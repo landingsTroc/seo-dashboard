@@ -12,6 +12,7 @@ on:
     paths:
       - "scripts/**"
       - "index.html"
+      - "reports/**"          # publishing a report must deploy it, not wait for the next cron
       - ".github/workflows/refresh.yml"
 
 permissions:
