@@ -195,14 +195,14 @@
 
     <div class="kpis">
       <div class="kpi">
-        <span class="k-label">Organic traffic / mo</span>
-        <span class="k-val">5,008</span>
-        <span class="k-note d-up">+52% vs. July</span>
+        <span class="k-label">Clicks / mo — <strong>measured</strong></span>
+        <span class="k-val">1,323</span>
+        <span class="k-note d-flat">Search Console, real clicks</span>
       </div>
       <div class="kpi">
-        <span class="k-label">Traffic value / mo</span>
-        <span class="k-val">$521K</span>
-        <span class="k-note d-up">+20% vs. July</span>
+        <span class="k-label">Site-wide CTR</span>
+        <span class="k-val">0.33%</span>
+        <span class="k-note d-down">vs. 2–5% typical</span>
       </div>
       <div class="kpi">
         <span class="k-label">Ranking keywords</span>
@@ -220,15 +220,17 @@
         <span class="k-note d-up">+1 vs. June</span>
       </div>
       <div class="kpi">
-        <span class="k-label">Non-branded traffic</span>
-        <span class="k-val">22%</span>
-        <span class="k-note d-down">Heavy brand reliance</span>
+        <span class="k-label">Non-branded clicks</span>
+        <span class="k-val">16.9%</span>
+        <span class="k-note d-down">measured — worse than estimated</span>
       </div>
     </div>
 
-    <p><strong>Ahrefs shows an August rebound; Search Console does not yet confirm it.</strong> Ahrefs estimates organic traffic rose 52% month over month, from 3,290 in July to 5,008, with Top-3 rankings <strong>+11%</strong> and Domain Rating <strong>42 → 43</strong> over two months. But Google's own data through July 23 shows <strong>impressions down 51.8%</strong> and <strong>127 pages dropped from the index</strong> — detailed below. The authority metrics are real; the traffic rebound is a model output awaiting verification.</p>
+    <p><strong>Search Console is now connected, and it changes the picture in two directions at once.</strong> Over the last 90 days the site earned <strong>3,969 clicks from 1,214,675 impressions</strong> — a site-wide click-through rate of <strong>0.33%</strong>, against a 2–5% norm. We are being shown to searchers over a million times a quarter and almost never clicked.</p>
 
-    <p>The gap is longer-term. Traffic is still <strong>21% below where it was a year ago</strong> (6,336 → 4,986), and <strong>the homepage alone accounts for 3,049 of 5,008 visits — 61%</strong>, almost entirely from branded searches by people who already know T-ROC. Only <strong>22% of traffic comes from non-branded searches</strong>, meaning prospects who don't yet know us.</p>
+    <p>Ahrefs estimated 5,008 visits a month. Measured clicks are <strong>1,323 a month — Ahrefs overstates by 3.8×</strong>. Every figure in earlier reports that came from Ahrefs was inflated by roughly that factor. The targets in this document have been rebased accordingly.</p>
+
+    <p>Brand dependence is also worse than modelled: of sampled clicks, <strong>83.1% are branded</strong> and only <strong>16.9% non-branded</strong> — 248 clicks in 90 days from people who did not already know T-ROC.</p>
   </section>
 
   <!-- ===== COMPARISON ===== -->
@@ -295,12 +297,21 @@
       </table>
     </div>
 
-    <div class="callout co-crit">
-      <h3>Search Console contradicts the Ahrefs rebound — read this before acting on the numbers above</h3>
-      <p>Google Search Console data through <strong>July 23</strong> shows <strong>impressions down 51.8%</strong> — from a June daily average of 16,051 to 7,738 — with <strong>no recovery in the data available</strong>. Over the same window Google <strong>dropped 127 pages out of the index</strong> (821 → 694), in two steps on June 30 and July 10.</p>
-      <p><strong>Important context before reading this as damage:</strong> all <strong>489 pruned pages had zero traffic</strong>, and 279 of them now redirect correctly with no broken links or redirect chains. Removing zero-traffic pages is <em>supposed</em> to reduce impressions — those pages were appearing in search results without ever earning a click. Much of this decline may be the intended effect working as designed.</p>
-      <p>The decisive number is <strong>clicks</strong>, which this export does not contain. If clicks held steady while impressions halved, the consolidation succeeded and click-through rate roughly doubled. If clicks fell in proportion, real traffic was lost. <strong>One Search Console export settles it.</strong></p>
-      <p>Until then, treat both the Ahrefs rebound and this impressions decline as <strong>unconfirmed</strong>, and do not present either as the outcome of the consolidation.</p>
+    <div class="callout co-up">
+      <h3>Settled: the content consolidation worked</h3>
+      <p>This was the open question — impressions halved after the 271-page consolidation, and without click data it was impossible to tell cleanup from damage. Search Console now answers it:</p>
+      <div class="t-wrap" style="margin:6px 0">
+        <table>
+          <thead><tr><th>Daily average</th><th class="num">May 4 – Jun 29</th><th class="num">Jul 14 – Aug 2</th><th class="num">Change</th></tr></thead>
+          <tbody>
+            <tr><td>Impressions</td><td class="num">14,858</td><td class="num">8,493</td><td class="num delta d-down">−42.8%</td></tr>
+            <tr><td><strong>Clicks</strong></td><td class="num">46</td><td class="num">40</td><td class="num delta"><strong>−13.5%</strong></td></tr>
+            <tr><td><strong>CTR</strong></td><td class="num">0.31%</td><td class="num">0.47%</td><td class="num delta d-up"><strong>+52%</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Impressions fell 43% while clicks fell only 13%, so <strong>click-through rate rose by half</strong>. The consolidation removed pages that were being shown in search results and never clicked — exactly what it was meant to do. All 489 pruned pages had zero traffic, 279 redirect cleanly, and none return 404.</p>
+      <p><strong>This should be reported as a completed win, not a decline.</strong> The earlier reading of "impressions down 52%" as damage was wrong.</p>
     </div>
 
     <div class="callout co-warn">
@@ -309,11 +320,43 @@
     </div>
   </section>
 
+  <!-- ===== MEASURED CTR ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Confirmed with measured data</span>
+      <h2>The real problem: we are seen constantly and almost never clicked</h2>
+    </div>
+
+    <p>Search Console confirms what the Ahrefs analysis suspected, and the scale is larger than estimated. These pages rank on <strong>page one</strong> and are shown tens of thousands of times, yet earn almost nothing:</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Page</th><th class="num">Avg. position</th><th class="num">Impressions</th><th class="num">Clicks</th><th class="num">CTR</th></tr></thead>
+        <tbody>
+          <tr><td><code>/experiential-retail-pop-up-events/</code></td><td class="num">5.5</td><td class="num">81,013</td><td class="num">38</td><td class="num"><strong>0.05%</strong></td></tr>
+          <tr><td><code>/retail-automation-distribution-centers-walmart/</code></td><td class="num">6.4</td><td class="num">36,608</td><td class="num">95</td><td class="num"><strong>0.26%</strong></td></tr>
+          <tr><td><code>/different-types-of-brand-ambassadors-2/</code></td><td class="num">9.2</td><td class="num">30,921</td><td class="num">135</td><td class="num"><strong>0.44%</strong></td></tr>
+          <tr><td><code>/luxury-pop-up-stores-shipping-containers/</code></td><td class="num">5.2</td><td class="num">28,742</td><td class="num">23</td><td class="num"><strong>0.08%</strong></td></tr>
+          <tr><td><code>/automated-retail-trends-arki-insights/</code></td><td class="num">8.6</td><td class="num">26,702</td><td class="num">13</td><td class="num"><strong>0.05%</strong></td></tr>
+          <tr><td><code>/retail-revenue-optimization-strategies…</code></td><td class="num">6.2</td><td class="num">18,010</td><td class="num">2</td><td class="num"><strong>0.01%</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p><strong>25 pages</strong> sit in the top 10 with a CTR below 2%. A position-5 result normally earns around 5%. These earn between 0.01% and 0.5% — <strong>ten to a hundred times below expectation</strong>.</p>
+
+    <div class="callout co-warn">
+      <h3>Scale of the opportunity — and an honest limit</h3>
+      <p>Those six pages produced <strong>349 clicks</strong> from 221,000 impressions. At an ordinary 3% CTR the same impressions would return roughly <strong>6,900</strong>. Site-wide, 1.2M impressions at a modest 2% would be <strong>~24,000 clicks per quarter</strong> against today's 3,969.</p>
+      <p>That arithmetic shows the size of the prize, not a forecast. A CTR this extreme is unlikely to be titles alone — the other candidates are queries where our page is not what the searcher wants, and AI Overviews absorbing the click. <strong>Confirming the split requires a per-page query breakdown, which is the next analysis, not a guess to act on now.</strong></p>
+    </div>
+  </section>
+
   <!-- ===== FINDING ===== -->
   <section>
     <div class="sec-head">
-      <span class="eyebrow">Key finding</span>
-      <h2>We rank #1 and receive no traffic</h2>
+      <span class="eyebrow">Verified defect</span>
+      <h2>One confirmed cause: the titles are broken</h2>
     </div>
 
     <p>A cluster of merchandising pages ranks at or near the top of Google for <strong>5,450 monthly searches</strong> yet generates <strong>zero traffic</strong>:</p>
@@ -527,16 +570,16 @@
       <table>
         <thead><tr><th>Metric</th><th class="num">Today</th><th class="num">Target</th><th>Via</th></tr></thead>
         <tbody>
-          <tr><td>Monthly organic traffic</td><td class="num">5,008</td><td class="num"><strong>6,500</strong></td><td>Phases 1–2</td></tr>
-          <tr><td>Non-branded traffic share</td><td class="num">22%</td><td class="num"><strong>35%</strong></td><td>Phase 3</td></tr>
-          <tr><td>Keywords in Top 3</td><td class="num">191</td><td class="num"><strong>240</strong></td><td>Phases 1–2</td></tr>
-          <tr><td>Ranking keywords</td><td class="num">429</td><td class="num"><strong>500</strong></td><td>Phases 2–3</td></tr>
-          <tr><td>Technical Health Score</td><td class="num">70</td><td class="num"><strong>85+</strong></td><td>Phase 0</td></tr>
+          <tr><td><strong>Monthly clicks</strong> <span class="small">(measured)</span></td><td class="num">1,323</td><td class="num"><strong>2,600</strong></td><td>Phases 1–2 — CTR recovery</td></tr>
+          <tr><td><strong>Site-wide CTR</strong></td><td class="num">0.33%</td><td class="num"><strong>0.70%</strong></td><td>Phase 1 — the core lever</td></tr>
+          <tr><td>Non-branded click share</td><td class="num">16.9%</td><td class="num"><strong>30%</strong></td><td>Phase 3</td></tr>
+          <tr><td>Pages in top 10 with CTR under 2%</td><td class="num">25</td><td class="num"><strong>under 10</strong></td><td>Phase 1</td></tr>
+          <tr><td>Keywords in Top 3 <span class="small">(Ahrefs)</span></td><td class="num">191</td><td class="num">240</td><td>Phases 1–2</td></tr>
           <tr><td>Domain Rating</td><td class="num">43</td><td class="num">43–45</td><td>Not forced</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="small">Targets are projections based on Ahrefs estimated traffic and the click-through recovery expected once titles are corrected. They will be recalibrated once Search Console data is confirmed.</p>
+    <p class="small"><strong>These targets have been rebased onto measured Search Console clicks.</strong> Earlier versions of this document used Ahrefs estimates, which overstate real clicks by 3.8× — the previous "6,500 visits" goal was measuring a number that was never real. Doubling CTR from 0.33% to 0.70% still leaves the site below a normal 2%, so this is deliberately a conservative target on a metric we can now verify weekly.</p>
   </section>
 
   <!-- ===== ASKS ===== -->
@@ -551,11 +594,9 @@
         <thead><tr><th>Access or decision</th><th>Needed for</th><th>Owner</th></tr></thead>
         <tbody>
           <tr>
-            <td><strong>Search Console — grant the service account access</strong><br>
-              <span class="small">Settings → Users and permissions → Add user →
-              <code>claude@explore-oculus-lp.iam.gserviceaccount.com</code> (Restricted)</span></td>
-            <td>The connection is built, authenticated and deployed. It currently returns <strong>403 — no properties visible</strong>. This single permission unlocks measured clicks and CTR, and settles the title diagnosis. <em>Requires a verified property owner.</em></td>
-            <td><span class="chip c-crit">Blocked</span></td>
+            <td><strong>Google Search Console</strong></td>
+            <td>Connected and refreshing daily into the live dashboard. Measured clicks now replace Ahrefs estimates throughout this document.</td>
+            <td><span class="chip c-up">Done</span></td>
           </tr>
           <tr><td><strong>WPCode on production</strong></td><td>Fix the title system and activate the H1 snippet — <em>blocks Phase 1</em></td><td>Pending</td></tr>
           <tr><td><strong>WP Engine / Cloudflare admin</strong></td><td>Unblock Google's crawlers</td><td>Pending</td></tr>
