@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:33:20.337Z",
+  "generatedAt": "2026-08-05T19:36:48.390Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "summary": {
@@ -503,7 +503,68 @@
       "topKeyword": "merchandising software"
     }
   ],
-  "deadRankings": [],
+  "deadRankings": [
+    {
+      "keyword": "what is merchandising",
+      "position": 1,
+      "volume": 3000,
+      "url": "https://trocglobal.com/merchandising-inventory/"
+    },
+    {
+      "keyword": "retail merchandising services",
+      "position": 6,
+      "volume": 1000,
+      "url": "https://trocglobal.com/merchandising-services/"
+    },
+    {
+      "keyword": "ecommerce merchandising",
+      "position": 1,
+      "volume": 900,
+      "url": "https://trocglobal.com/merchandising-e-commerce/"
+    },
+    {
+      "keyword": "what is retail merchandising",
+      "position": 1,
+      "volume": 300,
+      "url": "https://trocglobal.com/retail-merchandising/"
+    },
+    {
+      "keyword": "merchandise ideas",
+      "position": 6,
+      "volume": 250,
+      "url": "https://trocglobal.com/visual-merchandising-examples/"
+    },
+    {
+      "keyword": "retail scheduling",
+      "position": 1,
+      "volume": 250,
+      "url": "https://trocglobal.com/staff-scheduling-retail/"
+    },
+    {
+      "keyword": "audiotech",
+      "position": 8,
+      "volume": 250,
+      "url": "https://trocglobal.com/the-future-of-audio-technology-3-defining-trends-from-ces-2026/"
+    },
+    {
+      "keyword": "merchandise fulfillment",
+      "position": 5,
+      "volume": 200,
+      "url": "https://trocglobal.com/merchandising-fulfillment/"
+    },
+    {
+      "keyword": "retail 360",
+      "position": 3,
+      "volume": 200,
+      "url": "https://trocglobal.com/services/retail360/"
+    },
+    {
+      "keyword": "retail industry outlook",
+      "position": 1,
+      "volume": 150,
+      "url": "https://trocglobal.com/dollar-store-trends-wealthy-shoppers/"
+    }
+  ],
   "coreWebVitals": {
     "mobile": {
       "strategy": "mobile",
@@ -511,7 +572,7 @@
       "lcp": 1480,
       "cls": 8,
       "inp": null,
-      "performanceScore": 85
+      "performanceScore": 75
     },
     "desktop": {
       "strategy": "desktop",
@@ -519,7 +580,7 @@
       "lcp": 1812,
       "cls": 6,
       "inp": null,
-      "performanceScore": 99
+      "performanceScore": 93
     }
   },
   "caveats": [
