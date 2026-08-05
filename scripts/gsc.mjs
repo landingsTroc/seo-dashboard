@@ -1,0 +1,172 @@
+/**
+ * Google Search Console connector.
+ *
+ * Authenticates a service account with a signed JWT (RS256) and queries the
+ * Search Analytics API. Uses only Node built-ins — no dependencies.
+ *
+ * Required secret: GOOGLE_SERVICE_ACCOUNT_JSON — the full service-account JSON
+ * key, pasted verbatim. A plain API key does NOT work here; the API rejects it
+ * with "API keys are not supported by this API".
+ *
+ * The service account's client_email must be added as a user in Search Console
+ * (Settings → Users and permissions). "Restricted" is enough.
+ */
+
+import { createSign } from "node:crypto";
+
+const TOKEN_URL = "https://oauth2.googleapis.com/token";
+const SCOPE = "https://www.googleapis.com/auth/webmasters.readonly";
+
+const b64url = (input) => Buffer.from(input).toString("base64url");
+
+/** Exchange a service-account key for an OAuth2 access token. */
+async function getAccessToken(creds) {
+  const now = Math.floor(Date.now() / 1000);
+  const header = b64url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
+  const claim = b64url(JSON.stringify({
+    iss: creds.client_email,
+    scope: SCOPE,
+    aud: TOKEN_URL,
+    iat: now,
+    exp: now + 3600,
+  }));
+
+  const signer = createSign("RSA-SHA256");
+  signer.update(`${header}.${claim}`);
+  const signature = signer.sign(creds.private_key, "base64url");
+  const jwt = `${header}.${claim}.${signature}`;
+
+  const res = await fetch(TOKEN_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      assertion: jwt,
+    }),
+  });
+
+  const json = await res.json();
+  if (!res.ok) {
+    throw new Error(`token exchange HTTP ${res.status}: ${JSON.stringify(json).slice(0, 240)}`);
+  }
+  return json.access_token;
+}
+
+async function query(token, siteUrl, body) {
+  const url = `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent(siteUrl)}/searchAnalytics/query`;
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const json = await res.json();
+  if (!res.ok) {
+    throw new Error(`searchAnalytics HTTP ${res.status}: ${JSON.stringify(json).slice(0, 240)}`);
+  }
+  return json.rows ?? [];
+}
+
+/** Find which property form this account can actually read. */
+async function resolveSite(token, domain) {
+  const res = await fetch("https://www.googleapis.com/webmasters/v3/sites", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+  const json = await res.json();
+  if (!res.ok) {
+    throw new Error(`sites.list HTTP ${res.status}: ${JSON.stringify(json).slice(0, 240)}`);
+  }
+  const entries = json.siteEntry ?? [];
+  const wanted = [`sc-domain:${domain}`, `https://${domain}/`, `https://www.${domain}/`];
+  const hit = wanted.find((w) => entries.some((e) => e.siteUrl === w));
+  if (hit) return hit;
+
+  throw new Error(
+    `service account has no access to ${domain}. Properties it can see: ` +
+    (entries.map((e) => e.siteUrl).join(", ") || "(none)") +
+    ". Add its client_email under Search Console → Settings → Users and permissions."
+  );
+}
+
+const iso = (d) => d.toISOString().slice(0, 10);
+
+export async function fetchSearchConsole(domain, brandRe) {
+  const raw = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+  if (!raw) {
+    console.warn("GSC: GOOGLE_SERVICE_ACCOUNT_JSON not set — skipping Search Console.");
+    return null;
+  }
+
+  let creds;
+  try {
+    creds = JSON.parse(raw);
+  } catch {
+    throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON is not valid JSON. Paste the whole key file, including braces.");
+  }
+  if (!creds.client_email || !creds.private_key) {
+    throw new Error("Service-account JSON is missing client_email or private_key.");
+  }
+
+  const token = await getAccessToken(creds);
+  const siteUrl = await resolveSite(token, domain);
+  console.log(`GSC: authenticated as ${creds.client_email}, reading ${siteUrl}`);
+
+  // Search Console data lags ~2-3 days; asking for today returns empty rows.
+  const endDate = iso(new Date(Date.now() - 3 * 864e5));
+  const startDate = iso(new Date(Date.now() - 93 * 864e5));
+  const base = { startDate, endDate, type: "web" };
+
+  const [dateRows, queryRows, pageRows] = await Promise.all([
+    query(token, siteUrl, { ...base, dimensions: ["date"], rowLimit: 500 }),
+    query(token, siteUrl, { ...base, dimensions: ["query"], rowLimit: 250 }),
+    query(token, siteUrl, { ...base, dimensions: ["page"], rowLimit: 250 }),
+  ]);
+
+  const totals = dateRows.reduce(
+    (a, r) => ({ clicks: a.clicks + r.clicks, impressions: a.impressions + r.impressions }),
+    { clicks: 0, impressions: 0 }
+  );
+
+  // The branded split, finally from measured clicks rather than modeled traffic.
+  let brandedClicks = 0, nonBrandedClicks = 0;
+  for (const r of queryRows) {
+    if (brandRe.test(r.keys[0])) brandedClicks += r.clicks;
+    else nonBrandedClicks += r.clicks;
+  }
+  const clickSample = brandedClicks + nonBrandedClicks;
+
+  // The title/CTR test: ranked well, seen often, barely clicked.
+  const lowCtrHighRank = pageRows
+    .filter((r) => r.position <= 10 && r.impressions >= 200 && r.ctr < 0.02)
+    .sort((a, b) => b.impressions - a.impressions)
+    .slice(0, 25)
+    .map((r) => ({
+      page: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+      ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
+    }));
+
+  return {
+    siteUrl,
+    dateRange: { startDate, endDate },
+    totals: {
+      clicks: totals.clicks,
+      impressions: totals.impressions,
+      ctr: totals.impressions ? +((totals.clicks / totals.impressions) * 100).toFixed(2) : null,
+    },
+    daily: dateRows.map((r) => ({
+      date: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+      ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
+    })),
+    brandSplitByClicks: clickSample ? {
+      brandedClicks, nonBrandedClicks, sampleClicks: clickSample,
+      brandedPct: +((brandedClicks / clickSample) * 100).toFixed(1),
+      nonBrandedPct: +((nonBrandedClicks / clickSample) * 100).toFixed(1),
+      note: "Measured clicks from Search Console — supersedes the Ahrefs-modeled split.",
+    } : null,
+    topQueries: queryRows.slice(0, 30).map((r) => ({
+      query: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+      ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
+      branded: brandRe.test(r.keys[0]),
+    })),
+    lowCtrHighRank,
+  };
+}

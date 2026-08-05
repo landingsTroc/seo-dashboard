@@ -169,6 +169,15 @@
     </div>
   </section>
 
+  <!-- Search Console -->
+  <section>
+    <div class="sec-head">
+      <h2>Search Console — measured clicks</h2>
+      <span class="small" id="gsc-range"></span>
+    </div>
+    <div id="gsc-slot"></div>
+  </section>
+
   <!-- Brand split + CWV -->
   <div class="grid-2">
     <section>
@@ -290,6 +299,7 @@
     }).join("");
 
     drawTrend(d.trafficHistory || []);
+    renderGsc(d);
 
     // Brand split — explicitly refuses to render a percentage without data.
     var b = d.brandSplit || {};
@@ -364,6 +374,60 @@
 
     $("caveats").innerHTML = (d.caveats||[]).map(function(c){ return "<li>"+esc(c)+"</li>"; }).join("");
     $("kpi-note").textContent = "Scope: " + (d.scope||"");
+  }
+
+  function renderGsc(d){
+    var g = d.searchConsole, slot = $("gsc-slot"), err = (d.sources && d.sources.searchConsole && d.sources.searchConsole.error) || "";
+    if(!g){
+      slot.innerHTML = '<div class="empty"><strong>Search Console not connected</strong>' +
+        (err ? '<span>' + esc(err) + '</span>' : '') +
+        '<span>Add <code>GOOGLE_SERVICE_ACCOUNT_JSON</code> as a repository Secret and grant that ' +
+        'service account access in Search Console. A plain API key will not work — the API rejects it.</span>' +
+        '<span>Until then, every traffic number here is an Ahrefs <em>estimate</em>, not measured clicks.</span></div>';
+      return;
+    }
+    $("gsc-range").textContent = g.dateRange.startDate + " → " + g.dateRange.endDate + " · lags 2–3 days";
+
+    var t = g.totals;
+    var html = '<div class="kpis" style="margin-bottom:14px">' +
+      '<div class="kpi"><span class="lbl">Clicks (90d)</span><span class="val">'+nf(t.clicks)+
+        '</span><span class="sub">measured, not modeled</span></div>' +
+      '<div class="kpi"><span class="lbl">Impressions (90d)</span><span class="val">'+nf(t.impressions)+'</span><span class="sub"></span></div>' +
+      '<div class="kpi"><span class="lbl">Average CTR</span><span class="val">'+(t.ctr!=null?t.ctr+"%":"—")+
+        '</span><span class="sub">'+(t.ctr!=null && t.ctr<2 ? "below typical" : "")+'</span></div>' +
+      '</div>';
+
+    var b = g.brandSplitByClicks;
+    if(b){
+      html += '<div class="card" style="margin-bottom:14px">' +
+        '<h3 style="font-size:.95rem">Branded vs non-branded — by measured clicks</h3>' +
+        '<div class="split-bar">' +
+          '<span class="seg-brand" style="width:'+b.brandedPct+'%">'+(b.brandedPct>=12?b.brandedPct+"% branded":"")+'</span>' +
+          '<span class="seg-nonbrand" style="width:'+b.nonBrandedPct+'%">'+(b.nonBrandedPct>=12?b.nonBrandedPct+"% non-branded":"")+'</span>' +
+        '</div>' +
+        '<p class="small">'+nf(b.brandedClicks)+' branded clicks · '+nf(b.nonBrandedClicks)+
+        ' non-branded clicks. <strong>This supersedes the Ahrefs-modeled split below.</strong></p></div>';
+    }
+
+    var low = g.lowCtrHighRank || [];
+    html += '<div class="sec-head" style="border:none;padding:0;margin-bottom:8px">' +
+      '<h3>Ranked top-10 but almost never clicked</h3>' +
+      '<span class="small">Position ≤10, 200+ impressions, CTR under 2%</span></div>';
+    html += low.length === 0
+      ? '<div class="empty"><strong>None found</strong><span>No well-ranked page is being ignored in the results. ' +
+        'That argues against the broken-title theory.</span></div>'
+      : '<div class="t-wrap"><table><thead><tr><th>Page</th><th class="num">Pos</th>' +
+        '<th class="num">Impressions</th><th class="num">Clicks</th><th class="num">CTR</th></tr></thead><tbody>' +
+        low.map(function(r){
+          var p = r.page ? r.page.replace(/^https?:\/\/[^/]+/,"") || "/" : "—";
+          return '<tr><td><code>'+esc(p)+'</code></td><td class="num">'+r.position+'</td>' +
+                 '<td class="num">'+nf(r.impressions)+'</td><td class="num">'+nf(r.clicks)+'</td>' +
+                 '<td class="num"><span class="chip c-crit">'+r.ctr+'%</span></td></tr>';
+        }).join("") + '</tbody></table></div>' +
+        '<p class="small" style="margin-top:8px">These pages rank well and are seen often, yet earn almost no clicks. ' +
+        'That is the signature of a title or snippet problem, measured rather than inferred.</p>';
+
+    slot.innerHTML = html;
   }
 
   function esc(s){

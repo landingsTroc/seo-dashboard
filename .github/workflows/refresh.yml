@@ -42,6 +42,9 @@ jobs:
           # Secrets are injected here and never reach the published page.
           AHREFS_API_TOKEN: ${{ secrets.AHREFS_API_TOKEN }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          # Full service-account JSON key. A plain API key cannot read Search
+          # Console — the API rejects it with 401.
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           TARGET_DOMAIN: trocglobal.com
         run: node scripts/fetch-data.mjs
 

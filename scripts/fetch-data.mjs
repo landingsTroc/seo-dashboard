@@ -9,7 +9,8 @@
  *   GOOGLE_API_KEY    (optional)  PageSpeed Insights / CrUX field data
  */
 
-import { writeFile, mkdir } from "node:fs/promises";
+import { writeFile, mkdir, readFile } from "node:fs/promises";
+import { fetchSearchConsole } from "./gsc.mjs";
 
 const AHREFS_TOKEN = process.env.AHREFS_API_TOKEN;
 const GOOGLE_KEY = process.env.GOOGLE_API_KEY;
@@ -75,7 +76,16 @@ async function pagespeed(strategy) {
   }
 }
 
-async function main() {
+/** Last successful run, used so one failing source can't blank the others. */
+async function loadPrevious() {
+  try {
+    return JSON.parse(await readFile("data/latest.json", "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+async function collectAhrefs() {
   console.log(`Fetching Ahrefs data for ${TARGET} @ ${today}`);
 
   const base = { target: TARGET, mode: MODE, date: today };
@@ -141,10 +151,7 @@ async function main() {
     .filter((k) => (k.best_position ?? 99) <= 10 && (k.sum_traffic ?? 0) === 0 && (k.volume ?? 0) >= 150)
     .sort((a, b) => (b.volume ?? 0) - (a.volume ?? 0));
 
-  const out = {
-    generatedAt: new Date().toISOString(),
-    target: TARGET,
-    scope: `${MODE} · US`,
+  return {
     summary: {
       domainRating: dr?.domain_rating?.domain_rating ?? null,
       ahrefsRank: dr?.domain_rating?.ahrefs_rank ?? null,
@@ -182,24 +189,77 @@ async function main() {
       keyword: k.keyword, position: k.best_position, volume: k.volume, url: k.best_position_url,
     })),
     coreWebVitals: { mobile, desktop },
+    _log: `traffic ${metrics?.metrics?.org_traffic}, DR ${dr?.domain_rating?.domain_rating}, ` +
+      `${deadRankings.length} dead rankings (from ${byVolume.length} volume-sorted keywords)`,
+  };
+}
+
+async function main() {
+  const prev = await loadPrevious();
+
+  // Each source fails independently. A metered Ahrefs 403 must not cost us the
+  // free Search Console data, and vice versa.
+  let ahrefs = null, ahrefsError = null;
+  try {
+    ahrefs = await collectAhrefs();
+    console.log(`Ahrefs OK — ${ahrefs._log}`);
+    delete ahrefs._log;
+    if (ahrefs.deadRankings.length === 0) {
+      console.warn("NOTE: no zero-traffic top-10 rankings found. Verify the volume-sorted " +
+        "query still returns rows — an empty result previously meant a sort-order bug, not a clean site.");
+    }
+  } catch (err) {
+    ahrefsError = err.message;
+    console.warn(`Ahrefs FAILED — ${err.message}`);
+    if (/units limit reached/i.test(err.message)) {
+      console.warn("Ahrefs units exhausted (~3,300 per run). Wait for the monthly reset; " +
+        "do not re-run to retry.");
+    }
+    if (!prev) throw new Error(`Ahrefs failed with no previous data to fall back on: ${err.message}`);
+    console.warn("Reusing the previous Ahrefs data.");
+  }
+
+  let gsc = null, gscError = null;
+  try {
+    gsc = await fetchSearchConsole(TARGET, BRAND_RE);
+    if (gsc) {
+      console.log(`GSC OK — ${gsc.totals.clicks} clicks / ${gsc.totals.impressions} impressions ` +
+        `(CTR ${gsc.totals.ctr}%), ${gsc.lowCtrHighRank.length} pages ranked top-10 with CTR under 2%`);
+    }
+  } catch (err) {
+    gscError = err.message;
+    console.warn(`GSC FAILED — ${err.message}`);
+  }
+
+  const a = ahrefs ?? prev;
+  const out = {
+    generatedAt: new Date().toISOString(),
+    target: TARGET,
+    scope: `${MODE} · US`,
+    sources: {
+      ahrefs: { ok: !!ahrefs, error: ahrefsError, asOf: ahrefs ? new Date().toISOString() : prev?.sources?.ahrefs?.asOf ?? prev?.generatedAt ?? null },
+      searchConsole: { ok: !!gsc, error: gscError, asOf: gsc ? new Date().toISOString() : prev?.sources?.searchConsole?.asOf ?? null },
+    },
+    summary: a?.summary ?? {},
+    brandSplit: a?.brandSplit ?? {},
+    trafficHistory: a?.trafficHistory ?? [],
+    refdomainsHistory: a?.refdomainsHistory ?? [],
+    topKeywords: a?.topKeywords ?? [],
+    topPages: a?.topPages ?? [],
+    deadRankings: a?.deadRankings ?? [],
+    coreWebVitals: a?.coreWebVitals ?? {},
+    searchConsole: gsc ?? prev?.searchConsole ?? null,
     caveats: [
-      "Ahrefs traffic is a modeled estimate, not measured clicks. Search Console is the source of truth.",
-      "Keyword data covers the top 100 by traffic — the Ahrefs plan in use ignores pagination offset.",
+      "Ahrefs traffic is a modeled estimate, not measured clicks. Search Console clicks are the source of truth where both are present.",
+      "Search Console data lags 2-3 days — Google's pipeline, not a limitation of this dashboard.",
+      "Ahrefs keyword data covers the top 100 by traffic; that plan ignores pagination offset.",
       "Branded/non-branded is classified by explicit pattern match; Ahrefs' is_branded flag is unreliable for this domain.",
     ],
   };
 
   await mkdir("data", { recursive: true });
   await writeFile("data/latest.json", JSON.stringify(out, null, 2));
-
-  console.log(`OK — traffic ${out.summary.organicTraffic}, DR ${out.summary.domainRating}, ` +
-    `${out.summary.organicKeywords} keywords, brand split ${out.brandSplit.brandedPct}% branded, ` +
-    `${out.deadRankings.length} dead rankings (from ${byVolume.length} volume-sorted keywords)`);
-
-  if (out.deadRankings.length === 0) {
-    console.warn("NOTE: no zero-traffic top-10 rankings found. Verify the volume-sorted " +
-      "query still returns rows — an empty result here previously meant a sort-order bug, not a clean site.");
-  }
+  console.log(`Wrote data/latest.json — ahrefs=${!!ahrefs} searchConsole=${!!gsc}`);
 }
 
 main().catch(async (err) => {
