@@ -79,6 +79,7 @@
     font-variant-numeric:tabular-nums; line-height:1.05; }
   .kpi .k-note{ font-size:.77rem; font-weight:580; font-variant-numeric:tabular-nums; }
   .d-up{ color:var(--up); } .d-down{ color:var(--crit); } .d-flat{ color:var(--muted); }
+  .d-warn{ color:var(--warn); }
 
   .chip{ display:inline-flex; align-items:center; border-radius:100px; padding:2px 10px;
     font-size:.72rem; font-weight:660; letter-spacing:.02em; white-space:nowrap; }
@@ -368,6 +369,75 @@
     <p class="small">A previously used dashboard reported "100% non-branded — strong organic discovery" while holding zero click data. The measured figure is <strong>83.1% branded</strong>. That panel should not be used.</p>
   </section>
 
+  <!-- ===== INDEX COVERAGE ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Search Console — index coverage</span>
+      <h2>Only 39.6% of the site is in Google</h2>
+    </div>
+
+    <p>Of <strong>1,751 known pages</strong>, Google has indexed <strong>694</strong>. A page that is not indexed cannot rank, cannot be seen and cannot be clicked — it is invisible regardless of how good it is.</p>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span class="k-label">Indexed</span>
+        <span class="k-val">694</span>
+        <span class="k-note d-flat">39.6% of known pages</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Not indexed</span>
+        <span class="k-val">1,057</span>
+        <span class="k-note d-down">60.4%</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Peak indexed</span>
+        <span class="k-val">821</span>
+        <span class="k-note d-flat">Jun 12–29, before the prune</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Validation failing</span>
+        <span class="k-val">379</span>
+        <span class="k-note d-warn">redirect pages</span>
+      </div>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Reason not indexed</th><th class="num">Pages</th><th class="num">Share</th><th>Reading</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Crawled – currently not indexed</strong></td>
+            <td class="num">465</td><td class="num">44.0%</td>
+            <td>Google crawled these and <em>chose</em> not to index them. A content-quality judgement, not a technical fault — and the largest single bucket.</td>
+          </tr>
+          <tr>
+            <td><strong>Page with redirect</strong> <span class="chip c-warn">validation failed</span></td>
+            <td class="num">379</td><td class="num">35.9%</td>
+            <td>Expected. These are the consolidation's 301s. Redirected URLs are meant to leave the index — this is the cleanup showing up, not damage.</td>
+          </tr>
+          <tr>
+            <td><strong>Not found (404)</strong></td>
+            <td class="num">90</td><td class="num">8.5%</td>
+            <td><strong>Source unidentified.</strong> All 489 pruned URLs were checked and none return 404, so these come from somewhere else.</td>
+          </tr>
+          <tr><td>Excluded by "noindex" tag</td><td class="num">64</td><td class="num">6.1%</td><td>Intentional if correct — worth auditing that each one should be excluded.</td></tr>
+          <tr><td>Duplicate — Google chose a different canonical</td><td class="num">21</td><td class="num">2.0%</td><td>Google disagreed with our canonical. Signals near-duplicate content.</td></tr>
+          <tr><td>Discovered – currently not indexed</td><td class="num">29</td><td class="num">2.7%</td><td>Known but not yet crawled. Crawl-budget pressure.</td></tr>
+          <tr><td>Alternate page with proper canonical</td><td class="num">6</td><td class="num">0.6%</td><td>Normal.</td></tr>
+          <tr><td>Blocked by robots.txt / 4xx / 5xx</td><td class="num">3</td><td class="num">0.3%</td><td>Negligible, but each is a hard block.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-warn">
+      <h3>The 465 are the number that matters</h3>
+      <p>"Crawled – currently not indexed" means Google looked and declined. The most likely feeder is the <strong>210 zero-traffic pages still live</strong> from the consolidation — the job is only 57% complete, and those pages continue consuming crawl budget while adding nothing. Finishing the prune is the direct treatment.</p>
+      <p>The <strong>90 404s</strong> need separate investigation: they are not from the prune list, which was verified clean.</p>
+    </div>
+
+    <p class="small"><strong>Source and limitation:</strong> these figures come from a Search Console coverage export covering data to July 23, 2026. Unlike clicks and impressions, <strong>index coverage is not available through the Search Console API</strong> — Google only exposes it in the interface. It therefore cannot be added to the live dashboard and must be re-exported manually to refresh.</p>
+  </section>
+
   <!-- ===== ROOT CAUSES ===== -->
   <section>
     <div class="sec-head">
@@ -407,6 +477,11 @@
           <tr>
             <td><strong>Consolidation only 57% complete</strong><br><span class="small">210 of 489 flagged pages still live</span></td>
             <td><span class="chip c-up">Checked all 489 URLs</span></td>
+            <td><span class="chip c-warn">High</span></td>
+          </tr>
+          <tr>
+            <td><strong>60% of pages not indexed</strong><br><span class="small">465 crawled and declined; 90 unexplained 404s</span></td>
+            <td><span class="chip c-up">Search Console coverage</span></td>
             <td><span class="chip c-warn">High</span></td>
           </tr>
           <tr>
@@ -468,7 +543,10 @@
         <ul>
           <li><strong>Cloudflare / WP Engine:</strong> allow Googlebot, Bingbot and AhrefsBot. <em>Requires the infrastructure administrator.</em></li>
           <li><strong>Complete the consolidation</strong> — 210 of 489 flagged zero-traffic pages are still live and still being crawled.</li>
-          <li>Resolve the 465 "crawled, not indexed" backlog and the 90 pages returning 404.</li>
+          <li><strong>Attack the 465 "crawled, not indexed"</strong> — the largest not-indexed bucket. Finishing the prune is the direct treatment; anything remaining after that is a content-quality problem needing consolidation or improvement, not more pages.</li>
+          <li><strong>Trace the 90 404s.</strong> They are not from the prune list, so the source is unknown — likely broken internal links or stale external references.</li>
+          <li>Audit the 64 <code>noindex</code> pages and the 21 where Google overrode our canonical.</li>
+          <li><strong>Target: indexation rate from 39.6% back above 55%.</strong></li>
         </ul>
       </div>
 
@@ -505,6 +583,7 @@
           <tr><td>Non-branded click share</td><td class="num">16.9%</td><td class="num"><strong>30%</strong></td><td>Phases 2 &amp; 4</td></tr>
           <tr><td>Top-10 pages with CTR under 2%</td><td class="num">25</td><td class="num"><strong>under 10</strong></td><td>Phase 1</td></tr>
           <tr><td>"brand ambassador" position</td><td class="num">10.8</td><td class="num"><strong>top 5</strong></td><td>Phase 2</td></tr>
+          <tr><td>Indexation rate</td><td class="num">39.6%</td><td class="num"><strong>55%+</strong></td><td>Phase 3</td></tr>
           <tr><td>Domain Rating <span class="small">(Ahrefs)</span></td><td class="num">43</td><td class="num">43–45</td><td>Not forced</td></tr>
         </tbody>
       </table>
