@@ -47,10 +47,21 @@ jobs:
           git add data/latest.json
           if git diff --staged --quiet; then
             echo "No change in SEO data — nothing to commit."
-          else
-            git commit -m "chore: refresh SEO data $(date -u +%Y-%m-%dT%H:%MZ)"
-            git push
+            exit 0
           fi
+          git commit -m "chore: refresh SEO data $(date -u +%Y-%m-%dT%H:%MZ)"
+          # A manual run can overlap a scheduled one and land a commit first, which
+          # rejects this push. Rebase onto whatever arrived and retry before failing.
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected (attempt $attempt) — rebasing onto origin/${GITHUB_REF_NAME}."
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          done
+          echo "::error::Could not push refreshed data after 3 attempts."
+          exit 1
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
