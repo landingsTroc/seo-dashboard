@@ -31,9 +31,20 @@ async function getAccessToken(creds) {
     exp: now + 3600,
   }));
 
-  const signer = createSign("RSA-SHA256");
-  signer.update(`${header}.${claim}`);
-  const signature = signer.sign(creds.private_key, "base64url");
+  let signature;
+  try {
+    const signer = createSign("RSA-SHA256");
+    signer.update(`${header}.${claim}`);
+    signature = signer.sign(creds.private_key, "base64url");
+  } catch (err) {
+    // OpenSSL's "DECODER routines::unsupported" means the private key isn't a
+    // usable PEM. Almost always a paste problem, not a bad key.
+    throw new Error(
+      `could not sign with private_key (${err.message}). The key must be the full PEM ` +
+      `including the BEGIN/END lines. Paste the service-account JSON file verbatim — ` +
+      `do not unescape the \\n sequences, reformat it, or wrap it in extra quotes.`
+    );
+  }
   const jwt = `${header}.${claim}.${signature}`;
 
   const res = await fetch(TOKEN_URL, {
