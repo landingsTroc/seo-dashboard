@@ -105,6 +105,15 @@ async function main() {
     order_by: "sum_traffic:desc", limit: "100",
   });
 
+  // Sorted by VOLUME, not traffic. The zero-traffic rankings we care about sit at
+  // the bottom of a traffic-sorted list and never appear in its top 100 — sorting
+  // by volume is the only way this plan surfaces them (offset is ignored).
+  const volResp = await ahrefs("organic-keywords", {
+    target: TARGET, mode: MODE, date: today, country: "us",
+    select: "keyword,best_position,best_position_url,volume,keyword_difficulty,sum_traffic",
+    order_by: "volume:desc", limit: "100",
+  });
+
   const pagesResp = await ahrefs("top-pages", {
     target: TARGET, mode: MODE, date: today, country: "us",
     select: "url,sum_traffic,keywords,top_keyword,top_keyword_volume,top_keyword_best_position",
@@ -126,7 +135,9 @@ async function main() {
   const [mobile, desktop] = await Promise.all([pagespeed("mobile"), pagespeed("desktop")]);
 
   // "Rankings that earn no clicks" — ranked top 10, decent volume, zero traffic.
-  const deadRankings = keywords
+  // Derived from the volume-sorted set for the reason noted above.
+  const byVolume = volResp.keywords ?? [];
+  const deadRankings = byVolume
     .filter((k) => (k.best_position ?? 99) <= 10 && (k.sum_traffic ?? 0) === 0 && (k.volume ?? 0) >= 150)
     .sort((a, b) => (b.volume ?? 0) - (a.volume ?? 0));
 
@@ -183,7 +194,12 @@ async function main() {
 
   console.log(`OK — traffic ${out.summary.organicTraffic}, DR ${out.summary.domainRating}, ` +
     `${out.summary.organicKeywords} keywords, brand split ${out.brandSplit.brandedPct}% branded, ` +
-    `${out.deadRankings.length} dead rankings`);
+    `${out.deadRankings.length} dead rankings (from ${byVolume.length} volume-sorted keywords)`);
+
+  if (out.deadRankings.length === 0) {
+    console.warn("NOTE: no zero-traffic top-10 rankings found. Verify the volume-sorted " +
+      "query still returns rows — an empty result here previously meant a sort-order bug, not a clean site.");
+  }
 }
 
 main().catch((err) => {
