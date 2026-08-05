@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-05T22:10:25.666Z",
+  "generatedAt": "2026-08-05T22:14:01.272Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
       "ok": false,
-      "error": "Ahrefs refdomains-history → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 78, API units left: 62.\"\n}",
+      "error": "Ahrefs metrics-history → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 533, API units left: 46.\"\n}",
       "asOf": "2026-08-05T19:45:00.490Z"
     },
     "searchConsole": {
-      "ok": false,
-      "error": "service account has no access to trocglobal.com. Properties it can see: (none). Add its client_email under Search Console → Settings → Users and permissions.",
-      "asOf": null
+      "ok": true,
+      "error": null,
+      "asOf": "2026-08-05T22:14:01.272Z"
     }
   },
   "summary": {
@@ -595,7 +595,1084 @@
       "performanceScore": 99
     }
   },
-  "searchConsole": null,
+  "searchConsole": {
+    "siteUrl": "https://trocglobal.com/",
+    "dateRange": {
+      "startDate": "2026-05-04",
+      "endDate": "2026-08-02"
+    },
+    "totals": {
+      "clicks": 3969,
+      "impressions": 1214675,
+      "ctr": 0.33
+    },
+    "daily": [
+      {
+        "date": "2026-05-04",
+        "clicks": 45,
+        "impressions": 8392,
+        "ctr": 0.54,
+        "position": 8.3
+      },
+      {
+        "date": "2026-05-05",
+        "clicks": 47,
+        "impressions": 8019,
+        "ctr": 0.59,
+        "position": 8.4
+      },
+      {
+        "date": "2026-05-06",
+        "clicks": 56,
+        "impressions": 8660,
+        "ctr": 0.65,
+        "position": 9
+      },
+      {
+        "date": "2026-05-07",
+        "clicks": 48,
+        "impressions": 10642,
+        "ctr": 0.45,
+        "position": 8.5
+      },
+      {
+        "date": "2026-05-08",
+        "clicks": 37,
+        "impressions": 9077,
+        "ctr": 0.41,
+        "position": 8.4
+      },
+      {
+        "date": "2026-05-09",
+        "clicks": 18,
+        "impressions": 8570,
+        "ctr": 0.21,
+        "position": 7.9
+      },
+      {
+        "date": "2026-05-10",
+        "clicks": 22,
+        "impressions": 9591,
+        "ctr": 0.23,
+        "position": 10
+      },
+      {
+        "date": "2026-05-11",
+        "clicks": 54,
+        "impressions": 12821,
+        "ctr": 0.42,
+        "position": 10.2
+      },
+      {
+        "date": "2026-05-12",
+        "clicks": 41,
+        "impressions": 13060,
+        "ctr": 0.31,
+        "position": 10.5
+      },
+      {
+        "date": "2026-05-13",
+        "clicks": 79,
+        "impressions": 13318,
+        "ctr": 0.59,
+        "position": 9.8
+      },
+      {
+        "date": "2026-05-14",
+        "clicks": 53,
+        "impressions": 13273,
+        "ctr": 0.4,
+        "position": 10.7
+      },
+      {
+        "date": "2026-05-15",
+        "clicks": 60,
+        "impressions": 11197,
+        "ctr": 0.54,
+        "position": 11.6
+      },
+      {
+        "date": "2026-05-16",
+        "clicks": 31,
+        "impressions": 13677,
+        "ctr": 0.23,
+        "position": 11
+      },
+      {
+        "date": "2026-05-17",
+        "clicks": 21,
+        "impressions": 13328,
+        "ctr": 0.16,
+        "position": 11.9
+      },
+      {
+        "date": "2026-05-18",
+        "clicks": 46,
+        "impressions": 17427,
+        "ctr": 0.26,
+        "position": 11.1
+      },
+      {
+        "date": "2026-05-19",
+        "clicks": 58,
+        "impressions": 26713,
+        "ctr": 0.22,
+        "position": 8.1
+      },
+      {
+        "date": "2026-05-20",
+        "clicks": 49,
+        "impressions": 19355,
+        "ctr": 0.25,
+        "position": 10.5
+      },
+      {
+        "date": "2026-05-21",
+        "clicks": 62,
+        "impressions": 17587,
+        "ctr": 0.35,
+        "position": 9.8
+      },
+      {
+        "date": "2026-05-22",
+        "clicks": 43,
+        "impressions": 15364,
+        "ctr": 0.28,
+        "position": 12.3
+      },
+      {
+        "date": "2026-05-23",
+        "clicks": 31,
+        "impressions": 14462,
+        "ctr": 0.21,
+        "position": 12.7
+      },
+      {
+        "date": "2026-05-24",
+        "clicks": 24,
+        "impressions": 24376,
+        "ctr": 0.1,
+        "position": 9.7
+      },
+      {
+        "date": "2026-05-25",
+        "clicks": 47,
+        "impressions": 13039,
+        "ctr": 0.36,
+        "position": 13.2
+      },
+      {
+        "date": "2026-05-26",
+        "clicks": 63,
+        "impressions": 14428,
+        "ctr": 0.44,
+        "position": 11.5
+      },
+      {
+        "date": "2026-05-27",
+        "clicks": 63,
+        "impressions": 17698,
+        "ctr": 0.36,
+        "position": 11.4
+      },
+      {
+        "date": "2026-05-28",
+        "clicks": 56,
+        "impressions": 16114,
+        "ctr": 0.35,
+        "position": 11.1
+      },
+      {
+        "date": "2026-05-29",
+        "clicks": 50,
+        "impressions": 12619,
+        "ctr": 0.4,
+        "position": 12.4
+      },
+      {
+        "date": "2026-05-30",
+        "clicks": 33,
+        "impressions": 10382,
+        "ctr": 0.32,
+        "position": 13.2
+      },
+      {
+        "date": "2026-05-31",
+        "clicks": 41,
+        "impressions": 10590,
+        "ctr": 0.39,
+        "position": 12.7
+      },
+      {
+        "date": "2026-06-01",
+        "clicks": 74,
+        "impressions": 13793,
+        "ctr": 0.54,
+        "position": 10.9
+      },
+      {
+        "date": "2026-06-02",
+        "clicks": 59,
+        "impressions": 15624,
+        "ctr": 0.38,
+        "position": 10.1
+      },
+      {
+        "date": "2026-06-03",
+        "clicks": 56,
+        "impressions": 17975,
+        "ctr": 0.31,
+        "position": 9.9
+      },
+      {
+        "date": "2026-06-04",
+        "clicks": 53,
+        "impressions": 17868,
+        "ctr": 0.3,
+        "position": 9.7
+      },
+      {
+        "date": "2026-06-05",
+        "clicks": 52,
+        "impressions": 14522,
+        "ctr": 0.36,
+        "position": 11.2
+      },
+      {
+        "date": "2026-06-06",
+        "clicks": 25,
+        "impressions": 14945,
+        "ctr": 0.17,
+        "position": 11
+      },
+      {
+        "date": "2026-06-07",
+        "clicks": 29,
+        "impressions": 13701,
+        "ctr": 0.21,
+        "position": 11.9
+      },
+      {
+        "date": "2026-06-08",
+        "clicks": 50,
+        "impressions": 16108,
+        "ctr": 0.31,
+        "position": 10.5
+      },
+      {
+        "date": "2026-06-09",
+        "clicks": 69,
+        "impressions": 15160,
+        "ctr": 0.46,
+        "position": 10.7
+      },
+      {
+        "date": "2026-06-10",
+        "clicks": 62,
+        "impressions": 14358,
+        "ctr": 0.43,
+        "position": 10.8
+      },
+      {
+        "date": "2026-06-11",
+        "clicks": 52,
+        "impressions": 14927,
+        "ctr": 0.35,
+        "position": 10.5
+      },
+      {
+        "date": "2026-06-12",
+        "clicks": 45,
+        "impressions": 17536,
+        "ctr": 0.26,
+        "position": 10.5
+      },
+      {
+        "date": "2026-06-13",
+        "clicks": 29,
+        "impressions": 14610,
+        "ctr": 0.2,
+        "position": 11.6
+      },
+      {
+        "date": "2026-06-14",
+        "clicks": 28,
+        "impressions": 14102,
+        "ctr": 0.2,
+        "position": 12
+      },
+      {
+        "date": "2026-06-15",
+        "clicks": 49,
+        "impressions": 16353,
+        "ctr": 0.3,
+        "position": 11
+      },
+      {
+        "date": "2026-06-16",
+        "clicks": 68,
+        "impressions": 17060,
+        "ctr": 0.4,
+        "position": 10.4
+      },
+      {
+        "date": "2026-06-17",
+        "clicks": 63,
+        "impressions": 17793,
+        "ctr": 0.35,
+        "position": 11.4
+      },
+      {
+        "date": "2026-06-18",
+        "clicks": 42,
+        "impressions": 16899,
+        "ctr": 0.25,
+        "position": 12.6
+      },
+      {
+        "date": "2026-06-19",
+        "clicks": 35,
+        "impressions": 14571,
+        "ctr": 0.24,
+        "position": 11.8
+      },
+      {
+        "date": "2026-06-20",
+        "clicks": 29,
+        "impressions": 14832,
+        "ctr": 0.2,
+        "position": 13.2
+      },
+      {
+        "date": "2026-06-21",
+        "clicks": 30,
+        "impressions": 15647,
+        "ctr": 0.19,
+        "position": 11.5
+      },
+      {
+        "date": "2026-06-22",
+        "clicks": 43,
+        "impressions": 17685,
+        "ctr": 0.24,
+        "position": 10.4
+      },
+      {
+        "date": "2026-06-23",
+        "clicks": 73,
+        "impressions": 21406,
+        "ctr": 0.34,
+        "position": 9.7
+      },
+      {
+        "date": "2026-06-24",
+        "clicks": 45,
+        "impressions": 16790,
+        "ctr": 0.27,
+        "position": 12.3
+      },
+      {
+        "date": "2026-06-25",
+        "clicks": 48,
+        "impressions": 15083,
+        "ctr": 0.32,
+        "position": 12.8
+      },
+      {
+        "date": "2026-06-26",
+        "clicks": 43,
+        "impressions": 15507,
+        "ctr": 0.28,
+        "position": 13.1
+      },
+      {
+        "date": "2026-06-27",
+        "clicks": 24,
+        "impressions": 14596,
+        "ctr": 0.16,
+        "position": 14
+      },
+      {
+        "date": "2026-06-28",
+        "clicks": 31,
+        "impressions": 15653,
+        "ctr": 0.2,
+        "position": 13.1
+      },
+      {
+        "date": "2026-06-29",
+        "clicks": 48,
+        "impressions": 18020,
+        "ctr": 0.27,
+        "position": 12.3
+      },
+      {
+        "date": "2026-06-30",
+        "clicks": 50,
+        "impressions": 16146,
+        "ctr": 0.31,
+        "position": 12.9
+      },
+      {
+        "date": "2026-07-01",
+        "clicks": 42,
+        "impressions": 16943,
+        "ctr": 0.25,
+        "position": 13.4
+      },
+      {
+        "date": "2026-07-02",
+        "clicks": 41,
+        "impressions": 15932,
+        "ctr": 0.26,
+        "position": 13.2
+      },
+      {
+        "date": "2026-07-03",
+        "clicks": 33,
+        "impressions": 12840,
+        "ctr": 0.26,
+        "position": 13
+      },
+      {
+        "date": "2026-07-04",
+        "clicks": 14,
+        "impressions": 13415,
+        "ctr": 0.1,
+        "position": 13.4
+      },
+      {
+        "date": "2026-07-05",
+        "clicks": 22,
+        "impressions": 13355,
+        "ctr": 0.16,
+        "position": 14
+      },
+      {
+        "date": "2026-07-06",
+        "clicks": 39,
+        "impressions": 15883,
+        "ctr": 0.25,
+        "position": 12
+      },
+      {
+        "date": "2026-07-07",
+        "clicks": 45,
+        "impressions": 14905,
+        "ctr": 0.3,
+        "position": 12.6
+      },
+      {
+        "date": "2026-07-08",
+        "clicks": 45,
+        "impressions": 15442,
+        "ctr": 0.29,
+        "position": 12.7
+      },
+      {
+        "date": "2026-07-09",
+        "clicks": 49,
+        "impressions": 14570,
+        "ctr": 0.34,
+        "position": 13
+      },
+      {
+        "date": "2026-07-10",
+        "clicks": 54,
+        "impressions": 13136,
+        "ctr": 0.41,
+        "position": 14.1
+      },
+      {
+        "date": "2026-07-11",
+        "clicks": 17,
+        "impressions": 13172,
+        "ctr": 0.13,
+        "position": 15.7
+      },
+      {
+        "date": "2026-07-12",
+        "clicks": 29,
+        "impressions": 12523,
+        "ctr": 0.23,
+        "position": 14.3
+      },
+      {
+        "date": "2026-07-13",
+        "clicks": 58,
+        "impressions": 9653,
+        "ctr": 0.6,
+        "position": 16
+      },
+      {
+        "date": "2026-07-14",
+        "clicks": 52,
+        "impressions": 9430,
+        "ctr": 0.55,
+        "position": 16
+      },
+      {
+        "date": "2026-07-15",
+        "clicks": 46,
+        "impressions": 8756,
+        "ctr": 0.53,
+        "position": 15.1
+      },
+      {
+        "date": "2026-07-16",
+        "clicks": 39,
+        "impressions": 8180,
+        "ctr": 0.48,
+        "position": 16.6
+      },
+      {
+        "date": "2026-07-17",
+        "clicks": 47,
+        "impressions": 6999,
+        "ctr": 0.67,
+        "position": 16.4
+      },
+      {
+        "date": "2026-07-18",
+        "clicks": 13,
+        "impressions": 6739,
+        "ctr": 0.19,
+        "position": 16.5
+      },
+      {
+        "date": "2026-07-19",
+        "clicks": 27,
+        "impressions": 6443,
+        "ctr": 0.42,
+        "position": 16.7
+      },
+      {
+        "date": "2026-07-20",
+        "clicks": 58,
+        "impressions": 7772,
+        "ctr": 0.75,
+        "position": 15.7
+      },
+      {
+        "date": "2026-07-21",
+        "clicks": 47,
+        "impressions": 8890,
+        "ctr": 0.53,
+        "position": 15
+      },
+      {
+        "date": "2026-07-22",
+        "clicks": 49,
+        "impressions": 8281,
+        "ctr": 0.59,
+        "position": 13.8
+      },
+      {
+        "date": "2026-07-23",
+        "clicks": 42,
+        "impressions": 7760,
+        "ctr": 0.54,
+        "position": 15
+      },
+      {
+        "date": "2026-07-24",
+        "clicks": 38,
+        "impressions": 7557,
+        "ctr": 0.5,
+        "position": 15.3
+      },
+      {
+        "date": "2026-07-25",
+        "clicks": 23,
+        "impressions": 7681,
+        "ctr": 0.3,
+        "position": 15.1
+      },
+      {
+        "date": "2026-07-26",
+        "clicks": 19,
+        "impressions": 7424,
+        "ctr": 0.26,
+        "position": 15.9
+      },
+      {
+        "date": "2026-07-27",
+        "clicks": 69,
+        "impressions": 10020,
+        "ctr": 0.69,
+        "position": 14.7
+      },
+      {
+        "date": "2026-07-28",
+        "clicks": 54,
+        "impressions": 9973,
+        "ctr": 0.54,
+        "position": 15.1
+      },
+      {
+        "date": "2026-07-29",
+        "clicks": 50,
+        "impressions": 10399,
+        "ctr": 0.48,
+        "position": 14.4
+      },
+      {
+        "date": "2026-07-30",
+        "clicks": 43,
+        "impressions": 10743,
+        "ctr": 0.4,
+        "position": 16.4
+      },
+      {
+        "date": "2026-07-31",
+        "clicks": 31,
+        "impressions": 9756,
+        "ctr": 0.32,
+        "position": 14.8
+      },
+      {
+        "date": "2026-08-01",
+        "clicks": 23,
+        "impressions": 8574,
+        "ctr": 0.27,
+        "position": 16.1
+      },
+      {
+        "date": "2026-08-02",
+        "clicks": 29,
+        "impressions": 8480,
+        "ctr": 0.34,
+        "position": 16.9
+      }
+    ],
+    "brandSplitByClicks": {
+      "brandedClicks": 1222,
+      "nonBrandedClicks": 248,
+      "sampleClicks": 1470,
+      "brandedPct": 83.1,
+      "nonBrandedPct": 16.9,
+      "note": "Measured clicks from Search Console — supersedes the Ahrefs-modeled split."
+    },
+    "topQueries": [
+      {
+        "query": "troc",
+        "clicks": 413,
+        "impressions": 5636,
+        "ctr": 7.33,
+        "position": 3.5,
+        "branded": true
+      },
+      {
+        "query": "t-roc",
+        "clicks": 217,
+        "impressions": 1546,
+        "ctr": 14.04,
+        "position": 1.7,
+        "branded": true
+      },
+      {
+        "query": "troc global",
+        "clicks": 199,
+        "impressions": 500,
+        "ctr": 39.8,
+        "position": 1.4,
+        "branded": true
+      },
+      {
+        "query": "t roc",
+        "clicks": 92,
+        "impressions": 1986,
+        "ctr": 4.63,
+        "position": 2.1,
+        "branded": true
+      },
+      {
+        "query": "t-roc global",
+        "clicks": 85,
+        "impressions": 268,
+        "ctr": 31.72,
+        "position": 1.1,
+        "branded": true
+      },
+      {
+        "query": "the revenue optimization companies",
+        "clicks": 48,
+        "impressions": 242,
+        "ctr": 19.83,
+        "position": 1.2,
+        "branded": true
+      },
+      {
+        "query": "trocglobal",
+        "clicks": 42,
+        "impressions": 109,
+        "ctr": 38.53,
+        "position": 1,
+        "branded": true
+      },
+      {
+        "query": "t roc global",
+        "clicks": 23,
+        "impressions": 120,
+        "ctr": 19.17,
+        "position": 3.2,
+        "branded": true
+      },
+      {
+        "query": "t-roc - the revenue optimization companies",
+        "clicks": 14,
+        "impressions": 47,
+        "ctr": 29.79,
+        "position": 2.1,
+        "branded": true
+      },
+      {
+        "query": "automated retail machine",
+        "clicks": 11,
+        "impressions": 330,
+        "ctr": 3.33,
+        "position": 9.2,
+        "branded": false
+      },
+      {
+        "query": "t roc the revenue optimization companies",
+        "clicks": 11,
+        "impressions": 23,
+        "ctr": 47.83,
+        "position": 1,
+        "branded": true
+      },
+      {
+        "query": "troc company",
+        "clicks": 10,
+        "impressions": 62,
+        "ctr": 16.13,
+        "position": 2.1,
+        "branded": true
+      },
+      {
+        "query": "brand ambassador",
+        "clicks": 9,
+        "impressions": 3755,
+        "ctr": 0.24,
+        "position": 10.8,
+        "branded": false
+      },
+      {
+        "query": "the retail outsource",
+        "clicks": 9,
+        "impressions": 547,
+        "ctr": 1.65,
+        "position": 26.4,
+        "branded": true
+      },
+      {
+        "query": "t roc merchandising",
+        "clicks": 8,
+        "impressions": 32,
+        "ctr": 25,
+        "position": 6.1,
+        "branded": true
+      },
+      {
+        "query": "retail merchandising services",
+        "clicks": 7,
+        "impressions": 3735,
+        "ctr": 0.19,
+        "position": 10.5,
+        "branded": false
+      },
+      {
+        "query": "t roc company",
+        "clicks": 6,
+        "impressions": 30,
+        "ctr": 20,
+        "position": 3.6,
+        "branded": true
+      },
+      {
+        "query": "t-roc company",
+        "clicks": 6,
+        "impressions": 255,
+        "ctr": 2.35,
+        "position": 1.2,
+        "branded": true
+      },
+      {
+        "query": "trocglobal.com",
+        "clicks": 6,
+        "impressions": 256,
+        "ctr": 2.34,
+        "position": 1,
+        "branded": true
+      },
+      {
+        "query": "walmart zoom background",
+        "clicks": 6,
+        "impressions": 119,
+        "ctr": 5.04,
+        "position": 1,
+        "branded": false
+      },
+      {
+        "query": "automated retail machines",
+        "clicks": 5,
+        "impressions": 267,
+        "ctr": 1.87,
+        "position": 12.1,
+        "branded": false
+      },
+      {
+        "query": "big bang enterprises",
+        "clicks": 5,
+        "impressions": 74,
+        "ctr": 6.76,
+        "position": 5.3,
+        "branded": false
+      },
+      {
+        "query": "brand ambassador programs",
+        "clicks": 5,
+        "impressions": 230,
+        "ctr": 2.17,
+        "position": 25.5,
+        "branded": false
+      },
+      {
+        "query": "revenue optimization companies",
+        "clicks": 5,
+        "impressions": 357,
+        "ctr": 1.4,
+        "position": 13.8,
+        "branded": true
+      },
+      {
+        "query": "the revenue optimization company",
+        "clicks": 5,
+        "impressions": 59,
+        "ctr": 8.47,
+        "position": 3.3,
+        "branded": true
+      },
+      {
+        "query": "another word for brand ambassador",
+        "clicks": 4,
+        "impressions": 163,
+        "ctr": 2.45,
+        "position": 3.8,
+        "branded": false
+      },
+      {
+        "query": "brett beveridge",
+        "clicks": 4,
+        "impressions": 290,
+        "ctr": 1.38,
+        "position": 8.7,
+        "branded": false
+      },
+      {
+        "query": "walmart automated fulfillment center",
+        "clicks": 4,
+        "impressions": 13,
+        "ctr": 30.77,
+        "position": 5.9,
+        "branded": false
+      },
+      {
+        "query": "another word for ambassador",
+        "clicks": 3,
+        "impressions": 180,
+        "ctr": 1.67,
+        "position": 1.4,
+        "branded": false
+      },
+      {
+        "query": "brand ambassador agreement",
+        "clicks": 3,
+        "impressions": 121,
+        "ctr": 2.48,
+        "position": 6.5,
+        "branded": false
+      }
+    ],
+    "lowCtrHighRank": [
+      {
+        "page": "https://trocglobal.com/experiential-retail-pop-up-events/",
+        "clicks": 38,
+        "impressions": 81013,
+        "ctr": 0.05,
+        "position": 5.5
+      },
+      {
+        "page": "https://trocglobal.com/company/",
+        "clicks": 160,
+        "impressions": 56620,
+        "ctr": 0.28,
+        "position": 4.6
+      },
+      {
+        "page": "https://trocglobal.com/retail-automation-distribution-centers-walmart/",
+        "clicks": 95,
+        "impressions": 36608,
+        "ctr": 0.26,
+        "position": 6.4
+      },
+      {
+        "page": "https://trocglobal.com/contact/",
+        "clicks": 166,
+        "impressions": 32702,
+        "ctr": 0.51,
+        "position": 5.8
+      },
+      {
+        "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
+        "clicks": 135,
+        "impressions": 30921,
+        "ctr": 0.44,
+        "position": 9.2
+      },
+      {
+        "page": "https://trocglobal.com/luxury-pop-up-stores-shipping-containers/",
+        "clicks": 23,
+        "impressions": 28742,
+        "ctr": 0.08,
+        "position": 5.2
+      },
+      {
+        "page": "https://trocglobal.com/the-future-of-audio-technology-3-defining-trends-from-ces-2026/",
+        "clicks": 45,
+        "impressions": 27715,
+        "ctr": 0.16,
+        "position": 5.7
+      },
+      {
+        "page": "https://trocglobal.com/automated-retail-trends-arki-insights/",
+        "clicks": 13,
+        "impressions": 26702,
+        "ctr": 0.05,
+        "position": 8.6
+      },
+      {
+        "page": "https://trocglobal.com/despite-the-rise-of-e-commerce-physical-stores-are-here-to-stay/",
+        "clicks": 33,
+        "impressions": 24821,
+        "ctr": 0.13,
+        "position": 6.1
+      },
+      {
+        "page": "https://trocglobal.com/walmart-2026-annual-report-takeaways/",
+        "clicks": 21,
+        "impressions": 22811,
+        "ctr": 0.09,
+        "position": 6.9
+      },
+      {
+        "page": "https://trocglobal.com/experiential-retail-trends-2026-levis-pop-up/",
+        "clicks": 23,
+        "impressions": 21387,
+        "ctr": 0.11,
+        "position": 5.4
+      },
+      {
+        "page": "https://trocglobal.com/retail-revenue-optimization-strategies-multi-location-brands/",
+        "clicks": 2,
+        "impressions": 18010,
+        "ctr": 0.01,
+        "position": 6.2
+      },
+      {
+        "page": "https://trocglobal.com/store-resets-a-complete-guide-to-boosting-retail-sales/",
+        "clicks": 31,
+        "impressions": 14618,
+        "ctr": 0.21,
+        "position": 8
+      },
+      {
+        "page": "https://trocglobal.com/visual-merchandising-examples/",
+        "clicks": 42,
+        "impressions": 12445,
+        "ctr": 0.34,
+        "position": 9.3
+      },
+      {
+        "page": "https://trocglobal.com/brand-ambassador-contract-what-to-look-for/",
+        "clicks": 20,
+        "impressions": 12444,
+        "ctr": 0.16,
+        "position": 6.3
+      },
+      {
+        "page": "https://trocglobal.com/in-store-demonstrations-guide-the-value-of-showcasing-your-products-with-demos-2/",
+        "clicks": 19,
+        "impressions": 11481,
+        "ctr": 0.17,
+        "position": 8.7
+      },
+      {
+        "page": "https://trocglobal.com/community/",
+        "clicks": 3,
+        "impressions": 10000,
+        "ctr": 0.03,
+        "position": 6.7
+      },
+      {
+        "page": "https://trocglobal.com/the-key-benefits-of-brand-ambassadors-boosting-visibility-and-building-trust/",
+        "clicks": 25,
+        "impressions": 9774,
+        "ctr": 0.26,
+        "position": 6.4
+      },
+      {
+        "page": "https://trocglobal.com/pop-up-stores-market-expansion/",
+        "clicks": 5,
+        "impressions": 8457,
+        "ctr": 0.06,
+        "position": 7.3
+      },
+      {
+        "page": "https://trocglobal.com/assembly-services/",
+        "clicks": 73,
+        "impressions": 7845,
+        "ctr": 0.93,
+        "position": 9.7
+      },
+      {
+        "page": "https://trocglobal.com/cashierless-stores-future/",
+        "clicks": 23,
+        "impressions": 7615,
+        "ctr": 0.3,
+        "position": 9.7
+      },
+      {
+        "page": "https://trocglobal.com/world-cup-retail-trends-how-fifa-2026-will-drive-spending-and-foot-traffic/",
+        "clicks": 11,
+        "impressions": 7422,
+        "ctr": 0.15,
+        "position": 6.8
+      },
+      {
+        "page": "https://trocglobal.com/why-brand-ambassadors-still-matter/",
+        "clicks": 25,
+        "impressions": 7053,
+        "ctr": 0.35,
+        "position": 6.8
+      },
+      {
+        "page": "https://trocglobal.com/how-do-i-know-if-a-brand-ambassador-is-legit/",
+        "clicks": 20,
+        "impressions": 6642,
+        "ctr": 0.3,
+        "position": 6.4
+      },
+      {
+        "page": "https://trocglobal.com/final-assembly/",
+        "clicks": 16,
+        "impressions": 6558,
+        "ctr": 0.24,
+        "position": 8.4
+      }
+    ]
+  },
   "caveats": [
     "Ahrefs traffic is a modeled estimate, not measured clicks. Search Console clicks are the source of truth where both are present.",
     "Search Console data lags 2-3 days — Google's pipeline, not a limitation of this dashboard.",
