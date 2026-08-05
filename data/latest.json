@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:36:48.390Z",
+  "generatedAt": "2026-08-05T19:40:09.232Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "summary": {
@@ -572,7 +572,7 @@
       "lcp": 1480,
       "cls": 8,
       "inp": null,
-      "performanceScore": 75
+      "performanceScore": 70
     },
     "desktop": {
       "strategy": "desktop",
@@ -580,7 +580,7 @@
       "lcp": 1812,
       "cls": 6,
       "inp": null,
-      "performanceScore": 93
+      "performanceScore": 100
     }
   },
   "caveats": [
