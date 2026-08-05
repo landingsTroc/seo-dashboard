@@ -34,8 +34,38 @@ Vercel function) that holds the token — not client-side fetching.
 |---|---|---|
 | `AHREFS_API_TOKEN` | yes | All Ahrefs metrics. Get one at <https://ahrefs.com/api> |
 | `GOOGLE_API_KEY` | no | Core Web Vitals via PageSpeed Insights |
+| `GOOGLE_SERVICE_ACCOUNT_JSON` | no | Search Console clicks, impressions, CTR |
 
 Never put these in a file. They belong only in Secrets.
+
+### 1b. Connect Search Console (recommended)
+
+Search Console gives **measured clicks** instead of Ahrefs' modeled estimates, and
+the API is **free and unmetered** — no quota risk. A plain API key will not work:
+
+```
+401 — API keys are not supported by this API.
+      Expected OAuth2 access token or other authentication credentials.
+```
+
+You need a service account:
+
+1. <https://console.cloud.google.com> → create or pick a project
+2. **APIs & Services → Library** → enable **Google Search Console API**
+3. **IAM & Admin → Service Accounts → Create service account** (any name)
+4. Open it → **Keys → Add key → Create new key → JSON** → download
+5. Copy the `client_email` from that file (`…@….iam.gserviceaccount.com`)
+6. **Search Console → Settings → Users and permissions → Add user** → paste that
+   email → permission **Restricted** is enough
+7. Add the **entire JSON file contents** as the `GOOGLE_SERVICE_ACCOUNT_JSON` secret
+
+The connector auto-detects whether the property is registered as
+`sc-domain:trocglobal.com` or `https://trocglobal.com/`. If the service account
+has no access, the run logs exactly which properties it *can* see.
+
+**Search Console data lags 2–3 days.** That is Google's pipeline, not this
+dashboard — no tool can show real-time GSC data. The connector requests up to
+three days before today for that reason.
 
 ### 2. Enable Pages
 
