@@ -1,0 +1,60 @@
+name: Refresh SEO data
+
+on:
+  schedule:
+    # Every 6 hours. GitHub cron is UTC and best-effort — runs can be delayed
+    # under load, so treat the timestamp in the dashboard as authoritative.
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}   # lets you refresh on demand from the Actions tab
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "index.html"
+      - ".github/workflows/refresh.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: seo-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Fetch Ahrefs + PageSpeed data
+        env:
+          # Secrets are injected here and never reach the published page.
+          AHREFS_API_TOKEN: ${{ secrets.AHREFS_API_TOKEN }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          TARGET_DOMAIN: trocglobal.com
+        run: node scripts/fetch-data.mjs
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "seo-bot"
+          git config user.email "seo-bot@users.noreply.github.com"
+          git add data/latest.json
+          if git diff --staged --quiet; then
+            echo "No change in SEO data — nothing to commit."
+          else
+            git commit -m "chore: refresh SEO data $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

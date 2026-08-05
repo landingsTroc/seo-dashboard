@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T-ROC SEO Dashboard</title>
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#FBFCFD;
+    --ink:#121A24; --muted:#586574; --faint:#8A96A5;
+    --line:#E4E9EF; --line-strong:#D3DAE3;
+    --navy:#1E3A5F; --navy-soft:#2E5384; --navy-wash:#EDF2F8;
+    --series:#2E5384; --series-fill:rgba(46,83,132,.13);
+    --good:#157347; --good-bg:#E7F4EC;
+    --warn:#B45309; --warn-bg:#FBEEDF;
+    --crit:#B02A37; --crit-bg:#FBEAEC;
+    --shadow:0 1px 2px rgba(18,26,36,.04), 0 8px 24px -12px rgba(18,26,36,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])){
+      --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+      --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+      --line:#243040; --line-strong:#2E3C4E;
+      --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+      --series:#7FA9DB; --series-fill:rgba(127,169,219,.17);
+      --good:#54D183; --good-bg:#12291C;
+      --warn:#F0A64B; --warn-bg:#2C2110;
+      --crit:#F1808B; --crit-bg:#2C1518;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+    --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+    --line:#243040; --line-strong:#2E3C4E;
+    --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+    --series:#7FA9DB; --series-fill:rgba(127,169,219,.17);
+    --good:#54D183; --good-bg:#12291C;
+    --warn:#F0A64B; --warn-bg:#2C2110;
+    --crit:#F1808B; --crit-bg:#2C1518;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1180px; margin:0 auto; padding:40px 22px 80px;
+    display:flex; flex-direction:column; gap:34px; }
+  .wrap > *{ min-width:0; }
+
+  h1,h2,h3{ margin:0; line-height:1.25; text-wrap:balance; }
+  h1{ font-size:1.7rem; font-weight:650; letter-spacing:-.02em; }
+  h2{ font-size:1.12rem; font-weight:640; }
+  p{ margin:0; }
+  .eyebrow{ font-size:.7rem; font-weight:680; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--navy); }
+  .small{ font-size:.84rem; color:var(--muted); }
+
+  header.top{ border-bottom:2px solid var(--navy); padding-bottom:18px;
+    display:flex; flex-wrap:wrap; align-items:flex-end; gap:12px 20px; }
+  header.top .grow{ flex:1 1 260px; display:flex; flex-direction:column; gap:5px; }
+  .stamp{ font-size:.8rem; color:var(--faint); display:flex; flex-direction:column;
+    align-items:flex-end; gap:3px; text-align:right; }
+  .live-dot{ display:inline-block; width:7px; height:7px; border-radius:50%;
+    background:var(--good); margin-right:6px; }
+
+  section{ display:flex; flex-direction:column; gap:14px; min-width:0; }
+  .sec-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px;
+    border-bottom:1px solid var(--line-strong); padding-bottom:9px; }
+  .sec-head .small{ margin-left:auto; }
+
+  .kpis{ display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; }
+  .kpi{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:15px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:4px; }
+  .kpi .lbl{ font-size:.74rem; color:var(--muted); font-weight:560; }
+  .kpi .val{ font-size:1.65rem; font-weight:660; letter-spacing:-.025em;
+    font-variant-numeric:tabular-nums; line-height:1.05; }
+  .kpi .sub{ font-size:.76rem; color:var(--faint); font-variant-numeric:tabular-nums; }
+
+  .card{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:18px 19px; box-shadow:var(--shadow); display:flex; flex-direction:column;
+    gap:10px; min-width:0; }
+  .grid-2{ display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:14px; }
+
+  .chip{ display:inline-flex; align-items:center; border-radius:100px; padding:2px 9px;
+    font-size:.71rem; font-weight:660; white-space:nowrap; }
+  .c-good{ background:var(--good-bg); color:var(--good); }
+  .c-warn{ background:var(--warn-bg); color:var(--warn); }
+  .c-crit{ background:var(--crit-bg); color:var(--crit); }
+  .c-navy{ background:var(--navy-wash); color:var(--navy); }
+
+  .t-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    background:var(--surface); min-width:0; max-width:100%; }
+  table{ border-collapse:collapse; width:100%; font-size:.87rem; min-width:460px; }
+  th,td{ text-align:left; padding:9px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--surface-2); font-size:.7rem; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--muted); font-weight:660; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  .num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  a{ color:var(--navy-soft); }
+  code{ font-family:var(--mono); font-size:.84em; color:var(--navy); }
+
+  /* brand split bar */
+  .split-bar{ display:flex; height:26px; border-radius:6px; overflow:hidden;
+    border:1px solid var(--line); }
+  .split-bar span{ display:flex; align-items:center; justify-content:center;
+    font-size:.73rem; font-weight:680; color:#fff; }
+  .seg-brand{ background:var(--navy-soft); }
+  .seg-nonbrand{ background:var(--good); }
+  .legend{ display:flex; flex-wrap:wrap; gap:14px; font-size:.79rem; color:var(--muted); }
+  .legend i{ width:10px; height:10px; border-radius:2px; display:inline-block;
+    margin-right:6px; vertical-align:-1px; }
+
+  svg.chart{ width:100%; height:auto; display:block; }
+  .grid-line{ stroke:var(--line); stroke-width:1; }
+  .axis-txt{ fill:var(--faint); font-size:10.5px; font-family:var(--sans);
+    font-variant-numeric:tabular-nums; }
+
+  .empty{ border:1px dashed var(--line-strong); border-radius:10px; padding:26px 20px;
+    text-align:center; color:var(--muted); font-size:.9rem;
+    display:flex; flex-direction:column; gap:8px; }
+  .empty strong{ color:var(--ink); }
+
+  footer{ border-top:1px solid var(--line-strong); padding-top:16px; font-size:.79rem;
+    color:var(--faint); display:flex; flex-direction:column; gap:7px; }
+  footer li{ margin-bottom:4px; }
+
+  @media (max-width:600px){ .wrap{ padding:26px 14px 60px; gap:26px; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="grow">
+      <span class="eyebrow">SEO Dashboard</span>
+      <h1 id="target">trocglobal.com</h1>
+      <span class="small" id="scope">Ahrefs · loading…</span>
+    </div>
+    <div class="stamp">
+      <span id="stamp"><span class="live-dot"></span>Loading…</span>
+      <span id="stamp-rel"></span>
+    </div>
+  </header>
+
+  <div id="error-slot"></div>
+
+  <!-- KPIs -->
+  <section>
+    <div class="sec-head"><h2>Core metrics</h2><span class="small" id="kpi-note"></span></div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <!-- Trend -->
+  <section>
+    <div class="sec-head"><h2>Organic traffic trend</h2><span class="small">Monthly estimate</span></div>
+    <div class="card">
+      <svg class="chart" id="trend" viewBox="0 0 900 260" role="img" aria-label="Monthly organic traffic trend"></svg>
+      <details>
+        <summary class="small" style="cursor:pointer">View data table</summary>
+        <div class="t-wrap" style="margin-top:8px">
+          <table><thead><tr><th>Month</th><th class="num">Organic</th><th class="num">Paid</th></tr></thead>
+          <tbody id="trend-tbody"></tbody></table>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Brand split + CWV -->
+  <div class="grid-2">
+    <section>
+      <div class="sec-head"><h2>Branded vs non-branded</h2></div>
+      <div class="card" id="brand-card"></div>
+    </section>
+    <section>
+      <div class="sec-head"><h2>Core Web Vitals</h2><span class="small">Chrome field data</span></div>
+      <div class="card" id="cwv-card"></div>
+    </section>
+  </div>
+
+  <!-- Dead rankings -->
+  <section>
+    <div class="sec-head">
+      <h2>Rankings earning no clicks</h2>
+      <span class="small">Top-10 position, 150+ volume, zero estimated traffic</span>
+    </div>
+    <div id="dead-slot"></div>
+  </section>
+
+  <!-- Keywords -->
+  <section>
+    <div class="sec-head"><h2>Top keywords</h2><span class="small">By estimated traffic</span></div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Keyword</th><th class="num">Pos</th><th class="num">Volume</th>
+          <th class="num">KD</th><th class="num">Traffic</th><th>Type</th></tr></thead>
+        <tbody id="kw-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Pages -->
+  <section>
+    <div class="sec-head"><h2>Top pages</h2></div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Page</th><th class="num">Traffic</th><th class="num">Keywords</th><th>Top keyword</th></tr></thead>
+        <tbody id="pg-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>How this updates.</strong> A GitHub Action fetches Ahrefs and PageSpeed data on a schedule and commits it to <code>data/latest.json</code>. API tokens live in encrypted repository Secrets and are never sent to your browser.</p>
+    <ul id="caveats" style="margin:0; padding-left:18px"></ul>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var $ = function(id){ return document.getElementById(id); };
+  var nf = function(n){ return n==null ? "—" : Number(n).toLocaleString("en-US"); };
+
+  fetch("data/latest.json?cb=" + Date.now())
+    .then(function(r){
+      if(!r.ok) throw new Error("data/latest.json returned HTTP " + r.status);
+      return r.json();
+    })
+    .then(render)
+    .catch(function(err){
+      $("stamp").innerHTML = "No data";
+      $("error-slot").innerHTML =
+        '<div class="empty"><strong>No data file yet</strong>' +
+        '<span>' + String(err.message) + '</span>' +
+        '<span>Run the <em>Refresh SEO data</em> workflow in the Actions tab, or check that ' +
+        '<code>AHREFS_API_TOKEN</code> is set under Settings → Secrets → Actions.</span></div>';
+    });
+
+  function render(d){
+    $("target").textContent = d.target || "—";
+    $("scope").textContent = "Ahrefs · scope: " + (d.scope || "—");
+
+    var gen = new Date(d.generatedAt);
+    var mins = Math.round((Date.now() - gen.getTime())/60000);
+    var rel = mins < 60 ? mins + " min ago"
+            : mins < 1440 ? Math.round(mins/60) + " h ago"
+            : Math.round(mins/1440) + " d ago";
+    $("stamp").innerHTML = '<span class="live-dot"></span>Updated ' + rel;
+    $("stamp-rel").textContent = gen.toLocaleString();
+
+    // KPIs
+    var s = d.summary || {};
+    var tiles = [
+      ["Organic traffic / mo", nf(s.organicTraffic), s.organicCost ? "$" + nf(Math.round(s.organicCost/1000)) + "K value" : ""],
+      ["Domain Rating", s.domainRating ?? "—", s.ahrefsRank ? "Rank " + nf(s.ahrefsRank) : ""],
+      ["Ranking keywords", nf(s.organicKeywords), s.keywordsTop3 != null ? nf(s.keywordsTop3) + " in top 3" : ""],
+      ["Referring domains", nf(s.liveRefdomains), s.liveBacklinks != null ? nf(s.liveBacklinks) + " backlinks" : ""],
+      ["Paid traffic / mo", nf(s.paidTraffic), ""]
+    ];
+    $("kpis").innerHTML = tiles.map(function(t){
+      return '<div class="kpi"><span class="lbl">'+t[0]+'</span><span class="val">'+t[1]+
+             '</span><span class="sub">'+t[2]+'</span></div>';
+    }).join("");
+
+    drawTrend(d.trafficHistory || []);
+
+    // Brand split — explicitly refuses to render a percentage without data.
+    var b = d.brandSplit || {};
+    var bc = $("brand-card");
+    if(!b.sampleTraffic){
+      bc.innerHTML = '<div class="empty"><strong>Not enough data to report a split</strong>' +
+        '<span>No keyword traffic was returned, so no percentage is shown. ' +
+        'An empty dataset is not evidence of 100% anything.</span></div>';
+    } else {
+      var bp = b.brandedPct, np = b.nonBrandedPct;
+      bc.innerHTML =
+        '<div class="split-bar">' +
+          '<span class="seg-brand" style="width:'+bp+'%">'+(bp>=12?bp+"% branded":"")+'</span>' +
+          '<span class="seg-nonbrand" style="width:'+np+'%">'+(np>=12?np+"% non-branded":"")+'</span>' +
+        '</div>' +
+        '<div class="legend">' +
+          '<span><i style="background:var(--navy-soft)"></i>Branded — '+nf(b.brandedTraffic)+' visits · '+b.brandedCount+' keywords</span>' +
+          '<span><i style="background:var(--good)"></i>Non-branded — '+nf(b.nonBrandedTraffic)+' visits · '+b.nonBrandedCount+' keywords</span>' +
+        '</div>' +
+        '<p class="small">' + (bp > 60
+          ? '<span class="chip c-warn">Heavy brand reliance</span> Most traffic comes from people already searching for T-ROC.'
+          : '<span class="chip c-good">Healthy mix</span> A majority of traffic comes from non-branded discovery.') +
+        '</p>' +
+        '<p class="small">' + (b.note || "") + '</p>';
+    }
+
+    // CWV
+    var cw = d.coreWebVitals || {}, cc = $("cwv-card");
+    if(!cw.mobile && !cw.desktop){
+      cc.innerHTML = '<div class="empty"><strong>No field data</strong>' +
+        '<span>Add <code>GOOGLE_API_KEY</code> as a repository Secret, or this URL has too little Chrome traffic to report.</span></div>';
+    } else {
+      cc.innerHTML = ["mobile","desktop"].map(function(k){
+        var m = cw[k]; if(!m) return "";
+        var cls = m.overall==="FAST" ? "c-good" : m.overall==="AVERAGE" ? "c-warn" : "c-crit";
+        return '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">' +
+          '<strong style="text-transform:capitalize;min-width:70px">'+k+'</strong>' +
+          '<span class="chip '+cls+'">'+(m.overall||"—")+'</span>' +
+          '<span class="small">LCP '+(m.lcp!=null?(m.lcp/1000).toFixed(1)+"s":"—")+
+          ' · CLS '+(m.cls!=null?(m.cls/100).toFixed(2):"—")+
+          ' · INP '+(m.inp!=null?m.inp+"ms":"—")+'</span></div>';
+      }).join("");
+    }
+
+    // Dead rankings
+    var dr = d.deadRankings || [];
+    $("dead-slot").innerHTML = dr.length === 0
+      ? '<div class="empty"><strong>None detected</strong><span>No top-10 rankings with meaningful volume are returning zero traffic.</span></div>'
+      : '<div class="t-wrap"><table><thead><tr><th>Keyword</th><th class="num">Pos</th>' +
+        '<th class="num">Volume</th><th>Page</th></tr></thead><tbody>' +
+        dr.map(function(k){
+          var path = k.url ? k.url.replace(/^https?:\/\/[^/]+/,"") : "—";
+          return '<tr><td>'+esc(k.keyword)+'</td><td class="num">#'+k.position+'</td>' +
+                 '<td class="num">'+nf(k.volume)+'</td><td><code>'+esc(path)+'</code></td></tr>';
+        }).join("") + '</tbody></table></div>';
+
+    // Keywords
+    $("kw-tbody").innerHTML = (d.topKeywords||[]).map(function(k){
+      return '<tr><td>'+esc(k.keyword)+'</td><td class="num">#'+k.position+'</td>' +
+        '<td class="num">'+nf(k.volume)+'</td><td class="num">'+(k.difficulty??"—")+'</td>' +
+        '<td class="num">'+nf(k.traffic)+'</td>' +
+        '<td><span class="chip '+(k.branded?"c-navy":"c-good")+'">'+(k.branded?"Brand":"Non-brand")+'</span></td></tr>';
+    }).join("");
+
+    // Pages
+    $("pg-tbody").innerHTML = (d.topPages||[]).map(function(p){
+      var path = p.url ? p.url.replace(/^https?:\/\/[^/]+/,"") || "/" : "—";
+      return '<tr><td><a href="'+esc(p.url)+'" target="_blank" rel="noopener">'+esc(path)+'</a></td>' +
+        '<td class="num">'+nf(p.traffic)+'</td><td class="num">'+nf(p.keywords)+'</td>' +
+        '<td class="small">'+esc(p.topKeyword||"—")+'</td></tr>';
+    }).join("");
+
+    $("caveats").innerHTML = (d.caveats||[]).map(function(c){ return "<li>"+esc(c)+"</li>"; }).join("");
+    $("kpi-note").textContent = "Scope: " + (d.scope||"");
+  }
+
+  function esc(s){
+    return String(s==null?"":s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+
+  function drawTrend(rows){
+    var svg = $("trend");
+    if(!rows.length){ svg.innerHTML = '<text x="20" y="30" class="axis-txt">No history available</text>'; return; }
+    var W=900,H=260,L=52,R=16,T=16,B=34, pw=W-L-R, ph=H-T-B;
+    var max = Math.max.apply(null, rows.map(function(r){ return r.organic||0; }));
+    var YMAX = Math.ceil(max*1.15/500)*500 || 1000;
+    var NS="http://www.w3.org/2000/svg", out="";
+    function X(i){ return L + (rows.length===1?pw/2:i*(pw/(rows.length-1))); }
+    function Y(v){ return T + (1 - (v||0)/YMAX)*ph; }
+
+    for(var g=0; g<=4; g++){
+      var v = YMAX*g/4, y = Y(v);
+      out += '<line x1="'+L+'" y1="'+y+'" x2="'+(L+pw)+'" y2="'+y+'" class="grid-line"/>';
+      out += '<text x="'+(L-9)+'" y="'+(y+4)+'" class="axis-txt" text-anchor="end">'+Number(v).toLocaleString("en-US")+'</text>';
+    }
+    var dline="", i;
+    for(i=0;i<rows.length;i++) dline += (i?" L":"M")+X(i).toFixed(1)+" "+Y(rows[i].organic).toFixed(1);
+    out += '<path d="'+dline+' L'+X(rows.length-1).toFixed(1)+' '+Y(0)+' L'+X(0).toFixed(1)+' '+Y(0)+' Z" fill="var(--series-fill)"/>';
+    out += '<path d="'+dline+'" fill="none" stroke="var(--series)" stroke-width="2" stroke-linejoin="round"/>';
+    for(i=0;i<rows.length;i++){
+      var last = i===rows.length-1;
+      out += '<circle cx="'+X(i)+'" cy="'+Y(rows[i].organic)+'" r="'+(last?5:3.5)+
+             '" fill="var(--series)" stroke="var(--surface)" stroke-width="2"><title>'+
+             rows[i].date+": "+Number(rows[i].organic||0).toLocaleString("en-US")+' visits</title></circle>';
+      if(i % Math.ceil(rows.length/7) === 0 || last)
+        out += '<text x="'+X(i)+'" y="'+(H-12)+'" class="axis-txt" text-anchor="middle">'+rows[i].date+'</text>';
+    }
+    svg.innerHTML = out;
+
+    $("trend-tbody").innerHTML = rows.map(function(r){
+      return "<tr><td>"+r.date+"</td><td class='num'>"+nf(r.organic)+"</td><td class='num'>"+nf(r.paid)+"</td></tr>";
+    }).join("");
+  }
+})();
+</script>
+</body>
+</html>
