@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO KPI Improvement Plan · trocglobal.com · August 2026</title>
+
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#FBFCFD;
+    --ink:#121A24; --muted:#586574; --faint:#8A96A5;
+    --line:#E4E9EF; --line-strong:#D3DAE3;
+    --navy:#1E3A5F; --navy-soft:#2E5384; --navy-wash:#EDF2F8;
+    --series:#2E5384; --series-fill:rgba(46,83,132,.13);
+    --up:#157347; --up-bg:#E7F4EC;
+    --warn:#B45309; --warn-bg:#FBEEDF;
+    --crit:#B02A37; --crit-bg:#FBEAEC;
+    --shadow:0 1px 2px rgba(18,26,36,.04), 0 8px 24px -12px rgba(18,26,36,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])){
+      --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+      --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+      --line:#243040; --line-strong:#2E3C4E;
+      --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+      --series:#7FA9DB; --series-fill:rgba(127,169,219,.17);
+      --up:#54D183; --up-bg:#12291C;
+      --warn:#F0A64B; --warn-bg:#2C2110;
+      --crit:#F1808B; --crit-bg:#2C1518;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+    --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+    --line:#243040; --line-strong:#2E3C4E;
+    --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+    --series:#7FA9DB; --series-fill:rgba(127,169,219,.17);
+    --up:#54D183; --up-bg:#12291C;
+    --warn:#F0A64B; --warn-bg:#2C2110;
+    --crit:#F1808B; --crit-bg:#2C1518;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+
+  body{ margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.6; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1000px; margin:0 auto; padding:56px 24px 96px; }
+  .stack{ display:flex; flex-direction:column; gap:56px; }
+
+  h1,h2,h3{ text-wrap:balance; margin:0; line-height:1.25; }
+  h1{ font-size:clamp(1.85rem,4vw,2.6rem); font-weight:650; letter-spacing:-.02em; }
+  h2{ font-size:1.3rem; font-weight:640; letter-spacing:-.01em; }
+  h3{ font-size:1.02rem; font-weight:640; }
+  p{ margin:0; max-width:68ch; }
+
+  .eyebrow{ font-size:.72rem; font-weight:680; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--navy); }
+  .lede{ font-size:1.08rem; color:var(--muted); max-width:66ch; }
+  .small{ font-size:.87rem; color:var(--muted); }
+
+  header.masthead{ border-bottom:2px solid var(--navy); padding-bottom:24px;
+    display:flex; flex-direction:column; gap:12px; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:8px 20px; font-size:.83rem; color:var(--faint); }
+
+  section{ display:flex; flex-direction:column; gap:20px; min-width:0; }
+  .sec-head{ display:flex; flex-direction:column; gap:7px;
+    border-bottom:1px solid var(--line-strong); padding-bottom:11px; }
+  /* flex children default to min-width:auto and refuse to shrink below their
+     content, which pushes wide tables past the viewport. Let them shrink so the
+     scroll happens inside .t-wrap instead of on the page body. */
+  .stack > *, section > *, .chart-card > *, .phase > *{ min-width:0; }
+
+  .kpis{ display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:12px; }
+  .kpi{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px 17px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:5px; }
+  .kpi .k-label{ font-size:.75rem; color:var(--muted); font-weight:560; }
+  .kpi .k-val{ font-size:1.7rem; font-weight:660; letter-spacing:-.025em;
+    font-variant-numeric:tabular-nums; line-height:1.05; }
+  .kpi .k-note{ font-size:.78rem; font-weight:580; font-variant-numeric:tabular-nums; }
+  .d-up{ color:var(--up); } .d-down{ color:var(--crit); } .d-flat{ color:var(--muted); }
+
+  .chip{ display:inline-flex; align-items:center; gap:6px; border-radius:100px;
+    padding:2px 10px; font-size:.72rem; font-weight:660; letter-spacing:.02em; white-space:nowrap; }
+  .c-crit{ background:var(--crit-bg); color:var(--crit); }
+  .c-warn{ background:var(--warn-bg); color:var(--warn); }
+  .c-up{ background:var(--up-bg); color:var(--up); }
+  .c-navy{ background:var(--navy-wash); color:var(--navy); }
+
+  .t-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    background:var(--surface); min-width:0; max-width:100%; }
+  table{ border-collapse:collapse; width:100%; font-size:.9rem; min-width:480px; }
+  th,td{ text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--surface-2); font-size:.73rem; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--muted); font-weight:660; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  .num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  td.kw{ font-weight:560; }
+  code{ font-family:var(--mono); font-size:.85em; background:var(--navy-wash);
+    padding:1px 5px; border-radius:4px; color:var(--navy); }
+  .delta{ font-weight:660; font-variant-numeric:tabular-nums; }
+
+  /* chart */
+  .chart-card{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:20px 20px 14px; box-shadow:var(--shadow); display:flex; flex-direction:column;
+    gap:4px; min-width:0; }
+  .chart-title{ font-size:.95rem; font-weight:640; }
+  .chart-sub{ font-size:.8rem; color:var(--muted); }
+  .chart-holder{ position:relative; width:100%; }
+  svg.chart{ width:100%; height:auto; display:block; overflow:visible; }
+  .grid-line{ stroke:var(--line); stroke-width:1; }
+  .axis-txt{ fill:var(--faint); font-size:11px; font-family:var(--sans); font-variant-numeric:tabular-nums; }
+  .pt-label{ fill:var(--ink); font-size:11.5px; font-weight:660; font-family:var(--sans);
+    font-variant-numeric:tabular-nums; }
+  .tip{ position:absolute; pointer-events:none; opacity:0; transition:opacity .12s;
+    background:var(--surface); border:1px solid var(--line-strong); border-radius:7px;
+    padding:7px 10px; font-size:.79rem; box-shadow:var(--shadow); white-space:nowrap; z-index:5; }
+  .tip b{ font-variant-numeric:tabular-nums; }
+  details.data-view{ margin-top:6px; }
+  details.data-view summary{ cursor:pointer; font-size:.8rem; color:var(--navy); font-weight:580;
+    padding:5px 0; }
+  details.data-view summary:focus-visible{ outline:2px solid var(--navy); outline-offset:2px; border-radius:3px; }
+
+  .serp-pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px; }
+  .serp{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:17px 18px; display:flex; flex-direction:column; gap:9px; box-shadow:var(--shadow); }
+  .serp.bad{ border-color:var(--crit); }
+  .serp-url{ font-size:.78rem; color:var(--muted); font-family:var(--mono); }
+  .serp-title{ font-size:1.06rem; font-weight:560; color:var(--navy-soft); line-height:1.35; }
+  .serp.bad .serp-title{ color:var(--crit); }
+  .serp-desc{ font-size:.82rem; color:var(--muted); line-height:1.5; }
+  .serp-tag{ font-size:.71rem; font-weight:680; letter-spacing:.08em; text-transform:uppercase; }
+
+  .phases{ display:flex; flex-direction:column; gap:14px; }
+  .phase{ background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--navy);
+    border-radius:8px; padding:18px 20px; display:flex; flex-direction:column; gap:12px; box-shadow:var(--shadow); }
+  .phase-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 14px; }
+  .phase-n{ font-size:.74rem; font-weight:700; letter-spacing:.1em; color:var(--navy);
+    font-variant-numeric:tabular-nums; }
+  .phase-when{ margin-left:auto; font-size:.79rem; color:var(--faint); font-weight:560; }
+  .phase ul{ margin:0; padding-left:19px; display:flex; flex-direction:column; gap:6px;
+    font-size:.9rem; color:var(--muted); }
+  .phase ul strong{ color:var(--ink); font-weight:600; }
+
+  .callout{ border-radius:10px; padding:17px 19px; display:flex; flex-direction:column; gap:7px;
+    font-size:.9rem; border:1px solid; }
+  .callout h3{ font-size:.93rem; }
+  .co-warn{ background:var(--warn-bg); border-color:var(--warn); color:var(--warn); }
+  .co-warn p{ color:var(--ink); }
+  .co-crit{ background:var(--crit-bg); border-color:var(--crit); color:var(--crit); }
+  .co-crit p{ color:var(--ink); }
+  .co-up{ background:var(--up-bg); border-color:var(--up); color:var(--up); }
+  .co-up p{ color:var(--ink); }
+  .co-navy{ background:var(--navy-wash); border-color:var(--line-strong); }
+  .co-navy p{ color:var(--muted); }
+
+  footer{ border-top:1px solid var(--line-strong); padding-top:20px;
+    font-size:.81rem; color:var(--faint); display:flex; flex-direction:column; gap:9px; }
+  footer p{ max-width:none; }
+
+  @media (prefers-reduced-motion:reduce){ *{ transition:none !important; } }
+  @media (max-width:600px){
+    .wrap{ padding:34px 16px 64px; }
+    .stack{ gap:42px; }
+    .phase-when{ margin-left:0; width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<div class="stack">
+
+  <header class="masthead">
+    <span class="eyebrow">Action plan · 90 days</span>
+    <h1>SEO KPI Improvement Plan</h1>
+    <p class="lede">Two-month performance review, root-cause diagnosis of the organic traffic gap, and a phased recovery roadmap for trocglobal.com.</p>
+    <div class="meta-row">
+      <span>trocglobal.com</span>
+      <span>August 5, 2026</span>
+      <span>Source: Ahrefs API v3 (live snapshots) + direct site inspection</span>
+    </div>
+  </header>
+
+  <!-- ===== SNAPSHOT ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Executive summary</span>
+      <h2>Where we stand today</h2>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span class="k-label">Organic traffic / mo</span>
+        <span class="k-val">5,008</span>
+        <span class="k-note d-up">+52% vs. July</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Traffic value / mo</span>
+        <span class="k-val">$521K</span>
+        <span class="k-note d-up">+20% vs. July</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Ranking keywords</span>
+        <span class="k-val">429</span>
+        <span class="k-note d-down">−17% vs. July</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Keywords in Top&nbsp;3</span>
+        <span class="k-val">191</span>
+        <span class="k-note d-up">+11% vs. June</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Domain Rating</span>
+        <span class="k-val">43</span>
+        <span class="k-note d-up">+1 vs. June</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Non-branded traffic</span>
+        <span class="k-val">22%</span>
+        <span class="k-note d-down">Heavy brand reliance</span>
+      </div>
+    </div>
+
+    <p><strong>Ahrefs shows an August rebound; Search Console does not yet confirm it.</strong> Ahrefs estimates organic traffic rose 52% month over month, from 3,290 in July to 5,008, with Top-3 rankings <strong>+11%</strong> and Domain Rating <strong>42 → 43</strong> over two months. But Google's own data through July 23 shows <strong>impressions down 51.8%</strong> and <strong>127 pages dropped from the index</strong> — detailed below. The authority metrics are real; the traffic rebound is a model output awaiting verification.</p>
+
+    <p>The gap is longer-term. Traffic is still <strong>21% below where it was a year ago</strong> (6,336 → 4,986), and <strong>the homepage alone accounts for 3,049 of 5,008 visits — 61%</strong>, almost entirely from branded searches by people who already know T-ROC. Only <strong>22% of traffic comes from non-branded searches</strong>, meaning prospects who don't yet know us.</p>
+  </section>
+
+  <!-- ===== COMPARISON ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Performance review</span>
+      <h2>Two-month KPI comparison</h2>
+    </div>
+    <p class="small">Ahrefs snapshots taken on the 5th of each month for a like-for-like comparison.</p>
+
+    <div class="chart-card">
+      <span class="chart-title">Monthly organic traffic · trocglobal.com</span>
+      <span class="chart-sub">Estimated visits per month, August 2025 – August 2026</span>
+      <div class="chart-holder">
+        <svg class="chart" id="trend" viewBox="0 0 720 268" role="img"
+             aria-label="Line chart of monthly organic traffic from August 2025 to August 2026. Traffic declines from 6,336 to a low of 3,343 in July 2026, then recovers to 4,986 in August 2026."></svg>
+        <div class="tip" id="tip"></div>
+      </div>
+      <details class="data-view">
+        <summary>View data table</summary>
+        <div class="t-wrap" style="margin-top:8px">
+          <table>
+            <thead><tr><th>Month</th><th class="num">Organic visits</th></tr></thead>
+            <tbody id="dtbody"></tbody>
+          </table>
+        </div>
+      </details>
+    </div>
+
+    <h3>Last month · July 5 → August 5, 2026</h3>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Ahrefs KPI</th><th class="num">Jul 5</th><th class="num">Aug 5</th><th class="num">Change</th><th>Read</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">Organic traffic / mo</td><td class="num">3,290</td><td class="num">5,008</td><td class="num delta d-up">+52.2%</td><td>Strong rebound from the July low</td></tr>
+          <tr><td class="kw">Traffic value / mo</td><td class="num">$433K</td><td class="num">$521K</td><td class="num delta d-up">+20.2%</td><td>Recovered traffic is commercially valuable</td></tr>
+          <tr><td class="kw">Live backlinks</td><td class="num">13,677</td><td class="num">14,928</td><td class="num delta d-up">+9.1%</td><td>Volume up — but see quality note below</td></tr>
+          <tr><td class="kw">Referring domains</td><td class="num">3,234</td><td class="num">3,265</td><td class="num delta d-up">+1.0%</td><td>Growth slowing</td></tr>
+          <tr><td class="kw">Domain Rating</td><td class="num">43</td><td class="num">43</td><td class="num delta d-flat">—</td><td>Held steady</td></tr>
+          <tr><td class="kw">Ranking keywords</td><td class="num">519</td><td class="num">429</td><td class="num delta d-down">−17.3%</td><td>July spike normalized</td></tr>
+          <tr><td class="kw">Keywords in Top 3</td><td class="num">235</td><td class="num">191</td><td class="num delta d-down">−18.7%</td><td>Same correction</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-navy">
+      <h3>The July anomaly is the most important number on this page</h3>
+      <p>In July the site held <strong>its highest-ever ranking counts — 519 keywords and 235 in the Top 3 — and its lowest traffic in twelve months (3,290)</strong>. More top rankings produced less traffic. That combination is not normal, and it is the single strongest piece of evidence that <strong>our rankings are not converting into clicks</strong>. The root cause is identified in the next section.</p>
+    </div>
+
+    <h3>Two-month trend · June 5 → August 5, 2026</h3>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Ahrefs KPI</th><th class="num">Jun 5</th><th class="num">Aug 5</th><th class="num">Change</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="kw">Live backlinks</td><td class="num">11,858</td><td class="num">14,928</td><td class="num delta d-up">+25.9%</td><td><span class="chip c-warn">Quality concern</span></td></tr>
+          <tr><td class="kw">Keywords in Top 3</td><td class="num">172</td><td class="num">191</td><td class="num delta d-up">+11.0%</td><td><span class="chip c-up">Improved</span></td></tr>
+          <tr><td class="kw">Referring domains</td><td class="num">3,065</td><td class="num">3,265</td><td class="num delta d-up">+6.5%</td><td><span class="chip c-warn">Quality concern</span></td></tr>
+          <tr><td class="kw">Ranking keywords</td><td class="num">407</td><td class="num">429</td><td class="num delta d-up">+5.4%</td><td><span class="chip c-up">Improved</span></td></tr>
+          <tr><td class="kw">Organic traffic / mo</td><td class="num">4,785</td><td class="num">5,008</td><td class="num delta d-up">+4.7%</td><td><span class="chip c-up">Improved</span></td></tr>
+          <tr><td class="kw">Domain Rating</td><td class="num">42</td><td class="num">43</td><td class="num delta d-up">+1</td><td><span class="chip c-up">Improved</span></td></tr>
+          <tr><td class="kw">Traffic value / mo</td><td class="num">$525K</td><td class="num">$521K</td><td class="num delta d-flat">−0.8%</td><td><span class="chip c-navy">Flat</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-crit">
+      <h3>Search Console contradicts the Ahrefs rebound — read this before acting on the numbers above</h3>
+      <p>Google Search Console data through <strong>July 23</strong> shows <strong>impressions down 51.8%</strong> — from a June daily average of 16,051 to 7,738 — with <strong>no recovery in the data available</strong>. Over the same window Google <strong>dropped 127 pages out of the index</strong> (821 → 694), in two steps on June 30 and July 10.</p>
+      <p><strong>Important context before reading this as damage:</strong> all <strong>489 pruned pages had zero traffic</strong>, and 279 of them now redirect correctly with no broken links or redirect chains. Removing zero-traffic pages is <em>supposed</em> to reduce impressions — those pages were appearing in search results without ever earning a click. Much of this decline may be the intended effect working as designed.</p>
+      <p>The decisive number is <strong>clicks</strong>, which this export does not contain. If clicks held steady while impressions halved, the consolidation succeeded and click-through rate roughly doubled. If clicks fell in proportion, real traffic was lost. <strong>One Search Console export settles it.</strong></p>
+      <p>Until then, treat both the Ahrefs rebound and this impressions decline as <strong>unconfirmed</strong>, and do not present either as the outcome of the consolidation.</p>
+    </div>
+
+    <div class="callout co-warn">
+      <h3>One caveat on the backlink growth</h3>
+      <p>Backlinks rose 26% in two months, but this is <strong>not a win</strong>. An external spam network is generating links using domains that mimic ours. <strong>84% of incoming link text is spam.</strong> The growth is not earned and should not be reported as an achievement — it is a cleanup item, covered in Phase 4.</p>
+    </div>
+  </section>
+
+  <!-- ===== FINDING ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Key finding</span>
+      <h2>We rank #1 and receive no traffic</h2>
+    </div>
+
+    <p>A cluster of merchandising pages ranks at or near the top of Google for <strong>5,450 monthly searches</strong> yet generates <strong>zero traffic</strong>:</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Page</th><th>Search term</th><th class="num">Vol./mo</th><th class="num">Rank</th><th class="num">Traffic</th></tr></thead>
+        <tbody>
+          <tr><td><code>/merchandising-inventory/</code></td><td class="kw">what is merchandising</td><td class="num">3,000</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/merchandising-services/</code></td><td class="kw">retail merchandising services</td><td class="num">1,000</td><td class="num">#6</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/merchandising-e-commerce/</code></td><td class="kw">ecommerce merchandising</td><td class="num">900</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/retail-merchandising/</code></td><td class="kw">what is retail merchandising</td><td class="num">300</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/staff-scheduling-retail/</code></td><td class="kw">retail scheduling</td><td class="num">250</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The cause: our page titles are cut off in Google</h3>
+    <p>The system that generates the site's titles <strong>truncates them at 50 characters</strong> and then appends <code>- T-ROC</code>. The result is a title that reads as broken at the exact moment a searcher decides whether to click.</p>
+
+    <div class="serp-pair">
+      <div class="serp">
+        <span class="serp-tag" style="color:var(--up)">What it should show</span>
+        <span class="serp-url">trocglobal.com › merchandising-inventory</span>
+        <span class="serp-title">Understanding Merchandising Inventory: A Comprehensive Guide</span>
+        <span class="serp-desc">Understand merchandising inventory management. T-ROC helps brands align product flow with demand…</span>
+      </div>
+      <div class="serp bad">
+        <span class="serp-tag" style="color:var(--crit)">What Google shows today</span>
+        <span class="serp-url">trocglobal.com › merchandising-inventory</span>
+        <span class="serp-title">Understanding Merchandising Inventory: A - T-ROC</span>
+        <span class="serp-desc">Understand merchandising inventory management. T-ROC helps brands align product flow with demand…</span>
+      </div>
+    </div>
+
+    <p>Holding the #1 position with a title that looks broken destroys click-through. Measured across the <strong>61 pages that currently rank</strong>:</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Defect found</th><th class="num">Pages</th><th>Effect</th></tr></thead>
+        <tbody>
+          <tr><td>Title cut off mid-sentence</td><td class="num">12</td><td>Clicks lost on already-ranked results</td></tr>
+          <tr><td>Title tag <strong>completely empty</strong></td><td class="num">3</td><td>Google invents the title; we lose control of the message</td></tr>
+          <tr><td>Brand duplicated <code>| T-ROC - T-ROC</code></td><td class="num">2</td><td>78-character title, truncated on screen</td></tr>
+          <tr><td>No H1 heading</td><td class="num">8</td><td>Google can't identify the page's main topic</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-warn">
+      <h3>Verification required before we invest</h3>
+      <p>This diagnosis rests on Ahrefs data, which <strong>estimates</strong> traffic using a model. Before committing significant effort we will confirm it against <strong>Google Search Console</strong>, which reports actual clicks. High impressions with near-zero clicks confirms the diagnosis; low impressions would mean the ranking data is stale and priorities change.</p>
+    </div>
+  </section>
+
+  <!-- ===== ROOT CAUSES ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Diagnosis</span>
+      <h2>Five root causes</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Cause</th><th>Severity</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Broken page titles</strong><br><span class="small">Cancel out click-through on pages that already rank</span></td>
+            <td><span class="chip c-crit">Critical</span></td>
+            <td>17 pages affected. Fixable in days.</td>
+          </tr>
+          <tr>
+            <td><strong>Cloudflare is blocking crawlers</strong><br><span class="small">Verified Aug 5: the site returns “you have been blocked”</span></td>
+            <td><span class="chip c-crit">Critical</span></td>
+            <td>Requested July 15. <strong>Open for 3 weeks.</strong></td>
+          </tr>
+          <tr>
+            <td><strong>H1 fix never deployed</strong><br><span class="small">Code has been written and waiting since July 15</span></td>
+            <td><span class="chip c-warn">High</span></td>
+            <td>~293 pages. 5-minute activation.</td>
+          </tr>
+          <tr>
+            <td><strong>Contaminated link profile</strong><br><span class="small">External spam network using domains that mimic ours</span></td>
+            <td><span class="chip c-warn">High</span></td>
+            <td>84% of inbound link text is spam.</td>
+          </tr>
+          <tr>
+            <td><strong>Indexation collapse</strong><br><span class="small">127 pages dropped from Google's index; only 39.6% of known pages indexed</span></td>
+            <td><span class="chip c-crit">Critical</span></td>
+            <td>465 crawled-not-indexed, 379 redirect pages failing validation, 90 404s.</td>
+          </tr>
+          <tr>
+            <td><strong>Keyword targets lack volume</strong><br><span class="small">We rank #1 on terms with 40–250 searches/mo</span></td>
+            <td><span class="chip c-navy">Strategic</span></td>
+            <td>Structural ceiling on growth.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="small">On the strategic point: the site <strong>can compete</strong> — we hold #1 for “retail marketing services,” a high-difficulty term. The problem is that most of our top positions sit on very low-volume searches. Meanwhile <strong>“brand ambassador” (18,000 searches/mo) has us at position #14</strong>, with a dozen articles competing against each other and diluting the service page.</p>
+  </section>
+
+  <!-- ===== PLAN ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Roadmap</span>
+      <h2>Four-phase execution plan</h2>
+    </div>
+    <p>Phases are ordered by dependency: Phase 0 unblocks everything else, and Phase 1 carries the highest return per hour of effort.</p>
+
+    <div class="phases">
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">PHASE 0</span>
+          <h3>Unblock</h3>
+          <span class="chip c-crit">Blocks everything else</span>
+          <span class="phase-when">Week 1</span>
+        </div>
+        <ul>
+          <li><strong>Cloudflare / WP Engine:</strong> allow Googlebot, Bingbot and AhrefsBot; review rate-limiting rules. <em>Requires the infrastructure administrator.</em></li>
+          <li><strong>Activate the H1 fix</strong> in WPCode — the code is already written.</li>
+          <li><strong>Lower the Ahrefs crawl rate</strong> to clear false errors from the Health Score.</li>
+          <li><strong>Validate the title diagnosis</strong> against real Search Console click data.</li>
+          <li><strong>Diagnose the 127 de-indexed pages</strong> — identify which URLs left the index on June 30 and July 10, and whether the content consolidation removed pages that were still earning traffic.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">PHASE 0.5</span>
+          <h3>Recover the index</h3>
+          <span class="chip c-crit">New — supersedes Phase 1 in priority</span>
+          <span class="phase-when">Weeks 1–3</span>
+        </div>
+        <ul>
+          <li><strong>Finish the consolidation — it is only 57% done.</strong> Of 489 pages marked for pruning, 279 were redirected but <strong>210 are still live</strong>. These are zero-traffic pages still being crawled, and they are the most likely source of the "crawled, not indexed" backlog.</li>
+          <li><strong>465 pages "crawled, currently not indexed"</strong> — Google saw them and declined. The largest single bucket, and a content-quality signal rather than a technical fault.</li>
+          <li><strong>90 pages returning 404</strong> — these are <em>not</em> from the prune list, which was verified clean with zero 404s. Their source needs identifying.</li>
+          <li><strong>21 pages where Google chose a different canonical</strong> than we specified.</li>
+          <li>Re-submit for validation and monitor the indexed count back toward its 821 peak.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">PHASE 1</span>
+          <h3>Repair the title layer</h3>
+          <span class="chip c-up">Highest return</span>
+          <span class="phase-when">Weeks 1–2</span>
+        </div>
+        <ul>
+          <li>Fix the system that <strong>truncates titles at 50 characters</strong> and eliminate the duplicated brand suffix.</li>
+          <li>Rewrite the <strong>12 truncated titles</strong>, incorporating each page's target search term.</li>
+          <li>Fill the <strong>3 empty titles</strong> and rewrite descriptions across the merchandising cluster.</li>
+          <li><strong>Estimated return: ≈ +500 visits/month (+10% of total traffic), with no new content created.</strong></li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">PHASE 2</span>
+          <h3>Convert near-miss rankings</h3>
+          <span class="phase-when">Weeks 2–4</span>
+        </div>
+        <ul>
+          <li><strong>“retail customer experience”</strong> (2,900/mo, position #4) is currently answered by the wrong article. The largest single opportunity on the site.</li>
+          <li><strong>Zero-difficulty terms sitting at positions 11–12</strong> that need only title and internal-link adjustments.</li>
+          <li>Rebuild internal links to pages orphaned by the content cleanup.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">PHASE 3</span>
+          <h3>Reduce brand dependence</h3>
+          <span class="phase-when">Weeks 4–8</span>
+        </div>
+        <ul>
+          <li>Consolidate the brand-ambassador articles to push the service page toward the Top 10 on an <strong>18,000-searches/month</strong> term.</li>
+          <li>Complete the cleanup of non-performing content.</li>
+          <li><strong>Target: lift non-branded traffic from 22% to 35%.</strong></li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">PHASE 4</span>
+          <h3>Hygiene and defense</h3>
+          <span class="phase-when">Ongoing</span>
+        </div>
+        <ul>
+          <li>File the <strong>disavow of spam links</strong> with Google. <em>This is preventive hygiene, not growth — Google already discounts most of these links.</em></li>
+          <li>Image alt text, missing descriptions, and JavaScript errors.</li>
+          <li><strong>AI answer optimization:</strong> the search terms that lost traffic are definitional — precisely the queries absorbed by Google's AI-generated summaries.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== TARGETS ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Objectives</span>
+      <h2>90-day targets · November 5, 2026</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Metric</th><th class="num">Today</th><th class="num">Target</th><th>Via</th></tr></thead>
+        <tbody>
+          <tr><td>Monthly organic traffic</td><td class="num">5,008</td><td class="num"><strong>6,500</strong></td><td>Phases 1–2</td></tr>
+          <tr><td>Non-branded traffic share</td><td class="num">22%</td><td class="num"><strong>35%</strong></td><td>Phase 3</td></tr>
+          <tr><td>Keywords in Top 3</td><td class="num">191</td><td class="num"><strong>240</strong></td><td>Phases 1–2</td></tr>
+          <tr><td>Ranking keywords</td><td class="num">429</td><td class="num"><strong>500</strong></td><td>Phases 2–3</td></tr>
+          <tr><td>Technical Health Score</td><td class="num">70</td><td class="num"><strong>85+</strong></td><td>Phase 0</td></tr>
+          <tr><td>Domain Rating</td><td class="num">43</td><td class="num">43–45</td><td>Not forced</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Targets are projections based on Ahrefs estimated traffic and the click-through recovery expected once titles are corrected. They will be recalibrated once Search Console data is confirmed.</p>
+  </section>
+
+  <!-- ===== ASKS ===== -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Requirements</span>
+      <h2>What's needed to execute</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Access or decision</th><th>Needed for</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google Search Console</strong></td><td>Validate the diagnosis against real clicks before committing effort</td><td>In progress</td></tr>
+          <tr><td><strong>WPCode on production</strong></td><td>Fix the title system and activate the H1 snippet — <em>blocks Phase 1</em></td><td>Pending</td></tr>
+          <tr><td><strong>WP Engine / Cloudflare admin</strong></td><td>Unblock Google's crawlers</td><td>Pending</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-warn">
+      <h3>Decision point</h3>
+      <p>Without Search Console and WPCode access, <strong>Phase 1 — the highest-return work — cannot be executed</strong>. The infrastructure fixes requested on July 15 remain open and are holding back the recovery.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Methodology.</strong> Ahrefs traffic figures are modeled estimates, not measured clicks; Search Console and GA4 are the source of truth and will be integrated to close the measurement loop. All month-over-month comparisons use snapshots taken on the 5th of each month at identical scope settings.</p>
+    <p>Keyword analysis covers the top 100 of 429 terms (≈91% of traffic); the long tail is unexamined. The branded/non-branded split was classified manually, as Ahrefs' automatic classification proved unreliable for this domain.</p>
+    <p>The 21% year-over-year decline has several simultaneous causes — broken titles, blocked crawlers, content consolidation and pressure from AI-generated answers — and should not be attributed to any single one.</p>
+    <p style="color:var(--faint)">Prepared August 5, 2026 · Data: Ahrefs API v3 and direct inspection of 61 ranking pages.</p>
+  </footer>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var data = [
+    ["Aug 2025",6336],["Sep 2025",5028],["Oct 2025",4614],["Nov 2025",4975],
+    ["Dec 2025",4818],["Jan 2026",5315],["Feb 2026",4507],["Mar 2026",5063],
+    ["Apr 2026",5493],["May 2026",4509],["Jun 2026",4909],["Jul 2026",3343],
+    ["Aug 2026",4986]
+  ];
+  var svg = document.getElementById("trend");
+  var tip = document.getElementById("tip");
+  if(!svg) return;
+
+  var W=720, H=268, L=48, R=14, T=18, B=34;
+  var pw=W-L-R, ph=H-T-B, YMAX=7000;
+  var NS="http://www.w3.org/2000/svg";
+  function el(n,a){ var e=document.createElementNS(NS,n); for(var k in a) e.setAttribute(k,a[k]); return e; }
+  function X(i){ return L + i*(pw/(data.length-1)); }
+  function Y(v){ return T + (1 - v/YMAX)*ph; }
+  function fmt(n){ return n.toLocaleString("en-US"); }
+
+  // gridlines + y labels
+  [0,1750,3500,5250,7000].forEach(function(v){
+    svg.appendChild(el("line",{x1:L,y1:Y(v),x2:L+pw,y2:Y(v),class:"grid-line"}));
+    var t=el("text",{x:L-9,y:Y(v)+4,class:"axis-txt","text-anchor":"end"});
+    t.textContent = v===0 ? "0" : fmt(v);
+    svg.appendChild(t);
+  });
+
+  // area + line
+  var dLine="", dArea="";
+  data.forEach(function(p,i){
+    dLine += (i?" L":"M") + X(i).toFixed(1) + " " + Y(p[1]).toFixed(1);
+  });
+  dArea = dLine + " L"+X(data.length-1).toFixed(1)+" "+Y(0)+" L"+X(0).toFixed(1)+" "+Y(0)+" Z";
+  svg.appendChild(el("path",{d:dArea,fill:"var(--series-fill)",stroke:"none"}));
+  svg.appendChild(el("path",{d:dLine,fill:"none",stroke:"var(--series)","stroke-width":2,
+    "stroke-linejoin":"round","stroke-linecap":"round"}));
+
+  // x labels (every other, plus last)
+  data.forEach(function(p,i){
+    if(i%2!==0 && i!==data.length-1) return;
+    var t=el("text",{x:X(i),y:H-12,class:"axis-txt","text-anchor":"middle"});
+    t.textContent = p[0].replace(" 20","'");
+    svg.appendChild(t);
+  });
+
+  // dots
+  data.forEach(function(p,i){
+    var key = (i===11 || i===12);
+    svg.appendChild(el("circle",{cx:X(i),cy:Y(p[1]),r:key?5:3.5,
+      fill:"var(--series)",stroke:"var(--surface)","stroke-width":2}));
+  });
+
+  // selective direct labels: the trough and the current point
+  [[11,"3,343",-14],[12,"4,986",-16]].forEach(function(s){
+    var t=el("text",{x:X(s[0]),y:Y(data[s[0]][1])+s[2],class:"pt-label","text-anchor":"middle"});
+    t.textContent=s[1]; svg.appendChild(t);
+  });
+
+  // hover layer
+  var cross=el("line",{x1:0,y1:T,x2:0,y2:T+ph,stroke:"var(--line-strong)","stroke-width":1,opacity:0});
+  svg.appendChild(cross);
+  var hit=el("rect",{x:L,y:T,width:pw,height:ph,fill:"transparent"});
+  svg.appendChild(hit);
+  var holder=svg.parentNode;
+
+  function move(ev){
+    var r=svg.getBoundingClientRect();
+    var px=(ev.clientX-r.left)*(W/r.width);
+    var i=Math.round((px-L)/(pw/(data.length-1)));
+    if(i<0)i=0; if(i>data.length-1)i=data.length-1;
+    cross.setAttribute("x1",X(i)); cross.setAttribute("x2",X(i)); cross.setAttribute("opacity",1);
+    tip.innerHTML = data[i][0] + " · <b>" + fmt(data[i][1]) + "</b> visits";
+    tip.style.opacity=1;
+    var lx=(X(i)/W)*r.width, ly=(Y(data[i][1])/H)*r.height;
+    tip.style.left=Math.min(Math.max(lx-tip.offsetWidth/2,0), r.width-tip.offsetWidth)+"px";
+    tip.style.top=Math.max(ly-tip.offsetHeight-14,0)+"px";
+  }
+  hit.addEventListener("mousemove",move);
+  holder.addEventListener("mouseleave",function(){ tip.style.opacity=0; cross.setAttribute("opacity",0); });
+
+  // data table
+  var tb=document.getElementById("dtbody");
+  data.forEach(function(p){
+    var tr=document.createElement("tr");
+    tr.innerHTML="<td>"+p[0]+"</td><td class='num'>"+fmt(p[1])+"</td>";
+    tb.appendChild(tr);
+  });
+})();
+</script>
+</body>
+</html>

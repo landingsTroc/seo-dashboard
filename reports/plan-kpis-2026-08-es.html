@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan de Mejora de KPIs · trocglobal.com · Agosto 2026</title>
+
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#FBFCFD;
+    --ink:#121A24; --muted:#586574; --faint:#8A96A5;
+    --line:#E4E9EF; --line-strong:#D3DAE3;
+    --navy:#1E3A5F; --navy-soft:#2E5384; --navy-wash:#EDF2F8;
+    --up:#157347; --up-bg:#E7F4EC;
+    --warn:#B45309; --warn-bg:#FBEEDF;
+    --crit:#B02A37; --crit-bg:#FBEAEC;
+    --shadow:0 1px 2px rgba(18,26,36,.04), 0 8px 24px -12px rgba(18,26,36,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])){
+      --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+      --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+      --line:#243040; --line-strong:#2E3C4E;
+      --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+      --up:#54D183; --up-bg:#12291C;
+      --warn:#F0A64B; --warn-bg:#2C2110;
+      --crit:#F1808B; --crit-bg:#2C1518;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+    --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+    --line:#243040; --line-strong:#2E3C4E;
+    --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+    --up:#54D183; --up-bg:#12291C;
+    --warn:#F0A64B; --warn-bg:#2C2110;
+    --crit:#F1808B; --crit-bg:#2C1518;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{ max-width:1000px; margin:0 auto; padding:56px 24px 96px; }
+  .stack{ display:flex; flex-direction:column; gap:56px; }
+
+  h1,h2,h3{ text-wrap:balance; margin:0; line-height:1.25; }
+  h1{ font-size:clamp(1.85rem,4vw,2.6rem); font-weight:650; letter-spacing:-.02em; }
+  h2{ font-size:1.3rem; font-weight:640; letter-spacing:-.01em; }
+  h3{ font-size:1.02rem; font-weight:640; }
+  p{ margin:0; max-width:68ch; }
+
+  .eyebrow{
+    font-size:.72rem; font-weight:680; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--navy);
+  }
+  .lede{ font-size:1.08rem; color:var(--muted); max-width:66ch; }
+  .small{ font-size:.87rem; color:var(--muted); }
+
+  header.masthead{ border-bottom:2px solid var(--navy); padding-bottom:24px;
+    display:flex; flex-direction:column; gap:12px; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:8px 20px; font-size:.83rem; color:var(--faint); }
+
+  section{ display:flex; flex-direction:column; gap:20px; }
+  .sec-head{ display:flex; flex-direction:column; gap:7px;
+    border-bottom:1px solid var(--line-strong); padding-bottom:11px; }
+
+  /* KPI tiles */
+  .kpis{ display:grid; grid-template-columns:repeat(auto-fit,minmax(168px,1fr)); gap:12px; }
+  .kpi{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:16px 17px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:5px; }
+  .kpi .k-label{ font-size:.75rem; color:var(--muted); font-weight:560; }
+  .kpi .k-val{ font-size:1.75rem; font-weight:660; letter-spacing:-.025em;
+    font-variant-numeric:tabular-nums; line-height:1.05; }
+  .kpi .k-note{ font-size:.78rem; font-weight:580; font-variant-numeric:tabular-nums; }
+  .d-up{ color:var(--up); } .d-down{ color:var(--crit); } .d-flat{ color:var(--muted); }
+
+  /* chips */
+  .chip{ display:inline-flex; align-items:center; gap:6px; border-radius:100px;
+    padding:2px 10px; font-size:.72rem; font-weight:660; letter-spacing:.02em; white-space:nowrap; }
+  .c-crit{ background:var(--crit-bg); color:var(--crit); }
+  .c-warn{ background:var(--warn-bg); color:var(--warn); }
+  .c-up{ background:var(--up-bg); color:var(--up); }
+  .c-navy{ background:var(--navy-wash); color:var(--navy); }
+
+  /* tables */
+  .t-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+  table{ border-collapse:collapse; width:100%; font-size:.9rem; min-width:520px; }
+  th,td{ text-align:left; padding:11px 14px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--surface-2); font-size:.73rem; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--muted); font-weight:660; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  .num{ text-align:right; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  td.kw{ font-weight:560; }
+  code{ font-family:var(--mono); font-size:.85em; background:var(--navy-wash);
+    padding:1px 5px; border-radius:4px; color:var(--navy); }
+
+  /* SERP mock */
+  .serp-pair{ display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:14px; }
+  .serp{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:17px 18px; display:flex; flex-direction:column; gap:9px; box-shadow:var(--shadow); }
+  .serp.bad{ border-color:var(--crit); }
+  .serp-url{ font-size:.78rem; color:var(--muted); font-family:var(--mono); }
+  .serp-title{ font-size:1.06rem; font-weight:560; color:var(--navy-soft); line-height:1.35; }
+  .serp.bad .serp-title{ color:var(--crit); }
+  .serp-desc{ font-size:.82rem; color:var(--muted); line-height:1.5; }
+  .serp-tag{ font-size:.71rem; font-weight:680; letter-spacing:.08em; text-transform:uppercase; }
+
+  /* phases */
+  .phases{ display:flex; flex-direction:column; gap:14px; }
+  .phase{ background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--navy);
+    border-radius:8px; padding:18px 20px; display:flex; flex-direction:column; gap:12px;
+    box-shadow:var(--shadow); }
+  .phase-head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 14px; }
+  .phase-n{ font-size:.74rem; font-weight:700; letter-spacing:.1em; color:var(--navy);
+    font-variant-numeric:tabular-nums; }
+  .phase-when{ margin-left:auto; font-size:.79rem; color:var(--faint); font-weight:560; }
+  .phase ul{ margin:0; padding-left:19px; display:flex; flex-direction:column; gap:6px;
+    font-size:.9rem; color:var(--muted); }
+  .phase ul strong{ color:var(--ink); font-weight:600; }
+
+  /* callout */
+  .callout{ border-radius:10px; padding:17px 19px; display:flex; flex-direction:column; gap:7px;
+    font-size:.9rem; border:1px solid; }
+  .callout h3{ font-size:.93rem; }
+  .co-warn{ background:var(--warn-bg); border-color:var(--warn); color:var(--warn); }
+  .co-warn p{ color:var(--ink); }
+  .co-navy{ background:var(--navy-wash); border-color:var(--line-strong); }
+  .co-navy p{ color:var(--muted); }
+
+  footer{ border-top:1px solid var(--line-strong); padding-top:20px;
+    font-size:.81rem; color:var(--faint); display:flex; flex-direction:column; gap:9px; }
+  footer p{ max-width:none; }
+
+  @media (max-width:600px){
+    .wrap{ padding:34px 16px 64px; }
+    .stack{ gap:42px; }
+    .phase-when{ margin-left:0; width:100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<div class="stack">
+
+  <header class="masthead">
+    <span class="eyebrow">Plan de acción · 90 días</span>
+    <h1>Plan de Mejora de KPIs SEO</h1>
+    <p class="lede">Diagnóstico de la caída de tráfico orgánico en trocglobal.com, causa raíz identificada y hoja de ruta de recuperación.</p>
+    <div class="meta-row">
+      <span>trocglobal.com</span>
+      <span>5 de agosto, 2026</span>
+      <span>Fuente: Ahrefs API v3 (datos live) + inspección directa del sitio</span>
+    </div>
+  </header>
+
+  <!-- ============ RESUMEN ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Resumen ejecutivo</span>
+      <h2>Dónde estamos</h2>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi">
+        <span class="k-label">Tráfico orgánico / mes</span>
+        <span class="k-val">5,001</span>
+        <span class="k-note d-down">−21% interanual</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Keywords posicionadas</span>
+        <span class="k-val">429</span>
+        <span class="k-note d-down">−8% vs. julio (468)</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Keywords en Top-3</span>
+        <span class="k-val">192</span>
+        <span class="k-note d-down">−10% vs. julio (213)</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Domain Rating</span>
+        <span class="k-val">43</span>
+        <span class="k-note d-flat">Estable</span>
+      </div>
+      <div class="kpi">
+        <span class="k-label">Tráfico NO de marca</span>
+        <span class="k-val">22%</span>
+        <span class="k-note d-down">Alta dependencia de marca</span>
+      </div>
+    </div>
+
+    <p>El sitio recibe aproximadamente <strong>5,001 visitas orgánicas al mes</strong>, un <strong>21% menos que hace un año</strong> (6,336 → 4,986). El reporte de julio mostró un crecimiento del 50% en keywords; ese avance <strong>se revirtió parcialmente</strong> durante el último mes.</p>
+
+    <p>El dato de fondo más relevante para el negocio: <strong>la página de inicio concentra 3,049 de las 5,001 visitas (61%)</strong>, y casi todas provienen de búsquedas de marca —gente que ya conoce T-ROC. Sólo el <strong>22% del tráfico llega por búsquedas no relacionadas con la marca</strong>, es decir, clientes potenciales que aún no nos conocen.</p>
+
+    <div class="callout co-navy">
+      <h3>La buena noticia</h3>
+      <p>La causa principal de la caída no es la competencia ni la calidad del contenido: es un <strong>defecto técnico corregible</strong> que está anulando el rendimiento de páginas que ya ocupan el primer lugar en Google. La capacidad de posicionar existe; lo que falla es la conversión de esa posición en visitas.</p>
+    </div>
+  </section>
+
+  <!-- ============ HALLAZGO ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Hallazgo principal</span>
+      <h2>Estamos en la posición #1 y no recibimos visitas</h2>
+    </div>
+
+    <p>Existe un grupo de páginas de <em>merchandising</em> posicionadas en los primeros lugares de Google para <strong>5,450 búsquedas mensuales</strong> que, sin embargo, <strong>generan cero tráfico</strong>:</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead>
+          <tr><th>Página</th><th>Búsqueda</th><th class="num">Vol./mes</th><th class="num">Posición</th><th class="num">Tráfico</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>/merchandising-inventory/</code></td><td class="kw">what is merchandising</td><td class="num">3,000</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/merchandising-services/</code></td><td class="kw">retail merchandising services</td><td class="num">1,000</td><td class="num">#6</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/merchandising-e-commerce/</code></td><td class="kw">ecommerce merchandising</td><td class="num">900</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/retail-merchandising/</code></td><td class="kw">what is retail merchandising</td><td class="num">300</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+          <tr><td><code>/staff-scheduling-retail/</code></td><td class="kw">retail scheduling</td><td class="num">250</td><td class="num">#1</td><td class="num"><strong>0</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Por qué ocurre: los títulos aparecen cortados en Google</h3>
+    <p>El sistema que genera los títulos del sitio los <strong>corta a 50 caracteres</strong> y después añade <code>- T-ROC</code>. El resultado es un título que se lee incompleto justo en el momento en que el usuario decide si hacer clic.</p>
+
+    <div class="serp-pair">
+      <div class="serp">
+        <span class="serp-tag" style="color:var(--up)">Lo que debería verse</span>
+        <span class="serp-url">trocglobal.com › merchandising-inventory</span>
+        <span class="serp-title">Understanding Merchandising Inventory: A Comprehensive Guide</span>
+        <span class="serp-desc">Understand merchandising inventory management. T-ROC helps brands align product flow with demand…</span>
+      </div>
+      <div class="serp bad">
+        <span class="serp-tag" style="color:var(--crit)">Lo que Google muestra hoy</span>
+        <span class="serp-url">trocglobal.com › merchandising-inventory</span>
+        <span class="serp-title">Understanding Merchandising Inventory: A - T-ROC</span>
+        <span class="serp-desc">Understand merchandising inventory management. T-ROC helps brands align product flow with demand…</span>
+      </div>
+    </div>
+
+    <p>Estar en primer lugar con un título que parece roto destruye la tasa de clic. Medido sobre las <strong>61 páginas que posicionan</strong>:</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Defecto detectado</th><th class="num">Páginas</th><th>Efecto</th></tr></thead>
+        <tbody>
+          <tr><td>Título cortado a media frase</td><td class="num">12</td><td>Pérdida de clics en resultados ya posicionados</td></tr>
+          <tr><td>Título <strong>completamente vacío</strong></td><td class="num">3</td><td>Google inventa el título; se pierde el control del mensaje</td></tr>
+          <tr><td>Marca duplicada <code>| T-ROC - T-ROC</code></td><td class="num">2</td><td>Título de 78 caracteres, se corta en pantalla</td></tr>
+          <tr><td>Sin etiqueta H1</td><td class="num">8</td><td>Google no identifica el tema principal de la página</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-warn">
+      <h3>Verificación pendiente antes de invertir</h3>
+      <p>Este diagnóstico se apoya en datos de Ahrefs, que <strong>estima</strong> el tráfico mediante un modelo. Antes de destinar esfuerzo mayor, se confirmará con <strong>Google Search Console</strong>, que reporta clics reales. Muchas impresiones con clics cercanos a cero confirmaría el diagnóstico; pocas impresiones significaría que la posición está desactualizada y la prioridad cambia.</p>
+    </div>
+  </section>
+
+  <!-- ============ CAUSAS ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Diagnóstico</span>
+      <h2>Cinco causas raíz</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Causa</th><th>Severidad</th><th>Situación</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Títulos rotos</strong><br><span class="small">Anulan el CTR de páginas ya posicionadas</span></td>
+            <td><span class="chip c-crit">Crítica</span></td>
+            <td>17 páginas afectadas. Corregible en días.</td>
+          </tr>
+          <tr>
+            <td><strong>Cloudflare bloquea rastreadores</strong><br><span class="small">Verificado el 5 de agosto: el sitio responde «you have been blocked»</span></td>
+            <td><span class="chip c-crit">Crítica</span></td>
+            <td>Solicitado el 15 de julio. <strong>Sin resolver, 3 semanas.</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Corrección de H1 sin desplegar</strong><br><span class="small">El código está escrito desde el 15 de julio</span></td>
+            <td><span class="chip c-warn">Alta</span></td>
+            <td>~293 páginas. Activación de 5 minutos.</td>
+          </tr>
+          <tr>
+            <td><strong>Perfil de enlaces contaminado</strong><br><span class="small">Red de spam externa usando dominios similares al nuestro</span></td>
+            <td><span class="chip c-warn">Alta</span></td>
+            <td>84% de los enlaces entrantes son spam.</td>
+          </tr>
+          <tr>
+            <td><strong>Selección de keywords sin volumen</strong><br><span class="small">Somos #1 en términos de 40–250 búsquedas/mes</span></td>
+            <td><span class="chip c-navy">Estratégica</span></td>
+            <td>Techo estructural de crecimiento.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="small">Sobre el punto estratégico: el sitio <strong>sí puede competir</strong> —ocupamos el #1 en «retail marketing services», un término de dificultad alta. El problema es que la mayoría de nuestras primeras posiciones están en búsquedas de muy bajo volumen. Mientras tanto, <strong>«brand ambassador» (18,000 búsquedas/mes) nos tiene en posición #14</strong>, con una docena de artículos compitiendo entre sí y diluyendo la página de servicio.</p>
+  </section>
+
+  <!-- ============ PLAN ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Hoja de ruta</span>
+      <h2>Plan de ejecución en cuatro fases</h2>
+    </div>
+    <p>Las fases están ordenadas por dependencia: la Fase 0 desbloquea el resto y la Fase 1 concentra el mayor retorno por esfuerzo.</p>
+
+    <div class="phases">
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">FASE 0</span>
+          <h3>Desbloquear</h3>
+          <span class="chip c-crit">Bloquea todo lo demás</span>
+          <span class="phase-when">Semana 1</span>
+        </div>
+        <ul>
+          <li><strong>Cloudflare / WP Engine:</strong> permitir el acceso de Googlebot, Bingbot y AhrefsBot; revisar reglas de rate-limiting. <em>Requiere al administrador de infraestructura.</em></li>
+          <li><strong>Activar la corrección de H1</strong> en WPCode — el código ya está listo.</li>
+          <li><strong>Ajustar velocidad de rastreo</strong> en Ahrefs para eliminar errores falsos del Health Score.</li>
+          <li><strong>Validar el diagnóstico</strong> de títulos con datos reales de Search Console.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">FASE 1</span>
+          <h3>Reparar los títulos</h3>
+          <span class="chip c-up">Mayor retorno</span>
+          <span class="phase-when">Semanas 1–2</span>
+        </div>
+        <ul>
+          <li>Corregir el sistema que <strong>corta los títulos a 50 caracteres</strong> y evitar la duplicación de marca.</li>
+          <li>Reescribir los <strong>12 títulos cortados</strong>, incorporando el término de búsqueda objetivo.</li>
+          <li>Completar los <strong>3 títulos vacíos</strong> y las descripciones del grupo de merchandising.</li>
+          <li><strong>Retorno estimado: ≈ +500 visitas/mes (+10% del tráfico total), sin crear contenido nuevo.</strong></li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">FASE 2</span>
+          <h3>Capitalizar posiciones cercanas</h3>
+          <span class="phase-when">Semanas 2–4</span>
+        </div>
+        <ul>
+          <li><strong>«retail customer experience»</strong> (2,900/mes, posición #4): hoy responde un artículo equivocado. Es la mayor oportunidad individual del sitio.</li>
+          <li>Términos de <strong>dificultad cero en posiciones 11–12</strong> que sólo requieren ajustes de título y enlaces internos.</li>
+          <li>Reconstruir enlaces internos hacia las páginas que quedaron aisladas tras la limpieza de contenido.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">FASE 3</span>
+          <h3>Reducir la dependencia de marca</h3>
+          <span class="phase-when">Semanas 4–8</span>
+        </div>
+        <ul>
+          <li>Consolidar los artículos de <em>brand ambassador</em> para impulsar la página de servicio hacia el Top-10 en un término de <strong>18,000 búsquedas/mes</strong>.</li>
+          <li>Completar la limpieza de contenido sin rendimiento.</li>
+          <li><strong>Objetivo: elevar el tráfico no de marca del 22% al 35%.</strong></li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">FASE 4</span>
+          <h3>Higiene y defensa</h3>
+          <span class="phase-when">Continuo</span>
+        </div>
+        <ul>
+          <li>Presentar ante Google la <strong>desautorización de los enlaces de spam</strong>. <em>Es higiene preventiva, no crecimiento: Google mayormente ya los ignora.</em></li>
+          <li>Texto alternativo en imágenes, descripciones faltantes y errores de JavaScript.</li>
+          <li><strong>Optimización para respuestas de IA:</strong> las búsquedas que perdieron tráfico son de tipo definición —justo las que absorben los resúmenes generados por IA de Google.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ METAS ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Objetivos</span>
+      <h2>Metas a 90 días · 5 de noviembre, 2026</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Indicador</th><th class="num">Hoy</th><th class="num">Meta</th><th>Vía</th></tr></thead>
+        <tbody>
+          <tr><td>Tráfico orgánico mensual</td><td class="num">5,001</td><td class="num"><strong>6,500</strong></td><td>Fases 1–2</td></tr>
+          <tr><td>Tráfico no de marca</td><td class="num">22%</td><td class="num"><strong>35%</strong></td><td>Fase 3</td></tr>
+          <tr><td>Keywords en Top-3</td><td class="num">192</td><td class="num"><strong>240</strong></td><td>Fases 1–2</td></tr>
+          <tr><td>Keywords posicionadas</td><td class="num">429</td><td class="num"><strong>500</strong></td><td>Fases 2–3</td></tr>
+          <tr><td>Health Score técnico</td><td class="num">70</td><td class="num"><strong>85+</strong></td><td>Fase 0</td></tr>
+          <tr><td>Domain Rating</td><td class="num">43</td><td class="num">43–45</td><td>Sin forzar</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Las metas son proyecciones basadas en el tráfico estimado por Ahrefs y en la recuperación de tasa de clic esperada tras corregir los títulos. Se recalibrarán una vez confirmados los datos de Search Console.</p>
+  </section>
+
+  <!-- ============ DECISIONES ============ -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Requerimientos</span>
+      <h2>Qué se necesita para ejecutar</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Acceso o decisión</th><th>Necesario para</th><th>Responsable</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Google Search Console</strong></td><td>Validar el diagnóstico con clics reales antes de invertir esfuerzo</td><td>En proceso</td></tr>
+          <tr><td><strong>WPCode en producción</strong></td><td>Corregir el sistema de títulos y activar los H1 — <em>bloquea la Fase 1</em></td><td>Pendiente</td></tr>
+          <tr><td><strong>Administrador WP Engine / Cloudflare</strong></td><td>Desbloquear el acceso de los rastreadores de Google</td><td>Pendiente</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-warn">
+      <h3>Punto de decisión</h3>
+      <p>Sin acceso a Search Console y a WPCode, <strong>la Fase 1 —la de mayor retorno— no puede ejecutarse</strong>. Las correcciones de infraestructura solicitadas el 15 de julio siguen abiertas y están frenando la recuperación.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Notas metodológicas.</strong> Las cifras de tráfico de Ahrefs son estimaciones modeladas, no clics medidos; Search Console y GA4 son la fuente de verdad y se integrarán para cerrar el ciclo de medición.</p>
+    <p>El análisis de keywords cubre las 100 principales de 429 (≈91% del tráfico); la cola larga no está examinada. La separación entre tráfico de marca y no de marca se realizó manualmente, ya que la clasificación automática de Ahrefs resultó poco fiable para este dominio.</p>
+    <p>La caída del 21% responde a varias causas simultáneas —títulos rotos, bloqueo de rastreadores, limpieza de contenido y presión de los resúmenes de IA—; no debe atribuirse a una sola.</p>
+    <p style="color:var(--faint)">Preparado el 5 de agosto de 2026 · Datos: Ahrefs API v3 e inspección directa de 61 páginas posicionadas.</p>
+  </footer>
+
+</div>
+</div>
+</body>
+</html>
