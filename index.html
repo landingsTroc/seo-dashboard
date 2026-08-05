@@ -269,8 +269,11 @@
     var rel = mins < 60 ? mins + " min ago"
             : mins < 1440 ? Math.round(mins/60) + " h ago"
             : Math.round(mins/1440) + " d ago";
-    $("stamp").innerHTML = '<span class="live-dot"></span>Updated ' + rel;
-    $("stamp-rel").textContent = gen.toLocaleString();
+    var stale = mins > 60 * 36;   // more than ~1.5 daily cycles missed
+    $("stamp").innerHTML = '<span class="live-dot"' +
+      (stale ? ' style="background:var(--warn)"' : '') + '></span>Updated ' + rel;
+    $("stamp-rel").textContent = gen.toLocaleString() +
+      (stale ? " — refresh may be failing; check the Actions tab" : "");
 
     // KPIs
     var s = d.summary || {};

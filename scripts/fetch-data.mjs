@@ -202,7 +202,23 @@ async function main() {
   }
 }
 
-main().catch((err) => {
+main().catch(async (err) => {
   console.error("Fetch failed:", err.message);
-  process.exit(1);
+
+  // Quota exhaustion and transient API errors must not wipe or block the site.
+  // Leave the existing data/latest.json untouched and let the deploy proceed —
+  // the dashboard surfaces its own age, so stale data is visible, not silent.
+  const { access } = await import("node:fs/promises");
+  try {
+    await access("data/latest.json");
+    console.warn("Keeping the existing data/latest.json. The site will publish with stale data.");
+    if (/units limit reached/i.test(err.message)) {
+      console.warn("Ahrefs API units are exhausted. Each run costs ~3,300 units; " +
+        "reduce the schedule or wait for the monthly reset rather than re-running.");
+    }
+    process.exit(0);
+  } catch {
+    console.error("No existing data/latest.json to fall back on — failing so this is not silent.");
+    process.exit(1);
+  }
 });

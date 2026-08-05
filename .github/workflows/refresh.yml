@@ -2,9 +2,10 @@ name: Refresh SEO data
 
 on:
   schedule:
-    # Every 6 hours. GitHub cron is UTC and best-effort — runs can be delayed
-    # under load, so treat the timestamp in the dashboard as authoritative.
-    - cron: "0 */6 * * *"
+    # Once daily. The Ahrefs API is metered per unit and each run costs ~3,300
+    # units, so 6-hourly polling exhausts a month's quota fast. SEO metrics do
+    # not move meaningfully within a day. GitHub cron is UTC and best-effort.
+    - cron: "0 6 * * *"
   workflow_dispatch: {}   # lets you refresh on demand from the Actions tab
   push:
     branches: [main]
@@ -32,7 +33,11 @@ jobs:
         with:
           node-version: "20"
 
+      # A failed refresh must never block publishing. If Ahrefs is rate-limited or
+      # down, the site still deploys with the last good data and the dashboard
+      # shows how stale it is.
       - name: Fetch Ahrefs + PageSpeed data
+        continue-on-error: true
         env:
           # Secrets are injected here and never reach the published page.
           AHREFS_API_TOKEN: ${{ secrets.AHREFS_API_TOKEN }}
