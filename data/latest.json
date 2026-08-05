@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-08-05T19:45:00.490Z",
+  "generatedAt": "2026-08-05T21:38:26.284Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
+  "sources": {
+    "ahrefs": {
+      "ok": false,
+      "error": "Ahrefs metrics-history → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 533, API units left: 296.\"\n}",
+      "asOf": "2026-08-05T19:45:00.490Z"
+    },
+    "searchConsole": {
+      "ok": false,
+      "error": null,
+      "asOf": null
+    }
+  },
   "summary": {
     "domainRating": 43,
     "ahrefsRank": 1221939,
@@ -583,9 +595,11 @@
       "performanceScore": 99
     }
   },
+  "searchConsole": null,
   "caveats": [
-    "Ahrefs traffic is a modeled estimate, not measured clicks. Search Console is the source of truth.",
-    "Keyword data covers the top 100 by traffic — the Ahrefs plan in use ignores pagination offset.",
+    "Ahrefs traffic is a modeled estimate, not measured clicks. Search Console clicks are the source of truth where both are present.",
+    "Search Console data lags 2-3 days — Google's pipeline, not a limitation of this dashboard.",
+    "Ahrefs keyword data covers the top 100 by traffic; that plan ignores pagination offset.",
     "Branded/non-branded is classified by explicit pattern match; Ahrefs' is_branded flag is unreliable for this domain."
   ]
 }
