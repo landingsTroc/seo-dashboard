@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T21:38:26.284Z",
+  "generatedAt": "2026-08-05T21:48:02.884Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
@@ -10,7 +10,7 @@
     },
     "searchConsole": {
       "ok": false,
-      "error": null,
+      "error": "error:1E08010C:DECODER routines::unsupported",
       "asOf": null
     }
   },
