@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-08-05T21:49:37.454Z",
+  "generatedAt": "2026-08-05T22:10:25.666Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
       "ok": false,
-      "error": "Ahrefs metrics-history → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 533, API units left: 112.\"\n}",
+      "error": "Ahrefs refdomains-history → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 78, API units left: 62.\"\n}",
       "asOf": "2026-08-05T19:45:00.490Z"
     },
     "searchConsole": {
       "ok": false,
-      "error": null,
+      "error": "service account has no access to trocglobal.com. Properties it can see: (none). Add its client_email under Search Console → Settings → Users and permissions.",
       "asOf": null
     }
   },
