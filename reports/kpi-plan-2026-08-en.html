@@ -181,6 +181,9 @@
       <span>August 5, 2026</span>
       <span>Source: Ahrefs API v3 (live snapshots) + direct site inspection</span>
     </div>
+    <p class="small" style="margin-top:4px">Live metrics dashboard:
+      <a href="https://landingstroc.github.io/seo-dashboard/" style="color:var(--navy-soft)">landingstroc.github.io/seo-dashboard</a>
+      — refreshes daily from the Ahrefs API. This document is a point-in-time analysis; the dashboard is the current number.</p>
   </header>
 
   <!-- ===== SNAPSHOT ===== -->
@@ -547,7 +550,13 @@
       <table>
         <thead><tr><th>Access or decision</th><th>Needed for</th><th>Owner</th></tr></thead>
         <tbody>
-          <tr><td><strong>Google Search Console</strong></td><td>Validate the diagnosis against real clicks before committing effort</td><td>In progress</td></tr>
+          <tr>
+            <td><strong>Search Console — grant the service account access</strong><br>
+              <span class="small">Settings → Users and permissions → Add user →
+              <code>claude@explore-oculus-lp.iam.gserviceaccount.com</code> (Restricted)</span></td>
+            <td>The connection is built, authenticated and deployed. It currently returns <strong>403 — no properties visible</strong>. This single permission unlocks measured clicks and CTR, and settles the title diagnosis. <em>Requires a verified property owner.</em></td>
+            <td><span class="chip c-crit">Blocked</span></td>
+          </tr>
           <tr><td><strong>WPCode on production</strong></td><td>Fix the title system and activate the H1 snippet — <em>blocks Phase 1</em></td><td>Pending</td></tr>
           <tr><td><strong>WP Engine / Cloudflare admin</strong></td><td>Unblock Google's crawlers</td><td>Pending</td></tr>
         </tbody>
