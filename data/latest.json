@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-05T19:30:50.001Z",
+  "generatedAt": "2026-08-05T19:33:20.337Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "summary": {
@@ -505,8 +505,22 @@
   ],
   "deadRankings": [],
   "coreWebVitals": {
-    "mobile": null,
-    "desktop": null
+    "mobile": {
+      "strategy": "mobile",
+      "overall": "AVERAGE",
+      "lcp": 1480,
+      "cls": 8,
+      "inp": null,
+      "performanceScore": 85
+    },
+    "desktop": {
+      "strategy": "desktop",
+      "overall": "AVERAGE",
+      "lcp": 1812,
+      "cls": 6,
+      "inp": null,
+      "performanceScore": 99
+    }
   },
   "caveats": [
     "Ahrefs traffic is a modeled estimate, not measured clicks. Search Console is the source of truth.",
