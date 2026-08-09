@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-08-08T08:07:35.057Z",
+  "generatedAt": "2026-08-09T08:10:24.193Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
       "ok": false,
-      "error": "Ahrefs backlinks-stats → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 50, API units left: 0.\"\n}",
+      "error": "Ahrefs domain-rating → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 50, API units left: 0.\"\n}",
       "asOf": "2026-08-05T19:45:00.490Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-08-08T08:07:35.058Z"
+      "asOf": "2026-08-09T08:10:24.193Z"
     }
   },
   "summary": {
@@ -598,22 +598,15 @@
   "searchConsole": {
     "siteUrl": "https://trocglobal.com/",
     "dateRange": {
-      "startDate": "2026-05-07",
-      "endDate": "2026-08-05"
+      "startDate": "2026-05-08",
+      "endDate": "2026-08-06"
     },
     "totals": {
-      "clicks": 3988,
-      "impressions": 1216957,
+      "clicks": 3997,
+      "impressions": 1216165,
       "ctr": 0.33
     },
     "daily": [
-      {
-        "date": "2026-05-07",
-        "clicks": 48,
-        "impressions": 10642,
-        "ctr": 0.45,
-        "position": 8.5
-      },
       {
         "date": "2026-05-08",
         "clicks": 37,
@@ -1243,144 +1236,151 @@
         "impressions": 10617,
         "ctr": 0.59,
         "position": 16.4
+      },
+      {
+        "date": "2026-08-06",
+        "clicks": 57,
+        "impressions": 9850,
+        "ctr": 0.58,
+        "position": 17.3
       }
     ],
     "brandSplitByClicks": {
-      "brandedClicks": 1223,
-      "nonBrandedClicks": 258,
-      "sampleClicks": 1481,
-      "brandedPct": 82.6,
-      "nonBrandedPct": 17.4,
+      "brandedClicks": 1218,
+      "nonBrandedClicks": 260,
+      "sampleClicks": 1478,
+      "brandedPct": 82.4,
+      "nonBrandedPct": 17.6,
       "note": "Measured clicks from Search Console — supersedes the Ahrefs-modeled split."
     },
     "topQueries": [
       {
         "query": "troc",
-        "clicks": 411,
-        "impressions": 5564,
-        "ctr": 7.39,
+        "clicks": 412,
+        "impressions": 5556,
+        "ctr": 7.42,
         "position": 3.4,
         "branded": true
       },
       {
         "query": "t-roc",
-        "clicks": 217,
-        "impressions": 1524,
-        "ctr": 14.24,
+        "clicks": 216,
+        "impressions": 1510,
+        "ctr": 14.3,
         "position": 1.7,
         "branded": true
       },
       {
         "query": "troc global",
-        "clicks": 203,
-        "impressions": 501,
-        "ctr": 40.52,
+        "clicks": 204,
+        "impressions": 499,
+        "ctr": 40.88,
         "position": 1.4,
         "branded": true
       },
       {
         "query": "t roc",
-        "clicks": 92,
-        "impressions": 1969,
-        "ctr": 4.67,
+        "clicks": 90,
+        "impressions": 1964,
+        "ctr": 4.58,
         "position": 2.1,
         "branded": true
       },
       {
         "query": "t-roc global",
-        "clicks": 88,
-        "impressions": 273,
-        "ctr": 32.23,
+        "clicks": 86,
+        "impressions": 271,
+        "ctr": 31.73,
         "position": 1.1,
         "branded": true
       },
       {
         "query": "the revenue optimization companies",
-        "clicks": 44,
-        "impressions": 243,
-        "ctr": 18.11,
-        "position": 1.2,
+        "clicks": 45,
+        "impressions": 242,
+        "ctr": 18.6,
+        "position": 1,
         "branded": true
       },
       {
         "query": "trocglobal",
         "clicks": 43,
-        "impressions": 107,
-        "ctr": 40.19,
+        "impressions": 108,
+        "ctr": 39.81,
         "position": 1,
         "branded": true
       },
       {
         "query": "t roc global",
-        "clicks": 23,
-        "impressions": 122,
-        "ctr": 18.85,
+        "clicks": 24,
+        "impressions": 126,
+        "ctr": 19.05,
         "position": 3.1,
         "branded": true
       },
       {
         "query": "t-roc - the revenue optimization companies",
-        "clicks": 14,
-        "impressions": 47,
-        "ctr": 29.79,
+        "clicks": 13,
+        "impressions": 46,
+        "ctr": 28.26,
         "position": 2.2,
         "branded": true
       },
       {
         "query": "automated retail machine",
         "clicks": 11,
-        "impressions": 334,
-        "ctr": 3.29,
+        "impressions": 339,
+        "ctr": 3.24,
         "position": 9.2,
         "branded": false
       },
       {
-        "query": "t roc the revenue optimization companies",
-        "clicks": 10,
-        "impressions": 21,
-        "ctr": 47.62,
-        "position": 1,
-        "branded": true
-      },
-      {
         "query": "troc company",
         "clicks": 10,
-        "impressions": 60,
-        "ctr": 16.67,
-        "position": 2.1,
+        "impressions": 59,
+        "ctr": 16.95,
+        "position": 2.2,
         "branded": true
       },
       {
         "query": "brand ambassador",
         "clicks": 9,
-        "impressions": 3893,
+        "impressions": 3938,
         "ctr": 0.23,
         "position": 10.7,
         "branded": false
+      },
+      {
+        "query": "t roc the revenue optimization companies",
+        "clicks": 9,
+        "impressions": 19,
+        "ctr": 47.37,
+        "position": 1,
+        "branded": true
       },
       {
         "query": "the retail outsource",
         "clicks": 9,
         "impressions": 536,
         "ctr": 1.68,
-        "position": 26.5,
-        "branded": true
-      },
-      {
-        "query": "t roc merchandising",
-        "clicks": 8,
-        "impressions": 32,
-        "ctr": 25,
-        "position": 6.1,
+        "position": 26.8,
         "branded": true
       },
       {
         "query": "retail merchandising services",
         "clicks": 7,
-        "impressions": 3818,
+        "impressions": 3884,
         "ctr": 0.18,
         "position": 10.2,
         "branded": false
+      },
+      {
+        "query": "t roc merchandising",
+        "clicks": 7,
+        "impressions": 31,
+        "ctr": 22.58,
+        "position": 6.3,
+        "branded": true
       },
       {
         "query": "t-roc company",
@@ -1401,8 +1401,8 @@
       {
         "query": "trocglobal.com",
         "clicks": 6,
-        "impressions": 252,
-        "ctr": 2.38,
+        "impressions": 249,
+        "ctr": 2.41,
         "position": 1,
         "branded": true
       },
@@ -1417,16 +1417,16 @@
       {
         "query": "automated retail machines",
         "clicks": 5,
-        "impressions": 273,
-        "ctr": 1.83,
+        "impressions": 274,
+        "ctr": 1.82,
         "position": 12.2,
         "branded": false
       },
       {
         "query": "big bang enterprises",
         "clicks": 5,
-        "impressions": 72,
-        "ctr": 6.94,
+        "impressions": 70,
+        "ctr": 7.14,
         "position": 5.2,
         "branded": false
       },
@@ -1435,29 +1435,21 @@
         "clicks": 5,
         "impressions": 236,
         "ctr": 2.12,
-        "position": 24.8,
+        "position": 24.5,
         "branded": false
-      },
-      {
-        "query": "the revenue optimization company",
-        "clicks": 5,
-        "impressions": 57,
-        "ctr": 8.77,
-        "position": 3.3,
-        "branded": true
       },
       {
         "query": "another word for brand ambassador",
         "clicks": 4,
-        "impressions": 159,
-        "ctr": 2.52,
+        "impressions": 160,
+        "ctr": 2.5,
         "position": 3.6,
         "branded": false
       },
       {
         "query": "brett beveridge",
         "clicks": 4,
-        "impressions": 297,
+        "impressions": 296,
         "ctr": 1.35,
         "position": 8.8,
         "branded": false
@@ -1471,26 +1463,34 @@
         "branded": true
       },
       {
+        "query": "the revenue optimization company",
+        "clicks": 4,
+        "impressions": 56,
+        "ctr": 7.14,
+        "position": 3.4,
+        "branded": true
+      },
+      {
         "query": "troc logo",
         "clicks": 4,
-        "impressions": 50,
-        "ctr": 8,
-        "position": 1.5,
+        "impressions": 49,
+        "ctr": 8.16,
+        "position": 1.6,
         "branded": true
       },
       {
         "query": "walmart automated fulfillment center",
         "clicks": 4,
-        "impressions": 14,
-        "ctr": 28.57,
-        "position": 6,
+        "impressions": 15,
+        "ctr": 26.67,
+        "position": 6.3,
         "branded": false
       },
       {
         "query": "walmart automation",
         "clicks": 4,
-        "impressions": 165,
-        "ctr": 2.42,
+        "impressions": 170,
+        "ctr": 2.35,
         "position": 8.3,
         "branded": false
       }
@@ -1499,177 +1499,177 @@
       {
         "page": "https://trocglobal.com/experiential-retail-pop-up-events/",
         "clicks": 40,
-        "impressions": 79232,
+        "impressions": 78960,
         "ctr": 0.05,
         "position": 5.5
       },
       {
         "page": "https://trocglobal.com/company/",
-        "clicks": 159,
-        "impressions": 51797,
+        "clicks": 158,
+        "impressions": 50256,
         "ctr": 0.31,
         "position": 4.7
       },
       {
         "page": "https://trocglobal.com/retail-automation-distribution-centers-walmart/",
-        "clicks": 102,
-        "impressions": 37071,
+        "clicks": 104,
+        "impressions": 37227,
         "ctr": 0.28,
         "position": 6.4
       },
       {
         "page": "https://trocglobal.com/contact/",
-        "clicks": 160,
-        "impressions": 31287,
+        "clicks": 158,
+        "impressions": 30801,
         "ctr": 0.51,
-        "position": 6
+        "position": 6.1
       },
       {
         "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
-        "clicks": 133,
-        "impressions": 30824,
-        "ctr": 0.43,
-        "position": 9.3
+        "clicks": 135,
+        "impressions": 30777,
+        "ctr": 0.44,
+        "position": 9.4
       },
       {
         "page": "https://trocglobal.com/luxury-pop-up-stores-shipping-containers/",
         "clicks": 22,
-        "impressions": 28789,
+        "impressions": 28819,
         "ctr": 0.08,
         "position": 5.2
       },
       {
         "page": "https://trocglobal.com/the-future-of-audio-technology-3-defining-trends-from-ces-2026/",
-        "clicks": 48,
-        "impressions": 28045,
+        "clicks": 49,
+        "impressions": 28118,
         "ctr": 0.17,
         "position": 5.7
       },
       {
         "page": "https://trocglobal.com/automated-retail-trends-arki-insights/",
         "clicks": 14,
-        "impressions": 27501,
+        "impressions": 27724,
         "ctr": 0.05,
         "position": 8.7
       },
       {
         "page": "https://trocglobal.com/despite-the-rise-of-e-commerce-physical-stores-are-here-to-stay/",
         "clicks": 33,
-        "impressions": 23995,
+        "impressions": 23812,
         "ctr": 0.14,
-        "position": 6.1
+        "position": 6.2
       },
       {
         "page": "https://trocglobal.com/walmart-2026-annual-report-takeaways/",
         "clicks": 21,
-        "impressions": 23043,
+        "impressions": 22675,
         "ctr": 0.09,
-        "position": 6.9
+        "position": 7
       },
       {
         "page": "https://trocglobal.com/experiential-retail-trends-2026-levis-pop-up/",
-        "clicks": 25,
-        "impressions": 21983,
-        "ctr": 0.11,
-        "position": 5.4
+        "clicks": 27,
+        "impressions": 22175,
+        "ctr": 0.12,
+        "position": 5.5
       },
       {
         "page": "https://trocglobal.com/retail-revenue-optimization-strategies-multi-location-brands/",
         "clicks": 2,
-        "impressions": 18043,
+        "impressions": 18056,
         "ctr": 0.01,
         "position": 6.2
       },
       {
         "page": "https://trocglobal.com/store-resets-a-complete-guide-to-boosting-retail-sales/",
-        "clicks": 30,
-        "impressions": 15081,
+        "clicks": 31,
+        "impressions": 15253,
         "ctr": 0.2,
         "position": 8
       },
       {
         "page": "https://trocglobal.com/visual-merchandising-examples/",
         "clicks": 44,
-        "impressions": 12746,
-        "ctr": 0.35,
+        "impressions": 12991,
+        "ctr": 0.34,
         "position": 9.3
       },
       {
         "page": "https://trocglobal.com/brand-ambassador-contract-what-to-look-for/",
         "clicks": 20,
-        "impressions": 12228,
+        "impressions": 12175,
         "ctr": 0.16,
         "position": 6.3
       },
       {
         "page": "https://trocglobal.com/in-store-demonstrations-guide-the-value-of-showcasing-your-products-with-demos-2/",
         "clicks": 18,
-        "impressions": 11512,
+        "impressions": 11541,
         "ctr": 0.16,
         "position": 8.9
       },
       {
         "page": "https://trocglobal.com/the-key-benefits-of-brand-ambassadors-boosting-visibility-and-building-trust/",
         "clicks": 27,
-        "impressions": 9839,
+        "impressions": 9845,
         "ctr": 0.27,
         "position": 6.4
       },
       {
-        "page": "https://trocglobal.com/community/",
-        "clicks": 3,
-        "impressions": 8767,
-        "ctr": 0.03,
-        "position": 7
-      },
-      {
         "page": "https://trocglobal.com/pop-up-stores-market-expansion/",
         "clicks": 5,
-        "impressions": 8538,
+        "impressions": 8568,
         "ctr": 0.06,
         "position": 7.4
       },
       {
+        "page": "https://trocglobal.com/community/",
+        "clicks": 3,
+        "impressions": 8390,
+        "ctr": 0.04,
+        "position": 7.1
+      },
+      {
         "page": "https://trocglobal.com/assembly-services/",
         "clicks": 73,
-        "impressions": 7929,
+        "impressions": 7948,
         "ctr": 0.92,
         "position": 9.7
       },
       {
         "page": "https://trocglobal.com/cashierless-stores-future/",
-        "clicks": 22,
-        "impressions": 7634,
-        "ctr": 0.29,
+        "clicks": 23,
+        "impressions": 7645,
+        "ctr": 0.3,
         "position": 9.9
       },
       {
         "page": "https://trocglobal.com/world-cup-retail-trends-how-fifa-2026-will-drive-spending-and-foot-traffic/",
         "clicks": 11,
-        "impressions": 7425,
+        "impressions": 7426,
         "ctr": 0.15,
         "position": 6.8
       },
       {
         "page": "https://trocglobal.com/how-do-i-know-if-a-brand-ambassador-is-legit/",
         "clicks": 20,
-        "impressions": 6776,
-        "ctr": 0.3,
+        "impressions": 6803,
+        "ctr": 0.29,
         "position": 6.5
-      },
-      {
-        "page": "https://trocglobal.com/why-brand-ambassadors-still-matter/",
-        "clicks": 26,
-        "impressions": 6757,
-        "ctr": 0.38,
-        "position": 6.8
       },
       {
         "page": "https://trocglobal.com/final-assembly/",
         "clicks": 16,
-        "impressions": 6537,
+        "impressions": 6531,
         "ctr": 0.24,
         "position": 8.4
+      },
+      {
+        "page": "https://trocglobal.com/why-brand-ambassadors-still-matter/",
+        "clicks": 26,
+        "impressions": 6420,
+        "ctr": 0.4,
+        "position": 7
       }
     ]
   },
