@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-08-12T18:01:19.252Z",
+  "generatedAt": "2026-08-12T18:13:13.550Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
       "ok": false,
-      "error": "Ahrefs metrics → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 50, API units left: 0.\"\n}",
+      "error": "Ahrefs domain-rating → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 50, API units left: 0.\"\n}",
       "asOf": "2026-08-05T19:45:00.490Z"
     },
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-08-12T18:01:19.252Z"
+      "asOf": "2026-08-12T18:13:13.550Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-08-12T18:01:19.252Z"
+      "asOf": "2026-08-12T18:13:13.550Z"
     }
   },
   "summary": {
@@ -590,7 +590,7 @@
       "cls": 8,
       "inp": 139,
       "inpScope": "origin",
-      "performanceScore": 75
+      "performanceScore": 72
     },
     "desktop": {
       "strategy": "desktop",
@@ -2227,6 +2227,280 @@
             "ctr": 0,
             "position": 1.8,
             "shareOfPageImpressions": 0.38
+          }
+        ]
+      }
+    ],
+    "termPages": [
+      {
+        "term": "brand ambassador",
+        "totalImpressions": 4012,
+        "totalClicks": 10,
+        "competingPages": 13,
+        "pages": [
+          {
+            "page": "https://trocglobal.com/services/brand-ambassadors/",
+            "clicks": 9,
+            "impressions": 3832,
+            "ctr": 0.23,
+            "position": 10.5
+          },
+          {
+            "page": "https://trocglobal.com/how-does-a-brand-ambassador-work-2/",
+            "clicks": 0,
+            "impressions": 107,
+            "ctr": 0,
+            "position": 17.8
+          },
+          {
+            "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
+            "clicks": 0,
+            "impressions": 41,
+            "ctr": 0,
+            "position": 8.3
+          },
+          {
+            "page": "https://trocglobal.com/measuring-brand-ambassador-program-success/",
+            "clicks": 0,
+            "impressions": 10,
+            "ctr": 0,
+            "position": 3.7
+          },
+          {
+            "page": "https://trocglobal.com/influencer-vs-brand-ambassador-marketing-whats-the-difference/",
+            "clicks": 1,
+            "impressions": 6,
+            "ctr": 16.67,
+            "position": 2.3
+          },
+          {
+            "page": "https://trocglobal.com/brand-ambassador-marketing/",
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 3
+          },
+          {
+            "page": "https://trocglobal.com/growing-your-brand-ambassador-program/",
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 2.3
+          },
+          {
+            "page": "https://trocglobal.com/brand-ambassador-contract-what-to-look-for/",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 2.5
+          },
+          {
+            "page": "https://trocglobal.com/the-key-benefits-of-brand-ambassadors-boosting-visibility-and-building-trust/",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 2
+          },
+          {
+            "page": "https://trocglobal.com/choosing-a-brand-ambassador/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 3
+          },
+          {
+            "page": "https://trocglobal.com/how-do-i-know-if-a-brand-ambassador-is-legit/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 3
+          },
+          {
+            "page": "https://trocglobal.com/product-demonstrator-vs-brand-ambassador-whats-the-difference/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 1
+          },
+          {
+            "page": "https://trocglobal.com/why-brand-ambassadors-still-matter/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 6
+          }
+        ]
+      },
+      {
+        "term": "brand ambassadors",
+        "totalImpressions": 153,
+        "totalClicks": 0,
+        "competingPages": 3,
+        "pages": [
+          {
+            "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
+            "clicks": 0,
+            "impressions": 79,
+            "ctr": 0,
+            "position": 37.5
+          },
+          {
+            "page": "https://trocglobal.com/services/brand-ambassadors/",
+            "clicks": 0,
+            "impressions": 71,
+            "ctr": 0,
+            "position": 38
+          },
+          {
+            "page": "https://trocglobal.com/how-does-a-brand-ambassador-work-2/",
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 4
+          }
+        ]
+      },
+      {
+        "term": "brand ambassador programs",
+        "totalImpressions": 233,
+        "totalClicks": 6,
+        "competingPages": 3,
+        "pages": [
+          {
+            "page": "https://trocglobal.com/services/brand-ambassadors/",
+            "clicks": 6,
+            "impressions": 231,
+            "ctr": 2.6,
+            "position": 23.4
+          },
+          {
+            "page": "https://trocglobal.com/growing-your-brand-ambassador-program/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 11
+          },
+          {
+            "page": "https://trocglobal.com/how-does-a-brand-ambassador-work-2/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4
+          }
+        ]
+      },
+      {
+        "term": "retail merchandising services",
+        "totalImpressions": 4208,
+        "totalClicks": 7,
+        "competingPages": 4,
+        "pages": [
+          {
+            "page": "https://trocglobal.com/merchandising-services/",
+            "clicks": 7,
+            "impressions": 3574,
+            "ctr": 0.2,
+            "position": 8.5
+          },
+          {
+            "page": "https://trocglobal.com/services/merchandising/",
+            "clicks": 0,
+            "impressions": 613,
+            "ctr": 0,
+            "position": 32.4
+          },
+          {
+            "page": "https://trocglobal.com/what-is-retail-merchandising/",
+            "clicks": 0,
+            "impressions": 12,
+            "ctr": 0,
+            "position": 58.1
+          },
+          {
+            "page": "https://trocglobal.com/retail-merchandising/",
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 62.3
+          }
+        ]
+      },
+      {
+        "term": "merchandising services",
+        "totalImpressions": 1649,
+        "totalClicks": 1,
+        "competingPages": 2,
+        "pages": [
+          {
+            "page": "https://trocglobal.com/merchandising-services/",
+            "clicks": 1,
+            "impressions": 1613,
+            "ctr": 0.06,
+            "position": 8.1
+          },
+          {
+            "page": "https://trocglobal.com/services/merchandising/",
+            "clicks": 0,
+            "impressions": 36,
+            "ctr": 0,
+            "position": 44.8
+          }
+        ]
+      },
+      {
+        "term": "retail merchandising",
+        "totalImpressions": 4960,
+        "totalClicks": 0,
+        "competingPages": 7,
+        "pages": [
+          {
+            "page": "https://trocglobal.com/retail-merchandising/",
+            "clicks": 0,
+            "impressions": 2446,
+            "ctr": 0,
+            "position": 39.6
+          },
+          {
+            "page": "https://trocglobal.com/merchandising-services/",
+            "clicks": 0,
+            "impressions": 1289,
+            "ctr": 0,
+            "position": 27.9
+          },
+          {
+            "page": "https://trocglobal.com/what-is-retail-merchandising/",
+            "clicks": 0,
+            "impressions": 1161,
+            "ctr": 0,
+            "position": 61.4
+          },
+          {
+            "page": "https://trocglobal.com/services/merchandising/",
+            "clicks": 0,
+            "impressions": 33,
+            "ctr": 0,
+            "position": 55.8
+          },
+          {
+            "page": "https://trocglobal.com/retail-merchandising-secrets/",
+            "clicks": 0,
+            "impressions": 29,
+            "ctr": 0,
+            "position": 87.9
+          },
+          {
+            "page": "https://trocglobal.com/retail-merchandising-trends/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 15
+          },
+          {
+            "page": "https://trocglobal.com/visual-merchandising/",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 1
           }
         ]
       }
