@@ -150,8 +150,6 @@ async function collectAhrefs() {
   }
   const sampleTraffic = brandedTraffic + nonBrandedTraffic;
 
-  const [mobile, desktop] = await Promise.all([pagespeed("mobile"), pagespeed("desktop")]);
-
   // "Rankings that earn no clicks" — ranked top 10, decent volume, zero traffic.
   // Derived from the volume-sorted set for the reason noted above.
   const byVolume = volResp.keywords ?? [];
@@ -196,10 +194,18 @@ async function collectAhrefs() {
     deadRankings: deadRankings.map((k) => ({
       keyword: k.keyword, position: k.best_position, volume: k.volume, url: k.best_position_url,
     })),
-    coreWebVitals: { mobile, desktop },
     _log: `traffic ${metrics?.metrics?.org_traffic}, DR ${dr?.domain_rating?.domain_rating}, ` +
       `${deadRankings.length} dead rankings (from ${byVolume.length} volume-sorted keywords)`,
   };
+}
+
+/** PageSpeed is its own source. It was previously fetched inside the Ahrefs
+ *  collector, which meant an Ahrefs quota 403 silently froze Core Web Vitals
+ *  too — even though PageSpeed was working fine. */
+async function collectPageSpeed() {
+  const [mobile, desktop] = await Promise.all([pagespeed("mobile"), pagespeed("desktop")]);
+  if (!mobile && !desktop) return null;
+  return { mobile, desktop };
 }
 
 async function main() {
@@ -225,6 +231,21 @@ async function main() {
     }
     if (!prev) throw new Error(`Ahrefs failed with no previous data to fall back on: ${err.message}`);
     console.warn("Reusing the previous Ahrefs data.");
+  }
+
+  let cwv = null, cwvError = null;
+  try {
+    cwv = await collectPageSpeed();
+    if (cwv) {
+      const m = cwv.mobile;
+      console.log(`PageSpeed OK — mobile ${m?.overall ?? "n/a"}, LCP ${m?.lcp ?? "—"}ms, ` +
+        `INP ${m?.inp ?? "—"}${m?.inpScope === "origin" ? " (origin-level)" : ""}`);
+    } else {
+      console.warn("PageSpeed returned no field data.");
+    }
+  } catch (err) {
+    cwvError = err.message;
+    console.warn(`PageSpeed FAILED — ${err.message}`);
   }
 
   let gsc = null, gscError = null;
@@ -264,6 +285,7 @@ async function main() {
     scope: `${MODE} · US`,
     sources: {
       ahrefs: { ok: !!ahrefs, error: ahrefsError, asOf: ahrefs ? new Date().toISOString() : prev?.sources?.ahrefs?.asOf ?? prev?.generatedAt ?? null },
+      pageSpeed: { ok: !!cwv, error: cwvError, asOf: cwv ? new Date().toISOString() : prev?.sources?.pageSpeed?.asOf ?? null },
       searchConsole: { ok: !!gsc, error: gscError, asOf: gsc ? new Date().toISOString() : prev?.sources?.searchConsole?.asOf ?? null },
     },
     summary: a?.summary ?? {},
@@ -273,7 +295,7 @@ async function main() {
     topKeywords: a?.topKeywords ?? [],
     topPages: a?.topPages ?? [],
     deadRankings: a?.deadRankings ?? [],
-    coreWebVitals: a?.coreWebVitals ?? {},
+    coreWebVitals: cwv ?? prev?.coreWebVitals ?? {},
     ahrefsHistory,
     searchConsole: gsc ?? prev?.searchConsole ?? null,
     caveats: [

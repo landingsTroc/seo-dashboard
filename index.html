@@ -211,7 +211,7 @@
       <div class="card" id="brand-card"></div>
     </section>
     <section>
-      <div class="sec-head"><h2>Core Web Vitals</h2><span class="small">Chrome field data</span></div>
+      <div class="sec-head"><h2>Core Web Vitals</h2><span class="small" id="cwv-note">Chrome field data</span></div>
       <div class="card" id="cwv-card"></div>
     </section>
   </div>
@@ -409,6 +409,8 @@
        if one API failed, its numbers can be days old while the page still reads
        "updated just now". Each source states its own age. */
     $("kpi-note").innerHTML = "Scope: " + esc(d.scope||"") + " · " + sourceAge(d, "ahrefs", "Ahrefs");
+    var cn = $("cwv-note");
+    if (cn) cn.innerHTML = "Chrome field data · " + sourceAge(d, "pageSpeed", "PageSpeed");
     var gr = $("gsc-range");
     if (d.searchConsole && gr) {
       gr.innerHTML = d.searchConsole.dateRange.startDate + " → " + d.searchConsole.dateRange.endDate +
