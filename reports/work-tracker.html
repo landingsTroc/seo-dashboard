@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Work Tracker · trocglobal.com</title>
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#FBFCFD;
+    --ink:#121A24; --muted:#586574; --faint:#8A96A5;
+    --line:#E4E9EF; --line-strong:#D3DAE3;
+    --navy:#1E3A5F; --navy-soft:#2E5384; --navy-wash:#EDF2F8;
+    --up:#157347; --up-bg:#E7F4EC;
+    --warn:#B45309; --warn-bg:#FBEEDF;
+    --crit:#B02A37; --crit-bg:#FBEAEC;
+    --shadow:0 1px 2px rgba(18,26,36,.04), 0 8px 24px -12px rgba(18,26,36,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])){
+      --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+      --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+      --line:#243040; --line-strong:#2E3C4E;
+      --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+      --up:#54D183; --up-bg:#12291C;
+      --warn:#F0A64B; --warn-bg:#2C2110;
+      --crit:#F1808B; --crit-bg:#2C1518;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+    --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+    --line:#243040; --line-strong:#2E3C4E;
+    --navy:#7FA9DB; --navy-soft:#A9C6EA; --navy-wash:#16222F;
+    --up:#54D183; --up-bg:#12291C;
+    --warn:#F0A64B; --warn-bg:#2C2110;
+    --crit:#F1808B; --crit-bg:#2C1518;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:48px 22px 90px;
+    display:flex; flex-direction:column; gap:44px; }
+  .wrap > *{ min-width:0; }
+
+  h1,h2,h3{ margin:0; line-height:1.25; text-wrap:balance; }
+  h1{ font-size:clamp(1.7rem,4vw,2.3rem); font-weight:650; letter-spacing:-.02em; }
+  h2{ font-size:1.22rem; font-weight:640; }
+  p{ margin:0; max-width:70ch; }
+  .eyebrow{ font-size:.71rem; font-weight:680; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--navy); }
+  .small{ font-size:.85rem; color:var(--muted); }
+
+  header.top{ border-bottom:2px solid var(--navy); padding-bottom:20px;
+    display:flex; flex-direction:column; gap:10px; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:6px 18px; font-size:.82rem; color:var(--faint); }
+
+  section{ display:flex; flex-direction:column; gap:16px; min-width:0; }
+  section > *{ min-width:0; }
+  .sec-head{ display:flex; flex-direction:column; gap:6px;
+    border-bottom:1px solid var(--line-strong); padding-bottom:10px; }
+
+  .counts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .count{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:15px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:3px; }
+  .count .n{ font-size:1.9rem; font-weight:660; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1; }
+  .count .l{ font-size:.76rem; color:var(--muted); font-weight:560; }
+  .n-done{ color:var(--up); } .n-block{ color:var(--crit); }
+  .n-next{ color:var(--warn); } .n-watch{ color:var(--navy); }
+
+  .t-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    background:var(--surface); min-width:0; max-width:100%; }
+  table{ border-collapse:collapse; width:100%; font-size:.88rem; min-width:560px; }
+  th,td{ text-align:left; padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--surface-2); font-size:.7rem; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--muted); font-weight:660; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  td.date{ white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--faint); font-size:.82rem; }
+  code{ font-family:var(--mono); font-size:.85em; background:var(--navy-wash);
+    padding:1px 5px; border-radius:4px; color:var(--navy); }
+  a{ color:var(--navy-soft); }
+
+  .chip{ display:inline-flex; align-items:center; border-radius:100px; padding:2px 9px;
+    font-size:.7rem; font-weight:660; white-space:nowrap; }
+  .c-done{ background:var(--up-bg); color:var(--up); }
+  .c-block{ background:var(--crit-bg); color:var(--crit); }
+  .c-next{ background:var(--warn-bg); color:var(--warn); }
+  .c-info{ background:var(--navy-wash); color:var(--navy); }
+
+  .callout{ border-radius:10px; padding:16px 18px; display:flex; flex-direction:column;
+    gap:7px; font-size:.89rem; border:1px solid; }
+  .callout h3{ font-size:.92rem; }
+  .co-crit{ background:var(--crit-bg); border-color:var(--crit); color:var(--crit); }
+  .co-crit p{ color:var(--ink); }
+  .co-navy{ background:var(--navy-wash); border-color:var(--line-strong); }
+  .co-navy p{ color:var(--muted); }
+
+  footer{ border-top:1px solid var(--line-strong); padding-top:18px; font-size:.8rem;
+    color:var(--faint); display:flex; flex-direction:column; gap:7px; }
+  footer p{ max-width:none; }
+
+  @media (max-width:600px){ .wrap{ padding:30px 14px 60px; gap:34px; } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow">Work tracker</span>
+    <h1>SEO Work Tracker</h1>
+    <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
+    <div class="meta-row">
+      <span>trocglobal.com</span>
+      <span>Last updated: August 5, 2026</span>
+      <span><a href="../">← Live dashboard</a></span>
+      <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
+    </div>
+  </header>
+
+  <section>
+    <div class="counts">
+      <div class="count"><span class="n n-done">18</span><span class="l">Completed</span></div>
+      <div class="count"><span class="n n-block">3</span><span class="l">Blocked on access</span></div>
+      <div class="count"><span class="n n-next">6</span><span class="l">Next up</span></div>
+      <div class="count"><span class="n n-watch">4</span><span class="l">Watching</span></div>
+    </div>
+
+    <div class="callout co-crit">
+      <h3>Three items have been blocked since July 15 — 21 days</h3>
+      <p>The Cloudflare unblock, the H1 snippet activation and WPCode production access were all requested on July 15 and remain open. <strong>They block the highest-return work in the plan.</strong> Everything achievable without them has now been done.</p>
+    </div>
+  </section>
+
+  <!-- ================= COMPLETED ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Completed · 18 items</span>
+      <h2>Work done</h2>
+    </div>
+
+    <h3 style="font-size:1rem">Content &amp; on-site</h3>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">Jun 2026</td>
+            <td><strong>Content prune — Batch 1</strong><br><span class="small">25 press-release posts redirected to <code>/company/</code></span></td>
+            <td>Removed dead pages from the index.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Jul 1</td>
+            <td><strong>271-page content consolidation</strong><br><span class="small">279 of 489 zero-traffic pages redirected</span></td>
+            <td><strong>Verified successful.</strong> Impressions −42.8%, clicks only −13.5%, <strong>CTR +52%</strong> (0.31% → 0.47%). Removed pages that were shown and never clicked.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Jul</td>
+            <td><strong>7 duplicate pages merged</strong><br><span class="small">CX + engagement clusters</span></td>
+            <td>Reduced cannibalisation.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Jul</td>
+            <td><strong>4XX errors corrected, redirects repaired</strong></td>
+            <td>Verified Aug 5: <strong>zero</strong> of the 489 pruned URLs return 404, all destinations resolve 200, no redirect chains.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Jul</td>
+            <td><strong>3 new posts published</strong></td>
+            <td>—</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:1rem">Measurement &amp; infrastructure</h3>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Live SEO dashboard built &amp; deployed</strong><br><span class="small"><a href="https://landingstroc.github.io/seo-dashboard/">landingstroc.github.io/seo-dashboard</a></span></td>
+            <td>Auto-refreshes daily. API tokens held in encrypted secrets, never exposed to the browser.</td>
+            <td><span class="chip c-done">Live</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Google Search Console connected</strong><br><span class="small">Service account + Search Analytics API</span></td>
+            <td><strong>First measured click data.</strong> 3,969 clicks / 1,214,675 impressions / 0.33% CTR over 90 days.</td>
+            <td><span class="chip c-done">Live</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Ahrefs API connected</strong></td>
+            <td>Rankings, Domain Rating, backlinks refreshing daily.</td>
+            <td><span class="chip c-done">Live</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Core Web Vitals connected</strong><br><span class="small">PageSpeed Insights field data</span></td>
+            <td>Mobile AVERAGE — LCP 1.5s, CLS 0.08, INP 156ms.</td>
+            <td><span class="chip c-done">Live</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:1rem">Diagnosis &amp; analysis</h3>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Title defect audit</strong><br><span class="small">All 61 ranking pages fetched and compared to their H1</span></td>
+            <td>Found the title system truncates at 50 characters: <strong>12 truncated, 3 empty, 2 with duplicated brand, 8 missing H1</strong>.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>CTR analysis from measured clicks</strong></td>
+            <td><strong>25 pages rank top-10 with CTR under 2%.</strong> Worst: position 5.5 with 81,013 impressions and 38 clicks.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Prune completion audit</strong><br><span class="small">All 489 candidate URLs checked live</span></td>
+            <td>279 redirect correctly, <strong>210 still live</strong> — the consolidation is 57% complete. List saved.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Index coverage analysis</strong></td>
+            <td>Only <strong>39.6% of pages indexed</strong> (694 of 1,751). Largest bucket: 465 "crawled – not indexed".</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Backlink spam network identified</strong></td>
+            <td><strong>84% of inbound link text is spam</strong> from an SEO reseller using lookalike domains. Confirms the <code>troc*</code> domains are hostile, not ours.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Brand split corrected</strong></td>
+            <td>Measured <strong>83.1% branded</strong>. The previous dashboard reported "100% non-branded" from zero data — that panel is now known to be false.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Ahrefs calibrated against measured clicks</strong></td>
+            <td>Ahrefs overstates traffic by <strong>3.8×</strong>. All targets rebased onto Search Console clicks.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Jun 29</td>
+            <td><strong>Brand-ambassador cluster audit</strong></td>
+            <td>~12 overlapping articles found diluting the service page; URL conflict identified at <code>/what-is-a-brand-ambassador/</code>.</td>
+            <td><span class="chip c-done">Done</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="font-size:1rem">Deliverables</h3>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td><strong>Performance &amp; Recovery Plan</strong><br><span class="small">Executive report, web + PDF</span></td>
+            <td><a href="kpi-plan-2026-08-en.html">Read</a> · <a href="kpi-plan-2026-08-en.pdf">PDF</a> — built on measured data, with a 90-day roadmap.</td>
+            <td><span class="chip c-done">Published</span></td>
+          </tr>
+          <tr>
+            <td class="date">Jul</td>
+            <td><strong>Disavow file drafted</strong><br><span class="small"><code>disavow-trocglobal-DRAFT.txt</code></span></td>
+            <td>Ready to submit now that the spam network is confirmed.</td>
+            <td><span class="chip c-done">Drafted</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= BLOCKED ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Blocked · 3 items</span>
+      <h2>Waiting on access</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Requested</th><th>Item</th><th>Blocks</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">Jul 15</td>
+            <td><strong>WPCode access on production</strong></td>
+            <td>Title system repair and the 12 rewritten titles — <strong>the highest-return work in the plan</strong>. Editing the SEO plugin directly will not hold; an override snippet overwrites it.</td>
+            <td>Web team</td>
+          </tr>
+          <tr>
+            <td class="date">Jul 15</td>
+            <td><strong>Cloudflare / WP Engine — allow crawlers</strong></td>
+            <td>Googlebot, Bingbot and AhrefsBot are being blocked. Reproduced Aug 5: the site returns "you have been blocked".</td>
+            <td>Infrastructure admin</td>
+          </tr>
+          <tr>
+            <td class="date">Jul 15</td>
+            <td><strong>Activate the H1 snippet in WPCode</strong></td>
+            <td>~293 pages without an H1. <strong>The code is written and waiting</strong> — a five-minute activation.</td>
+            <td>Web team</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= NEXT ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Next up · 6 items</span>
+      <h2>Ready to start, in priority order</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Task</th><th>Why it's next</th><th>Needs</th></tr></thead>
+        <tbody>
+          <tr><td class="date">1</td><td><strong>Per-page query breakdown</strong></td><td>Separates a title problem from an intent mismatch on the 25 low-CTR pages. Decides whether we rewrite or retarget — no effort should be spent before this.</td><td>Nothing</td></tr>
+          <tr><td class="date">2</td><td><strong>Finish the consolidation</strong><br><span class="small">210 remaining pages</span></td><td>The likely feeder of the 465 "crawled – not indexed" backlog.</td><td>Publishing access</td></tr>
+          <tr><td class="date">3</td><td><strong>Trace the 90 unexplained 404s</strong></td><td>Not from the prune list — source unknown.</td><td>Nothing</td></tr>
+          <tr><td class="date">4</td><td><strong>Brand-ambassador consolidation</strong></td><td>"brand ambassador" holds 3,755 impressions at position 10.8, earning 9 clicks. Biggest single growth lever.</td><td><span class="chip c-next">Your decision on what to merge</span></td></tr>
+          <tr><td class="date">5</td><td><strong>Submit the disavow</strong></td><td>Spam network confirmed. Hygiene, not growth.</td><td>Search Console owner</td></tr>
+          <tr><td class="date">6</td><td><strong>Rotate the service account key</strong></td><td>The credential was shared in chat and should be replaced.</td><td>Google Cloud access</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= WATCHING ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Watching · 4 items</span>
+      <h2>Known issues, no action yet</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Ahrefs API quota exhausted</strong></td><td>Used up on Aug 5. The dashboard reuses the last good Ahrefs data and keeps publishing; Search Console is unaffected. Resets monthly. Schedule reduced from 6-hourly to daily.</td></tr>
+          <tr><td><strong>Index coverage cannot be automated</strong></td><td>Google exposes coverage only in the interface, not the API. That section of the report needs a manual re-export to refresh.</td></tr>
+          <tr><td><strong>Machine clock drift</strong></td><td>The working machine runs several minutes ahead of real time, which broke token signing once. Affects certificate checks generally — worth fixing in Windows time settings.</td></tr>
+          <tr><td><strong>INP missing from Core Web Vitals</strong></td><td>Renders as "—". PageSpeed often omits it at URL level; a fallback to origin-level data would fix it.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= CORRECTIONS ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Record of corrections</span>
+      <h2>Conclusions that changed, and why</h2>
+    </div>
+    <p class="small">Kept deliberately, so nobody acts on a superseded finding or is surprised by a reversal.</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Was believed</th><th>Corrected to</th><th>What settled it</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td>"Impressions fell 52% — the consolidation damaged the site"</td>
+            <td><strong>The consolidation succeeded.</strong> Clicks held while impressions fell, so CTR rose 52%.</td>
+            <td>Search Console click data</td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td>"Organic traffic is ~5,000/month"</td>
+            <td><strong>1,323 measured clicks/month.</strong> Ahrefs overstates by 3.8×.</td>
+            <td>Search Console vs Ahrefs comparison</td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td>"100% of clicks are non-branded — strong organic discovery" <span class="small">(previous dashboard)</span></td>
+            <td><strong>83.1% branded.</strong> The old panel was reporting a percentage from an empty dataset.</td>
+            <td>Measured clicks by query</td>
+          </tr>
+          <tr>
+            <td class="date">Aug 5</td>
+            <td>"The <code>troc*</code> referring domains may be our own microsites"</td>
+            <td><strong>A hostile spam network.</strong> Disavow is justified.</td>
+            <td>Anchor-text analysis — 84% spam</td>
+          </tr>
+          <tr>
+            <td class="date">Jul 1</td>
+            <td>"Ranking keywords grew 50% — strong momentum"</td>
+            <td>Partly reversed the following month, and the July ranking peak coincided with the quarter's <em>worst</em> CTR.</td>
+            <td>Aug 5 Ahrefs snapshot + GSC</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>How to keep this current.</strong> This page is a manual record — it does not auto-update. When an item completes, move it into the Completed table with its date and what it produced, and adjust the count at the top of the section.</p>
+    <p>Evidence for every "Verified" item is in the <a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a>. Live metrics are on the <a href="../">dashboard</a>.</p>
+    <p style="color:var(--faint)">trocglobal.com · last updated August 5, 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>
