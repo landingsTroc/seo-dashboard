@@ -371,7 +371,7 @@
           '<span class="chip '+cls+'">'+(m.overall||"—")+'</span>' +
           '<span class="small">LCP '+(m.lcp!=null?(m.lcp/1000).toFixed(1)+"s":"—")+
           ' · CLS '+(m.cls!=null?(m.cls/100).toFixed(2):"—")+
-          ' · INP '+(m.inp!=null?m.inp+"ms":"—")+'</span></div>';
+          ' · INP '+(m.inp!=null? m.inp+"ms"+(m.inpScope==="origin"?" (site-wide)":"") : "—")+'</span></div>';
       }).join("");
     }
 
@@ -404,7 +404,29 @@
     }).join("");
 
     $("caveats").innerHTML = (d.caveats||[]).map(function(c){ return "<li>"+esc(c)+"</li>"; }).join("");
-    $("kpi-note").textContent = "Scope: " + (d.scope||"");
+
+    /* Per-source freshness. The page-level timestamp only says when the job ran —
+       if one API failed, its numbers can be days old while the page still reads
+       "updated just now". Each source states its own age. */
+    $("kpi-note").innerHTML = "Scope: " + esc(d.scope||"") + " · " + sourceAge(d, "ahrefs", "Ahrefs");
+    var gr = $("gsc-range");
+    if (d.searchConsole && gr) {
+      gr.innerHTML = d.searchConsole.dateRange.startDate + " → " + d.searchConsole.dateRange.endDate +
+        " · lags 2–3 days · " + sourceAge(d, "searchConsole", "Search Console");
+    }
+  }
+
+  function sourceAge(d, key, label){
+    var s = (d.sources || {})[key];
+    if (!s || !s.asOf) return '<span class="chip c-warn">' + label + ': never fetched</span>';
+    var hrs = (Date.now() - new Date(s.asOf).getTime()) / 36e5;
+    var age = hrs < 1 ? "just now"
+            : hrs < 48 ? Math.round(hrs) + "h old"
+            : Math.round(hrs / 24) + " days old";
+    if (s.ok && hrs < 48) return label + " " + age;
+    var why = s.error ? (/units limit reached/i.test(s.error) ? "API quota exhausted" : "last refresh failed") : "stale";
+    return '<span class="chip c-warn" title="' + esc(s.error || "") + '">' +
+           label + ' data ' + age + ' — ' + why + '</span>';
   }
 
   /* Last 3 rolling 7-day windows from Search Console daily rows. Rolling weeks,
@@ -510,7 +532,7 @@
         '<span>Until then, every traffic number here is an Ahrefs <em>estimate</em>, not measured clicks.</span></div>';
       return;
     }
-    $("gsc-range").textContent = g.dateRange.startDate + " → " + g.dateRange.endDate + " · lags 2–3 days";
+    // #gsc-range is written at the end of render(), which also appends source freshness.
 
     var t = g.totals;
     var html = '<div class="kpis" style="margin-bottom:14px">' +

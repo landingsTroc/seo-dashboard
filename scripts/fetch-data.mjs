@@ -62,12 +62,20 @@ async function pagespeed(strategy) {
     const json = await res.json();
     const m = json?.loadingExperience?.metrics;
     if (!m) return null;
+
+    // A single URL often has too little traffic for INP, while the origin does.
+    // Fall back rather than render a dash, and record which level was used.
+    const om = json?.originLoadingExperience?.metrics ?? {};
+    const inpUrl = m.INTERACTION_TO_NEXT_PAINT?.percentile ?? null;
+    const inpOrigin = om.INTERACTION_TO_NEXT_PAINT?.percentile ?? null;
+
     return {
       strategy,
       overall: json.loadingExperience.overall_category ?? null,
-      lcp: m.LARGEST_CONTENTFUL_PAINT_MS?.percentile ?? null,
-      cls: m.CUMULATIVE_LAYOUT_SHIFT_SCORE?.percentile ?? null,
-      inp: m.INTERACTION_TO_NEXT_PAINT?.percentile ?? null,
+      lcp: m.LARGEST_CONTENTFUL_PAINT_MS?.percentile ?? om.LARGEST_CONTENTFUL_PAINT_MS?.percentile ?? null,
+      cls: m.CUMULATIVE_LAYOUT_SHIFT_SCORE?.percentile ?? om.CUMULATIVE_LAYOUT_SHIFT_SCORE?.percentile ?? null,
+      inp: inpUrl ?? inpOrigin,
+      inpScope: inpUrl != null ? "url" : (inpOrigin != null ? "origin" : null),
       performanceScore: Math.round((json?.lighthouseResult?.categories?.performance?.score ?? 0) * 100) || null,
     };
   } catch (err) {

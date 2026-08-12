@@ -67,9 +67,34 @@ has no access, the run logs exactly which properties it *can* see.
 dashboard — no tool can show real-time GSC data. The connector requests up to
 three days before today for that reason.
 
-### 2. Enable Pages
+### 2. Hosting
 
-**Settings → Pages → Source: GitHub Actions**
+**GitHub Pages:** Settings → Pages → Source: **GitHub Actions**.
+
+**Vercel:** import the repo at <https://vercel.com/new>. `vercel.json` is already
+configured — **Framework Preset: Other**, no build command, output directory `.`.
+
+Auto-refresh still works on Vercel, because the chain is:
+
+```
+GitHub Actions (daily) → fetches APIs → commits data/latest.json
+                                             ↓
+                          that commit is a push to main
+                                             ↓
+                             Vercel redeploys automatically
+```
+
+Two things to know:
+
+- **Do not put the API tokens in Vercel.** Nothing on Vercel calls the APIs — the
+  fetch happens in GitHub Actions and only the resulting JSON is deployed. Adding
+  the secrets there would expose them for no benefit.
+- **Vercel Cron is not a replacement for the Action.** It would need serverless
+  functions holding the tokens, and Hobby-plan cron only runs once a day anyway.
+  The Action already does this and keeps the tokens in one place.
+- Both hosts can run at once; they are independent. To use only Vercel, remove the
+  `configure-pages` / `upload-pages-artifact` / `deploy-pages` steps from the
+  workflow — the fetch-and-commit steps are what matter.
 
 ### 3. Run it
 
