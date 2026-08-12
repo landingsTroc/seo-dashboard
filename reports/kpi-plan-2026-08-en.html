@@ -369,10 +369,26 @@
 
     <p><strong>25 pages</strong> hold a top-10 position with CTR under 2% — ten to a hundred times below expectation. Those six alone drew <strong>221,000 impressions and 349 clicks</strong>.</p>
 
-    <div class="callout co-warn">
-      <h3>The size of the prize — and what we do not yet know</h3>
-      <p>At an ordinary 3% CTR, those six pages would return roughly <strong>6,900 clicks</strong> instead of 349. Site-wide, 1.21M impressions at a modest 2% would mean <strong>~24,000 clicks a quarter</strong> against today's 3,969.</p>
-      <p>That is the scale of the opportunity, not a forecast. <strong>We have one verified cause and two unverified ones.</strong> Broken titles are confirmed (below). But 0.05% at position 5 is too extreme for titles alone — the other candidates are queries where our page is not what the searcher wanted, and AI Overviews answering before the click. Separating them needs a per-page query breakdown, which is the first task in Phase 1.</p>
+    <div class="callout co-crit">
+      <h3>Resolved: a third of this exposure was never human</h3>
+      <p>The per-page query breakdown has been run. It overturns the obvious reading of the numbers above.</p>
+      <p>The queries driving these impressions are dominated by <strong>machine-generated entity lookups</strong> — templated questions no person would type:</p>
+      <div class="t-wrap" style="margin:4px 0">
+        <table>
+          <thead><tr><th>Search term</th><th class="num">Impressions</th><th class="num">Clicks</th></tr></thead>
+          <tbody>
+            <tr><td>what is the company name for troc.com</td><td class="num">3,944</td><td class="num"><strong>0</strong></td></tr>
+            <tr><td>what is the industry of troc.com</td><td class="num">3,438</td><td class="num"><strong>0</strong></td></tr>
+            <tr><td>troc.com customer service phone number</td><td class="num">3,351</td><td class="num"><strong>0</strong></td></tr>
+            <tr><td>who is the ceo of troc.com</td><td class="num">3,157</td><td class="num"><strong>0</strong></td></tr>
+            <tr><td>troc.com founded</td><td class="num">2,908</td><td class="num"><strong>0</strong></td></tr>
+            <tr><td>number of employees at troc.com</td><td class="num">1,283</td><td class="num"><strong>0</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Across the 15 pages examined, <strong>35.6% of identifiable impressions come from this pattern and produced exactly zero clicks</strong> — 24,323 impressions, nothing. On the worst pages, <strong>93–98% of impressions come from queries Google will not even name</strong>, against a normal 30–50%.</p>
+      <p><strong>What this changes:</strong> the CTR figure is depressed by exposure that was never winnable, so an earlier estimate here of "~24,000 clicks a quarter" was <strong>wrong and has been removed</strong>. Even excluding the machine queries, however, the remainder converts at just <strong>0.20%</strong> — so a real problem remains underneath, it is simply smaller than the raw number implied.</p>
+      <p><strong>And it redirects the work:</strong> these 25 pages are mostly informational articles collecting non-commercial exposure. They are not the growth opportunity. The commercial terms below are.</p>
     </div>
   </section>
 
@@ -599,31 +615,45 @@
 
       <div class="phase">
         <div class="phase-head">
-          <span class="phase-n">PHASE 1</span>
-          <h3>Fix the click-through rate</h3>
-          <span class="chip c-crit">Highest return</span>
-          <span class="phase-when">Weeks 1–3</span>
+          <span class="phase-n">PHASE 0</span>
+          <h3>Query breakdown</h3>
+          <span class="chip c-up">Done — Aug 12</span>
+          <span class="phase-when">Complete</span>
         </div>
         <ul>
-          <li><strong>Run the per-page query breakdown first.</strong> For the 25 low-CTR pages, identify which searches drive their impressions. This separates a title problem from an intent mismatch and decides whether we rewrite or retarget. <em>No effort should be committed before this.</em></li>
-          <li><strong>Repair the title system</strong> — remove the 50-character truncation and the duplicated brand suffix.</li>
-          <li><strong>Rewrite the 12 truncated and 3 empty titles</strong>, each carrying its target search term.</li>
-          <li><strong>Activate the H1 fix</strong> in WPCode — written since July 15, five minutes to deploy.</li>
-          <li>Measure weekly. CTR responds within days of re-crawl, so this validates or disproves itself quickly.</li>
+          <li>Established that <strong>35.6% of exposure on the low-CTR pages is machine-generated and unwinnable</strong>, and that those pages are informational rather than commercial.</li>
+          <li><strong>Result: the plan was reordered.</strong> Chasing CTR on those pages is no longer Phase 1; the commercial terms are. This is why the analysis ran before the work.</li>
         </ul>
       </div>
 
       <div class="phase">
         <div class="phase-head">
-          <span class="phase-n">PHASE 2</span>
-          <h3>Convert the two head terms</h3>
-          <span class="phase-when">Weeks 2–5</span>
+          <span class="phase-n">PHASE 1</span>
+          <h3>Convert the two commercial head terms</h3>
+          <span class="chip c-crit">Highest return</span>
+          <span class="phase-when">Weeks 1–4</span>
         </div>
         <ul>
           <li><strong>"brand ambassador"</strong> — 3,755 impressions at position 10.8. Consolidate the ~12 competing articles into the service page so one strong page ranks instead of a dozen weak ones.</li>
           <li><strong>"retail merchandising services"</strong> — 3,735 impressions at position 10.5, pointing at a money page.</li>
           <li>Internal links from the highest-authority pages to both targets.</li>
           <li>Moving either from position 10 to position 3–5 changes them from ~8 clicks a quarter to several hundred.</li>
+          <li><strong>Why these and not the low-CTR pages:</strong> these are human, commercial searches. The query breakdown showed the low-CTR pages are largely machine exposure that cannot be converted at any position.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <div class="phase-head">
+          <span class="phase-n">PHASE 2</span>
+          <h3>Repair the title layer</h3>
+          <span class="chip c-warn">Cheap, still worth doing</span>
+          <span class="phase-when">Weeks 1–3 · blocked on WPCode</span>
+        </div>
+        <ul>
+          <li><strong>Fix the 50-character truncation</strong> and the duplicated brand suffix in the override snippet.</li>
+          <li><strong>Rewrite the 12 truncated and 3 empty titles</strong>, each carrying its target search term.</li>
+          <li><strong>Activate the H1 fix</strong> — written since July 15, five minutes to deploy.</li>
+          <li>These are verified defects and worth fixing on their own merits. <strong>Expectations are now lower than before the query breakdown</strong>: they will improve the human share of impressions, not the machine share, so the gain is real but smaller than the raw CTR gap suggested.</li>
         </ul>
       </div>
 
@@ -671,8 +701,8 @@
       <table>
         <thead><tr><th>Metric</th><th class="num">Today</th><th class="num">Target</th><th>Via</th></tr></thead>
         <tbody>
-          <tr><td><strong>Click-through rate</strong></td><td class="num">0.33%</td><td class="num"><strong>0.70%</strong></td><td>Phase 1 — the core lever</td></tr>
-          <tr><td><strong>Clicks / month</strong></td><td class="num">1,323</td><td class="num"><strong>2,600</strong></td><td>Phases 1–2</td></tr>
+          <tr><td><strong>Clicks from commercial terms</strong></td><td class="num">~16/qtr</td><td class="num"><strong>250+/qtr</strong></td><td>Phase 1 — "brand ambassador" + "retail merchandising services"</td></tr>
+          <tr><td><strong>Clicks / month</strong></td><td class="num">1,323</td><td class="num"><strong>1,900</strong></td><td>Phases 1–2 · revised down after the query breakdown</td></tr>
           <tr><td>Non-branded click share</td><td class="num">16.9%</td><td class="num"><strong>30%</strong></td><td>Phases 2 &amp; 4</td></tr>
           <tr><td>Top-10 pages with CTR under 2%</td><td class="num">25</td><td class="num"><strong>under 10</strong></td><td>Phase 1</td></tr>
           <tr><td>"brand ambassador" position</td><td class="num">10.8</td><td class="num"><strong>top 5</strong></td><td>Phase 2</td></tr>
@@ -683,7 +713,7 @@
         </tbody>
       </table>
     </div>
-    <p class="small">Every target except Domain Rating is measured in Search Console and verifiable weekly. Doubling CTR to 0.70% still leaves the site well below a normal 2% — this is deliberately conservative.</p>
+    <p class="small">Every target except Domain Rating is measured in Search Console and verifiable weekly. The clicks target was revised down from 2,600 after the query breakdown showed a third of exposure is machine-generated and cannot convert. Site-wide CTR is deliberately no longer a headline target: it is distorted by bot impressions we do not control.</p>
   </section>
 
   <!-- ===== NEEDS ===== -->
