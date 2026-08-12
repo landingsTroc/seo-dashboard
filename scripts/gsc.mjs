@@ -197,10 +197,54 @@ export async function fetchSearchConsole(domain, brandRe) {
   }
   console.log(`GSC: query breakdown captured for ${pageQueries.length}/${diagnoseTargets.length} low-CTR pages`);
 
+  // Which page does Google actually choose for our commercial head terms? If
+  // several of our own pages appear, we are competing with ourselves and the
+  // fix is consolidation, not more content.
+  const COMMERCIAL_TERMS = [
+    "brand ambassador",
+    "brand ambassadors",
+    "brand ambassador programs",
+    "retail merchandising services",
+    "merchandising services",
+    "retail merchandising",
+  ];
+  const termPages = [];
+  for (const term of COMMERCIAL_TERMS) {
+    try {
+      const rows = await query(token, siteUrl, {
+        ...base,
+        dimensions: ["page"],
+        rowLimit: 25,
+        dimensionFilterGroups: [{
+          filters: [{ dimension: "query", operator: "equals", expression: term }],
+        }],
+      });
+      if (!rows.length) continue;
+      termPages.push({
+        term,
+        totalImpressions: rows.reduce((a, r) => a + r.impressions, 0),
+        totalClicks: rows.reduce((a, r) => a + r.clicks, 0),
+        competingPages: rows.length,
+        pages: rows
+          .sort((a, b) => b.impressions - a.impressions)
+          .map((r) => ({
+            page: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+            ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
+          })),
+      });
+    } catch (err) {
+      console.warn(`GSC: term breakdown failed for "${term}" — ${err.message}`);
+    }
+  }
+  const cannibalised = termPages.filter((t) => t.competingPages > 1);
+  console.log(`GSC: ${termPages.length} commercial terms analysed, ` +
+    `${cannibalised.length} show more than one of our pages competing`);
+
   return {
     siteUrl,
     dateRange: { startDate, endDate },
     pageQueries,
+    termPages,
     totals: {
       clicks: totals.clicks,
       impressions: totals.impressions,
