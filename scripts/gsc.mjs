@@ -163,21 +163,32 @@ export async function fetchSearchConsole(domain, brandRe) {
   const pageQueries = [];
   for (const t of diagnoseTargets) {
     try {
+      // The API sorts rows by clicks and has no orderBy, so a low-click page
+      // returns its least interesting queries first. Pull deep, then sort by
+      // impressions ourselves to find what actually drives the exposure.
       const rows = await query(token, siteUrl, {
         ...base,
         dimensions: ["query"],
-        rowLimit: 15,
+        rowLimit: 1000,
         dimensionFilterGroups: [{
           filters: [{ dimension: "page", operator: "equals", expression: t.page }],
         }],
       });
-      const total = rows.reduce((a, r) => a + r.impressions, 0);
+      const named = rows.reduce((a, r) => a + r.impressions, 0);
+      const byImpressions = rows.slice().sort((a, b) => b.impressions - a.impressions);
+
       pageQueries.push({
         page: t.page, pageCtr: t.ctr, pagePosition: t.position, pageImpressions: t.impressions,
-        topQueries: rows.map((r) => ({
+        namedQueryCount: rows.length,
+        namedImpressions: named,
+        // Google withholds rare queries. A large gap means most exposure cannot
+        // be attributed to any search we can see — which is itself a finding.
+        anonymizedImpressions: Math.max(0, t.impressions - named),
+        anonymizedPct: t.impressions ? +(((t.impressions - named) / t.impressions) * 100).toFixed(1) : null,
+        topQueries: byImpressions.slice(0, 12).map((r) => ({
           query: r.keys[0], clicks: r.clicks, impressions: r.impressions,
           ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
-          shareOfPageImpressions: total ? +((r.impressions / total) * 100).toFixed(1) : null,
+          shareOfPageImpressions: t.impressions ? +((r.impressions / t.impressions) * 100).toFixed(2) : null,
         })),
       });
     } catch (err) {
