@@ -155,9 +155,41 @@ export async function fetchSearchConsole(domain, brandRe) {
       ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
     }));
 
+  // For each badly-converting page, what are people actually searching when they
+  // see it? This is what separates a title/snippet problem from a page that
+  // simply is not what the searcher wanted. Search Console is unmetered, so the
+  // extra calls are free.
+  const diagnoseTargets = lowCtrHighRank.slice(0, 15);
+  const pageQueries = [];
+  for (const t of diagnoseTargets) {
+    try {
+      const rows = await query(token, siteUrl, {
+        ...base,
+        dimensions: ["query"],
+        rowLimit: 15,
+        dimensionFilterGroups: [{
+          filters: [{ dimension: "page", operator: "equals", expression: t.page }],
+        }],
+      });
+      const total = rows.reduce((a, r) => a + r.impressions, 0);
+      pageQueries.push({
+        page: t.page, pageCtr: t.ctr, pagePosition: t.position, pageImpressions: t.impressions,
+        topQueries: rows.map((r) => ({
+          query: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+          ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
+          shareOfPageImpressions: total ? +((r.impressions / total) * 100).toFixed(1) : null,
+        })),
+      });
+    } catch (err) {
+      console.warn(`GSC: query breakdown failed for ${t.page} — ${err.message}`);
+    }
+  }
+  console.log(`GSC: query breakdown captured for ${pageQueries.length}/${diagnoseTargets.length} low-CTR pages`);
+
   return {
     siteUrl,
     dateRange: { startDate, endDate },
+    pageQueries,
     totals: {
       clicks: totals.clicks,
       impressions: totals.impressions,
