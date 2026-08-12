@@ -232,6 +232,24 @@ async function main() {
   }
 
   const a = ahrefs ?? prev;
+
+  // Ahrefs reports a live snapshot, not history, for DR / keywords / refdomains.
+  // Week-over-week on those is only possible if we store consecutive readings —
+  // so keep one entry per day, and only when the fetch actually succeeded.
+  const ahrefsHistory = (prev?.ahrefsHistory ?? []).filter((h) => h.date !== today);
+  if (ahrefs) {
+    ahrefsHistory.push({
+      date: today,
+      domainRating: ahrefs.summary.domainRating,
+      organicKeywords: ahrefs.summary.organicKeywords,
+      keywordsTop3: ahrefs.summary.keywordsTop3,
+      liveRefdomains: ahrefs.summary.liveRefdomains,
+      liveBacklinks: ahrefs.summary.liveBacklinks,
+    });
+  }
+  ahrefsHistory.sort((x, y) => (x.date < y.date ? -1 : 1));
+  while (ahrefsHistory.length > 120) ahrefsHistory.shift();
+
   const out = {
     generatedAt: new Date().toISOString(),
     target: TARGET,
@@ -248,6 +266,7 @@ async function main() {
     topPages: a?.topPages ?? [],
     deadRankings: a?.deadRankings ?? [],
     coreWebVitals: a?.coreWebVitals ?? {},
+    ahrefsHistory,
     searchConsole: gsc ?? prev?.searchConsole ?? null,
     caveats: [
       "Ahrefs traffic is a modeled estimate, not measured clicks. Search Console clicks are the source of truth where both are present.",

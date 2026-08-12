@@ -178,6 +178,15 @@
     <div id="gsc-slot"></div>
   </section>
 
+  <!-- Week over week -->
+  <section>
+    <div class="sec-head">
+      <h2>Week over week</h2>
+      <span class="small" id="wow-range"></span>
+    </div>
+    <div id="wow-slot"></div>
+  </section>
+
   <!-- Brand split + CWV -->
   <div class="grid-2">
     <section>
@@ -304,6 +313,7 @@
 
     drawTrend(d.trafficHistory || []);
     renderGsc(d);
+    renderWow(d);
 
     // Brand split — explicitly refuses to render a percentage without data.
     var b = d.brandSplit || {};
@@ -378,6 +388,99 @@
 
     $("caveats").innerHTML = (d.caveats||[]).map(function(c){ return "<li>"+esc(c)+"</li>"; }).join("");
     $("kpi-note").textContent = "Scope: " + (d.scope||"");
+  }
+
+  /* Last 3 rolling 7-day windows from Search Console daily rows. Rolling weeks,
+     not calendar weeks — GSC lags 2-3 days, so a calendar week is always part
+     empty and would read as a collapse. */
+  function renderWow(d){
+    var slot = $("wow-slot");
+    var daily = (d.searchConsole && d.searchConsole.daily) || [];
+    if(daily.length < 21){
+      slot.innerHTML = '<div class="empty"><strong>Not enough history yet</strong>' +
+        '<span>Week-over-week needs 21 days of Search Console data; ' + daily.length + ' available.</span></div>';
+      return;
+    }
+    var rows = daily.slice().sort(function(a,b){ return a.date < b.date ? -1 : 1; });
+    var last = rows.slice(-21);
+
+    function agg(seg){
+      var c=0,i=0,posW=0;
+      seg.forEach(function(r){ c+=r.clicks; i+=r.impressions; posW += r.position*r.impressions; });
+      return {
+        from: seg[0].date, to: seg[seg.length-1].date,
+        clicks:c, impressions:i,
+        ctr: i ? (c/i)*100 : 0,
+        position: i ? posW/i : 0      // impression-weighted, not a mean of means
+      };
+    }
+    var w3 = agg(last.slice(0,7)), w2 = agg(last.slice(7,14)), w1 = agg(last.slice(14,21));
+    $("wow-range").textContent = "Rolling 7-day windows · " + w3.from + " → " + w1.to;
+
+    function pct(cur, prev){ return prev ? ((cur-prev)/prev)*100 : null; }
+    function cell(v, dec){ return v==null ? "—" : Number(v).toLocaleString("en-US",
+      {minimumFractionDigits:dec||0, maximumFractionDigits:dec||0}); }
+    function delta(v, goodIsUp){
+      if(v==null || !isFinite(v)) return '<span class="small">—</span>';
+      var good = goodIsUp ? v > 0 : v < 0;
+      var cls = Math.abs(v) < 1 ? "d-flat" : (good ? "d-up" : "d-down");
+      return '<span class="'+cls+'" style="font-weight:660">'+(v>0?"+":"")+v.toFixed(1)+'%</span>';
+    }
+
+    var metrics = [
+      ["Clicks",      "clicks",      0, true,  false],
+      ["Impressions", "impressions", 0, true,  false],
+      ["CTR",         "ctr",         2, true,  true],
+      ["Avg. position","position",   1, false, false]   // lower is better
+    ];
+
+    var html = '<div class="t-wrap"><table><thead><tr>' +
+      '<th>Metric</th>' +
+      '<th class="num">' + w3.from.slice(5) + '<br><span class="small">3 weeks ago</span></th>' +
+      '<th class="num">' + w2.from.slice(5) + '<br><span class="small">2 weeks ago</span></th>' +
+      '<th class="num">' + w1.from.slice(5) + '<br><span class="small">last 7 days</span></th>' +
+      '<th class="num">vs. prior week</th>' +
+      '<th class="num">vs. 3 weeks ago</th>' +
+      '</tr></thead><tbody>';
+
+    metrics.forEach(function(m){
+      var key=m[1], dec=m[2], goodIsUp=m[3], suffix=m[4]?"%":"";
+      html += '<tr><td class="kw">'+m[0]+'</td>' +
+        '<td class="num">'+cell(w3[key],dec)+suffix+'</td>' +
+        '<td class="num">'+cell(w2[key],dec)+suffix+'</td>' +
+        '<td class="num"><strong>'+cell(w1[key],dec)+suffix+'</strong></td>' +
+        '<td class="num">'+delta(pct(w1[key],w2[key]),goodIsUp)+'</td>' +
+        '<td class="num">'+delta(pct(w1[key],w3[key]),goodIsUp)+'</td></tr>';
+    });
+    html += '</tbody></table></div>';
+
+    html += '<p class="small" style="margin-top:8px">Average position is weighted by impressions, ' +
+      'so a burst of low-ranking impressions cannot distort it. <strong>For position, lower is better</strong> — ' +
+      'a fall is shown in green.</p>';
+
+    // Ahrefs weekly comparison, once enough snapshots have accumulated
+    var hist = d.ahrefsHistory || [];
+    if(hist.length >= 2){
+      var h = hist.slice(-3);
+      html += '<h3 style="font-size:1rem;margin-top:22px">Ahrefs — rankings &amp; authority</h3>' +
+        '<div class="t-wrap" style="margin-top:8px"><table><thead><tr><th>Metric</th>' +
+        h.map(function(s){ return '<th class="num">'+s.date.slice(5)+'</th>'; }).join("") +
+        '<th class="num">Change</th></tr></thead><tbody>';
+      [["Domain Rating","domainRating",1],["Ranking keywords","organicKeywords",0],
+       ["Keywords in top 3","keywordsTop3",0],["Referring domains","liveRefdomains",0]].forEach(function(m){
+        var first=h[0][m[1]], lastv=h[h.length-1][m[1]];
+        html += '<tr><td class="kw">'+m[0]+'</td>' +
+          h.map(function(s){ return '<td class="num">'+nf(s[m[1]])+'</td>'; }).join("") +
+          '<td class="num">'+delta(pct(lastv,first),true)+'</td></tr>';
+      });
+      html += '</tbody></table></div>';
+    } else {
+      html += '<p class="small" style="margin-top:18px"><strong>Ahrefs week-over-week starts accumulating from today.</strong> ' +
+        'Ahrefs reports a live snapshot rather than history for these metrics, so weekly comparison ' +
+        'only becomes possible once the dashboard has stored consecutive readings.</p>';
+    }
+
+    slot.innerHTML = html;
   }
 
   function renderGsc(d){
