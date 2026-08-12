@@ -6,15 +6,13 @@
   "outputDirectory": ".",
   "headers": [
     {
-      "//": "The data file changes on every refresh. Without this Vercel's CDN can serve a cached copy and the dashboard silently shows old numbers.",
       "source": "/data/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
     },
     {
-      "//": "Pages are edited often; revalidate rather than serve a stale build.",
-      "source": "/(.*).html",
+      "source": "/(.*)\\.html",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
