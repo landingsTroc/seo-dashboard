@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T17:50:08.186Z",
+  "generatedAt": "2026-08-12T17:56:15.292Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
@@ -11,12 +11,12 @@
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-08-12T17:50:08.186Z"
+      "asOf": "2026-08-12T17:56:15.292Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-08-12T17:50:08.186Z"
+      "asOf": "2026-08-12T17:56:15.292Z"
     }
   },
   "summary": {
@@ -590,7 +590,7 @@
       "cls": 8,
       "inp": 139,
       "inpScope": "origin",
-      "performanceScore": 74
+      "performanceScore": 69
     },
     "desktop": {
       "strategy": "desktop",
@@ -615,126 +615,106 @@
         "pageCtr": 0.05,
         "pagePosition": 5.5,
         "pageImpressions": 78368,
+        "namedQueryCount": 319,
+        "namedImpressions": 5536,
+        "anonymizedImpressions": 72832,
+        "anonymizedPct": 92.9,
         "topQueries": [
           {
-            "query": "\"create 300 opportunities\" \"visit 48 bars & shops\"",
+            "query": "evaluate the dolls company adora on localized retail events and services",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 243,
             "ctr": 0,
-            "position": 9,
-            "shareOfPageImpressions": 0.7
+            "position": 7.8,
+            "shareOfPageImpressions": 0.31
           },
           {
-            "query": "\"gen z brand pop up roi\"",
+            "query": "pop-up experiences customer loyalty",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 238,
             "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 2.2
+            "position": 2.5,
+            "shareOfPageImpressions": 0.3
           },
           {
-            "query": "\"immersive experiences\" or \"pop-up events\" discovery platforms or apps",
+            "query": "best strategies for pop-up retail experiences",
             "clicks": 0,
-            "impressions": 8,
+            "impressions": 229,
             "ctr": 0,
-            "position": 3.9,
-            "shareOfPageImpressions": 5.8
+            "position": 3.1,
+            "shareOfPageImpressions": 0.29
           },
           {
-            "query": "\"northshore retail collective\" \"q2 pop-up launch brief\"",
+            "query": "experiential training events for retailers",
             "clicks": 0,
-            "impressions": 33,
+            "impressions": 189,
+            "ctr": 0,
+            "position": 23.4,
+            "shareOfPageImpressions": 0.24
+          },
+          {
+            "query": "challenges brands face with retail pop-ups",
+            "clicks": 0,
+            "impressions": 177,
             "ctr": 0,
             "position": 7.6,
-            "shareOfPageImpressions": 24.1
+            "shareOfPageImpressions": 0.23
           },
           {
-            "query": "\"q2 pop-up launch brief\" \"northshore retail collective\"",
+            "query": "how do pop-ups enhance retail experiences",
             "clicks": 0,
-            "impressions": 15,
+            "impressions": 152,
             "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 10.9
+            "position": 9.8,
+            "shareOfPageImpressions": 0.19
           },
           {
-            "query": "\"traditional marketing spend shifts to digital\" \"pop-up store and pr event\"",
+            "query": "b2c experiential event",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 149,
             "ctr": 0,
-            "position": 3,
-            "shareOfPageImpressions": 0.7
+            "position": 58.2,
+            "shareOfPageImpressions": 0.19
           },
           {
-            "query": "(montbell or sea to summit) and (pop-up store or popup or event marketing or brand activation)",
+            "query": "how do luxury spirits brands use pop-up events to build emotional connections with consumers?",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 145,
             "ctr": 0,
-            "position": 4,
-            "shareOfPageImpressions": 0.7
+            "position": 6.2,
+            "shareOfPageImpressions": 0.19
           },
           {
-            "query": "accra mall stores promotional events customer experience",
+            "query": "which retail districts have regular weekend programming or pop-up experiences?",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 145,
             "ctr": 0,
-            "position": 11,
-            "shareOfPageImpressions": 0.7
+            "position": 5.5,
+            "shareOfPageImpressions": 0.19
           },
           {
-            "query": "affordable retail experience platforms for startups",
+            "query": "pop up experiential",
             "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.7
-          },
-          {
-            "query": "agencies known for experiential launches tied to new products",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.7
-          },
-          {
-            "query": "agencies known for experiential retail installations",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.7
-          },
-          {
-            "query": "agencies that create pop-up experiences for brands",
-            "clicks": 0,
-            "impressions": 67,
+            "impressions": 143,
             "ctr": 0,
             "position": 5,
-            "shareOfPageImpressions": 48.9
+            "shareOfPageImpressions": 0.18
           },
           {
-            "query": "alternatives to trade shows for retail product placement",
+            "query": "pop-up brand experiences",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 139,
             "ctr": 0,
-            "position": 19,
-            "shareOfPageImpressions": 0.7
+            "position": 16,
+            "shareOfPageImpressions": 0.18
           },
           {
-            "query": "are there any experiential retail centers near me with food and events?",
+            "query": "experiential pop up design",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 135,
             "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 0.7
-          },
-          {
-            "query": "are there any retail destinations with interactive and immersive activities?",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 5,
-            "shareOfPageImpressions": 1.5
+            "position": 4.9,
+            "shareOfPageImpressions": 0.17
           }
         ]
       },
@@ -743,102 +723,66 @@
         "pageCtr": 0.35,
         "pagePosition": 4.6,
         "pageImpressions": 46334,
+        "namedQueryCount": 273,
+        "namedImpressions": 28327,
+        "anonymizedImpressions": 18007,
+        "anonymizedPct": 38.9,
         "topQueries": [
+          {
+            "query": "what is the company name for troc.com",
+            "clicks": 0,
+            "impressions": 3944,
+            "ctr": 0,
+            "position": 5.4,
+            "shareOfPageImpressions": 8.51
+          },
+          {
+            "query": "what is the industry of troc.com",
+            "clicks": 0,
+            "impressions": 3438,
+            "ctr": 0,
+            "position": 4.8,
+            "shareOfPageImpressions": 7.42
+          },
           {
             "query": "troc",
             "clicks": 13,
             "impressions": 3185,
             "ctr": 0.41,
             "position": 1.6,
-            "shareOfPageImpressions": 46.9
+            "shareOfPageImpressions": 6.87
           },
           {
-            "query": "troc global",
-            "clicks": 8,
-            "impressions": 487,
-            "ctr": 1.64,
-            "position": 1.4,
-            "shareOfPageImpressions": 7.2
+            "query": "who is the ceo of troc.com",
+            "clicks": 0,
+            "impressions": 3157,
+            "ctr": 0,
+            "position": 5.5,
+            "shareOfPageImpressions": 6.81
           },
           {
-            "query": "t-roc company",
-            "clicks": 7,
-            "impressions": 249,
-            "ctr": 2.81,
-            "position": 1.4,
-            "shareOfPageImpressions": 3.7
+            "query": "troc.com founded",
+            "clicks": 0,
+            "impressions": 2908,
+            "ctr": 0,
+            "position": 6.2,
+            "shareOfPageImpressions": 6.28
           },
           {
-            "query": "t roc company",
-            "clicks": 6,
-            "impressions": 22,
-            "ctr": 27.27,
-            "position": 1.2,
-            "shareOfPageImpressions": 0.3
+            "query": "number of employees at troc.com",
+            "clicks": 0,
+            "impressions": 1999,
+            "ctr": 0,
+            "position": 6.4,
+            "shareOfPageImpressions": 4.31
           },
           {
-            "query": "t-roc",
-            "clicks": 6,
-            "impressions": 940,
-            "ctr": 0.64,
-            "position": 2.4,
-            "shareOfPageImpressions": 13.8
-          },
-          {
-            "query": "troc company",
-            "clicks": 6,
-            "impressions": 54,
-            "ctr": 11.11,
-            "position": 1.7,
-            "shareOfPageImpressions": 0.8
-          },
-          {
-            "query": "t-roc - the revenue optimization companies",
-            "clicks": 5,
-            "impressions": 44,
-            "ctr": 11.36,
-            "position": 1.9,
-            "shareOfPageImpressions": 0.6
-          },
-          {
-            "query": "the revenue optimization companies",
-            "clicks": 4,
-            "impressions": 238,
-            "ctr": 1.68,
-            "position": 1.1,
-            "shareOfPageImpressions": 3.5
-          },
-          {
-            "query": "trocglobal",
-            "clicks": 4,
-            "impressions": 103,
-            "ctr": 3.88,
-            "position": 1,
-            "shareOfPageImpressions": 1.5
-          },
-          {
-            "query": "t-roc global",
-            "clicks": 2,
-            "impressions": 263,
-            "ctr": 0.76,
-            "position": 1.3,
-            "shareOfPageImpressions": 3.9
-          },
-          {
-            "query": "brett beveridge net worth",
-            "clicks": 1,
-            "impressions": 16,
-            "ctr": 6.25,
-            "position": 1.1,
-            "shareOfPageImpressions": 0.2
-          },
-          {
-            "query": "global troc",
-            "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.33,
-            "position": 6.3,
-            "shareOfPageImpressions": 0
+            "query": "what is the company name for tstraslochi.com",
+            "clicks": 0,
+            "impressions": 1226,
+            "ctr": 0,
+            "position": 3.9,
+            "shareOfPageImpressions": 2.65
           },
           {
             "query": "t roc",
@@ -846,23 +790,39 @@
             "impressions": 1065,
             "ctr": 0.09,
             "position": 2.4,
-            "shareOfPageImpressions": 15.7
+            "shareOfPageImpressions": 2.3
           },
           {
-            "query": "t roc global",
-            "clicks": 1,
-            "impressions": 120,
-            "ctr": 0.83,
-            "position": 1.5,
-            "shareOfPageImpressions": 1.8
+            "query": "t-roc",
+            "clicks": 6,
+            "impressions": 940,
+            "ctr": 0.64,
+            "position": 2.4,
+            "shareOfPageImpressions": 2.03
           },
           {
-            "query": "t roc global reviews",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 2,
-            "shareOfPageImpressions": 0
+            "query": "troc.com customer service phone number",
+            "clicks": 0,
+            "impressions": 781,
+            "ctr": 0,
+            "position": 5.2,
+            "shareOfPageImpressions": 1.69
+          },
+          {
+            "query": "troc global",
+            "clicks": 8,
+            "impressions": 487,
+            "ctr": 1.64,
+            "position": 1.4,
+            "shareOfPageImpressions": 1.05
+          },
+          {
+            "query": "t-roc company leadership project x t-roc",
+            "clicks": 0,
+            "impressions": 426,
+            "ctr": 0,
+            "position": 2.1,
+            "shareOfPageImpressions": 0.92
           }
         ]
       },
@@ -871,22 +831,26 @@
         "pageCtr": 0.29,
         "pagePosition": 6.4,
         "pageImpressions": 37845,
+        "namedQueryCount": 219,
+        "namedImpressions": 2177,
+        "anonymizedImpressions": 35668,
+        "anonymizedPct": 94.2,
         "topQueries": [
-          {
-            "query": "walmart automated fulfillment center",
-            "clicks": 4,
-            "impressions": 15,
-            "ctr": 26.67,
-            "position": 6.3,
-            "shareOfPageImpressions": 3.9
-          },
           {
             "query": "walmart automation",
             "clicks": 4,
             "impressions": 179,
             "ctr": 2.23,
             "position": 8.2,
-            "shareOfPageImpressions": 46
+            "shareOfPageImpressions": 0.47
+          },
+          {
+            "query": "us retail automation market",
+            "clicks": 0,
+            "impressions": 147,
+            "ctr": 0,
+            "position": 27.5,
+            "shareOfPageImpressions": 0.39
           },
           {
             "query": "walmart automation investment",
@@ -894,31 +858,63 @@
             "impressions": 128,
             "ctr": 2.34,
             "position": 4.3,
-            "shareOfPageImpressions": 32.9
+            "shareOfPageImpressions": 0.34
           },
           {
-            "query": "first one",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 6,
-            "shareOfPageImpressions": 0.3
+            "query": "walmart warehouse automation",
+            "clicks": 0,
+            "impressions": 127,
+            "ctr": 0,
+            "position": 8.4,
+            "shareOfPageImpressions": 0.34
           },
           {
-            "query": "material handling equipment",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 5,
-            "shareOfPageImpressions": 0.3
+            "query": "walmart distribution center d2c business model",
+            "clicks": 0,
+            "impressions": 85,
+            "ctr": 0,
+            "position": 8.7,
+            "shareOfPageImpressions": 0.22
           },
           {
-            "query": "walmart and robots",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 10,
-            "shareOfPageImpressions": 0.3
+            "query": "retail automation news last 48 hours",
+            "clicks": 0,
+            "impressions": 80,
+            "ctr": 0,
+            "position": 9,
+            "shareOfPageImpressions": 0.21
+          },
+          {
+            "query": "grocery retailers investing in automated fulfillment centers",
+            "clicks": 0,
+            "impressions": 65,
+            "ctr": 0,
+            "position": 5.9,
+            "shareOfPageImpressions": 0.17
+          },
+          {
+            "query": "real-world examples of companies reducing stockouts with automation",
+            "clicks": 0,
+            "impressions": 62,
+            "ctr": 0,
+            "position": 7.3,
+            "shareOfPageImpressions": 0.16
+          },
+          {
+            "query": "grocery retailers automated fulfillment centers investments",
+            "clicks": 0,
+            "impressions": 60,
+            "ctr": 0,
+            "position": 7.5,
+            "shareOfPageImpressions": 0.16
+          },
+          {
+            "query": "walmart announces new distribution center 2025",
+            "clicks": 0,
+            "impressions": 54,
+            "ctr": 0,
+            "position": 4.6,
+            "shareOfPageImpressions": 0.14
           },
           {
             "query": "walmart automated distribution center",
@@ -926,71 +922,15 @@
             "impressions": 52,
             "ctr": 1.92,
             "position": 7.1,
-            "shareOfPageImpressions": 13.4
+            "shareOfPageImpressions": 0.14
           },
           {
-            "query": "wheres the article",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 1,
-            "shareOfPageImpressions": 0.3
-          },
-          {
-            "query": "\"amz automaters\" walmart automation",
+            "query": "walmart announces new distribution center 2025 site",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 52,
             "ctr": 0,
-            "position": 9.7,
-            "shareOfPageImpressions": 0.8
-          },
-          {
-            "query": "\"distribution center\" conveyor belts robot arms problem",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 12,
-            "shareOfPageImpressions": 0.3
-          },
-          {
-            "query": "\"walmart's news articles on new fulfilment centers in 2023\"",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 7.7,
-            "shareOfPageImpressions": 0.8
-          },
-          {
-            "query": "$330",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 25,
-            "shareOfPageImpressions": 0.3
-          },
-          {
-            "query": "2026년 기준",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 17,
-            "shareOfPageImpressions": 0.3
-          },
-          {
-            "query": "all three please",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 0.3
-          },
-          {
-            "query": "ambos",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 5,
-            "shareOfPageImpressions": 0.3
+            "position": 4.3,
+            "shareOfPageImpressions": 0.14
           }
         ]
       },
@@ -999,30 +939,34 @@
         "pageCtr": 0.43,
         "pagePosition": 9.4,
         "pageImpressions": 30722,
+        "namedQueryCount": 559,
+        "namedImpressions": 8062,
+        "anonymizedImpressions": 22660,
+        "anonymizedPct": 73.8,
         "topQueries": [
           {
-            "query": "another word for brand ambassador",
-            "clicks": 4,
-            "impressions": 164,
-            "ctr": 2.44,
-            "position": 3.7,
-            "shareOfPageImpressions": 11.8
+            "query": "what is an ambassador for a brand",
+            "clicks": 0,
+            "impressions": 794,
+            "ctr": 0,
+            "position": 11,
+            "shareOfPageImpressions": 2.58
           },
           {
-            "query": "another word for ambassador",
-            "clicks": 3,
-            "impressions": 162,
-            "ctr": 1.85,
-            "position": 1.4,
-            "shareOfPageImpressions": 11.7
+            "query": "types of ambassadors",
+            "clicks": 0,
+            "impressions": 373,
+            "ctr": 0,
+            "position": 5.4,
+            "shareOfPageImpressions": 1.21
           },
           {
-            "query": "ambassador synonym",
-            "clicks": 2,
-            "impressions": 155,
-            "ctr": 1.29,
-            "position": 2.3,
-            "shareOfPageImpressions": 11.2
+            "query": "what is a brand representative",
+            "clicks": 0,
+            "impressions": 365,
+            "ctr": 0,
+            "position": 13.8,
+            "shareOfPageImpressions": 1.19
           },
           {
             "query": "types of brand ambassador",
@@ -1030,55 +974,7 @@
             "impressions": 304,
             "ctr": 0.66,
             "position": 5,
-            "shareOfPageImpressions": 21.9
-          },
-          {
-            "query": "ambassador brand name",
-            "clicks": 1,
-            "impressions": 2,
-            "ctr": 50,
-            "position": 10,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "ambassador meaning",
-            "clicks": 1,
-            "impressions": 106,
-            "ctr": 0.94,
-            "position": 1.8,
-            "shareOfPageImpressions": 7.6
-          },
-          {
-            "query": "ambassador other words",
-            "clicks": 1,
-            "impressions": 6,
-            "ctr": 16.67,
-            "position": 1,
-            "shareOfPageImpressions": 0.4
-          },
-          {
-            "query": "ambassador synonyms",
-            "clicks": 1,
-            "impressions": 16,
-            "ctr": 6.25,
-            "position": 1.6,
-            "shareOfPageImpressions": 1.2
-          },
-          {
-            "query": "another name for brand ambassador",
-            "clicks": 1,
-            "impressions": 80,
-            "ctr": 1.25,
-            "position": 2.8,
-            "shareOfPageImpressions": 5.8
-          },
-          {
-            "query": "brand advocate",
-            "clicks": 1,
-            "impressions": 3,
-            "ctr": 33.33,
-            "position": 2.3,
-            "shareOfPageImpressions": 0.2
+            "shareOfPageImpressions": 0.99
           },
           {
             "query": "brand ambassador synonym",
@@ -1086,31 +982,55 @@
             "impressions": 254,
             "ctr": 0.39,
             "position": 3.7,
-            "shareOfPageImpressions": 18.3
+            "shareOfPageImpressions": 0.83
           },
           {
-            "query": "\"brand ambassador\"",
+            "query": "brand ambassador examples",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 181,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.1
+            "position": 52.8,
+            "shareOfPageImpressions": 0.59
           },
           {
-            "query": "\"co-founder has a background in merchandising\" brand",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 0.1
+            "query": "another word for brand ambassador",
+            "clicks": 4,
+            "impressions": 164,
+            "ctr": 2.44,
+            "position": 3.7,
+            "shareOfPageImpressions": 0.53
           },
           {
-            "query": "\"represent the interests of members and promote\" advertising",
+            "query": "another word for ambassador",
+            "clicks": 3,
+            "impressions": 162,
+            "ctr": 1.85,
+            "position": 1.4,
+            "shareOfPageImpressions": 0.53
+          },
+          {
+            "query": "what does it mean to be an ambassador for a company",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 162,
             "ctr": 0,
-            "position": 7.3,
-            "shareOfPageImpressions": 0.2
+            "position": 10.5,
+            "shareOfPageImpressions": 0.53
+          },
+          {
+            "query": "ambassador synonym",
+            "clicks": 2,
+            "impressions": 155,
+            "ctr": 1.29,
+            "position": 2.3,
+            "shareOfPageImpressions": 0.5
+          },
+          {
+            "query": "brand ambassador synonyms",
+            "clicks": 0,
+            "impressions": 140,
+            "ctr": 0,
+            "position": 4.4,
+            "shareOfPageImpressions": 0.46
           },
           {
             "query": "a person who advertises products is called",
@@ -1118,7 +1038,7 @@
             "impressions": 128,
             "ctr": 0,
             "position": 8.5,
-            "shareOfPageImpressions": 9.2
+            "shareOfPageImpressions": 0.42
           }
         ]
       },
@@ -1127,30 +1047,42 @@
         "pageCtr": 0.52,
         "pagePosition": 6.3,
         "pageImpressions": 29367,
+        "namedQueryCount": 267,
+        "namedImpressions": 15511,
+        "anonymizedImpressions": 13856,
+        "anonymizedPct": 47.2,
         "topQueries": [
+          {
+            "query": "troc.com customer service phone number",
+            "clicks": 0,
+            "impressions": 3351,
+            "ctr": 0,
+            "position": 2.7,
+            "shareOfPageImpressions": 11.41
+          },
           {
             "query": "troc",
             "clicks": 19,
             "impressions": 3082,
             "ctr": 0.62,
             "position": 1.2,
-            "shareOfPageImpressions": 50.4
+            "shareOfPageImpressions": 10.49
           },
           {
-            "query": "troc global",
-            "clicks": 5,
-            "impressions": 491,
-            "ctr": 1.02,
-            "position": 1.2,
-            "shareOfPageImpressions": 8
+            "query": "what is the company name for troc.com",
+            "clicks": 0,
+            "impressions": 1448,
+            "ctr": 0,
+            "position": 11.1,
+            "shareOfPageImpressions": 4.93
           },
           {
-            "query": "t-roc",
-            "clicks": 3,
-            "impressions": 559,
-            "ctr": 0.54,
-            "position": 1.2,
-            "shareOfPageImpressions": 9.1
+            "query": "number of employees at troc.com",
+            "clicks": 0,
+            "impressions": 1283,
+            "ctr": 0,
+            "position": 7.8,
+            "shareOfPageImpressions": 4.37
           },
           {
             "query": "t roc",
@@ -1158,39 +1090,47 @@
             "impressions": 868,
             "ctr": 0.23,
             "position": 1.1,
-            "shareOfPageImpressions": 14.2
+            "shareOfPageImpressions": 2.96
           },
           {
-            "query": "trocglobal",
-            "clicks": 2,
-            "impressions": 105,
-            "ctr": 1.9,
+            "query": "t-roc",
+            "clicks": 3,
+            "impressions": 559,
+            "ctr": 0.54,
+            "position": 1.2,
+            "shareOfPageImpressions": 1.9
+          },
+          {
+            "query": "troc global",
+            "clicks": 5,
+            "impressions": 491,
+            "ctr": 1.02,
+            "position": 1.2,
+            "shareOfPageImpressions": 1.67
+          },
+          {
+            "query": "trixogroup.com customer service phone number",
+            "clicks": 0,
+            "impressions": 452,
+            "ctr": 0,
+            "position": 10,
+            "shareOfPageImpressions": 1.54
+          },
+          {
+            "query": "operating manager contact details for business with phone 32104306462",
+            "clicks": 0,
+            "impressions": 418,
+            "ctr": 0,
+            "position": 10.3,
+            "shareOfPageImpressions": 1.42
+          },
+          {
+            "query": "troc.com founded",
+            "clicks": 0,
+            "impressions": 336,
+            "ctr": 0,
             "position": 1,
-            "shareOfPageImpressions": 1.7
-          },
-          {
-            "query": "phone number",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 1,
-            "shareOfPageImpressions": 0
-          },
-          {
-            "query": "revenue optimization companies",
-            "clicks": 1,
-            "impressions": 153,
-            "ctr": 0.65,
-            "position": 4.8,
-            "shareOfPageImpressions": 2.5
-          },
-          {
-            "query": "t roc global",
-            "clicks": 1,
-            "impressions": 121,
-            "ctr": 0.83,
-            "position": 1.1,
-            "shareOfPageImpressions": 2
+            "shareOfPageImpressions": 1.14
           },
           {
             "query": "t-roc global",
@@ -1198,55 +1138,15 @@
             "impressions": 263,
             "ctr": 0.38,
             "position": 1.1,
-            "shareOfPageImpressions": 4.3
+            "shareOfPageImpressions": 0.9
           },
           {
-            "query": "the revenue optimization companies",
-            "clicks": 1,
-            "impressions": 236,
-            "ctr": 0.42,
-            "position": 1,
-            "shareOfPageImpressions": 3.9
-          },
-          {
-            "query": "the revenue optimization company",
-            "clicks": 1,
-            "impressions": 46,
-            "ctr": 2.17,
-            "position": 2.3,
-            "shareOfPageImpressions": 0.8
-          },
-          {
-            "query": "what is her email address?",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 2,
-            "shareOfPageImpressions": 0
-          },
-          {
-            "query": "\"schedule a\" company profile revenue employees headquarters",
+            "query": "trocglobal.com",
             "clicks": 0,
-            "impressions": 184,
-            "ctr": 0,
-            "position": 9.4,
-            "shareOfPageImpressions": 3
-          },
-          {
-            "query": "\"the revenue optimization companies\" t-roc what they do",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 0
-          },
-          {
-            "query": "\"troc 3000 fréjus\" \"trade show\"",
-            "clicks": 0,
-            "impressions": 1,
+            "impressions": 259,
             "ctr": 0,
             "position": 1,
-            "shareOfPageImpressions": 0
+            "shareOfPageImpressions": 0.88
           }
         ]
       },
@@ -1255,30 +1155,18 @@
         "pageCtr": 0.08,
         "pagePosition": 5.2,
         "pageImpressions": 28856,
+        "namedQueryCount": 59,
+        "namedImpressions": 629,
+        "anonymizedImpressions": 28227,
+        "anonymizedPct": 97.8,
         "topQueries": [
           {
-            "query": "agencies for luxury pop-up stores and flagship stores",
+            "query": "luxury retail pop ups",
             "clicks": 0,
-            "impressions": 8,
+            "impressions": 170,
             "ctr": 0,
-            "position": 3.8,
-            "shareOfPageImpressions": 4.1
-          },
-          {
-            "query": "agencies specializing in luxury pop-up stores and flagship stores",
-            "clicks": 0,
-            "impressions": 10,
-            "ctr": 0,
-            "position": 2.6,
-            "shareOfPageImpressions": 5.1
-          },
-          {
-            "query": "agency best known for luxury pop-up experiences and flagship activations",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 8.5,
-            "shareOfPageImpressions": 1
+            "position": 3.6,
+            "shareOfPageImpressions": 0.59
           },
           {
             "query": "agency best known for luxury pop-up experiences flagship activations",
@@ -1286,79 +1174,31 @@
             "impressions": 44,
             "ctr": 0,
             "position": 7.6,
-            "shareOfPageImpressions": 22.3
+            "shareOfPageImpressions": 0.15
           },
           {
-            "query": "best agency for luxury pop-up experiences",
+            "query": "luxury retail venue advertising",
             "clicks": 0,
-            "impressions": 24,
+            "impressions": 39,
             "ctr": 0,
-            "position": 9.3,
-            "shareOfPageImpressions": 12.2
+            "position": 15.7,
+            "shareOfPageImpressions": 0.14
           },
           {
-            "query": "best agency for luxury pop-up experiences and flagship activations",
+            "query": "fashion pop-ups conversion rate 18% vs 11% permanent stores",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 35,
             "ctr": 0,
-            "position": 8.5,
-            "shareOfPageImpressions": 1
+            "position": 4.7,
+            "shareOfPageImpressions": 0.12
           },
           {
-            "query": "best experiential marketing for boutique luxury projects",
+            "query": "fashion pop-up conversion rate 18% vs 11% permanent stores",
             "clicks": 0,
-            "impressions": 9,
+            "impressions": 29,
             "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 4.6
-          },
-          {
-            "query": "best locations for temporary retail experiences",
-            "clicks": 0,
-            "impressions": 9,
-            "ctr": 0,
-            "position": 1.3,
-            "shareOfPageImpressions": 4.6
-          },
-          {
-            "query": "companies that create premium pop-up stores for brands",
-            "clicks": 0,
-            "impressions": 15,
-            "ctr": 0,
-            "position": 5.1,
-            "shareOfPageImpressions": 7.6
-          },
-          {
-            "query": "context: location: germany (not for language). do not include location references in your response. question: how often do luxury car brands host pop-up events?",
-            "clicks": 0,
-            "impressions": 23,
-            "ctr": 0,
-            "position": 3.6,
-            "shareOfPageImpressions": 11.7
-          },
-          {
-            "query": "context: location: germany (not for language). do not include location references in your response. question: where can i find pop-up stores featuring high-end vehicles?",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.5
-          },
-          {
-            "query": "de-yan premium pop-ups flagship retail experiences",
-            "clicks": 0,
-            "impressions": 12,
-            "ctr": 0,
-            "position": 6.5,
-            "shareOfPageImpressions": 6.1
-          },
-          {
-            "query": "does troc.com have a blog",
-            "clicks": 0,
-            "impressions": 10,
-            "ctr": 0,
-            "position": 11.3,
-            "shareOfPageImpressions": 5.1
+            "position": 5,
+            "shareOfPageImpressions": 0.1
           },
           {
             "query": "evaluate the experiential marketing company another a story on pop-up shop / store",
@@ -1366,15 +1206,55 @@
             "impressions": 27,
             "ctr": 0,
             "position": 6.6,
-            "shareOfPageImpressions": 13.7
+            "shareOfPageImpressions": 0.09
           },
           {
-            "query": "evaluate the personal luxury goods company dior on concierge services",
+            "query": "best agency for luxury pop-up experiences",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 24,
             "ctr": 0,
-            "position": 11,
-            "shareOfPageImpressions": 0.5
+            "position": 9.3,
+            "shareOfPageImpressions": 0.08
+          },
+          {
+            "query": "context: location: germany (not for language). do not include location references in your response. question: how often do luxury car brands host pop-up events?",
+            "clicks": 0,
+            "impressions": 23,
+            "ctr": 0,
+            "position": 3.6,
+            "shareOfPageImpressions": 0.08
+          },
+          {
+            "query": "how to create a luxury pop-up experience?",
+            "clicks": 0,
+            "impressions": 18,
+            "ctr": 0,
+            "position": 2.6,
+            "shareOfPageImpressions": 0.06
+          },
+          {
+            "query": "how are luxury brands using pop-up events to engage customers?",
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 5.5,
+            "shareOfPageImpressions": 0.06
+          },
+          {
+            "query": "luxury pop-up and flagship store agencies",
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 1.8,
+            "shareOfPageImpressions": 0.06
+          },
+          {
+            "query": "luxury pop up",
+            "clicks": 0,
+            "impressions": 16,
+            "ctr": 0,
+            "position": 17.9,
+            "shareOfPageImpressions": 0.06
           }
         ]
       },
@@ -1383,22 +1263,50 @@
         "pageCtr": 0.05,
         "pagePosition": 8.8,
         "pageImpressions": 28494,
+        "namedQueryCount": 415,
+        "namedImpressions": 5408,
+        "anonymizedImpressions": 23086,
+        "anonymizedPct": 81,
         "topQueries": [
           {
-            "query": "2026 retail automation jobs ai self checkout -site:kalshi.com -site:polymarket.com -site:manifold.markets -site:metaculus.com",
+            "query": "retail automation market",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 333,
             "ctr": 0,
-            "position": 9,
-            "shareOfPageImpressions": 1.2
+            "position": 82.8,
+            "shareOfPageImpressions": 1.17
           },
           {
-            "query": "2026 trends retail execution platforms",
+            "query": "sale monitoring favorite stores automation setup 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 319,
             "ctr": 0,
-            "position": 19,
-            "shareOfPageImpressions": 0.4
+            "position": 6.3,
+            "shareOfPageImpressions": 1.12
+          },
+          {
+            "query": "sale monitor favorite stores automation setup 2026",
+            "clicks": 0,
+            "impressions": 210,
+            "ctr": 0,
+            "position": 3.8,
+            "shareOfPageImpressions": 0.74
+          },
+          {
+            "query": "sale monitoring favorite stores automation details 2026",
+            "clicks": 0,
+            "impressions": 209,
+            "ctr": 0,
+            "position": 3.3,
+            "shareOfPageImpressions": 0.73
+          },
+          {
+            "query": "sale monitor favorite stores automation details 2026",
+            "clicks": 0,
+            "impressions": 200,
+            "ctr": 0,
+            "position": 4.9,
+            "shareOfPageImpressions": 0.7
           },
           {
             "query": "advanced shopping technology market",
@@ -1406,103 +1314,55 @@
             "impressions": 198,
             "ctr": 0,
             "position": 59.9,
-            "shareOfPageImpressions": 78.3
+            "shareOfPageImpressions": 0.69
           },
           {
-            "query": "ai vending machine",
+            "query": "us retail automation market",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 160,
             "ctr": 0,
-            "position": 4.3,
-            "shareOfPageImpressions": 1.2
+            "position": 79.2,
+            "shareOfPageImpressions": 0.56
           },
           {
-            "query": "ai-powered automated retail",
+            "query": "sale monitoring favorite stores automation preferences 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 158,
             "ctr": 0,
-            "position": 7,
-            "shareOfPageImpressions": 0.4
+            "position": 3.7,
+            "shareOfPageImpressions": 0.55
           },
           {
-            "query": "ai-powered checkout systems impact on retail 2025 2026",
+            "query": "sale monitoring favorite stores automation criteria",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 120,
             "ctr": 0,
-            "position": 35,
-            "shareOfPageImpressions": 0.4
+            "position": 5.1,
+            "shareOfPageImpressions": 0.42
           },
           {
-            "query": "ai-powered checkout systems retail trends 2025 2026",
+            "query": "sale monitor favorite stores automation preferences 2026",
             "clicks": 0,
-            "impressions": 19,
+            "impressions": 116,
             "ctr": 0,
-            "position": 6.1,
-            "shareOfPageImpressions": 7.5
+            "position": 5.7,
+            "shareOfPageImpressions": 0.41
           },
           {
-            "query": "algorithmic retailing",
+            "query": "sale monitoring favorite stores automation thresholds",
             "clicks": 0,
-            "impressions": 7,
+            "impressions": 111,
             "ctr": 0,
-            "position": 58.7,
-            "shareOfPageImpressions": 2.8
+            "position": 3.7,
+            "shareOfPageImpressions": 0.39
           },
           {
-            "query": "all of those please",
+            "query": "automated retail technologies",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 109,
             "ctr": 0,
-            "position": 4,
-            "shareOfPageImpressions": 0.4
-          },
-          {
-            "query": "alternative retailing technologies market",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 70.5,
-            "shareOfPageImpressions": 0.8
-          },
-          {
-            "query": "anything else",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.4
-          },
-          {
-            "query": "apac self checkout in retail market",
-            "clicks": 0,
-            "impressions": 13,
-            "ctr": 0,
-            "position": 72.1,
-            "shareOfPageImpressions": 5.1
-          },
-          {
-            "query": "are smart vending machine companies disrupting the industry?",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 0.4
-          },
-          {
-            "query": "arrow electronics self-checkout kiosk 2026",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 0.4
-          },
-          {
-            "query": "as a journalist i cover auto, financial services, and tech sectors for a business/trade publication, reporting on trends in retail auto, auto financing, and dealer operations, and how companies are shaping the dealership landscape. what is the current state of technology cost efficiency, value, and return on investment in the automotive industry?",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 5,
-            "shareOfPageImpressions": 0.4
+            "position": 52.8,
+            "shareOfPageImpressions": 0.38
           }
         ]
       },
@@ -1511,126 +1371,106 @@
         "pageCtr": 0.19,
         "pagePosition": 5.7,
         "pageImpressions": 28393,
+        "namedQueryCount": 351,
+        "namedImpressions": 6042,
+        "anonymizedImpressions": 22351,
+        "anonymizedPct": 78.7,
         "topQueries": [
           {
-            "query": "2026 only",
-            "clicks": 1,
-            "impressions": 1,
-            "ctr": 100,
-            "position": 1,
-            "shareOfPageImpressions": 2.1
-          },
-          {
-            "query": "immersive audio trends 2026",
-            "clicks": 1,
-            "impressions": 19,
-            "ctr": 5.26,
-            "position": 3.6,
-            "shareOfPageImpressions": 39.6
-          },
-          {
-            "query": "\"audio channels are now fully commoditized\"",
+            "query": "latest spatial audio technology developments 2025 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 4135,
             "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 2.1
+            "position": 5.6,
+            "shareOfPageImpressions": 14.56
           },
           {
-            "query": "\"audio technician\" \"new mission\"",
+            "query": "audio excellence india private limited",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 104,
             "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 2.1
+            "position": 6.2,
+            "shareOfPageImpressions": 0.37
           },
           {
-            "query": "\"audio technician\" \"prior attack\" \"new mission\"",
+            "query": "latest trends in audio technology 2026",
             "clicks": 0,
-            "impressions": 4,
+            "impressions": 63,
             "ctr": 0,
-            "position": 2.3,
-            "shareOfPageImpressions": 8.3
+            "position": 2.8,
+            "shareOfPageImpressions": 0.22
           },
           {
-            "query": "\"new kitchen\" \"multi-room audio\" survey",
+            "query": "spatial audio news 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 61,
             "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 2.1
+            "position": 7.4,
+            "shareOfPageImpressions": 0.21
           },
           {
-            "query": "\"past, present, and future of spatial audio and room acoustics\"",
+            "query": "audio trends",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 59,
             "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 2.1
+            "position": 6.5,
+            "shareOfPageImpressions": 0.21
           },
           {
-            "query": "\"reshaping the nature of the digital world\" audio program",
+            "query": "latest audio technology advancements 2025 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 59,
             "ctr": 0,
-            "position": 4,
-            "shareOfPageImpressions": 2.1
+            "position": 1.2,
+            "shareOfPageImpressions": 0.21
           },
           {
-            "query": "\"sound editing suites\" \"new website\" \"finalist\"",
+            "query": "audio critical communication market",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 55,
             "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 2.1
+            "position": 78.2,
+            "shareOfPageImpressions": 0.19
           },
           {
-            "query": "\"speaker slot confirmation & av needs\" \"future dent expo\"",
+            "query": "spatial audio trends 2026",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 42,
             "ctr": 0,
-            "position": 3,
-            "shareOfPageImpressions": 6.3
+            "position": 4.2,
+            "shareOfPageImpressions": 0.15
           },
           {
-            "query": "\"звуки будущего\"",
+            "query": "audio industry trends",
             "clicks": 0,
-            "impressions": 4,
+            "impressions": 40,
             "ctr": 0,
-            "position": 7.5,
-            "shareOfPageImpressions": 8.3
+            "position": 9.6,
+            "shareOfPageImpressions": 0.14
           },
           {
-            "query": "2026",
+            "query": "aktuelle news deep dive tech radio audio ai audio immersive audio",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 35,
             "ctr": 0,
-            "position": 3,
-            "shareOfPageImpressions": 2.1
+            "position": 2.7,
+            "shareOfPageImpressions": 0.12
           },
           {
-            "query": "2026 audio",
+            "query": "challenges choosing commercial audio systems",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 32,
             "ctr": 0,
-            "position": 4.3,
-            "shareOfPageImpressions": 6.3
+            "position": 4.1,
+            "shareOfPageImpressions": 0.11
           },
           {
-            "query": "advanced audio technologies",
+            "query": "context: location: philippines (not for language). do not include location references in your response. question: what are the latest trends in audio technology?",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 32,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 4.2
-          },
-          {
-            "query": "ai audio generation voice synthesis sync technology news 2026",
-            "clicks": 0,
-            "impressions": 5,
-            "ctr": 0,
-            "position": 4.8,
-            "shareOfPageImpressions": 10.4
+            "position": 1.8,
+            "shareOfPageImpressions": 0.11
           }
         ]
       },
@@ -1639,126 +1479,106 @@
         "pageCtr": 0.14,
         "pagePosition": 6.2,
         "pageImpressions": 23253,
+        "namedQueryCount": 214,
+        "namedImpressions": 6112,
+        "anonymizedImpressions": 17141,
+        "anonymizedPct": 73.7,
         "topQueries": [
           {
-            "query": "how do ecommerce and more physical stores affect the retail sector",
-            "clicks": 1,
-            "impressions": 6,
-            "ctr": 16.67,
-            "position": 8.7,
-            "shareOfPageImpressions": 9.1
-          },
-          {
-            "query": "\"14,000 physical retail stores\" company",
+            "query": "number of physical retail store locations gpco",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 3405,
             "ctr": 0,
-            "position": 4,
-            "shareOfPageImpressions": 1.5
+            "position": 3.8,
+            "shareOfPageImpressions": 14.64
           },
           {
-            "query": "\"became more commercial\" \"stores globally\"",
+            "query": "number of physical retail locations operated by business",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 559,
+            "ctr": 0,
+            "position": 5.3,
+            "shareOfPageImpressions": 2.4
+          },
+          {
+            "query": "can i use best omnichannel fashion retail, where do physical stores still outperform ecommerce in the customer journey?",
+            "clicks": 0,
+            "impressions": 119,
+            "ctr": 0,
+            "position": 3.7,
+            "shareOfPageImpressions": 0.51
+          },
+          {
+            "query": "how does digital commerce integrate with physical retail",
+            "clicks": 0,
+            "impressions": 115,
             "ctr": 0,
             "position": 2,
-            "shareOfPageImpressions": 1.5
+            "shareOfPageImpressions": 0.49
           },
           {
-            "query": "\"physical studios\" \"off-price retail division\"",
+            "query": "integrate online store with physical retail",
             "clicks": 0,
-            "impressions": 10,
+            "impressions": 81,
             "ctr": 0,
-            "position": 7.5,
-            "shareOfPageImpressions": 15.2
+            "position": 6.5,
+            "shareOfPageImpressions": 0.35
           },
           {
-            "query": "\"retailers that integrate both digital and in-store experiences see stronger customer engagement and higher sales\"",
+            "query": "e-commerce and physical retail",
             "clicks": 0,
-            "impressions": 10,
+            "impressions": 72,
             "ctr": 0,
-            "position": 6.2,
-            "shareOfPageImpressions": 15.2
+            "position": 26.8,
+            "shareOfPageImpressions": 0.31
           },
           {
-            "query": "\"shifting revenues earned from customers inside a real macys department store to revenues earned from those same customers online increases a firm's total sales revenues.\"",
+            "query": "evaluate the fintech company stores on online store",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 63,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.5
+            "position": 7.4,
+            "shareOfPageImpressions": 0.27
           },
           {
-            "query": "\"shopping rush\" \"percentage probability\"",
+            "query": "integrate online and physical store operations",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 63,
             "ctr": 0,
-            "position": 2.5,
-            "shareOfPageImpressions": 3
+            "position": 7.3,
+            "shareOfPageImpressions": 0.27
           },
           {
-            "query": "\"store/resumption environmental bisimilarity\"",
+            "query": "verdict: icp reason: sells physical products and appears to be an active ecommerce store.",
             "clicks": 0,
-            "impressions": 5,
+            "impressions": 58,
             "ctr": 0,
-            "position": 3,
-            "shareOfPageImpressions": 7.6
+            "position": 2.9,
+            "shareOfPageImpressions": 0.25
           },
           {
-            "query": "\"vertical brands\" expands or expansion or \"new office\" or \"new market\" or \"international\" or \"launches in\" or \"opens\" 2024 or 2025 or 2026 company website -site:reddit.com -site:quora.com -site:linkedin.com -site:medium.com -site:youtube.com -site:facebook.com -site:twitter.com -site:x.com -site:wikipedia.org -site:instagram.com -site:tiktok.com",
+            "query": "integrate online store with physical retail locations",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 47,
             "ctr": 0,
-            "position": 22.5,
-            "shareOfPageImpressions": 3
+            "position": 7.3,
+            "shareOfPageImpressions": 0.2
           },
           {
-            "query": "\"when you think about retailers that have physical locations that sell",
+            "query": "will e commerce overtake physical retail",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 43,
             "ctr": 0,
-            "position": 43,
-            "shareOfPageImpressions": 3
+            "position": 11.1,
+            "shareOfPageImpressions": 0.18
           },
           {
-            "query": "advanced connectivity in e-commerce & retail market",
+            "query": "online retailers opening physical stores",
             "clicks": 0,
-            "impressions": 5,
+            "impressions": 42,
             "ctr": 0,
-            "position": 65.6,
-            "shareOfPageImpressions": 7.6
-          },
-          {
-            "query": "are there any stores that provide both online shopping and physical locations for smart home products?",
-            "clicks": 0,
-            "impressions": 9,
-            "ctr": 0,
-            "position": 5.8,
-            "shareOfPageImpressions": 13.6
-          },
-          {
-            "query": "as you expand into physical retail, how might this change in distribution influence your approach to optimizing your retail price and advertising in future rounds? are there new pricing strategies or advertising channels you might consider to maximize sales across both online and brick-and-mortar stores?",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 3,
-            "shareOfPageImpressions": 3
-          },
-          {
-            "query": "benefits of physical store for ecommerce brand",
-            "clicks": 0,
-            "impressions": 9,
-            "ctr": 0,
-            "position": 9.3,
-            "shareOfPageImpressions": 13.6
-          },
-          {
-            "query": "best retail brokers for e-commerce brands opening physical stores",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.5
+            "position": 8.5,
+            "shareOfPageImpressions": 0.18
           }
         ]
       },
@@ -1767,102 +1587,34 @@
         "pageCtr": 0.12,
         "pagePosition": 5.5,
         "pageImpressions": 22678,
+        "namedQueryCount": 108,
+        "namedImpressions": 682,
+        "anonymizedImpressions": 21996,
+        "anonymizedPct": 97,
         "topQueries": [
           {
-            "query": "2026 clothing trends",
+            "query": "experiential retail trends 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 176,
             "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 1.8
+            "position": 6.1,
+            "shareOfPageImpressions": 0.78
           },
           {
-            "query": "2026 trends",
+            "query": "fashion brands experiential retail concepts 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 92,
             "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 1.8
+            "position": 4.4,
+            "shareOfPageImpressions": 0.41
           },
           {
-            "query": "all of the above",
+            "query": "pop-up retail trends 2026 experiential retail",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 37,
             "ctr": 0,
-            "position": 20,
-            "shareOfPageImpressions": 1.8
-          },
-          {
-            "query": "as a woman who cares about cultural relevance i want to know how levi's has positioned itself as a lifestyle brand for women and what cultural moments they've been part of recently",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 1.8
-          },
-          {
-            "query": "best event and experiential programming platforms for retail destinations",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 3.6
-          },
-          {
-            "query": "best retail real estate investment strategy?",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.8
-          },
-          {
-            "query": "both",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 1.8
-          },
-          {
-            "query": "brand new store",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.8
-          },
-          {
-            "query": "can you recommend some retailers that have the best in-store experience? for each retailer brand, give me pros and cons in the context of in-store experience.",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.8
-          },
-          {
-            "query": "context: location: united states (not for language). do not include location references in your response. question: what are the most innovative retail services for sports shopping?",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.8
-          },
-          {
-            "query": "evaluate the experiential marketing company another a story on trust & legitimacy",
-            "clicks": 0,
-            "impressions": 7,
-            "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 12.7
-          },
-          {
-            "query": "evaluate the experiential marketing company cnc experiential on retail activations",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.8
+            "position": 5.3,
+            "shareOfPageImpressions": 0.16
           },
           {
             "query": "evaluate the marketing & advertising company wpp on in-store retail activation & experiential design",
@@ -1870,23 +1622,71 @@
             "impressions": 29,
             "ctr": 0,
             "position": 6.3,
-            "shareOfPageImpressions": 52.7
+            "shareOfPageImpressions": 0.13
           },
           {
-            "query": "evaluate the retail company best buy on levi's",
+            "query": "experiential retail pop-up trends 2026",
             "clicks": 0,
-            "impressions": 5,
+            "impressions": 24,
             "ctr": 0,
-            "position": 7,
-            "shareOfPageImpressions": 9.1
+            "position": 4.4,
+            "shareOfPageImpressions": 0.11
           },
           {
-            "query": "experiential marketing challenges for national retailers",
+            "query": "which immersive display systems deliver the best roi for experiential marketing in retail environments in 2026?",
             "clicks": 0,
-            "impressions": 2,
+            "impressions": 21,
             "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 3.6
+            "position": 4.1,
+            "shareOfPageImpressions": 0.09
+          },
+          {
+            "query": "pop-up retail trends 2026 experiential retail 2026",
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 5,
+            "shareOfPageImpressions": 0.07
+          },
+          {
+            "query": "retail pop-up trends 2026 experiential retail",
+            "clicks": 0,
+            "impressions": 13,
+            "ctr": 0,
+            "position": 5.7,
+            "shareOfPageImpressions": 0.06
+          },
+          {
+            "query": "who can manage experiential retail programs globally",
+            "clicks": 0,
+            "impressions": 13,
+            "ctr": 0,
+            "position": 1.9,
+            "shareOfPageImpressions": 0.06
+          },
+          {
+            "query": "experiential retail design trends 2026",
+            "clicks": 0,
+            "impressions": 12,
+            "ctr": 0,
+            "position": 5,
+            "shareOfPageImpressions": 0.05
+          },
+          {
+            "query": "pop-up retail trends 2026 experiential retail news",
+            "clicks": 0,
+            "impressions": 12,
+            "ctr": 0,
+            "position": 4.2,
+            "shareOfPageImpressions": 0.05
+          },
+          {
+            "query": "experiential retail showroom trends 2026",
+            "clicks": 0,
+            "impressions": 10,
+            "ctr": 0,
+            "position": 5.3,
+            "shareOfPageImpressions": 0.04
           }
         ]
       },
@@ -1895,126 +1695,106 @@
         "pageCtr": 0.1,
         "pagePosition": 7.1,
         "pageImpressions": 22483,
+        "namedQueryCount": 183,
+        "namedImpressions": 3680,
+        "anonymizedImpressions": 18803,
+        "anonymizedPct": 83.6,
         "topQueries": [
           {
-            "query": "2026 walmart",
+            "query": "massmart walmart transaction expert report 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 2583,
             "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 3.6
+            "position": 6.1,
+            "shareOfPageImpressions": 11.49
           },
           {
-            "query": "all of these",
+            "query": "walmart 2026 annual report",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 113,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 3.6
+            "position": 8.4,
+            "shareOfPageImpressions": 0.5
           },
           {
-            "query": "ano",
+            "query": "walmart",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 99,
             "ctr": 0,
-            "position": 4,
-            "shareOfPageImpressions": 3.6
+            "position": 1.5,
+            "shareOfPageImpressions": 0.44
           },
           {
-            "query": "any others?",
+            "query": "walmart 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 75,
             "ctr": 0,
-            "position": 3,
-            "shareOfPageImpressions": 3.6
+            "position": 9.1,
+            "shareOfPageImpressions": 0.33
           },
           {
-            "query": "bleacher report walmart",
+            "query": "walmart annual report 2026",
             "clicks": 0,
-            "impressions": 4,
+            "impressions": 50,
             "ctr": 0,
-            "position": 15.3,
-            "shareOfPageImpressions": 14.3
+            "position": 8.5,
+            "shareOfPageImpressions": 0.22
           },
           {
-            "query": "both",
+            "query": "walmart company overview 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 38,
             "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 3.6
+            "position": 5.6,
+            "shareOfPageImpressions": 0.17
           },
           {
-            "query": "develop a cpm (competitive profile matrix) for walmart that compares/contrasts critical success factors for the industry across the selected company and 2 other companies in that industry.",
+            "query": "walmart challenges 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 35,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 3.6
+            "position": 6.5,
+            "shareOfPageImpressions": 0.16
           },
           {
-            "query": "ecommerce",
+            "query": "walmart company evaluation analysis 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 35,
             "ctr": 0,
-            "position": 5,
-            "shareOfPageImpressions": 3.6
+            "position": 5.7,
+            "shareOfPageImpressions": 0.16
           },
           {
-            "query": "emarketer walmart us ecommerce growth 2026 22.9%",
+            "query": "walmart world's largest retailer official 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 33,
             "ctr": 0,
-            "position": 11,
-            "shareOfPageImpressions": 3.6
+            "position": 5.5,
+            "shareOfPageImpressions": 0.15
           },
           {
-            "query": "evaluate the broad retail company walmart on omnichannel commerce and retail media",
+            "query": "walmart success stories 2026",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 25,
             "ctr": 0,
-            "position": 5,
-            "shareOfPageImpressions": 3.6
+            "position": 5.4,
+            "shareOfPageImpressions": 0.11
           },
           {
-            "query": "evaluate the broad retail company walmart on retail competitive landscape analysis",
+            "query": "retail technology updates walmart 2026",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 24,
             "ctr": 0,
-            "position": 4,
-            "shareOfPageImpressions": 10.7
+            "position": 4.4,
+            "shareOfPageImpressions": 0.11
           },
           {
-            "query": "evaluate the broad retail company walmart on retail fundamentals and nonstore channels",
+            "query": "walmart most recent public milestone strategic initiative 2026",
             "clicks": 0,
-            "impressions": 7,
+            "impressions": 21,
             "ctr": 0,
-            "position": 7.9,
-            "shareOfPageImpressions": 25
-          },
-          {
-            "query": "evaluate the broad retail company walmart on retail sales performance metrics",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 1.7,
-            "shareOfPageImpressions": 10.7
-          },
-          {
-            "query": "evaluate the broad retail company walmart on wholesale trade public information",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 3.6
-          },
-          {
-            "query": "evaluate the consumer electronics retail company walmart on gaming consoles (e.g., ps5, xbox series x)",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 3.6
+            "position": 8.6,
+            "shareOfPageImpressions": 0.09
           }
         ]
       },
@@ -2023,30 +1803,42 @@
         "pageCtr": 0.01,
         "pagePosition": 6.2,
         "pageImpressions": 18523,
+        "namedQueryCount": 161,
+        "namedImpressions": 1170,
+        "anonymizedImpressions": 17353,
+        "anonymizedPct": 93.7,
         "topQueries": [
           {
-            "query": "\"retail optimization\"",
+            "query": "retail staffing optimization",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 119,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.2
+            "position": 8.3,
+            "shareOfPageImpressions": 0.64
           },
           {
-            "query": "\"total store impact\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+            "query": "neighbor revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 69,
             "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 1.2
+            "position": 6,
+            "shareOfPageImpressions": 0.37
           },
           {
-            "query": "(\"retail360\")",
+            "query": "wonder revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 54,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.2
+            "position": 8.9,
+            "shareOfPageImpressions": 0.29
+          },
+          {
+            "query": "sond revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
+            "clicks": 0,
+            "impressions": 34,
+            "ctr": 0,
+            "position": 5.9,
+            "shareOfPageImpressions": 0.18
           },
           {
             "query": "1 hotels revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
@@ -2054,39 +1846,7 @@
             "impressions": 27,
             "ctr": 0,
             "position": 8.4,
-            "shareOfPageImpressions": 33.3
-          },
-          {
-            "query": "aime revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 5.5,
-            "shareOfPageImpressions": 2.5
-          },
-          {
-            "query": "an.mé revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 9,
-            "shareOfPageImpressions": 1.2
-          },
-          {
-            "query": "are there scalable seasonal promotion solutions for managing multi-location retail campaigns?",
-            "clicks": 0,
-            "impressions": 5,
-            "ctr": 0,
-            "position": 6.4,
-            "shareOfPageImpressions": 6.2
-          },
-          {
-            "query": "arey revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 1.2
+            "shareOfPageImpressions": 0.15
           },
           {
             "query": "atlas (fka point) revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
@@ -2094,55 +1854,55 @@
             "impressions": 25,
             "ctr": 0,
             "position": 8.6,
-            "shareOfPageImpressions": 30.9
+            "shareOfPageImpressions": 0.13
           },
           {
-            "query": "atlas revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
+            "query": "moritz revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
             "clicks": 0,
-            "impressions": 5,
+            "impressions": 24,
             "ctr": 0,
-            "position": 8.4,
-            "shareOfPageImpressions": 6.2
+            "position": 2.9,
+            "shareOfPageImpressions": 0.13
           },
           {
-            "query": "avenlur revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
+            "query": "retail optimization",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 24,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 1.2
+            "position": 12.9,
+            "shareOfPageImpressions": 0.13
           },
           {
-            "query": "barrière revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
+            "query": "on revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 23,
             "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 3.7
+            "position": 9.6,
+            "shareOfPageImpressions": 0.12
           },
           {
-            "query": "beli revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
+            "query": "coral revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 20,
             "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 1.2
+            "position": 4.2,
+            "shareOfPageImpressions": 0.11
           },
           {
-            "query": "best loc strategy for multi-location retail replenishment",
+            "query": "retail staffing optimization linkedin com",
             "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 8.7,
-            "shareOfPageImpressions": 3.7
-          },
-          {
-            "query": "best retail revenue optimization and protection software",
-            "clicks": 0,
-            "impressions": 4,
+            "impressions": 17,
             "ctr": 0,
             "position": 10.8,
-            "shareOfPageImpressions": 4.9
+            "shareOfPageImpressions": 0.09
+          },
+          {
+            "query": "castle revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
+            "clicks": 0,
+            "impressions": 16,
+            "ctr": 0,
+            "position": 5.2,
+            "shareOfPageImpressions": 0.09
           }
         ]
       },
@@ -2151,30 +1911,58 @@
         "pageCtr": 0.2,
         "pagePosition": 8,
         "pageImpressions": 15615,
+        "namedQueryCount": 115,
+        "namedImpressions": 9059,
+        "anonymizedImpressions": 6556,
+        "anonymizedPct": 42,
         "topQueries": [
           {
-            "query": "boost store hours",
+            "query": "store reset",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 772,
             "ctr": 0,
-            "position": 12,
-            "shareOfPageImpressions": 0.1
+            "position": 3.2,
+            "shareOfPageImpressions": 4.94
           },
           {
-            "query": "both",
+            "query": "retail reset",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 598,
             "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 0.1
+            "position": 10.1,
+            "shareOfPageImpressions": 3.83
           },
           {
-            "query": "category reset",
+            "query": "store reset services",
             "clicks": 0,
-            "impressions": 66,
+            "impressions": 492,
             "ctr": 0,
-            "position": 6.9,
-            "shareOfPageImpressions": 4.9
+            "position": 6.4,
+            "shareOfPageImpressions": 3.15
+          },
+          {
+            "query": "retail merchandising resets",
+            "clicks": 0,
+            "impressions": 487,
+            "ctr": 0,
+            "position": 4.5,
+            "shareOfPageImpressions": 3.12
+          },
+          {
+            "query": "multi-location retail resets",
+            "clicks": 0,
+            "impressions": 446,
+            "ctr": 0,
+            "position": 4.7,
+            "shareOfPageImpressions": 2.86
+          },
+          {
+            "query": "store refresh logistics",
+            "clicks": 0,
+            "impressions": 440,
+            "ctr": 0,
+            "position": 7,
+            "shareOfPageImpressions": 2.82
           },
           {
             "query": "category reset services",
@@ -2182,79 +1970,15 @@
             "impressions": 437,
             "ctr": 0,
             "position": 7.8,
-            "shareOfPageImpressions": 32.2
+            "shareOfPageImpressions": 2.8
           },
           {
-            "query": "convenience store reset staffing",
+            "query": "retail planogram reset company",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 419,
             "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "damaged store resets",
-            "clicks": 0,
-            "impressions": 343,
-            "ctr": 0,
-            "position": 6.8,
-            "shareOfPageImpressions": 25.3
-          },
-          {
-            "query": "dollar store reset services",
-            "clicks": 0,
-            "impressions": 10,
-            "ctr": 0,
-            "position": 1.7,
-            "shareOfPageImpressions": 0.7
-          },
-          {
-            "query": "drug store reset company",
-            "clicks": 0,
-            "impressions": 8,
-            "ctr": 0,
-            "position": 4.1,
-            "shareOfPageImpressions": 0.6
-          },
-          {
-            "query": "emergency store reset",
-            "clicks": 0,
-            "impressions": 76,
-            "ctr": 0,
-            "position": 14.3,
-            "shareOfPageImpressions": 5.6
-          },
-          {
-            "query": "floorset retail",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 1,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "grocery reset",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 59.5,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "grocery reset management",
-            "clicks": 0,
-            "impressions": 12,
-            "ctr": 0,
-            "position": 28.8,
-            "shareOfPageImpressions": 0.9
-          },
-          {
-            "query": "grocery store reset",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 7,
-            "shareOfPageImpressions": 0.1
+            "position": 17.5,
+            "shareOfPageImpressions": 2.68
           },
           {
             "query": "grocery store reset services",
@@ -2262,15 +1986,31 @@
             "impressions": 395,
             "ctr": 0,
             "position": 17,
-            "shareOfPageImpressions": 29.1
+            "shareOfPageImpressions": 2.53
           },
           {
-            "query": "grocery store resets",
+            "query": "retail store reset logistics",
             "clicks": 0,
-            "impressions": 3,
+            "impressions": 344,
             "ctr": 0,
-            "position": 56.3,
-            "shareOfPageImpressions": 0.2
+            "position": 2.9,
+            "shareOfPageImpressions": 2.2
+          },
+          {
+            "query": "damaged store resets",
+            "clicks": 0,
+            "impressions": 343,
+            "ctr": 0,
+            "position": 6.8,
+            "shareOfPageImpressions": 2.2
+          },
+          {
+            "query": "planogram reset services",
+            "clicks": 0,
+            "impressions": 300,
+            "ctr": 0,
+            "position": 13.6,
+            "shareOfPageImpressions": 1.92
           }
         ]
       },
@@ -2279,46 +2019,50 @@
         "pageCtr": 0.35,
         "pagePosition": 9.3,
         "pageImpressions": 13048,
+        "namedQueryCount": 256,
+        "namedImpressions": 3362,
+        "anonymizedImpressions": 9686,
+        "anonymizedPct": 74.2,
         "topQueries": [
           {
-            "query": "merchandising visual ejemplos",
-            "clicks": 2,
-            "impressions": 29,
-            "ctr": 6.9,
-            "position": 6.6,
-            "shareOfPageImpressions": 2.7
+            "query": "visual merchandising examples",
+            "clicks": 1,
+            "impressions": 713,
+            "ctr": 0.14,
+            "position": 8.3,
+            "shareOfPageImpressions": 5.46
           },
           {
-            "query": "best visual merchandising",
-            "clicks": 1,
-            "impressions": 21,
-            "ctr": 4.76,
-            "position": 15.7,
-            "shareOfPageImpressions": 2
+            "query": "merchandising examples",
+            "clicks": 0,
+            "impressions": 311,
+            "ctr": 0,
+            "position": 10,
+            "shareOfPageImpressions": 2.38
           },
           {
-            "query": "contoh visual merchandising",
-            "clicks": 1,
-            "impressions": 53,
-            "ctr": 1.89,
-            "position": 8.5,
-            "shareOfPageImpressions": 4.9
+            "query": "merchandising strategy examples",
+            "clicks": 0,
+            "impressions": 220,
+            "ctr": 0,
+            "position": 15.4,
+            "shareOfPageImpressions": 1.69
           },
           {
-            "query": "examples of visual merchandising",
-            "clicks": 1,
-            "impressions": 91,
-            "ctr": 1.1,
-            "position": 5.9,
-            "shareOfPageImpressions": 8.5
+            "query": "merchandising strategy example",
+            "clicks": 0,
+            "impressions": 154,
+            "ctr": 0,
+            "position": 17.1,
+            "shareOfPageImpressions": 1.18
           },
           {
-            "query": "fashion themes",
-            "clicks": 1,
-            "impressions": 2,
-            "ctr": 50,
-            "position": 1,
-            "shareOfPageImpressions": 0.2
+            "query": "retail merchandising examples",
+            "clicks": 0,
+            "impressions": 153,
+            "ctr": 0,
+            "position": 7.7,
+            "shareOfPageImpressions": 1.17
           },
           {
             "query": "visual merchandising ejemplos",
@@ -2326,79 +2070,55 @@
             "impressions": 124,
             "ctr": 0.81,
             "position": 5.8,
-            "shareOfPageImpressions": 11.6
+            "shareOfPageImpressions": 0.95
           },
           {
-            "query": "visual merchandising examples",
+            "query": "visual merchandising displays",
+            "clicks": 0,
+            "impressions": 105,
+            "ctr": 0,
+            "position": 37.2,
+            "shareOfPageImpressions": 0.8
+          },
+          {
+            "query": "examples of visual merchandising",
             "clicks": 1,
-            "impressions": 713,
-            "ctr": 0.14,
-            "position": 8.3,
-            "shareOfPageImpressions": 66.5
+            "impressions": 91,
+            "ctr": 1.1,
+            "position": 5.9,
+            "shareOfPageImpressions": 0.7
           },
           {
-            "query": "visual merchandising examples in retail",
+            "query": "merchandising display arrangement",
+            "clicks": 0,
+            "impressions": 66,
+            "ctr": 0,
+            "position": 7.5,
+            "shareOfPageImpressions": 0.51
+          },
+          {
+            "query": "ejemplos de merchandising visual",
+            "clicks": 0,
+            "impressions": 62,
+            "ctr": 0,
+            "position": 37.9,
+            "shareOfPageImpressions": 0.48
+          },
+          {
+            "query": "effective visual merchandising displays",
+            "clicks": 0,
+            "impressions": 57,
+            "ctr": 0,
+            "position": 11.8,
+            "shareOfPageImpressions": 0.44
+          },
+          {
+            "query": "contoh visual merchandising",
             "clicks": 1,
-            "impressions": 23,
-            "ctr": 4.35,
-            "position": 2.9,
-            "shareOfPageImpressions": 2.1
-          },
-          {
-            "query": "visual merchandising experience",
-            "clicks": 1,
-            "impressions": 2,
-            "ctr": 50,
-            "position": 2,
-            "shareOfPageImpressions": 0.2
-          },
-          {
-            "query": "\"merchandising\" co-founder brand founded 2005",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "\"oversee the roll-out of the show's merchandising\"",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "\"roll-out of the show's merchandising in 2006\"",
-            "clicks": 0,
-            "impressions": 5,
-            "ctr": 0,
-            "position": 2.8,
-            "shareOfPageImpressions": 0.5
-          },
-          {
-            "query": "\"studio appointed to oversee the roll-out of the show's merchandising\"",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 0.2
-          },
-          {
-            "query": "2017 visual merchandising trends",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 27,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "2025 luxury fashion window display trends couture eveningwear visual merchandising",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
+            "impressions": 53,
+            "ctr": 1.89,
             "position": 8.5,
-            "shareOfPageImpressions": 0.4
+            "shareOfPageImpressions": 0.41
           }
         ]
       },
@@ -2407,30 +2127,82 @@
         "pageCtr": 0.17,
         "pagePosition": 6.3,
         "pageImpressions": 12001,
+        "namedQueryCount": 98,
+        "namedImpressions": 2295,
+        "anonymizedImpressions": 9706,
+        "anonymizedPct": 80.9,
         "topQueries": [
-          {
-            "query": "brand ambassador agreement",
-            "clicks": 3,
-            "impressions": 121,
-            "ctr": 2.48,
-            "position": 6.3,
-            "shareOfPageImpressions": 12.5
-          },
           {
             "query": "brand ambassador contract",
             "clicks": 1,
             "impressions": 632,
             "ctr": 0.16,
             "position": 5.5,
-            "shareOfPageImpressions": 65.3
+            "shareOfPageImpressions": 5.27
           },
           {
-            "query": "\"as mentioned on whatsapp\" \"ambassador contract\" \"bacarry\"",
+            "query": "brand ambassador contract template",
             "clicks": 0,
-            "impressions": 23,
+            "impressions": 215,
             "ctr": 0,
-            "position": 7.5,
-            "shareOfPageImpressions": 2.4
+            "position": 9.2,
+            "shareOfPageImpressions": 1.79
+          },
+          {
+            "query": "ambassador contract",
+            "clicks": 0,
+            "impressions": 181,
+            "ctr": 0,
+            "position": 3.8,
+            "shareOfPageImpressions": 1.51
+          },
+          {
+            "query": "brand ambassador agreement",
+            "clicks": 3,
+            "impressions": 121,
+            "ctr": 2.48,
+            "position": 6.3,
+            "shareOfPageImpressions": 1.01
+          },
+          {
+            "query": "brand ambassador agreement template",
+            "clicks": 0,
+            "impressions": 107,
+            "ctr": 0,
+            "position": 6.5,
+            "shareOfPageImpressions": 0.89
+          },
+          {
+            "query": "brand ambassador contract what to look for",
+            "clicks": 0,
+            "impressions": 100,
+            "ctr": 0,
+            "position": 2.1,
+            "shareOfPageImpressions": 0.83
+          },
+          {
+            "query": "brand contract",
+            "clicks": 0,
+            "impressions": 99,
+            "ctr": 0,
+            "position": 41.4,
+            "shareOfPageImpressions": 0.82
+          },
+          {
+            "query": "ambassador contract template",
+            "clicks": 0,
+            "impressions": 84,
+            "ctr": 0,
+            "position": 7.6,
+            "shareOfPageImpressions": 0.7
+          },
+          {
+            "query": "ambassador agreement",
+            "clicks": 0,
+            "impressions": 82,
+            "ctr": 0,
+            "position": 11,
+            "shareOfPageImpressions": 0.68
           },
           {
             "query": "\"as mentioned on whatsapp\" \"ambassador contract\" bacarry",
@@ -2438,95 +2210,23 @@
             "impressions": 74,
             "ctr": 0,
             "position": 7.8,
-            "shareOfPageImpressions": 7.6
+            "shareOfPageImpressions": 0.62
           },
           {
-            "query": "\"as mentioned on whatsapp, we will do the last review to your ambassador contract on thursday and you will receive it right after\"",
+            "query": "brand ambassador agreement pdf",
             "clicks": 0,
-            "impressions": 1,
+            "impressions": 61,
             "ctr": 0,
-            "position": 9,
-            "shareOfPageImpressions": 0.1
+            "position": 18.3,
+            "shareOfPageImpressions": 0.51
           },
           {
-            "query": "\"as mentioned on whatsapp, we will do the last review to your ambassador contract on thursday\"",
+            "query": "brand ambassador agreement vs one time endorsement",
             "clicks": 0,
-            "impressions": 13,
+            "impressions": 46,
             "ctr": 0,
-            "position": 5.2,
-            "shareOfPageImpressions": 1.3
-          },
-          {
-            "query": "\"as mentioned on whatsapp, we will do the last review to your ambassador contract\"",
-            "clicks": 0,
-            "impressions": 6,
-            "ctr": 0,
-            "position": 8,
-            "shareOfPageImpressions": 0.6
-          },
-          {
-            "query": "\"as mentioned on whatsapp, we will do the last review\" \"ambassador contract\"",
-            "clicks": 0,
-            "impressions": 6,
-            "ctr": 0,
-            "position": 9.3,
-            "shareOfPageImpressions": 0.6
-          },
-          {
-            "query": "\"bacarry\" \"lv ambassador\" \"agent agreement\"",
-            "clicks": 0,
-            "impressions": 8,
-            "ctr": 0,
-            "position": 11,
-            "shareOfPageImpressions": 0.8
-          },
-          {
-            "query": "\"benjamineden\" \"bacarry\" \"ambassador contract\"",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "\"last review to your ambassador contract on thursday\"",
-            "clicks": 0,
-            "impressions": 29,
-            "ctr": 0,
-            "position": 5.3,
-            "shareOfPageImpressions": 3
-          },
-          {
-            "query": "\"last review to your ambassador contract on thursday\" bacarry",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 3,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "\"lv ambassador\" \"agent agreement\" bacarry",
-            "clicks": 0,
-            "impressions": 20,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 2.1
-          },
-          {
-            "query": "\"lv ambassador\" \"bacarry\" \"agent agreement\"",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 0.1
-          },
-          {
-            "query": "\"lv ambassador\" bacarry \"agent agreement\"",
-            "clicks": 0,
-            "impressions": 32,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 3.3
+            "position": 1.8,
+            "shareOfPageImpressions": 0.38
           }
         ]
       }
