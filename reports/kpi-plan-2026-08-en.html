@@ -411,19 +411,24 @@
       </table>
     </div>
 
-    <p>Measured across the 61 pages that rank:</p>
-
-    <div class="t-wrap">
-      <table>
-        <thead><tr><th>Defect</th><th class="num">Pages</th><th>Effect</th></tr></thead>
-        <tbody>
-          <tr><td>Title cut off mid-sentence</td><td class="num">12</td><td>Reads as broken at the moment of the click decision</td></tr>
-          <tr><td>Title tag completely empty</td><td class="num">3</td><td>Google invents one; we lose control of the message</td></tr>
-          <tr><td>Brand duplicated <code>| T-ROC - T-ROC</code></td><td class="num">2</td><td>78 characters, truncated on screen</td></tr>
-          <tr><td>No H1 heading</td><td class="num">8</td><td>Google cannot identify the page's topic</td></tr>
-        </tbody>
-      </table>
+    <div class="callout co-up">
+      <h3>Fixed — 12 August 2026</h3>
+      <p>A full database audit found the damage was <strong>four times larger than first reported</strong>. The earlier figure came from sampling the 61 ranking pages; querying every page told the real story:</p>
+      <div class="t-wrap" style="margin:4px 0">
+        <table>
+          <thead><tr><th>Defect</th><th class="num">First reported</th><th class="num">Actual</th><th class="num">Fixed</th></tr></thead>
+          <tbody>
+            <tr><td>Title cut off mid-sentence</td><td class="num">12</td><td class="num"><strong>49</strong></td><td class="num">49</td></tr>
+            <tr><td>Brand duplicated <code>| T-ROC - T-ROC</code></td><td class="num">2</td><td class="num">3</td><td class="num">3</td></tr>
+            <tr><td><em>Empty title field</em></td><td class="num">3</td><td class="num" colspan="2"><em>not a defect — Yoast's template renders these correctly</em></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>The cause was not a code filter.</strong> The truncated strings were stored in the database, in Yoast's title override field — an earlier bulk process wrote cut-off values into it. Clearing the field restores Yoast's template, which renders the full title.</p>
+      <p><strong>52 of 52 corrected and verified live.</strong> Previous values retained for restoration.</p>
     </div>
+
+    <p>Still outstanding: <strong>7 of 54 indexed pages have no H1 heading</strong>, so Google cannot identify their topic. These span several post types and need template-level work rather than a field edit.</p>
   </section>
 
   <!-- ===== GROWTH ===== -->
