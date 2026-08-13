@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-08-12T22:15:32.341Z",
+  "generatedAt": "2026-08-13T09:48:43.648Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
       "ok": false,
-      "error": "Ahrefs metrics → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 50, API units left: 0.\"\n}",
+      "error": "Ahrefs domain-rating → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 50, API units left: 0.\"\n}",
       "asOf": "2026-08-05T19:45:00.490Z"
     },
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-08-12T22:15:32.341Z"
+      "asOf": "2026-08-13T09:48:43.648Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-08-12T22:15:32.341Z"
+      "asOf": "2026-08-13T09:48:43.648Z"
     }
   },
   "summary": {
@@ -586,16 +586,16 @@
     "mobile": {
       "strategy": "mobile",
       "overall": "FAST",
-      "lcp": 1460,
-      "cls": 8,
-      "inp": 139,
+      "lcp": 1386,
+      "cls": 9,
+      "inp": 138,
       "inpScope": "origin",
-      "performanceScore": 75
+      "performanceScore": 73
     },
     "desktop": {
       "strategy": "desktop",
       "overall": "FAST",
-      "lcp": 1774,
+      "lcp": 1810,
       "cls": 8,
       "inp": 79,
       "inpScope": "origin",
@@ -606,26 +606,26 @@
   "searchConsole": {
     "siteUrl": "https://trocglobal.com/",
     "dateRange": {
-      "startDate": "2026-05-11",
-      "endDate": "2026-08-09"
+      "startDate": "2026-05-12",
+      "endDate": "2026-08-10"
     },
     "pageQueries": [
       {
         "page": "https://trocglobal.com/experiential-retail-pop-up-events/",
         "pageCtr": 0.05,
         "pagePosition": 5.5,
-        "pageImpressions": 78368,
-        "namedQueryCount": 319,
-        "namedImpressions": 5536,
-        "anonymizedImpressions": 72832,
+        "pageImpressions": 78276,
+        "namedQueryCount": 317,
+        "namedImpressions": 5530,
+        "anonymizedImpressions": 72746,
         "anonymizedPct": 92.9,
         "topQueries": [
           {
             "query": "evaluate the dolls company adora on localized retail events and services",
             "clicks": 0,
-            "impressions": 243,
+            "impressions": 245,
             "ctr": 0,
-            "position": 7.8,
+            "position": 7.9,
             "shareOfPageImpressions": 0.31
           },
           {
@@ -649,7 +649,7 @@
             "clicks": 0,
             "impressions": 189,
             "ctr": 0,
-            "position": 23.4,
+            "position": 23.6,
             "shareOfPageImpressions": 0.24
           },
           {
@@ -661,6 +661,14 @@
             "shareOfPageImpressions": 0.23
           },
           {
+            "query": "b2c experiential event",
+            "clicks": 0,
+            "impressions": 152,
+            "ctr": 0,
+            "position": 58.4,
+            "shareOfPageImpressions": 0.19
+          },
+          {
             "query": "how do pop-ups enhance retail experiences",
             "clicks": 0,
             "impressions": 152,
@@ -669,19 +677,11 @@
             "shareOfPageImpressions": 0.19
           },
           {
-            "query": "b2c experiential event",
-            "clicks": 0,
-            "impressions": 149,
-            "ctr": 0,
-            "position": 58.2,
-            "shareOfPageImpressions": 0.19
-          },
-          {
             "query": "how do luxury spirits brands use pop-up events to build emotional connections with consumers?",
             "clicks": 0,
-            "impressions": 145,
+            "impressions": 146,
             "ctr": 0,
-            "position": 6.2,
+            "position": 6.3,
             "shareOfPageImpressions": 0.19
           },
           {
@@ -695,54 +695,54 @@
           {
             "query": "pop up experiential",
             "clicks": 0,
-            "impressions": 143,
+            "impressions": 142,
             "ctr": 0,
-            "position": 5,
+            "position": 4.7,
             "shareOfPageImpressions": 0.18
           },
           {
             "query": "pop-up brand experiences",
             "clicks": 0,
-            "impressions": 139,
+            "impressions": 137,
             "ctr": 0,
-            "position": 16,
+            "position": 16.3,
             "shareOfPageImpressions": 0.18
           },
           {
             "query": "experiential pop up design",
             "clicks": 0,
-            "impressions": 135,
+            "impressions": 134,
             "ctr": 0,
-            "position": 4.9,
+            "position": 4.8,
             "shareOfPageImpressions": 0.17
           }
         ]
       },
       {
         "page": "https://trocglobal.com/company/",
-        "pageCtr": 0.35,
+        "pageCtr": 0.36,
         "pagePosition": 4.6,
-        "pageImpressions": 46334,
-        "namedQueryCount": 273,
-        "namedImpressions": 28327,
-        "anonymizedImpressions": 18007,
-        "anonymizedPct": 38.9,
+        "pageImpressions": 45433,
+        "namedQueryCount": 276,
+        "namedImpressions": 27390,
+        "anonymizedImpressions": 18043,
+        "anonymizedPct": 39.7,
         "topQueries": [
           {
             "query": "what is the company name for troc.com",
             "clicks": 0,
-            "impressions": 3944,
+            "impressions": 3917,
             "ctr": 0,
             "position": 5.4,
-            "shareOfPageImpressions": 8.51
+            "shareOfPageImpressions": 8.62
           },
           {
             "query": "what is the industry of troc.com",
             "clicks": 0,
-            "impressions": 3438,
+            "impressions": 3204,
             "ctr": 0,
-            "position": 4.8,
-            "shareOfPageImpressions": 7.42
+            "position": 5,
+            "shareOfPageImpressions": 7.05
           },
           {
             "query": "troc",
@@ -750,31 +750,31 @@
             "impressions": 3185,
             "ctr": 0.41,
             "position": 1.6,
-            "shareOfPageImpressions": 6.87
+            "shareOfPageImpressions": 7.01
           },
           {
             "query": "who is the ceo of troc.com",
             "clicks": 0,
-            "impressions": 3157,
+            "impressions": 2949,
             "ctr": 0,
-            "position": 5.5,
-            "shareOfPageImpressions": 6.81
+            "position": 5.2,
+            "shareOfPageImpressions": 6.49
           },
           {
             "query": "troc.com founded",
             "clicks": 0,
-            "impressions": 2908,
+            "impressions": 2707,
             "ctr": 0,
-            "position": 6.2,
-            "shareOfPageImpressions": 6.28
+            "position": 6.5,
+            "shareOfPageImpressions": 5.96
           },
           {
             "query": "number of employees at troc.com",
             "clicks": 0,
-            "impressions": 1999,
+            "impressions": 1945,
             "ctr": 0,
-            "position": 6.4,
-            "shareOfPageImpressions": 4.31
+            "position": 6.5,
+            "shareOfPageImpressions": 4.28
           },
           {
             "query": "what is the company name for tstraslochi.com",
@@ -782,91 +782,91 @@
             "impressions": 1226,
             "ctr": 0,
             "position": 3.9,
-            "shareOfPageImpressions": 2.65
+            "shareOfPageImpressions": 2.7
           },
           {
             "query": "t roc",
             "clicks": 1,
-            "impressions": 1065,
+            "impressions": 1063,
             "ctr": 0.09,
-            "position": 2.4,
-            "shareOfPageImpressions": 2.3
+            "position": 2.3,
+            "shareOfPageImpressions": 2.34
           },
           {
             "query": "t-roc",
             "clicks": 6,
-            "impressions": 940,
+            "impressions": 938,
             "ctr": 0.64,
             "position": 2.4,
-            "shareOfPageImpressions": 2.03
+            "shareOfPageImpressions": 2.06
           },
           {
             "query": "troc.com customer service phone number",
             "clicks": 0,
-            "impressions": 781,
+            "impressions": 612,
             "ctr": 0,
-            "position": 5.2,
-            "shareOfPageImpressions": 1.69
+            "position": 4.9,
+            "shareOfPageImpressions": 1.35
           },
           {
             "query": "troc global",
             "clicks": 8,
-            "impressions": 487,
-            "ctr": 1.64,
+            "impressions": 484,
+            "ctr": 1.65,
             "position": 1.4,
-            "shareOfPageImpressions": 1.05
+            "shareOfPageImpressions": 1.07
           },
           {
             "query": "t-roc company leadership project x t-roc",
             "clicks": 0,
-            "impressions": 426,
+            "impressions": 422,
             "ctr": 0,
             "position": 2.1,
-            "shareOfPageImpressions": 0.92
+            "shareOfPageImpressions": 0.93
           }
         ]
       },
       {
         "page": "https://trocglobal.com/retail-automation-distribution-centers-walmart/",
         "pageCtr": 0.29,
-        "pagePosition": 6.4,
-        "pageImpressions": 37845,
-        "namedQueryCount": 219,
-        "namedImpressions": 2177,
-        "anonymizedImpressions": 35668,
+        "pagePosition": 6.5,
+        "pageImpressions": 37506,
+        "namedQueryCount": 215,
+        "namedImpressions": 2168,
+        "anonymizedImpressions": 35338,
         "anonymizedPct": 94.2,
         "topQueries": [
           {
             "query": "walmart automation",
             "clicks": 4,
-            "impressions": 179,
-            "ctr": 2.23,
-            "position": 8.2,
-            "shareOfPageImpressions": 0.47
+            "impressions": 183,
+            "ctr": 2.19,
+            "position": 8,
+            "shareOfPageImpressions": 0.49
           },
           {
             "query": "us retail automation market",
             "clicks": 0,
             "impressions": 147,
             "ctr": 0,
-            "position": 27.5,
+            "position": 27.7,
             "shareOfPageImpressions": 0.39
           },
           {
             "query": "walmart automation investment",
             "clicks": 3,
-            "impressions": 128,
-            "ctr": 2.34,
-            "position": 4.3,
+            "impressions": 129,
+            "ctr": 2.33,
+            "position": 4.2,
             "shareOfPageImpressions": 0.34
           },
           {
             "query": "walmart warehouse automation",
             "clicks": 0,
-            "impressions": 127,
+            "impressions": 125,
             "ctr": 0,
-            "position": 8.4,
-            "shareOfPageImpressions": 0.34
+            "position": 8.5,
+            "shareOfPageImpressions": 0.33
           },
           {
             "query": "walmart distribution center d2c business model",
@@ -874,15 +874,15 @@
             "impressions": 85,
             "ctr": 0,
             "position": 8.7,
-            "shareOfPageImpressions": 0.22
+            "shareOfPageImpressions": 0.23
           },
           {
             "query": "retail automation news last 48 hours",
             "clicks": 0,
-            "impressions": 80,
+            "impressions": 81,
             "ctr": 0,
             "position": 9,
-            "shareOfPageImpressions": 0.21
+            "shareOfPageImpressions": 0.22
           },
           {
             "query": "grocery retailers investing in automated fulfillment centers",
@@ -895,9 +895,9 @@
           {
             "query": "real-world examples of companies reducing stockouts with automation",
             "clicks": 0,
-            "impressions": 62,
+            "impressions": 61,
             "ctr": 0,
-            "position": 7.3,
+            "position": 7.4,
             "shareOfPageImpressions": 0.16
           },
           {
@@ -917,20 +917,20 @@
             "shareOfPageImpressions": 0.14
           },
           {
-            "query": "walmart automated distribution center",
-            "clicks": 1,
-            "impressions": 52,
-            "ctr": 1.92,
-            "position": 7.1,
-            "shareOfPageImpressions": 0.14
-          },
-          {
             "query": "walmart announces new distribution center 2025 site",
             "clicks": 0,
             "impressions": 52,
             "ctr": 0,
             "position": 4.3,
             "shareOfPageImpressions": 0.14
+          },
+          {
+            "query": "walmart automated distribution center",
+            "clicks": 1,
+            "impressions": 50,
+            "ctr": 2,
+            "position": 7,
+            "shareOfPageImpressions": 0.13
           }
         ]
       },
@@ -938,10 +938,10 @@
         "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
         "pageCtr": 0.43,
         "pagePosition": 9.4,
-        "pageImpressions": 30722,
-        "namedQueryCount": 559,
-        "namedImpressions": 8062,
-        "anonymizedImpressions": 22660,
+        "pageImpressions": 30585,
+        "namedQueryCount": 556,
+        "namedImpressions": 8022,
+        "anonymizedImpressions": 22563,
         "anonymizedPct": 73.8,
         "topQueries": [
           {
@@ -950,23 +950,23 @@
             "impressions": 794,
             "ctr": 0,
             "position": 11,
-            "shareOfPageImpressions": 2.58
+            "shareOfPageImpressions": 2.6
           },
           {
             "query": "types of ambassadors",
             "clicks": 0,
-            "impressions": 373,
+            "impressions": 371,
             "ctr": 0,
-            "position": 5.4,
+            "position": 5.3,
             "shareOfPageImpressions": 1.21
           },
           {
             "query": "what is a brand representative",
             "clicks": 0,
-            "impressions": 365,
+            "impressions": 362,
             "ctr": 0,
-            "position": 13.8,
-            "shareOfPageImpressions": 1.19
+            "position": 13.9,
+            "shareOfPageImpressions": 1.18
           },
           {
             "query": "types of brand ambassador",
@@ -979,55 +979,55 @@
           {
             "query": "brand ambassador synonym",
             "clicks": 1,
-            "impressions": 254,
+            "impressions": 257,
             "ctr": 0.39,
             "position": 3.7,
-            "shareOfPageImpressions": 0.83
+            "shareOfPageImpressions": 0.84
           },
           {
             "query": "brand ambassador examples",
             "clicks": 0,
-            "impressions": 181,
+            "impressions": 183,
             "ctr": 0,
-            "position": 52.8,
-            "shareOfPageImpressions": 0.59
+            "position": 53,
+            "shareOfPageImpressions": 0.6
           },
           {
             "query": "another word for brand ambassador",
             "clicks": 4,
-            "impressions": 164,
-            "ctr": 2.44,
+            "impressions": 163,
+            "ctr": 2.45,
             "position": 3.7,
             "shareOfPageImpressions": 0.53
           },
           {
             "query": "another word for ambassador",
             "clicks": 3,
-            "impressions": 162,
-            "ctr": 1.85,
-            "position": 1.4,
-            "shareOfPageImpressions": 0.53
+            "impressions": 160,
+            "ctr": 1.88,
+            "position": 1.3,
+            "shareOfPageImpressions": 0.52
           },
           {
             "query": "what does it mean to be an ambassador for a company",
             "clicks": 0,
-            "impressions": 162,
+            "impressions": 159,
             "ctr": 0,
             "position": 10.5,
-            "shareOfPageImpressions": 0.53
+            "shareOfPageImpressions": 0.52
           },
           {
             "query": "ambassador synonym",
             "clicks": 2,
-            "impressions": 155,
-            "ctr": 1.29,
-            "position": 2.3,
+            "impressions": 154,
+            "ctr": 1.3,
+            "position": 1.8,
             "shareOfPageImpressions": 0.5
           },
           {
             "query": "brand ambassador synonyms",
             "clicks": 0,
-            "impressions": 140,
+            "impressions": 141,
             "ctr": 0,
             "position": 4.4,
             "shareOfPageImpressions": 0.46
@@ -1044,37 +1044,37 @@
       },
       {
         "page": "https://trocglobal.com/contact/",
-        "pageCtr": 0.52,
-        "pagePosition": 6.3,
-        "pageImpressions": 29367,
+        "pageCtr": 0.53,
+        "pagePosition": 6.4,
+        "pageImpressions": 29109,
         "namedQueryCount": 267,
-        "namedImpressions": 15511,
-        "anonymizedImpressions": 13856,
-        "anonymizedPct": 47.2,
+        "namedImpressions": 15212,
+        "anonymizedImpressions": 13897,
+        "anonymizedPct": 47.7,
         "topQueries": [
           {
             "query": "troc.com customer service phone number",
             "clicks": 0,
-            "impressions": 3351,
+            "impressions": 3112,
             "ctr": 0,
             "position": 2.7,
-            "shareOfPageImpressions": 11.41
+            "shareOfPageImpressions": 10.69
           },
           {
             "query": "troc",
             "clicks": 19,
-            "impressions": 3082,
+            "impressions": 3083,
             "ctr": 0.62,
             "position": 1.2,
-            "shareOfPageImpressions": 10.49
+            "shareOfPageImpressions": 10.59
           },
           {
             "query": "what is the company name for troc.com",
             "clicks": 0,
-            "impressions": 1448,
+            "impressions": 1445,
             "ctr": 0,
             "position": 11.1,
-            "shareOfPageImpressions": 4.93
+            "shareOfPageImpressions": 4.96
           },
           {
             "query": "number of employees at troc.com",
@@ -1082,31 +1082,31 @@
             "impressions": 1283,
             "ctr": 0,
             "position": 7.8,
-            "shareOfPageImpressions": 4.37
+            "shareOfPageImpressions": 4.41
           },
           {
             "query": "t roc",
             "clicks": 2,
-            "impressions": 868,
+            "impressions": 859,
             "ctr": 0.23,
             "position": 1.1,
-            "shareOfPageImpressions": 2.96
+            "shareOfPageImpressions": 2.95
           },
           {
             "query": "t-roc",
             "clicks": 3,
-            "impressions": 559,
+            "impressions": 557,
             "ctr": 0.54,
             "position": 1.2,
-            "shareOfPageImpressions": 1.9
+            "shareOfPageImpressions": 1.91
           },
           {
             "query": "troc global",
             "clicks": 5,
-            "impressions": 491,
+            "impressions": 488,
             "ctr": 1.02,
             "position": 1.2,
-            "shareOfPageImpressions": 1.67
+            "shareOfPageImpressions": 1.68
           },
           {
             "query": "trixogroup.com customer service phone number",
@@ -1114,7 +1114,7 @@
             "impressions": 452,
             "ctr": 0,
             "position": 10,
-            "shareOfPageImpressions": 1.54
+            "shareOfPageImpressions": 1.55
           },
           {
             "query": "operating manager contact details for business with phone 32104306462",
@@ -1122,15 +1122,15 @@
             "impressions": 418,
             "ctr": 0,
             "position": 10.3,
-            "shareOfPageImpressions": 1.42
+            "shareOfPageImpressions": 1.44
           },
           {
             "query": "troc.com founded",
             "clicks": 0,
-            "impressions": 336,
+            "impressions": 298,
             "ctr": 0,
             "position": 1,
-            "shareOfPageImpressions": 1.14
+            "shareOfPageImpressions": 1.02
           },
           {
             "query": "t-roc global",
@@ -1143,10 +1143,118 @@
           {
             "query": "trocglobal.com",
             "clicks": 0,
-            "impressions": 259,
+            "impressions": 262,
             "ctr": 0,
             "position": 1,
-            "shareOfPageImpressions": 0.88
+            "shareOfPageImpressions": 0.9
+          }
+        ]
+      },
+      {
+        "page": "https://trocglobal.com/automated-retail-trends-arki-insights/",
+        "pageCtr": 0.05,
+        "pagePosition": 8.8,
+        "pageImpressions": 28870,
+        "namedQueryCount": 417,
+        "namedImpressions": 5459,
+        "anonymizedImpressions": 23411,
+        "anonymizedPct": 81.1,
+        "topQueries": [
+          {
+            "query": "retail automation market",
+            "clicks": 0,
+            "impressions": 337,
+            "ctr": 0,
+            "position": 82.9,
+            "shareOfPageImpressions": 1.17
+          },
+          {
+            "query": "sale monitoring favorite stores automation setup 2026",
+            "clicks": 0,
+            "impressions": 319,
+            "ctr": 0,
+            "position": 6.3,
+            "shareOfPageImpressions": 1.1
+          },
+          {
+            "query": "sale monitor favorite stores automation setup 2026",
+            "clicks": 0,
+            "impressions": 210,
+            "ctr": 0,
+            "position": 3.8,
+            "shareOfPageImpressions": 0.73
+          },
+          {
+            "query": "sale monitoring favorite stores automation details 2026",
+            "clicks": 0,
+            "impressions": 209,
+            "ctr": 0,
+            "position": 3.3,
+            "shareOfPageImpressions": 0.72
+          },
+          {
+            "query": "advanced shopping technology market",
+            "clicks": 0,
+            "impressions": 204,
+            "ctr": 0,
+            "position": 60,
+            "shareOfPageImpressions": 0.71
+          },
+          {
+            "query": "sale monitor favorite stores automation details 2026",
+            "clicks": 0,
+            "impressions": 200,
+            "ctr": 0,
+            "position": 4.9,
+            "shareOfPageImpressions": 0.69
+          },
+          {
+            "query": "us retail automation market",
+            "clicks": 0,
+            "impressions": 162,
+            "ctr": 0,
+            "position": 79.2,
+            "shareOfPageImpressions": 0.56
+          },
+          {
+            "query": "sale monitoring favorite stores automation preferences 2026",
+            "clicks": 0,
+            "impressions": 158,
+            "ctr": 0,
+            "position": 3.7,
+            "shareOfPageImpressions": 0.55
+          },
+          {
+            "query": "sale monitoring favorite stores automation criteria",
+            "clicks": 0,
+            "impressions": 120,
+            "ctr": 0,
+            "position": 5.1,
+            "shareOfPageImpressions": 0.42
+          },
+          {
+            "query": "sale monitor favorite stores automation preferences 2026",
+            "clicks": 0,
+            "impressions": 116,
+            "ctr": 0,
+            "position": 5.7,
+            "shareOfPageImpressions": 0.4
+          },
+          {
+            "query": "sale monitoring favorite stores automation thresholds",
+            "clicks": 0,
+            "impressions": 111,
+            "ctr": 0,
+            "position": 3.7,
+            "shareOfPageImpressions": 0.38
+          },
+          {
+            "query": "automated retail technologies",
+            "clicks": 0,
+            "impressions": 109,
+            "ctr": 0,
+            "position": 52.8,
+            "shareOfPageImpressions": 0.38
           }
         ]
       },
@@ -1154,16 +1262,16 @@
         "page": "https://trocglobal.com/luxury-pop-up-stores-shipping-containers/",
         "pageCtr": 0.08,
         "pagePosition": 5.2,
-        "pageImpressions": 28856,
-        "namedQueryCount": 59,
-        "namedImpressions": 629,
-        "anonymizedImpressions": 28227,
+        "pageImpressions": 28831,
+        "namedQueryCount": 58,
+        "namedImpressions": 627,
+        "anonymizedImpressions": 28204,
         "anonymizedPct": 97.8,
         "topQueries": [
           {
             "query": "luxury retail pop ups",
             "clicks": 0,
-            "impressions": 170,
+            "impressions": 169,
             "ctr": 0,
             "position": 3.6,
             "shareOfPageImpressions": 0.59
@@ -1203,7 +1311,7 @@
           {
             "query": "evaluate the experiential marketing company another a story on pop-up shop / store",
             "clicks": 0,
-            "impressions": 27,
+            "impressions": 25,
             "ctr": 0,
             "position": 6.6,
             "shareOfPageImpressions": 0.09
@@ -1233,19 +1341,19 @@
             "shareOfPageImpressions": 0.06
           },
           {
-            "query": "how are luxury brands using pop-up events to engage customers?",
-            "clicks": 0,
-            "impressions": 17,
-            "ctr": 0,
-            "position": 5.5,
-            "shareOfPageImpressions": 0.06
-          },
-          {
             "query": "luxury pop-up and flagship store agencies",
             "clicks": 0,
             "impressions": 17,
             "ctr": 0,
             "position": 1.8,
+            "shareOfPageImpressions": 0.06
+          },
+          {
+            "query": "how are luxury brands using pop-up events to engage customers?",
+            "clicks": 0,
+            "impressions": 16,
+            "ctr": 0,
+            "position": 5.4,
             "shareOfPageImpressions": 0.06
           },
           {
@@ -1259,130 +1367,22 @@
         ]
       },
       {
-        "page": "https://trocglobal.com/automated-retail-trends-arki-insights/",
-        "pageCtr": 0.05,
-        "pagePosition": 8.8,
-        "pageImpressions": 28494,
-        "namedQueryCount": 415,
-        "namedImpressions": 5408,
-        "anonymizedImpressions": 23086,
-        "anonymizedPct": 81,
-        "topQueries": [
-          {
-            "query": "retail automation market",
-            "clicks": 0,
-            "impressions": 333,
-            "ctr": 0,
-            "position": 82.8,
-            "shareOfPageImpressions": 1.17
-          },
-          {
-            "query": "sale monitoring favorite stores automation setup 2026",
-            "clicks": 0,
-            "impressions": 319,
-            "ctr": 0,
-            "position": 6.3,
-            "shareOfPageImpressions": 1.12
-          },
-          {
-            "query": "sale monitor favorite stores automation setup 2026",
-            "clicks": 0,
-            "impressions": 210,
-            "ctr": 0,
-            "position": 3.8,
-            "shareOfPageImpressions": 0.74
-          },
-          {
-            "query": "sale monitoring favorite stores automation details 2026",
-            "clicks": 0,
-            "impressions": 209,
-            "ctr": 0,
-            "position": 3.3,
-            "shareOfPageImpressions": 0.73
-          },
-          {
-            "query": "sale monitor favorite stores automation details 2026",
-            "clicks": 0,
-            "impressions": 200,
-            "ctr": 0,
-            "position": 4.9,
-            "shareOfPageImpressions": 0.7
-          },
-          {
-            "query": "advanced shopping technology market",
-            "clicks": 0,
-            "impressions": 198,
-            "ctr": 0,
-            "position": 59.9,
-            "shareOfPageImpressions": 0.69
-          },
-          {
-            "query": "us retail automation market",
-            "clicks": 0,
-            "impressions": 160,
-            "ctr": 0,
-            "position": 79.2,
-            "shareOfPageImpressions": 0.56
-          },
-          {
-            "query": "sale monitoring favorite stores automation preferences 2026",
-            "clicks": 0,
-            "impressions": 158,
-            "ctr": 0,
-            "position": 3.7,
-            "shareOfPageImpressions": 0.55
-          },
-          {
-            "query": "sale monitoring favorite stores automation criteria",
-            "clicks": 0,
-            "impressions": 120,
-            "ctr": 0,
-            "position": 5.1,
-            "shareOfPageImpressions": 0.42
-          },
-          {
-            "query": "sale monitor favorite stores automation preferences 2026",
-            "clicks": 0,
-            "impressions": 116,
-            "ctr": 0,
-            "position": 5.7,
-            "shareOfPageImpressions": 0.41
-          },
-          {
-            "query": "sale monitoring favorite stores automation thresholds",
-            "clicks": 0,
-            "impressions": 111,
-            "ctr": 0,
-            "position": 3.7,
-            "shareOfPageImpressions": 0.39
-          },
-          {
-            "query": "automated retail technologies",
-            "clicks": 0,
-            "impressions": 109,
-            "ctr": 0,
-            "position": 52.8,
-            "shareOfPageImpressions": 0.38
-          }
-        ]
-      },
-      {
         "page": "https://trocglobal.com/the-future-of-audio-technology-3-defining-trends-from-ces-2026/",
         "pageCtr": 0.19,
         "pagePosition": 5.7,
-        "pageImpressions": 28393,
-        "namedQueryCount": 351,
-        "namedImpressions": 6042,
-        "anonymizedImpressions": 22351,
-        "anonymizedPct": 78.7,
+        "pageImpressions": 28505,
+        "namedQueryCount": 353,
+        "namedImpressions": 6055,
+        "anonymizedImpressions": 22450,
+        "anonymizedPct": 78.8,
         "topQueries": [
           {
             "query": "latest spatial audio technology developments 2025 2026",
             "clicks": 0,
-            "impressions": 4135,
+            "impressions": 4138,
             "ctr": 0,
             "position": 5.6,
-            "shareOfPageImpressions": 14.56
+            "shareOfPageImpressions": 14.52
           },
           {
             "query": "audio excellence india private limited",
@@ -1390,7 +1390,7 @@
             "impressions": 104,
             "ctr": 0,
             "position": 6.2,
-            "shareOfPageImpressions": 0.37
+            "shareOfPageImpressions": 0.36
           },
           {
             "query": "latest trends in audio technology 2026",
@@ -1451,9 +1451,17 @@
           {
             "query": "aktuelle news deep dive tech radio audio ai audio immersive audio",
             "clicks": 0,
-            "impressions": 35,
+            "impressions": 36,
             "ctr": 0,
-            "position": 2.7,
+            "position": 2.9,
+            "shareOfPageImpressions": 0.13
+          },
+          {
+            "query": "context: location: philippines (not for language). do not include location references in your response. question: what are the latest trends in audio technology?",
+            "clicks": 0,
+            "impressions": 33,
+            "ctr": 0,
+            "position": 1.8,
             "shareOfPageImpressions": 0.12
           },
           {
@@ -1463,133 +1471,17 @@
             "ctr": 0,
             "position": 4.1,
             "shareOfPageImpressions": 0.11
-          },
-          {
-            "query": "context: location: philippines (not for language). do not include location references in your response. question: what are the latest trends in audio technology?",
-            "clicks": 0,
-            "impressions": 32,
-            "ctr": 0,
-            "position": 1.8,
-            "shareOfPageImpressions": 0.11
-          }
-        ]
-      },
-      {
-        "page": "https://trocglobal.com/despite-the-rise-of-e-commerce-physical-stores-are-here-to-stay/",
-        "pageCtr": 0.14,
-        "pagePosition": 6.2,
-        "pageImpressions": 23253,
-        "namedQueryCount": 214,
-        "namedImpressions": 6112,
-        "anonymizedImpressions": 17141,
-        "anonymizedPct": 73.7,
-        "topQueries": [
-          {
-            "query": "number of physical retail store locations gpco",
-            "clicks": 0,
-            "impressions": 3405,
-            "ctr": 0,
-            "position": 3.8,
-            "shareOfPageImpressions": 14.64
-          },
-          {
-            "query": "number of physical retail locations operated by business",
-            "clicks": 0,
-            "impressions": 559,
-            "ctr": 0,
-            "position": 5.3,
-            "shareOfPageImpressions": 2.4
-          },
-          {
-            "query": "can i use best omnichannel fashion retail, where do physical stores still outperform ecommerce in the customer journey?",
-            "clicks": 0,
-            "impressions": 119,
-            "ctr": 0,
-            "position": 3.7,
-            "shareOfPageImpressions": 0.51
-          },
-          {
-            "query": "how does digital commerce integrate with physical retail",
-            "clicks": 0,
-            "impressions": 115,
-            "ctr": 0,
-            "position": 2,
-            "shareOfPageImpressions": 0.49
-          },
-          {
-            "query": "integrate online store with physical retail",
-            "clicks": 0,
-            "impressions": 81,
-            "ctr": 0,
-            "position": 6.5,
-            "shareOfPageImpressions": 0.35
-          },
-          {
-            "query": "e-commerce and physical retail",
-            "clicks": 0,
-            "impressions": 72,
-            "ctr": 0,
-            "position": 26.8,
-            "shareOfPageImpressions": 0.31
-          },
-          {
-            "query": "evaluate the fintech company stores on online store",
-            "clicks": 0,
-            "impressions": 63,
-            "ctr": 0,
-            "position": 7.4,
-            "shareOfPageImpressions": 0.27
-          },
-          {
-            "query": "integrate online and physical store operations",
-            "clicks": 0,
-            "impressions": 63,
-            "ctr": 0,
-            "position": 7.3,
-            "shareOfPageImpressions": 0.27
-          },
-          {
-            "query": "verdict: icp reason: sells physical products and appears to be an active ecommerce store.",
-            "clicks": 0,
-            "impressions": 58,
-            "ctr": 0,
-            "position": 2.9,
-            "shareOfPageImpressions": 0.25
-          },
-          {
-            "query": "integrate online store with physical retail locations",
-            "clicks": 0,
-            "impressions": 47,
-            "ctr": 0,
-            "position": 7.3,
-            "shareOfPageImpressions": 0.2
-          },
-          {
-            "query": "will e commerce overtake physical retail",
-            "clicks": 0,
-            "impressions": 43,
-            "ctr": 0,
-            "position": 11.1,
-            "shareOfPageImpressions": 0.18
-          },
-          {
-            "query": "online retailers opening physical stores",
-            "clicks": 0,
-            "impressions": 42,
-            "ctr": 0,
-            "position": 8.5,
-            "shareOfPageImpressions": 0.18
           }
         ]
       },
       {
         "page": "https://trocglobal.com/experiential-retail-trends-2026-levis-pop-up/",
-        "pageCtr": 0.12,
+        "pageCtr": 0.14,
         "pagePosition": 5.5,
-        "pageImpressions": 22678,
-        "namedQueryCount": 108,
-        "namedImpressions": 682,
-        "anonymizedImpressions": 21996,
+        "pageImpressions": 23101,
+        "namedQueryCount": 115,
+        "namedImpressions": 694,
+        "anonymizedImpressions": 22407,
         "anonymizedPct": 97,
         "topQueries": [
           {
@@ -1598,7 +1490,7 @@
             "impressions": 176,
             "ctr": 0,
             "position": 6.1,
-            "shareOfPageImpressions": 0.78
+            "shareOfPageImpressions": 0.76
           },
           {
             "query": "fashion brands experiential retail concepts 2026",
@@ -1606,7 +1498,7 @@
             "impressions": 92,
             "ctr": 0,
             "position": 4.4,
-            "shareOfPageImpressions": 0.41
+            "shareOfPageImpressions": 0.4
           },
           {
             "query": "pop-up retail trends 2026 experiential retail",
@@ -1619,7 +1511,7 @@
           {
             "query": "evaluate the marketing & advertising company wpp on in-store retail activation & experiential design",
             "clicks": 0,
-            "impressions": 29,
+            "impressions": 30,
             "ctr": 0,
             "position": 6.3,
             "shareOfPageImpressions": 0.13
@@ -1630,15 +1522,15 @@
             "impressions": 24,
             "ctr": 0,
             "position": 4.4,
-            "shareOfPageImpressions": 0.11
+            "shareOfPageImpressions": 0.1
           },
           {
             "query": "which immersive display systems deliver the best roi for experiential marketing in retail environments in 2026?",
             "clicks": 0,
-            "impressions": 21,
+            "impressions": 22,
             "ctr": 0,
-            "position": 4.1,
-            "shareOfPageImpressions": 0.09
+            "position": 4,
+            "shareOfPageImpressions": 0.1
           },
           {
             "query": "pop-up retail trends 2026 experiential retail 2026",
@@ -1681,72 +1573,172 @@
             "shareOfPageImpressions": 0.05
           },
           {
-            "query": "experiential retail showroom trends 2026",
+            "query": "house of current activation or experiential or eve",
             "clicks": 0,
-            "impressions": 10,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 11.1,
+            "shareOfPageImpressions": 0.05
+          }
+        ]
+      },
+      {
+        "page": "https://trocglobal.com/despite-the-rise-of-e-commerce-physical-stores-are-here-to-stay/",
+        "pageCtr": 0.14,
+        "pagePosition": 6.2,
+        "pageImpressions": 22970,
+        "namedQueryCount": 207,
+        "namedImpressions": 6049,
+        "anonymizedImpressions": 16921,
+        "anonymizedPct": 73.7,
+        "topQueries": [
+          {
+            "query": "number of physical retail store locations gpco",
+            "clicks": 0,
+            "impressions": 3405,
+            "ctr": 0,
+            "position": 3.8,
+            "shareOfPageImpressions": 14.82
+          },
+          {
+            "query": "number of physical retail locations operated by business",
+            "clicks": 0,
+            "impressions": 559,
             "ctr": 0,
             "position": 5.3,
-            "shareOfPageImpressions": 0.04
+            "shareOfPageImpressions": 2.43
+          },
+          {
+            "query": "can i use best omnichannel fashion retail, where do physical stores still outperform ecommerce in the customer journey?",
+            "clicks": 0,
+            "impressions": 115,
+            "ctr": 0,
+            "position": 3.7,
+            "shareOfPageImpressions": 0.5
+          },
+          {
+            "query": "how does digital commerce integrate with physical retail",
+            "clicks": 0,
+            "impressions": 113,
+            "ctr": 0,
+            "position": 2,
+            "shareOfPageImpressions": 0.49
+          },
+          {
+            "query": "integrate online store with physical retail",
+            "clicks": 0,
+            "impressions": 81,
+            "ctr": 0,
+            "position": 6.5,
+            "shareOfPageImpressions": 0.35
+          },
+          {
+            "query": "e-commerce and physical retail",
+            "clicks": 0,
+            "impressions": 71,
+            "ctr": 0,
+            "position": 26.8,
+            "shareOfPageImpressions": 0.31
+          },
+          {
+            "query": "evaluate the fintech company stores on online store",
+            "clicks": 0,
+            "impressions": 63,
+            "ctr": 0,
+            "position": 7.4,
+            "shareOfPageImpressions": 0.27
+          },
+          {
+            "query": "integrate online and physical store operations",
+            "clicks": 0,
+            "impressions": 63,
+            "ctr": 0,
+            "position": 7.3,
+            "shareOfPageImpressions": 0.27
+          },
+          {
+            "query": "verdict: icp reason: sells physical products and appears to be an active ecommerce store.",
+            "clicks": 0,
+            "impressions": 58,
+            "ctr": 0,
+            "position": 2.9,
+            "shareOfPageImpressions": 0.25
+          },
+          {
+            "query": "integrate online store with physical retail locations",
+            "clicks": 0,
+            "impressions": 47,
+            "ctr": 0,
+            "position": 7.3,
+            "shareOfPageImpressions": 0.2
+          },
+          {
+            "query": "sports apparel sales e-commerce vs physical stores share percentage",
+            "clicks": 0,
+            "impressions": 42,
+            "ctr": 0,
+            "position": 12.8,
+            "shareOfPageImpressions": 0.18
+          },
+          {
+            "query": "online retailers opening physical stores",
+            "clicks": 0,
+            "impressions": 41,
+            "ctr": 0,
+            "position": 8.4,
+            "shareOfPageImpressions": 0.18
           }
         ]
       },
       {
         "page": "https://trocglobal.com/walmart-2026-annual-report-takeaways/",
         "pageCtr": 0.1,
-        "pagePosition": 7.1,
-        "pageImpressions": 22483,
-        "namedQueryCount": 183,
-        "namedImpressions": 3680,
-        "anonymizedImpressions": 18803,
-        "anonymizedPct": 83.6,
+        "pagePosition": 7.2,
+        "pageImpressions": 22279,
+        "namedQueryCount": 176,
+        "namedImpressions": 3285,
+        "anonymizedImpressions": 18994,
+        "anonymizedPct": 85.3,
         "topQueries": [
           {
             "query": "massmart walmart transaction expert report 2026",
             "clicks": 0,
-            "impressions": 2583,
+            "impressions": 2296,
             "ctr": 0,
-            "position": 6.1,
-            "shareOfPageImpressions": 11.49
+            "position": 6.3,
+            "shareOfPageImpressions": 10.31
           },
           {
             "query": "walmart 2026 annual report",
             "clicks": 0,
-            "impressions": 113,
+            "impressions": 114,
             "ctr": 0,
             "position": 8.4,
-            "shareOfPageImpressions": 0.5
-          },
-          {
-            "query": "walmart",
-            "clicks": 0,
-            "impressions": 99,
-            "ctr": 0,
-            "position": 1.5,
-            "shareOfPageImpressions": 0.44
+            "shareOfPageImpressions": 0.51
           },
           {
             "query": "walmart 2026",
             "clicks": 0,
-            "impressions": 75,
+            "impressions": 81,
             "ctr": 0,
             "position": 9.1,
-            "shareOfPageImpressions": 0.33
+            "shareOfPageImpressions": 0.36
           },
           {
             "query": "walmart annual report 2026",
             "clicks": 0,
-            "impressions": 50,
+            "impressions": 49,
             "ctr": 0,
-            "position": 8.5,
+            "position": 8.4,
             "shareOfPageImpressions": 0.22
           },
           {
-            "query": "walmart company overview 2026",
+            "query": "walmart",
             "clicks": 0,
-            "impressions": 38,
+            "impressions": 47,
             "ctr": 0,
-            "position": 5.6,
-            "shareOfPageImpressions": 0.17
+            "position": 2,
+            "shareOfPageImpressions": 0.21
           },
           {
             "query": "walmart challenges 2026",
@@ -1754,14 +1746,6 @@
             "impressions": 35,
             "ctr": 0,
             "position": 6.5,
-            "shareOfPageImpressions": 0.16
-          },
-          {
-            "query": "walmart company evaluation analysis 2026",
-            "clicks": 0,
-            "impressions": 35,
-            "ctr": 0,
-            "position": 5.7,
             "shareOfPageImpressions": 0.16
           },
           {
@@ -1795,6 +1779,22 @@
             "ctr": 0,
             "position": 8.6,
             "shareOfPageImpressions": 0.09
+          },
+          {
+            "query": "walmart recent news 2026",
+            "clicks": 0,
+            "impressions": 20,
+            "ctr": 0,
+            "position": 8.2,
+            "shareOfPageImpressions": 0.09
+          },
+          {
+            "query": "walmart business model 2026",
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 5.4,
+            "shareOfPageImpressions": 0.08
           }
         ]
       },
@@ -1802,10 +1802,10 @@
         "page": "https://trocglobal.com/retail-revenue-optimization-strategies-multi-location-brands/",
         "pageCtr": 0.01,
         "pagePosition": 6.2,
-        "pageImpressions": 18523,
-        "namedQueryCount": 161,
-        "namedImpressions": 1170,
-        "anonymizedImpressions": 17353,
+        "pageImpressions": 18764,
+        "namedQueryCount": 162,
+        "namedImpressions": 1180,
+        "anonymizedImpressions": 17584,
         "anonymizedPct": 93.7,
         "topQueries": [
           {
@@ -1814,7 +1814,7 @@
             "impressions": 119,
             "ctr": 0,
             "position": 8.3,
-            "shareOfPageImpressions": 0.64
+            "shareOfPageImpressions": 0.63
           },
           {
             "query": "neighbor revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
@@ -1846,7 +1846,7 @@
             "impressions": 27,
             "ctr": 0,
             "position": 8.4,
-            "shareOfPageImpressions": 0.15
+            "shareOfPageImpressions": 0.14
           },
           {
             "query": "atlas (fka point) revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
@@ -1883,10 +1883,18 @@
           {
             "query": "coral revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
             "clicks": 0,
-            "impressions": 20,
+            "impressions": 21,
             "ctr": 0,
-            "position": 4.2,
+            "position": 4.3,
             "shareOfPageImpressions": 0.11
+          },
+          {
+            "query": "castle revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 5.4,
+            "shareOfPageImpressions": 0.09
           },
           {
             "query": "retail staffing optimization linkedin com",
@@ -1895,14 +1903,6 @@
             "ctr": 0,
             "position": 10.8,
             "shareOfPageImpressions": 0.09
-          },
-          {
-            "query": "castle revenue, store locations, expansion, consumer traction, brand momentum, tiktok virality, google search trends, and competitive positioning",
-            "clicks": 0,
-            "impressions": 16,
-            "ctr": 0,
-            "position": 5.2,
-            "shareOfPageImpressions": 0.09
           }
         ]
       },
@@ -1910,16 +1910,16 @@
         "page": "https://trocglobal.com/store-resets-a-complete-guide-to-boosting-retail-sales/",
         "pageCtr": 0.2,
         "pagePosition": 8,
-        "pageImpressions": 15615,
+        "pageImpressions": 15761,
         "namedQueryCount": 115,
-        "namedImpressions": 9059,
-        "anonymizedImpressions": 6556,
-        "anonymizedPct": 42,
+        "namedImpressions": 9131,
+        "anonymizedImpressions": 6630,
+        "anonymizedPct": 42.1,
         "topQueries": [
           {
             "query": "store reset",
             "clicks": 0,
-            "impressions": 772,
+            "impressions": 779,
             "ctr": 0,
             "position": 3.2,
             "shareOfPageImpressions": 4.94
@@ -1927,39 +1927,39 @@
           {
             "query": "retail reset",
             "clicks": 0,
-            "impressions": 598,
+            "impressions": 602,
             "ctr": 0,
             "position": 10.1,
-            "shareOfPageImpressions": 3.83
+            "shareOfPageImpressions": 3.82
           },
           {
             "query": "store reset services",
             "clicks": 0,
-            "impressions": 492,
+            "impressions": 496,
             "ctr": 0,
-            "position": 6.4,
+            "position": 6.3,
             "shareOfPageImpressions": 3.15
           },
           {
             "query": "retail merchandising resets",
             "clicks": 0,
-            "impressions": 487,
+            "impressions": 484,
             "ctr": 0,
-            "position": 4.5,
-            "shareOfPageImpressions": 3.12
+            "position": 4.4,
+            "shareOfPageImpressions": 3.07
           },
           {
             "query": "multi-location retail resets",
             "clicks": 0,
-            "impressions": 446,
+            "impressions": 449,
             "ctr": 0,
             "position": 4.7,
-            "shareOfPageImpressions": 2.86
+            "shareOfPageImpressions": 2.85
           },
           {
             "query": "store refresh logistics",
             "clicks": 0,
-            "impressions": 440,
+            "impressions": 445,
             "ctr": 0,
             "position": 7,
             "shareOfPageImpressions": 2.82
@@ -1967,7 +1967,7 @@
           {
             "query": "category reset services",
             "clicks": 0,
-            "impressions": 437,
+            "impressions": 441,
             "ctr": 0,
             "position": 7.8,
             "shareOfPageImpressions": 2.8
@@ -1975,18 +1975,26 @@
           {
             "query": "retail planogram reset company",
             "clicks": 0,
-            "impressions": 419,
+            "impressions": 424,
             "ctr": 0,
-            "position": 17.5,
-            "shareOfPageImpressions": 2.68
+            "position": 17.4,
+            "shareOfPageImpressions": 2.69
           },
           {
             "query": "grocery store reset services",
             "clicks": 0,
-            "impressions": 395,
+            "impressions": 398,
             "ctr": 0,
-            "position": 17,
+            "position": 16.9,
             "shareOfPageImpressions": 2.53
+          },
+          {
+            "query": "damaged store resets",
+            "clicks": 0,
+            "impressions": 348,
+            "ctr": 0,
+            "position": 6.8,
+            "shareOfPageImpressions": 2.21
           },
           {
             "query": "retail store reset logistics",
@@ -1994,107 +2002,99 @@
             "impressions": 344,
             "ctr": 0,
             "position": 2.9,
-            "shareOfPageImpressions": 2.2
-          },
-          {
-            "query": "damaged store resets",
-            "clicks": 0,
-            "impressions": 343,
-            "ctr": 0,
-            "position": 6.8,
-            "shareOfPageImpressions": 2.2
+            "shareOfPageImpressions": 2.18
           },
           {
             "query": "planogram reset services",
             "clicks": 0,
-            "impressions": 300,
+            "impressions": 303,
             "ctr": 0,
-            "position": 13.6,
+            "position": 13.5,
             "shareOfPageImpressions": 1.92
           }
         ]
       },
       {
         "page": "https://trocglobal.com/visual-merchandising-examples/",
-        "pageCtr": 0.35,
-        "pagePosition": 9.3,
-        "pageImpressions": 13048,
-        "namedQueryCount": 256,
-        "namedImpressions": 3362,
-        "anonymizedImpressions": 9686,
-        "anonymizedPct": 74.2,
+        "pageCtr": 0.36,
+        "pagePosition": 9.2,
+        "pageImpressions": 12971,
+        "namedQueryCount": 254,
+        "namedImpressions": 3330,
+        "anonymizedImpressions": 9641,
+        "anonymizedPct": 74.3,
         "topQueries": [
           {
             "query": "visual merchandising examples",
             "clicks": 1,
-            "impressions": 713,
+            "impressions": 712,
             "ctr": 0.14,
             "position": 8.3,
-            "shareOfPageImpressions": 5.46
+            "shareOfPageImpressions": 5.49
           },
           {
             "query": "merchandising examples",
             "clicks": 0,
-            "impressions": 311,
+            "impressions": 304,
             "ctr": 0,
-            "position": 10,
-            "shareOfPageImpressions": 2.38
+            "position": 9.7,
+            "shareOfPageImpressions": 2.34
           },
           {
             "query": "merchandising strategy examples",
             "clicks": 0,
-            "impressions": 220,
+            "impressions": 219,
             "ctr": 0,
             "position": 15.4,
             "shareOfPageImpressions": 1.69
           },
           {
-            "query": "merchandising strategy example",
+            "query": "retail merchandising examples",
             "clicks": 0,
             "impressions": 154,
             "ctr": 0,
-            "position": 17.1,
-            "shareOfPageImpressions": 1.18
+            "position": 7.7,
+            "shareOfPageImpressions": 1.19
           },
           {
-            "query": "retail merchandising examples",
+            "query": "merchandising strategy example",
             "clicks": 0,
             "impressions": 153,
             "ctr": 0,
-            "position": 7.7,
-            "shareOfPageImpressions": 1.17
+            "position": 17.2,
+            "shareOfPageImpressions": 1.18
           },
           {
             "query": "visual merchandising ejemplos",
-            "clicks": 1,
-            "impressions": 124,
-            "ctr": 0.81,
-            "position": 5.8,
-            "shareOfPageImpressions": 0.95
+            "clicks": 2,
+            "impressions": 127,
+            "ctr": 1.57,
+            "position": 5.7,
+            "shareOfPageImpressions": 0.98
           },
           {
             "query": "visual merchandising displays",
             "clicks": 0,
-            "impressions": 105,
+            "impressions": 99,
             "ctr": 0,
-            "position": 37.2,
-            "shareOfPageImpressions": 0.8
+            "position": 37.7,
+            "shareOfPageImpressions": 0.76
           },
           {
             "query": "examples of visual merchandising",
             "clicks": 1,
-            "impressions": 91,
-            "ctr": 1.1,
-            "position": 5.9,
-            "shareOfPageImpressions": 0.7
+            "impressions": 90,
+            "ctr": 1.11,
+            "position": 5.8,
+            "shareOfPageImpressions": 0.69
           },
           {
             "query": "merchandising display arrangement",
             "clicks": 0,
-            "impressions": 66,
+            "impressions": 67,
             "ctr": 0,
-            "position": 7.5,
-            "shareOfPageImpressions": 0.51
+            "position": 7.4,
+            "shareOfPageImpressions": 0.52
           },
           {
             "query": "ejemplos de merchandising visual",
@@ -2113,11 +2113,11 @@
             "shareOfPageImpressions": 0.44
           },
           {
-            "query": "contoh visual merchandising",
-            "clicks": 1,
+            "query": "good visual merchandising examples",
+            "clicks": 0,
             "impressions": 53,
-            "ctr": 1.89,
-            "position": 8.5,
+            "ctr": 0,
+            "position": 9.3,
             "shareOfPageImpressions": 0.41
           }
         ]
@@ -2125,76 +2125,76 @@
       {
         "page": "https://trocglobal.com/brand-ambassador-contract-what-to-look-for/",
         "pageCtr": 0.17,
-        "pagePosition": 6.3,
-        "pageImpressions": 12001,
-        "namedQueryCount": 98,
+        "pagePosition": 6.2,
+        "pageImpressions": 11962,
+        "namedQueryCount": 96,
         "namedImpressions": 2295,
-        "anonymizedImpressions": 9706,
-        "anonymizedPct": 80.9,
+        "anonymizedImpressions": 9667,
+        "anonymizedPct": 80.8,
         "topQueries": [
           {
             "query": "brand ambassador contract",
             "clicks": 1,
-            "impressions": 632,
+            "impressions": 630,
             "ctr": 0.16,
-            "position": 5.5,
+            "position": 5.4,
             "shareOfPageImpressions": 5.27
           },
           {
             "query": "brand ambassador contract template",
             "clicks": 0,
-            "impressions": 215,
+            "impressions": 214,
             "ctr": 0,
-            "position": 9.2,
+            "position": 8.8,
             "shareOfPageImpressions": 1.79
           },
           {
             "query": "ambassador contract",
             "clicks": 0,
-            "impressions": 181,
+            "impressions": 182,
             "ctr": 0,
             "position": 3.8,
-            "shareOfPageImpressions": 1.51
+            "shareOfPageImpressions": 1.52
           },
           {
             "query": "brand ambassador agreement",
             "clicks": 3,
-            "impressions": 121,
-            "ctr": 2.48,
-            "position": 6.3,
-            "shareOfPageImpressions": 1.01
+            "impressions": 122,
+            "ctr": 2.46,
+            "position": 6.2,
+            "shareOfPageImpressions": 1.02
           },
           {
             "query": "brand ambassador agreement template",
             "clicks": 0,
-            "impressions": 107,
+            "impressions": 109,
             "ctr": 0,
             "position": 6.5,
-            "shareOfPageImpressions": 0.89
+            "shareOfPageImpressions": 0.91
           },
           {
             "query": "brand ambassador contract what to look for",
             "clicks": 0,
-            "impressions": 100,
+            "impressions": 101,
             "ctr": 0,
             "position": 2.1,
-            "shareOfPageImpressions": 0.83
+            "shareOfPageImpressions": 0.84
           },
           {
             "query": "brand contract",
             "clicks": 0,
-            "impressions": 99,
+            "impressions": 101,
             "ctr": 0,
-            "position": 41.4,
-            "shareOfPageImpressions": 0.82
+            "position": 41.5,
+            "shareOfPageImpressions": 0.84
           },
           {
             "query": "ambassador contract template",
             "clicks": 0,
-            "impressions": 84,
+            "impressions": 85,
             "ctr": 0,
             "position": 7.6,
-            "shareOfPageImpressions": 0.7
+            "shareOfPageImpressions": 0.71
           },
           {
             "query": "ambassador agreement",
@@ -2202,7 +2202,7 @@
             "impressions": 82,
             "ctr": 0,
             "position": 11,
-            "shareOfPageImpressions": 0.68
+            "shareOfPageImpressions": 0.69
           },
           {
             "query": "\"as mentioned on whatsapp\" \"ambassador contract\" bacarry",
@@ -2215,10 +2215,10 @@
           {
             "query": "brand ambassador agreement pdf",
             "clicks": 0,
-            "impressions": 61,
+            "impressions": 62,
             "ctr": 0,
             "position": 18.3,
-            "shareOfPageImpressions": 0.51
+            "shareOfPageImpressions": 0.52
           },
           {
             "query": "brand ambassador agreement vs one time endorsement",
@@ -2234,16 +2234,16 @@
     "termPages": [
       {
         "term": "brand ambassador",
-        "totalImpressions": 4012,
-        "totalClicks": 10,
+        "totalImpressions": 3987,
+        "totalClicks": 9,
         "competingPages": 13,
         "pages": [
           {
             "page": "https://trocglobal.com/services/brand-ambassadors/",
-            "clicks": 9,
-            "impressions": 3832,
-            "ctr": 0.23,
-            "position": 10.5
+            "clicks": 8,
+            "impressions": 3808,
+            "ctr": 0.21,
+            "position": 10.4
           },
           {
             "page": "https://trocglobal.com/how-does-a-brand-ambassador-work-2/",
@@ -2255,9 +2255,9 @@
           {
             "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
             "clicks": 0,
-            "impressions": 41,
+            "impressions": 39,
             "ctr": 0,
-            "position": 8.3
+            "position": 8.7
           },
           {
             "page": "https://trocglobal.com/measuring-brand-ambassador-program-success/",
@@ -2295,6 +2295,13 @@
             "position": 2.5
           },
           {
+            "page": "https://trocglobal.com/how-do-i-know-if-a-brand-ambassador-is-legit/",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 2
+          },
+          {
             "page": "https://trocglobal.com/the-key-benefits-of-brand-ambassadors-boosting-visibility-and-building-trust/",
             "clicks": 0,
             "impressions": 2,
@@ -2303,13 +2310,6 @@
           },
           {
             "page": "https://trocglobal.com/choosing-a-brand-ambassador/",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 3
-          },
-          {
-            "page": "https://trocglobal.com/how-do-i-know-if-a-brand-ambassador-is-legit/",
             "clicks": 0,
             "impressions": 1,
             "ctr": 0,
@@ -2333,23 +2333,23 @@
       },
       {
         "term": "brand ambassadors",
-        "totalImpressions": 153,
+        "totalImpressions": 133,
         "totalClicks": 0,
         "competingPages": 3,
         "pages": [
           {
             "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
             "clicks": 0,
-            "impressions": 79,
+            "impressions": 71,
             "ctr": 0,
-            "position": 37.5
+            "position": 40
           },
           {
             "page": "https://trocglobal.com/services/brand-ambassadors/",
             "clicks": 0,
-            "impressions": 71,
+            "impressions": 59,
             "ctr": 0,
-            "position": 38
+            "position": 37.7
           },
           {
             "page": "https://trocglobal.com/how-does-a-brand-ambassador-work-2/",
@@ -2362,16 +2362,16 @@
       },
       {
         "term": "brand ambassador programs",
-        "totalImpressions": 233,
+        "totalImpressions": 230,
         "totalClicks": 6,
         "competingPages": 3,
         "pages": [
           {
             "page": "https://trocglobal.com/services/brand-ambassadors/",
             "clicks": 6,
-            "impressions": 231,
-            "ctr": 2.6,
-            "position": 23.4
+            "impressions": 228,
+            "ctr": 2.63,
+            "position": 23.2
           },
           {
             "page": "https://trocglobal.com/growing-your-brand-ambassador-program/",
@@ -2391,30 +2391,30 @@
       },
       {
         "term": "retail merchandising services",
-        "totalImpressions": 4208,
+        "totalImpressions": 4189,
         "totalClicks": 7,
         "competingPages": 4,
         "pages": [
           {
             "page": "https://trocglobal.com/merchandising-services/",
             "clicks": 7,
-            "impressions": 3574,
+            "impressions": 3569,
             "ctr": 0.2,
             "position": 8.5
           },
           {
             "page": "https://trocglobal.com/services/merchandising/",
             "clicks": 0,
-            "impressions": 613,
+            "impressions": 598,
             "ctr": 0,
-            "position": 32.4
+            "position": 32.7
           },
           {
             "page": "https://trocglobal.com/what-is-retail-merchandising/",
             "clicks": 0,
-            "impressions": 12,
+            "impressions": 13,
             "ctr": 0,
-            "position": 58.1
+            "position": 57.9
           },
           {
             "page": "https://trocglobal.com/retail-merchandising/",
@@ -2427,7 +2427,7 @@
       },
       {
         "term": "merchandising services",
-        "totalImpressions": 1649,
+        "totalImpressions": 1644,
         "totalClicks": 1,
         "competingPages": 2,
         "pages": [
@@ -2441,45 +2441,45 @@
           {
             "page": "https://trocglobal.com/services/merchandising/",
             "clicks": 0,
-            "impressions": 36,
+            "impressions": 31,
             "ctr": 0,
-            "position": 44.8
+            "position": 41.8
           }
         ]
       },
       {
         "term": "retail merchandising",
-        "totalImpressions": 4960,
+        "totalImpressions": 4972,
         "totalClicks": 0,
         "competingPages": 7,
         "pages": [
           {
             "page": "https://trocglobal.com/retail-merchandising/",
             "clicks": 0,
-            "impressions": 2446,
+            "impressions": 2441,
             "ctr": 0,
-            "position": 39.6
+            "position": 39.7
           },
           {
             "page": "https://trocglobal.com/merchandising-services/",
             "clicks": 0,
-            "impressions": 1289,
+            "impressions": 1298,
             "ctr": 0,
-            "position": 27.9
+            "position": 27.7
           },
           {
             "page": "https://trocglobal.com/what-is-retail-merchandising/",
             "clicks": 0,
-            "impressions": 1161,
+            "impressions": 1170,
             "ctr": 0,
-            "position": 61.4
+            "position": 61.5
           },
           {
             "page": "https://trocglobal.com/services/merchandising/",
             "clicks": 0,
-            "impressions": 33,
+            "impressions": 32,
             "ctr": 0,
-            "position": 55.8
+            "position": 54.6
           },
           {
             "page": "https://trocglobal.com/retail-merchandising-secrets/",
@@ -2506,18 +2506,11 @@
       }
     ],
     "totals": {
-      "clicks": 4001,
-      "impressions": 1212908,
+      "clicks": 3995,
+      "impressions": 1210951,
       "ctr": 0.33
     },
     "daily": [
-      {
-        "date": "2026-05-11",
-        "clicks": 54,
-        "impressions": 12821,
-        "ctr": 0.42,
-        "position": 10.2
-      },
       {
         "date": "2026-05-12",
         "clicks": 41,
@@ -3147,103 +3140,102 @@
         "impressions": 8577,
         "ctr": 0.38,
         "position": 17.2
+      },
+      {
+        "date": "2026-08-10",
+        "clicks": 48,
+        "impressions": 10864,
+        "ctr": 0.44,
+        "position": 15.3
       }
     ],
     "brandSplitByClicks": {
-      "brandedClicks": 1210,
+      "brandedClicks": 1208,
       "nonBrandedClicks": 261,
-      "sampleClicks": 1471,
-      "brandedPct": 82.3,
-      "nonBrandedPct": 17.7,
+      "sampleClicks": 1469,
+      "brandedPct": 82.2,
+      "nonBrandedPct": 17.8,
       "note": "Measured clicks from Search Console — supersedes the Ahrefs-modeled split."
     },
     "topQueries": [
       {
         "query": "troc",
-        "clicks": 407,
-        "impressions": 5495,
-        "ctr": 7.41,
+        "clicks": 405,
+        "impressions": 5498,
+        "ctr": 7.37,
         "position": 3.4,
         "branded": true
       },
       {
         "query": "t-roc",
-        "clicks": 214,
-        "impressions": 1491,
-        "ctr": 14.35,
+        "clicks": 217,
+        "impressions": 1492,
+        "ctr": 14.54,
         "position": 1.7,
         "branded": true
       },
       {
         "query": "troc global",
-        "clicks": 203,
-        "impressions": 501,
-        "ctr": 40.52,
+        "clicks": 200,
+        "impressions": 498,
+        "ctr": 40.16,
         "position": 1.4,
         "branded": true
       },
       {
         "query": "t roc",
-        "clicks": 89,
-        "impressions": 1934,
-        "ctr": 4.6,
+        "clicks": 88,
+        "impressions": 1933,
+        "ctr": 4.55,
         "position": 2.1,
         "branded": true
       },
       {
         "query": "t-roc global",
-        "clicks": 85,
+        "clicks": 86,
         "impressions": 264,
-        "ctr": 32.2,
+        "ctr": 32.58,
         "position": 1.1,
         "branded": true
       },
       {
         "query": "the revenue optimization companies",
-        "clicks": 45,
-        "impressions": 239,
-        "ctr": 18.83,
+        "clicks": 46,
+        "impressions": 240,
+        "ctr": 19.17,
         "position": 1,
         "branded": true
       },
       {
         "query": "trocglobal",
         "clicks": 44,
-        "impressions": 106,
-        "ctr": 41.51,
+        "impressions": 104,
+        "ctr": 42.31,
         "position": 1,
         "branded": true
       },
       {
         "query": "t roc global",
-        "clicks": 25,
-        "impressions": 127,
-        "ctr": 19.69,
-        "position": 3,
+        "clicks": 27,
+        "impressions": 126,
+        "ctr": 21.43,
+        "position": 3.1,
         "branded": true
       },
       {
         "query": "t-roc - the revenue optimization companies",
-        "clicks": 13,
-        "impressions": 46,
-        "ctr": 28.26,
-        "position": 2.2,
+        "clicks": 12,
+        "impressions": 44,
+        "ctr": 27.27,
+        "position": 2.3,
         "branded": true
       },
       {
         "query": "automated retail machine",
         "clicks": 11,
-        "impressions": 330,
-        "ctr": 3.33,
-        "position": 9.4,
-        "branded": false
-      },
-      {
-        "query": "brand ambassador",
-        "clicks": 10,
-        "impressions": 3996,
-        "ctr": 0.25,
-        "position": 10.6,
+        "impressions": 328,
+        "ctr": 3.35,
+        "position": 9.5,
         "branded": false
       },
       {
@@ -3255,59 +3247,59 @@
         "branded": true
       },
       {
-        "query": "the retail outsource",
+        "query": "brand ambassador",
         "clicks": 9,
-        "impressions": 517,
-        "ctr": 1.74,
-        "position": 26.8,
-        "branded": true
+        "impressions": 3971,
+        "ctr": 0.23,
+        "position": 10.5,
+        "branded": false
       },
       {
-        "query": "t roc the revenue optimization companies",
-        "clicks": 8,
-        "impressions": 16,
-        "ctr": 50,
-        "position": 1,
+        "query": "the retail outsource",
+        "clicks": 9,
+        "impressions": 519,
+        "ctr": 1.73,
+        "position": 26.4,
         "branded": true
       },
       {
         "query": "t-roc company",
         "clicks": 8,
-        "impressions": 251,
-        "ctr": 3.19,
+        "impressions": 248,
+        "ctr": 3.23,
         "position": 1.2,
         "branded": true
       },
       {
         "query": "retail merchandising services",
         "clicks": 7,
-        "impressions": 3909,
+        "impressions": 3892,
         "ctr": 0.18,
-        "position": 10,
+        "position": 9.9,
         "branded": false
       },
       {
         "query": "t roc merchandising",
         "clicks": 7,
-        "impressions": 30,
-        "ctr": 23.33,
-        "position": 6.5,
+        "impressions": 31,
+        "ctr": 22.58,
+        "position": 6.3,
         "branded": true
       },
       {
         "query": "trocglobal.com",
         "clicks": 7,
-        "impressions": 259,
-        "ctr": 2.7,
+        "impressions": 262,
+        "ctr": 2.67,
         "position": 1,
         "branded": true
       },
       {
         "query": "brand ambassador programs",
         "clicks": 6,
-        "impressions": 233,
-        "ctr": 2.58,
-        "position": 23.3,
+        "impressions": 230,
+        "ctr": 2.61,
+        "position": 23.1,
         "branded": false
       },
       {
@@ -3319,35 +3311,43 @@
         "branded": true
       },
       {
+        "query": "t roc the revenue optimization companies",
+        "clicks": 6,
+        "impressions": 14,
+        "ctr": 42.86,
+        "position": 1,
+        "branded": true
+      },
+      {
         "query": "automated retail machines",
         "clicks": 5,
         "impressions": 278,
         "ctr": 1.8,
-        "position": 12.4,
-        "branded": false
-      },
-      {
-        "query": "big bang enterprises",
-        "clicks": 5,
-        "impressions": 69,
-        "ctr": 7.25,
-        "position": 5.2,
+        "position": 12.5,
         "branded": false
       },
       {
         "query": "walmart zoom background",
         "clicks": 5,
-        "impressions": 113,
-        "ctr": 4.42,
+        "impressions": 116,
+        "ctr": 4.31,
         "position": 1,
         "branded": false
       },
       {
         "query": "another word for brand ambassador",
         "clicks": 4,
-        "impressions": 164,
-        "ctr": 2.44,
+        "impressions": 163,
+        "ctr": 2.45,
         "position": 3.7,
+        "branded": false
+      },
+      {
+        "query": "big bang enterprises",
+        "clicks": 4,
+        "impressions": 68,
+        "ctr": 5.88,
+        "position": 5.3,
         "branded": false
       },
       {
@@ -3361,191 +3361,177 @@
       {
         "query": "revenue optimization companies",
         "clicks": 4,
-        "impressions": 371,
+        "impressions": 372,
         "ctr": 1.08,
-        "position": 15.8,
+        "position": 16.3,
         "branded": true
       },
       {
         "query": "the revenue optimization company",
         "clicks": 4,
-        "impressions": 55,
-        "ctr": 7.27,
-        "position": 3.4,
+        "impressions": 54,
+        "ctr": 7.41,
+        "position": 3.5,
         "branded": true
       },
       {
         "query": "troc logo",
         "clicks": 4,
-        "impressions": 50,
-        "ctr": 8,
+        "impressions": 49,
+        "ctr": 8.16,
         "position": 1.6,
         "branded": true
       },
       {
         "query": "walmart automated fulfillment center",
         "clicks": 4,
-        "impressions": 15,
-        "ctr": 26.67,
-        "position": 6.3,
+        "impressions": 17,
+        "ctr": 23.53,
+        "position": 6.5,
         "branded": false
       },
       {
         "query": "walmart automation",
         "clicks": 4,
-        "impressions": 179,
-        "ctr": 2.23,
-        "position": 8.2,
+        "impressions": 183,
+        "ctr": 2.19,
+        "position": 8,
         "branded": false
       }
     ],
     "lowCtrHighRank": [
       {
         "page": "https://trocglobal.com/experiential-retail-pop-up-events/",
-        "clicks": 41,
-        "impressions": 78368,
+        "clicks": 38,
+        "impressions": 78276,
         "ctr": 0.05,
         "position": 5.5
       },
       {
         "page": "https://trocglobal.com/company/",
-        "clicks": 161,
-        "impressions": 46334,
-        "ctr": 0.35,
+        "clicks": 164,
+        "impressions": 45433,
+        "ctr": 0.36,
         "position": 4.6
       },
       {
         "page": "https://trocglobal.com/retail-automation-distribution-centers-walmart/",
-        "clicks": 109,
-        "impressions": 37845,
+        "clicks": 107,
+        "impressions": 37506,
         "ctr": 0.29,
-        "position": 6.4
+        "position": 6.5
       },
       {
         "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
         "clicks": 131,
-        "impressions": 30722,
+        "impressions": 30585,
         "ctr": 0.43,
         "position": 9.4
       },
       {
         "page": "https://trocglobal.com/contact/",
         "clicks": 154,
-        "impressions": 29367,
-        "ctr": 0.52,
-        "position": 6.3
-      },
-      {
-        "page": "https://trocglobal.com/luxury-pop-up-stores-shipping-containers/",
-        "clicks": 22,
-        "impressions": 28856,
-        "ctr": 0.08,
-        "position": 5.2
+        "impressions": 29109,
+        "ctr": 0.53,
+        "position": 6.4
       },
       {
         "page": "https://trocglobal.com/automated-retail-trends-arki-insights/",
         "clicks": 15,
-        "impressions": 28494,
+        "impressions": 28870,
         "ctr": 0.05,
         "position": 8.8
       },
       {
+        "page": "https://trocglobal.com/luxury-pop-up-stores-shipping-containers/",
+        "clicks": 22,
+        "impressions": 28831,
+        "ctr": 0.08,
+        "position": 5.2
+      },
+      {
         "page": "https://trocglobal.com/the-future-of-audio-technology-3-defining-trends-from-ces-2026/",
-        "clicks": 53,
-        "impressions": 28393,
+        "clicks": 54,
+        "impressions": 28505,
         "ctr": 0.19,
         "position": 5.7
       },
       {
+        "page": "https://trocglobal.com/experiential-retail-trends-2026-levis-pop-up/",
+        "clicks": 32,
+        "impressions": 23101,
+        "ctr": 0.14,
+        "position": 5.5
+      },
+      {
         "page": "https://trocglobal.com/despite-the-rise-of-e-commerce-physical-stores-are-here-to-stay/",
         "clicks": 33,
-        "impressions": 23253,
+        "impressions": 22970,
         "ctr": 0.14,
         "position": 6.2
       },
       {
-        "page": "https://trocglobal.com/experiential-retail-trends-2026-levis-pop-up/",
-        "clicks": 28,
-        "impressions": 22678,
-        "ctr": 0.12,
-        "position": 5.5
-      },
-      {
         "page": "https://trocglobal.com/walmart-2026-annual-report-takeaways/",
         "clicks": 22,
-        "impressions": 22483,
+        "impressions": 22279,
         "ctr": 0.1,
-        "position": 7.1
+        "position": 7.2
       },
       {
         "page": "https://trocglobal.com/retail-revenue-optimization-strategies-multi-location-brands/",
         "clicks": 2,
-        "impressions": 18523,
+        "impressions": 18764,
         "ctr": 0.01,
         "position": 6.2
       },
       {
         "page": "https://trocglobal.com/store-resets-a-complete-guide-to-boosting-retail-sales/",
         "clicks": 32,
-        "impressions": 15615,
+        "impressions": 15761,
         "ctr": 0.2,
         "position": 8
       },
       {
         "page": "https://trocglobal.com/visual-merchandising-examples/",
-        "clicks": 46,
-        "impressions": 13048,
-        "ctr": 0.35,
-        "position": 9.3
+        "clicks": 47,
+        "impressions": 12971,
+        "ctr": 0.36,
+        "position": 9.2
       },
       {
         "page": "https://trocglobal.com/brand-ambassador-contract-what-to-look-for/",
         "clicks": 20,
-        "impressions": 12001,
+        "impressions": 11962,
         "ctr": 0.17,
-        "position": 6.3
+        "position": 6.2
       },
       {
         "page": "https://trocglobal.com/in-store-demonstrations-guide-the-value-of-showcasing-your-products-with-demos-2/",
         "clicks": 18,
-        "impressions": 11461,
+        "impressions": 11337,
         "ctr": 0.16,
-        "position": 9
+        "position": 9.1
       },
       {
         "page": "https://trocglobal.com/the-key-benefits-of-brand-ambassadors-boosting-visibility-and-building-trust/",
         "clicks": 27,
-        "impressions": 9775,
+        "impressions": 9627,
         "ctr": 0.28,
         "position": 6.4
       },
       {
         "page": "https://trocglobal.com/pop-up-stores-market-expansion/",
         "clicks": 5,
-        "impressions": 8555,
+        "impressions": 8498,
         "ctr": 0.06,
         "position": 7.4
       },
       {
         "page": "https://trocglobal.com/assembly-services/",
-        "clicks": 72,
-        "impressions": 7933,
-        "ctr": 0.91,
+        "clicks": 73,
+        "impressions": 7812,
+        "ctr": 0.93,
         "position": 9.8
-      },
-      {
-        "page": "https://trocglobal.com/cashierless-stores-future/",
-        "clicks": 23,
-        "impressions": 7766,
-        "ctr": 0.3,
-        "position": 10
-      },
-      {
-        "page": "https://trocglobal.com/community/",
-        "clicks": 3,
-        "impressions": 7545,
-        "ctr": 0.04,
-        "position": 7.6
       },
       {
         "page": "https://trocglobal.com/world-cup-retail-trends-how-fifa-2026-will-drive-spending-and-foot-traffic/",
@@ -3555,25 +3541,39 @@
         "position": 6.8
       },
       {
+        "page": "https://trocglobal.com/community/",
+        "clicks": 3,
+        "impressions": 7406,
+        "ctr": 0.04,
+        "position": 7.7
+      },
+      {
         "page": "https://trocglobal.com/how-do-i-know-if-a-brand-ambassador-is-legit/",
         "clicks": 20,
-        "impressions": 6964,
+        "impressions": 7013,
         "ctr": 0.29,
-        "position": 6.5
+        "position": 6.6
       },
       {
         "page": "https://trocglobal.com/final-assembly/",
         "clicks": 16,
-        "impressions": 6517,
+        "impressions": 6510,
         "ctr": 0.25,
         "position": 8.4
       },
       {
         "page": "https://trocglobal.com/why-brand-ambassadors-still-matter/",
         "clicks": 26,
-        "impressions": 6149,
-        "ctr": 0.42,
-        "position": 7
+        "impressions": 6014,
+        "ctr": 0.43,
+        "position": 7.1
+      },
+      {
+        "page": "https://trocglobal.com/t-roc-announces-new-name-as-part-of-rebranding-initiative/",
+        "clicks": 9,
+        "impressions": 5955,
+        "ctr": 0.15,
+        "position": 4.7
       }
     ]
   },
