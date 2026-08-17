@@ -245,10 +245,21 @@ export async function fetchSearchConsole(domain, brandRe) {
   // next question — "for that page, which specific queries are close enough to
   // move?" Anything at position 4-20 with real impressions is a candidate; a
   // page at 10.5 overall is an average hiding both winnable and hopeless terms.
+  // The merchandising URLs are here as a matched set, not because each is a
+  // target. Seven of our pages split "retail merchandising" for 5,051
+  // impressions and zero clicks, and Google ranks /merchandising-services/ at
+  // position 8 while the actual service page sits at 32. Choosing which URL
+  // should own the cluster needs per-page numbers for all of them, measured
+  // AFTER the blank pages start rendering — /what-is-retail-merchandising/
+  // currently holds 1,242 impressions while displaying only nav and footer,
+  // so today's positions understate what these pages would do with content.
   const TARGET_PAGES = [
     "https://trocglobal.com/services/brand-ambassadors/",
-    "https://trocglobal.com/services/merchandising/",
     "https://trocglobal.com/services/mystery-shopping-and-audits/",
+    "https://trocglobal.com/services/merchandising/",
+    "https://trocglobal.com/merchandising-services/",
+    "https://trocglobal.com/retail-merchandising/",
+    "https://trocglobal.com/what-is-retail-merchandising/",
   ];
   const pageOpportunities = [];
   for (const page of TARGET_PAGES) {
