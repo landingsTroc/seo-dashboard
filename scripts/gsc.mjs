@@ -240,11 +240,71 @@ export async function fetchSearchConsole(domain, brandRe) {
   console.log(`GSC: ${termPages.length} commercial terms analysed, ` +
     `${cannibalised.length} show more than one of our pages competing`);
 
+  // Per-page query inventory for the pages we are actively trying to rank.
+  // termPages answers "which of our pages does Google pick?"; this answers the
+  // next question — "for that page, which specific queries are close enough to
+  // move?" Anything at position 4-20 with real impressions is a candidate; a
+  // page at 10.5 overall is an average hiding both winnable and hopeless terms.
+  const TARGET_PAGES = [
+    "https://trocglobal.com/services/brand-ambassadors/",
+    "https://trocglobal.com/services/merchandising/",
+    "https://trocglobal.com/services/mystery-shopping-and-audits/",
+  ];
+  const pageOpportunities = [];
+  for (const page of TARGET_PAGES) {
+    try {
+      const rows = await query(token, siteUrl, {
+        ...base,
+        dimensions: ["query"],
+        rowLimit: 500,
+        dimensionFilterGroups: [{
+          filters: [{ dimension: "page", operator: "equals", expression: page }],
+        }],
+      });
+      if (!rows.length) { console.warn(`GSC: no query rows for ${page}`); continue; }
+      const queries = rows
+        .map((r) => ({
+          query: r.keys[0], clicks: r.clicks, impressions: r.impressions,
+          ctr: +(r.ctr * 100).toFixed(2), position: +r.position.toFixed(1),
+          branded: brandRe.test(r.keys[0]),
+        }))
+        .sort((a, b) => b.impressions - a.impressions);
+      const impressions = queries.reduce((a, q) => a + q.impressions, 0);
+      const clicks = queries.reduce((a, q) => a + q.clicks, 0);
+      pageOpportunities.push({
+        page,
+        totalQueries: queries.length,
+        clicks,
+        impressions,
+        ctr: impressions ? +((clicks / impressions) * 100).toFixed(2) : null,
+        // Impression-weighted, so one high-volume term at 18 is not hidden by
+        // fifty long-tail terms at 3.
+        position: impressions
+          ? +(queries.reduce((a, q) => a + q.position * q.impressions, 0) / impressions).toFixed(1)
+          : null,
+        // Non-branded only: no amount of on-page work moves "t-roc" rankings,
+        // and including them flatters the numbers.
+        strikingDistance: queries
+          .filter((q) => !q.branded && q.position >= 4 && q.position <= 20 && q.impressions >= 20)
+          .slice(0, 40),
+        alreadyTop3: queries.filter((q) => !q.branded && q.position < 4).length,
+        queries: queries.slice(0, 100),
+      });
+    } catch (err) {
+      console.warn(`GSC: page opportunity query failed for ${page} — ${err.message}`);
+    }
+  }
+  for (const p of pageOpportunities) {
+    console.log(`GSC: ${p.page} — ${p.totalQueries} queries, pos ${p.position}, ` +
+      `${p.strikingDistance.length} non-branded terms in striking distance`);
+  }
+
   return {
     siteUrl,
     dateRange: { startDate, endDate },
     pageQueries,
     termPages,
+    pageOpportunities,
     totals: {
       clicks: totals.clicks,
       impressions: totals.impressions,
