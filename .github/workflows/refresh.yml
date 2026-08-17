@@ -2,9 +2,11 @@ name: Refresh SEO data
 
 on:
   schedule:
-    # Once daily. The Ahrefs API is metered per unit and each run costs ~3,300
-    # units, so 6-hourly polling exhausts a month's quota fast. SEO metrics do
-    # not move meaningfully within a day. GitHub cron is UTC and best-effort.
+    # Once daily. The Ahrefs API is metered per unit and each full run costs
+    # ~1,800 units against a 100,000/month workspace quota, so anything more
+    # frequent exhausts it well before the reset date. SEO metrics do not move
+    # meaningfully within a day. GitHub cron is UTC and best-effort.
+    # Push events deploy but do NOT re-fetch Ahrefs — see AHREFS_SKIP below.
     - cron: "0 6 * * *"
   workflow_dispatch: {}   # lets you refresh on demand from the Actions tab
   push:
@@ -47,6 +49,11 @@ jobs:
           # Console — the API rejects it with 401.
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           TARGET_DOMAIN: trocglobal.com
+          # Ahrefs is metered (~1,800 units/run, 100k per month for the whole
+          # workspace). A push only means the dashboard code changed, not that
+          # the data did, so deploy runs reuse the last snapshot. The daily cron
+          # and a manual "Run workflow" still fetch fresh data.
+          AHREFS_SKIP: ${{ github.event_name == 'push' && '1' || '0' }}
         run: node scripts/fetch-data.mjs
 
       - name: Commit refreshed data

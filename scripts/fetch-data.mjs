@@ -215,6 +215,18 @@ async function main() {
   // free Search Console data, and vice versa.
   let ahrefs = null, ahrefsError = null;
   try {
+    // Ahrefs is the only metered source (~1,800 units/run against a 100k monthly
+    // workspace quota). It must not be re-fetched just because someone edited the
+    // dashboard: 24 of the first 30 runs were push-triggered edits on two days of
+    // script iteration, and they burned roughly 43,000 units for data that had not
+    // changed. Ahrefs updates daily at best, so one snapshot per calendar day is
+    // the most that can ever be useful.
+    if (process.env.AHREFS_SKIP === "1") {
+      throw new Error("skipped: deploy-only run, reusing the last Ahrefs snapshot");
+    }
+    if (prev?.sources?.ahrefs?.asOf?.slice(0, 10) === today) {
+      throw new Error(`skipped: already have an Ahrefs snapshot for ${today}`);
+    }
     ahrefs = await collectAhrefs();
     console.log(`Ahrefs OK — ${ahrefs._log}`);
     delete ahrefs._log;
@@ -223,13 +235,17 @@ async function main() {
         "query still returns rows — an empty result previously meant a sort-order bug, not a clean site.");
     }
   } catch (err) {
-    ahrefsError = err.message;
-    console.warn(`Ahrefs FAILED — ${err.message}`);
+    const skipped = err.message.startsWith("skipped:");
+    // A deliberate skip is not an error. Reporting it as one trains everyone to
+    // ignore the freshness badge, which is the only thing that would flag a real
+    // outage. The badge still shows the true age of the data either way.
+    ahrefsError = skipped ? null : err.message;
+    console.warn(skipped ? `Ahrefs ${err.message}` : `Ahrefs FAILED — ${err.message}`);
     if (/units limit reached/i.test(err.message)) {
-      console.warn("Ahrefs units exhausted (~3,300 per run). Wait for the monthly reset; " +
-        "do not re-run to retry.");
+      console.warn("Ahrefs units exhausted (~1,800 per run, 100k/month workspace-wide). " +
+        "Wait for the monthly reset; re-running only burns the next month's quota.");
     }
-    if (!prev) throw new Error(`Ahrefs failed with no previous data to fall back on: ${err.message}`);
+    if (!prev) throw new Error(`Ahrefs unavailable with no previous data to fall back on: ${err.message}`);
     console.warn("Reusing the previous Ahrefs data.");
   }
 
