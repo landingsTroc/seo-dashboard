@@ -134,7 +134,7 @@
     <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
     <div class="meta-row">
       <span>trocglobal.com</span>
-      <span>Last updated: August 5, 2026</span>
+      <span>Last updated: August 18, 2026</span>
       <span><a href="../">← Live dashboard</a></span>
       <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
     </div>
@@ -142,8 +142,8 @@
 
   <section>
     <div class="counts">
-      <div class="count"><span class="n n-done">19</span><span class="l">Completed</span></div>
-      <div class="count"><span class="n n-block">3</span><span class="l">Blocked on access</span></div>
+      <div class="count"><span class="n n-done">29</span><span class="l">Completed</span></div>
+      <div class="count"><span class="n n-block">4</span><span class="l">Blocked on access</span></div>
       <div class="count"><span class="n n-next">6</span><span class="l">Next up</span></div>
       <div class="count"><span class="n n-watch">4</span><span class="l">Watching</span></div>
     </div>
@@ -195,6 +195,60 @@
             <td><strong>3 new posts published</strong></td>
             <td>—</td>
             <td><span class="chip c-done">Done</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 14&ndash;18</td>
+            <td><strong>Pages that stored content but displayed none</strong><br><span class="small">193 pages &middot; theme never printed <code>post_content</code></span></td>
+            <td>Root cause of the indexation problem: pages served ~546 words of header, nav and footer and nothing else. Content fallback published them. Glossary 546 &rarr; <strong>2,737 words</strong>, competitor pages 541 &rarr; 1,985. Verified live.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 17</td>
+            <td><strong>Missing H1 headings</strong><br><span class="small">98 pages + all custom post types and archives</span></td>
+            <td><strong>The existing fix ran in JavaScript</strong>, so crawlers never saw it &mdash; active for weeks while every crawl still reported the headings missing. Replaced with server-side output present in the HTML source.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 17</td>
+            <td><strong>Redirect chains and a trailing-slash defect</strong><br><span class="small">64 rules</span></td>
+            <td>2- and 3-hop chains collapsed to one, including <code>/contact-form/</code> (608 inlinks) and a URL that ended on a .jpg (23 inlinks). Ten redirects that terminated on a 404 repointed. Also fixed our own <code>/blog/</code> rule, which dropped the trailing slash and 404d two URLs.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 18</td>
+            <td><strong>Guide pages: whole HTML documents pasted into content</strong><br><span class="small">14 pages &middot; 691 escaped quotes &middot; 12 embedded documents</span></td>
+            <td><strong>Roughly half of all 404s.</strong> Links stored with escaped quotes parsed as relative paths, generating URLs like <code>/mystery-shopping-guide/https:/trocglobal.com/contact/</code>. Unescaped and document wrappers removed; pages now 200 at ~4,400&ndash;4,900 words with zero malformed links.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 18</td>
+            <td><strong>Resource hubs linking to slugs that never existed</strong><br><span class="small">34 pages &middot; 193 links</span></td>
+            <td>Hubs linked to shortened URLs such as <code>/t-roc-ces-2013/</code>. Only 10 of 142 matched a live article &mdash; the rest were removed in the June prune. Those 10 repointed, the remainder unlinked with all heading text preserved. News hub: 351 anchors &rarr; 271, word count unchanged.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 18</td>
+            <td><strong>Structural URLs the site linked to but never had</strong><br><span class="small">18 redirects</span></td>
+            <td><code>/services/retail-merchandising/</code>, <code>/resources/definitions/</code> (14 inlinks), <code>/terms-of-use/</code> and 15 more. Every destination verified 200 before the rule was written.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 17</td>
+            <td><strong>Dead external links removed</strong><br><span class="small">5 links across 5 posts</span></td>
+            <td>Checked with a browser user-agent first: 7 of the 12 flagged were bot-blocking, not dead, and were left alone. Only the 5 genuine 404s were unlinked, sentences intact.</td>
+            <td><span class="chip c-done">Verified</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 17</td>
+            <td><strong>Ahrefs API quota leak closed</strong></td>
+            <td>The refresh job re-ran the metered Ahrefs collector on every deploy, not just the daily schedule &mdash; 24 of the first 30 runs were code edits, burning ~43,000 units. Deploys now reuse the last snapshot; a second guard blocks two fetches in one day.</td>
+            <td><span class="chip c-done">Fixed</span></td>
+          </tr>
+          <tr>
+            <td class="date">Aug 18</td>
+            <td><strong>Full sitemap sweep</strong><br><span class="small">655 URLs</span></td>
+            <td>Every URL declared across all 13 sitemaps requested individually: <strong>zero 404s</strong>, 3 entries redirect rather than resolve (worth tidying in Yoast).</td>
+            <td><span class="chip c-done">Verified</span></td>
           </tr>
         </tbody>
       </table>
@@ -336,10 +390,16 @@
             <td>Infrastructure admin</td>
           </tr>
           <tr>
-            <td class="date">Jul 15</td>
-            <td><strong>Activate the H1 snippet in WPCode</strong></td>
-            <td>~293 pages without an H1. <strong>The code is written and waiting</strong> — a five-minute activation.</td>
-            <td>Web team</td>
+            <td class="date">Aug 18</td>
+            <td><strong>Purge the server cache in WP Engine</strong><br><span class="small">blocking 2 completed fixes</span></td>
+            <td><strong>Update was clicked ten times without effect.</strong> The code is saved correctly &mdash; the stored snippet is byte-identical to the reviewed version, timestamped 14:48 &mdash; but the server keeps executing the previously compiled copy. Cache-busting a URL does not help, which rules out page cache and points at PHP OPcache. A purge is the action; further saves are not.</td>
+            <td>Infrastructure admin</td>
+          </tr>
+          <tr>
+            <td class="date">Aug 18</td>
+            <td><strong>Identify the second Ahrefs API key</strong><br><span class="small">quota resets 24 Aug</span></td>
+            <td>The workspace burned 100,996 of 100,000 units. Our dashboard key accounts for 54,578 &mdash; the leak behind that is fixed. The other <strong>46%</strong> was spent by a different key in the same workspace. Worth identifying before the reset, or next month goes the same way.</td>
+            <td>Whoever owns the Ahrefs account</td>
           </tr>
         </tbody>
       </table>
