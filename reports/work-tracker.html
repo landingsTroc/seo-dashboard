@@ -134,7 +134,7 @@
     <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
     <div class="meta-row">
       <span>trocglobal.com</span>
-      <span>Last updated: August 18, 2026</span>
+      <span>Last updated: August 19, 2026</span>
       <span><a href="../">← Live dashboard</a></span>
       <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
     </div>
@@ -142,14 +142,14 @@
 
   <section>
     <div class="counts">
-      <div class="count"><span class="n n-done">29</span><span class="l">Completed</span></div>
-      <div class="count"><span class="n n-block">4</span><span class="l">Blocked on access</span></div>
+      <div class="count"><span class="n n-done">32</span><span class="l">Completed</span></div>
+      <div class="count"><span class="n n-block">5</span><span class="l">Blocked on access</span></div>
       <div class="count"><span class="n n-next">6</span><span class="l">Next up</span></div>
       <div class="count"><span class="n n-watch">4</span><span class="l">Watching</span></div>
     </div>
 
     <div class="callout co-crit">
-      <h3>Three items have been blocked since July 15 — 21 days</h3>
+      <h3>Three items have been blocked since July 15 — 35 days</h3>
       <p>The Cloudflare unblock, the H1 snippet activation and WPCode production access were all requested on July 15 and remain open. <strong>They block the highest-return work in the plan.</strong> Everything achievable without them has now been done.</p>
     </div>
   </section>
@@ -166,6 +166,10 @@
       <table>
         <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
         <tbody>
+            <tr><td class="date">Aug 19</td><td><strong>/services/ traced to a server-level block</strong><br><span class="small">301 staged, waiting on WP Engine</span></td><td>The page returns <strong>403 before WordPress runs</strong>. Reproduced with Cloudflare bypassed (<code>Server: nginx</code>), while <code>/services/nonexistent-xyz/</code> returns a normal WordPress 404 &mdash; so the block sits at the host, not in our code or plugins. Confirmed absent from Access, Header and Rewrite rules, and the same path serves 200 on staging. A <strong>301 to /solutions/</strong> is staged as rule 488 and fires the moment the block is lifted. Support ticket drafted with the full evidence.</td><td><span class="chip c-done">Diagnosed</span></td></tr>
+            <tr><td class="date">Aug 19</td><td><strong>Full status sweep of the site</strong><br><span class="small">667 URLs &mdash; sitemap plus every internal link target</span></td><td><strong>658 return 200.</strong> Seven redirect, each resolving to a live page in a single hop. One 403 (<code>/services/</code>, above). <strong>No 404s</strong> &mdash; the single one reported was an artefact of our own trailing-slash normalisation and returns 200 as actually linked.</td><td><span class="chip c-done">Verified</span></td></tr>
+            <tr><td class="date">Aug 19</td><td><strong>Staging-domain links found on 63 pages</strong><br><span class="small">needs a database search-replace</span></td><td>61 case study, video and e-book pages link <strong>&ldquo;Privacy Policy&rdquo; to trocdev.wpengine.com</strong> &mdash; a staging site set to <code>Disallow: /</code> in robots.txt, so visitors and crawlers are pointed at a blocked domain. Two further pages load images from it. These URLs sit in Elementor and plugin data, which the REST API cannot reach.</td><td><span class="chip c-next">Web team action</span></td></tr>
+            <tr><td class="date">Aug 19</td><td><strong>Dev URLs cleared from stored page content</strong><br><span class="small">/assembly-services/ &middot; all caches purged</span></td><td>Rewrote the staging asset URLs held in the page record to production, after confirming every asset resolves on the live domain. Purged all WP Engine caches <strong>through the API</strong> &mdash; no dashboard access needed, which removes the manual cache step that held up earlier fixes.</td><td><span class="chip c-done">Fixed</span></td></tr>
           <tr>
             <td class="date">Jun 2026</td>
             <td><strong>Content prune — Batch 1</strong><br><span class="small">25 press-release posts redirected to <code>/company/</code></span></td>
@@ -369,7 +373,7 @@
   <!-- ================= BLOCKED ================= -->
   <section>
     <div class="sec-head">
-      <span class="eyebrow">Blocked · 3 items</span>
+      <span class="eyebrow">Blocked · 5 items</span>
       <h2>Waiting on access</h2>
     </div>
 
@@ -391,16 +395,22 @@
           </tr>
           <tr>
             <td class="date">Aug 18</td>
-            <td><strong>Purge the server cache in WP Engine</strong><br><span class="small">blocking 2 completed fixes</span></td>
-            <td><strong>Update was clicked ten times without effect.</strong> The code is saved correctly &mdash; the stored snippet is byte-identical to the reviewed version, timestamped 14:48 &mdash; but the server keeps executing the previously compiled copy. Cache-busting a URL does not help, which rules out page cache and points at PHP OPcache. A purge is the action; further saves are not.</td>
-            <td>Infrastructure admin</td>
-          </tr>
-          <tr>
-            <td class="date">Aug 18</td>
             <td><strong>Identify the second Ahrefs API key</strong><br><span class="small">quota resets 24 Aug</span></td>
             <td>The workspace burned 100,996 of 100,000 units. Our dashboard key accounts for 54,578 &mdash; the leak behind that is fixed. The other <strong>46%</strong> was spent by a different key in the same workspace. Worth identifying before the reset, or next month goes the same way.</td>
             <td>Whoever owns the Ahrefs account</td>
           </tr>
+            <tr>
+              <td class="date">Aug 19</td>
+              <td><strong>WP Engine &mdash; remove the 403 on /services/</strong><br><span class="small">~670 internal links, homepage included</span></td>
+              <td>The path is blocked at nginx, before WordPress. It is not in Access, Header or Rewrite rules, so only WP Engine support can see and remove it. A ticket with full evidence is drafted and ready to send. <strong>The 301 to /solutions/ is already staged</strong> and takes effect the moment the block is lifted.</td>
+              <td>WP Engine support</td>
+            </tr>
+            <tr>
+              <td class="date">Aug 19</td>
+              <td><strong>Replace staging URLs in the database</strong><br><span class="small">63 pages point at trocdev.wpengine.com</span></td>
+              <td>Run <strong>Better Search Replace</strong> (already installed) for <code>trocdev.wpengine.com</code> &rarr; <code>trocglobal.com</code>, dry run first. The URLs sit in Elementor and plugin data, which the REST API cannot write. If the dry run reports no matches, the link is hardcoded in a theme file and needs a developer.</td>
+              <td>Web team</td>
+            </tr>
         </tbody>
       </table>
     </div>
