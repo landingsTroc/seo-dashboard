@@ -134,7 +134,7 @@
     <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
     <div class="meta-row">
       <span>trocglobal.com</span>
-      <span>Last updated: August 19, 2026</span>
+      <span>Last updated: August 27, 2026</span>
       <span><a href="../">← Live dashboard</a></span>
       <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
     </div>
@@ -142,10 +142,10 @@
 
   <section>
     <div class="counts">
-      <div class="count"><span class="n n-done">32</span><span class="l">Completed</span></div>
+      <div class="count"><span class="n n-done">37</span><span class="l">Completed</span></div>
       <div class="count"><span class="n n-block">5</span><span class="l">Blocked on access</span></div>
       <div class="count"><span class="n n-next">6</span><span class="l">Next up</span></div>
-      <div class="count"><span class="n n-watch">4</span><span class="l">Watching</span></div>
+      <div class="count"><span class="n n-watch">7</span><span class="l">Watching</span></div>
     </div>
 
     <div class="callout co-crit">
@@ -157,7 +157,7 @@
   <!-- ================= COMPLETED ================= -->
   <section>
     <div class="sec-head">
-      <span class="eyebrow">Completed · 18 items</span>
+      <span class="eyebrow">Completed · 23 items</span>
       <h2>Work done</h2>
     </div>
 
@@ -166,6 +166,11 @@
       <table>
         <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
         <tbody>
+            <tr><td class="date">Aug 27</td><td><strong>Custom code layer cut from 64 snippets to 39</strong><br><span class="small">6 deleted, 19 disabled and preserved &middot; all 64 backed up first</span></td><td>Audited every active WPCode snippet for security exposure, effectiveness and page scope. <strong>No injection or remote-execution vulnerability exists</strong> across the set. Removed one snippet that exposed the SEO fields over REST with the permission callback set to <code>__return_true</code> &mdash; a second snippet already did the job with a real capability check. Cleared nine test snippets left in production, three competing <code>robots.txt</code> writers reduced to one, and a duplicated FAQPage emitter. Verified with <strong>three full crawls of all 661 URLs</strong>: no page went down and no PHP errors were introduced at any point.</td><td><span class="chip c-done">Fixed</span></td></tr>
+            <tr><td class="date">Aug 27</td><td><strong>Hidden text removed from seven pages</strong><br><span class="small">penalty exposure &middot; 1,731 words on a single page</span></td><td>Four snippets were injecting SEO copy into the service pages via <code>wp_footer</code>, which renders <strong>below the site footer, outside the layout</strong>. Because it looked broken, a CSS rule had been added to hide it &mdash; leaving the text present for crawlers and invisible to visitors, which Google's spam policies classify as hidden text. Traced the rule to Customizer CSS (not a snippet), disabled the injectors, and confirmed <strong>0 of 7 pages still serve hidden content</strong>. The copy is preserved and can be reinstated as visible page content.</td><td><span class="chip c-done">Fixed</span></td></tr>
+            <tr><td class="date">Aug 27</td><td><strong>Duplicate structured data cut from 575 pages to 10</strong><br><span class="small">three emitters reduced to one</span></td><td>Yoast, plus two snippets, were each emitting BreadcrumbList on every singular page &mdash; <strong>565 pages were sending Google three conflicting navigation trails</strong>, and the worst carried four. Two further snippets duplicated Service schema already produced by a newer, more complete one. Disabled the four redundant emitters; <strong>589 of 661 pages now carry exactly one</strong>. The residue traces to schema hand-pasted into page content, not to code.</td><td><span class="chip c-done">Fixed</span></td></tr>
+            <tr><td class="date">Aug 26</td><td><strong>New post on the largest unowned query</strong><br><span class="small">/retail-marketing-services/</span></td><td>&ldquo;retail marketing services&rdquo; carries <strong>~1,500 impressions at position 9.4 with zero clicks</strong> and had no page of its own &mdash; it resolved to two merchandising pages, which is the wrong intent. Deliberately avoided the head terms: seven pages already split &ldquo;retail merchandising&rdquo; for 0 clicks, so an eighth would have deepened the cannibalisation. Published with a section that explicitly separates marketing from merchandising, to signal which URL owns which term. <strong>Re-measure in ~30 days.</strong></td><td><span class="chip c-done">Published</span></td></tr>
+            <tr><td class="date">Aug 26</td><td><strong>24 posts given a unique featured image</strong><br><span class="small">every image on the site now used once</span></td><td>Audit of all 272 published posts found <strong>24 with no featured image and 26 sharing 11 images</strong> &mdash; one image appeared on four posts. The cause: the site's featured images are banners with the article title baked in, so they cannot be recycled, and only 2 of 36 house-template banners remained unused. Generated 24 branded banners and set each with alt text. Verified live: <strong>0 posts without an image, 24 distinct images, no repeats.</strong></td><td><span class="chip c-done">Fixed</span></td></tr>
             <tr><td class="date">Aug 19</td><td><strong>/services/ traced to a server-level block</strong><br><span class="small">301 staged, waiting on WP Engine</span></td><td>The page returns <strong>403 before WordPress runs</strong>. Reproduced with Cloudflare bypassed (<code>Server: nginx</code>), while <code>/services/nonexistent-xyz/</code> returns a normal WordPress 404 &mdash; so the block sits at the host, not in our code or plugins. Confirmed absent from Access, Header and Rewrite rules, and the same path serves 200 on staging. A <strong>301 to /solutions/</strong> is staged as rule 488 and fires the moment the block is lifted. Support ticket drafted with the full evidence.</td><td><span class="chip c-done">Diagnosed</span></td></tr>
             <tr><td class="date">Aug 19</td><td><strong>Full status sweep of the site</strong><br><span class="small">667 URLs &mdash; sitemap plus every internal link target</span></td><td><strong>658 return 200.</strong> Seven redirect, each resolving to a live page in a single hop. One 403 (<code>/services/</code>, above). <strong>No 404s</strong> &mdash; the single one reported was an artefact of our own trailing-slash normalisation and returns 200 as actually linked.</td><td><span class="chip c-done">Verified</span></td></tr>
             <tr><td class="date">Aug 19</td><td><strong>Staging-domain links found on 63 pages</strong><br><span class="small">needs a database search-replace</span></td><td>61 case study, video and e-book pages link <strong>&ldquo;Privacy Policy&rdquo; to trocdev.wpengine.com</strong> &mdash; a staging site set to <code>Disallow: /</code> in robots.txt, so visitors and crawlers are pointed at a blocked domain. Two further pages load images from it. These URLs sit in Elementor and plugin data, which the REST API cannot reach.</td><td><span class="chip c-next">Web team action</span></td></tr>
@@ -441,7 +446,7 @@
   <!-- ================= WATCHING ================= -->
   <section>
     <div class="sec-head">
-      <span class="eyebrow">Watching · 4 items</span>
+      <span class="eyebrow">Watching · 7 items</span>
       <h2>Known issues, no action yet</h2>
     </div>
 
@@ -449,6 +454,9 @@
       <table>
         <thead><tr><th>Item</th><th>Detail</th></tr></thead>
         <tbody>
+          <tr><td><strong>62 case study pages are silent to search</strong></td><td>Every page under <code>/case-studies/</code> returns 200 but carries <strong>no canonical tag, no structured data, and no Yoast output at all</strong> &mdash; the SEO plugin does not run on them. Responses are 46&ndash;66&nbsp;KB against a 220&nbsp;KB site average, the same signature as <code>/services/viba/</code>, which is served by the Webflow plugin rather than the WordPress template. This is a larger loss than anything in the code layer and is an infrastructure question, not a content one. <strong>Recommended as the next investigation.</strong></td></tr>
+          <tr><td><strong>Schema hand-pasted into post content</strong></td><td>182 posts carry an <code>Article</code> block with two nested <code>Organization</code> nodes written directly into the post body, competing with the one Yoast generates. A further 11 pages hold an <strong>entire second HTML document</strong> &mdash; <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;head&gt;</code>, its own <code>&lt;title&gt;</code> and canonical &mdash; pasted inside the content field, which is what produces the 9 duplicate canonicals under <code>/resources/</code>. None of this is fixable by touching code; it needs the content edited.</td></tr>
+          <tr><td><strong>Service pages lost ~1,700 words each</strong></td><td>Disabling the hidden-text injectors removed content that visitors never saw but search engines counted. Impressions on the six affected URLs may soften. Baseline captured before the change &mdash; <code>/services/brand-ambassadors/</code> stood at <strong>20 clicks and 5,353 impressions at position 14.2</strong> over the 90 days to Aug 22. <strong>Re-measure around Sep 17.</strong> The copy is preserved and can be reinstated as visible page content.</td></tr>
           <tr><td><strong>Ahrefs API quota exhausted</strong></td><td>Used up on Aug 5. The dashboard reuses the last good Ahrefs data and keeps publishing; Search Console is unaffected. Resets monthly. Schedule reduced from 6-hourly to daily.</td></tr>
           <tr><td><strong>Index coverage cannot be automated</strong></td><td>Google exposes coverage only in the interface, not the API. That section of the report needs a manual re-export to refresh.</td></tr>
           <tr><td><strong>Machine clock drift</strong></td><td>The working machine runs several minutes ahead of real time, which broke token signing once. Affects certificate checks generally — worth fixing in Windows time settings.</td></tr>
