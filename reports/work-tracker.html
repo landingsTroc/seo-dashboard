@@ -134,9 +134,10 @@
     <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
     <div class="meta-row">
       <span>trocglobal.com</span>
-      <span>Last updated: August 27, 2026</span>
+      <span>Last updated: September 2, 2026</span>
       <span><a href="../">← Live dashboard</a></span>
       <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
+      <span><a href="seo-review-2026-09-02.html">Site review, Sep 2</a></span>
     </div>
   </header>
 
@@ -144,7 +145,7 @@
     <div class="counts">
       <div class="count"><span class="n n-done">37</span><span class="l">Completed</span></div>
       <div class="count"><span class="n n-block">5</span><span class="l">Blocked on access</span></div>
-      <div class="count"><span class="n n-next">6</span><span class="l">Next up</span></div>
+      <div class="count"><span class="n n-next">7</span><span class="l">Next up</span></div>
       <div class="count"><span class="n n-watch">7</span><span class="l">Watching</span></div>
     </div>
 
@@ -166,6 +167,7 @@
       <table>
         <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
         <tbody>
+            <tr><td class="date">Sep 2</td><td><strong>Full site re-crawl and verification of the August cleanup</strong><br><span class="small">662 URLs, diffed against the Aug 28 snapshot</span></td><td>Re-tested every item in the August remediation pack against the live site rather than the changelog: <strong>all seven are closed</strong> &mdash; hidden text gone, duplicate FAQPage down to one, robots.txt served correctly, and the permission-bypass and nine test snippets confirmed deleted (404, not a permissions 403). <strong>All 662 sitemap URLs return 200 and nothing has drifted</strong> &mdash; zero field-level differences across the 661 URLs shared with the previous snapshot. The crawl also surfaced <strong>11 topics with two competing live pages</strong>, which was not previously known. <a href="seo-review-2026-09-02.html">Full review</a>.</td><td><span class="chip c-done">Verified</span></td></tr>
             <tr><td class="date">Aug 27</td><td><strong>Custom code layer cut from 64 snippets to 39</strong><br><span class="small">6 deleted, 19 disabled and preserved &middot; all 64 backed up first</span></td><td>Audited every active WPCode snippet for security exposure, effectiveness and page scope. <strong>No injection or remote-execution vulnerability exists</strong> across the set. Removed one snippet that exposed the SEO fields over REST with the permission callback set to <code>__return_true</code> &mdash; a second snippet already did the job with a real capability check. Cleared nine test snippets left in production, three competing <code>robots.txt</code> writers reduced to one, and a duplicated FAQPage emitter. Verified with <strong>three full crawls of all 661 URLs</strong>: no page went down and no PHP errors were introduced at any point.</td><td><span class="chip c-done">Fixed</span></td></tr>
             <tr><td class="date">Aug 27</td><td><strong>Hidden text removed from seven pages</strong><br><span class="small">penalty exposure &middot; 1,731 words on a single page</span></td><td>Four snippets were injecting SEO copy into the service pages via <code>wp_footer</code>, which renders <strong>below the site footer, outside the layout</strong>. Because it looked broken, a CSS rule had been added to hide it &mdash; leaving the text present for crawlers and invisible to visitors, which Google's spam policies classify as hidden text. Traced the rule to Customizer CSS (not a snippet), disabled the injectors, and confirmed <strong>0 of 7 pages still serve hidden content</strong>. The copy is preserved and can be reinstated as visible page content.</td><td><span class="chip c-done">Fixed</span></td></tr>
             <tr><td class="date">Aug 27</td><td><strong>Duplicate structured data cut from 575 pages to 10</strong><br><span class="small">three emitters reduced to one</span></td><td>Yoast, plus two snippets, were each emitting BreadcrumbList on every singular page &mdash; <strong>565 pages were sending Google three conflicting navigation trails</strong>, and the worst carried four. Two further snippets duplicated Service schema already produced by a newer, more complete one. Disabled the four redundant emitters; <strong>589 of 661 pages now carry exactly one</strong>. The residue traces to schema hand-pasted into page content, not to code.</td><td><span class="chip c-done">Fixed</span></td></tr>
@@ -432,12 +434,13 @@
       <table>
         <thead><tr><th>#</th><th>Task</th><th>Why it's next</th><th>Needs</th></tr></thead>
         <tbody>
-          <tr><td class="date">1</td><td><strong>Per-page query breakdown</strong></td><td>Separates a title problem from an intent mismatch on the 25 low-CTR pages. Decides whether we rewrite or retarget — no effort should be spent before this.</td><td>Nothing</td></tr>
-          <tr><td class="date">2</td><td><strong>Finish the consolidation</strong><br><span class="small">210 remaining pages</span></td><td>The likely feeder of the 465 "crawled – not indexed" backlog.</td><td>Publishing access</td></tr>
-          <tr><td class="date">3</td><td><strong>Trace the 90 unexplained 404s</strong></td><td>Not from the prune list — source unknown.</td><td>Nothing</td></tr>
-          <tr><td class="date">4</td><td><strong>Brand-ambassador consolidation</strong></td><td>"brand ambassador" holds 3,755 impressions at position 10.8, earning 9 clicks. Biggest single growth lever.</td><td><span class="chip c-next">Your decision on what to merge</span></td></tr>
-          <tr><td class="date">5</td><td><strong>Submit the disavow</strong></td><td>Spam network confirmed. Hygiene, not growth.</td><td>Search Console owner</td></tr>
-          <tr><td class="date">6</td><td><strong>Rotate the service account key</strong></td><td>The credential was shared in chat and should be replaced.</td><td>Google Cloud access</td></tr>
+          <tr><td class="date">1</td><td><strong>Resolve the 11 duplicate page pairs</strong><br><span class="small">22 live URLs, all self-canonical</span></td><td>A <code>/resources/</code> section duplicates pages that already exist at the root, on eleven commercial topics including <strong>retail merchandising</strong>. Both copies are indexable and both are in the sitemap. Blocks the nested-HTML cleanup, which should only touch the surviving copies.</td><td>Nothing, Redirection plugin</td></tr>
+          <tr><td class="date">2</td><td><strong>Per-page query breakdown</strong></td><td>Separates a title problem from an intent mismatch on the 25 low-CTR pages. Decides whether we rewrite or retarget — no effort should be spent before this.</td><td>Nothing</td></tr>
+          <tr><td class="date">3</td><td><strong>Finish the consolidation</strong><br><span class="small">210 remaining pages</span></td><td>The likely feeder of the 465 "crawled – not indexed" backlog.</td><td>Publishing access</td></tr>
+          <tr><td class="date">4</td><td><strong>Trace the 90 unexplained 404s</strong></td><td>Not from the prune list — source unknown.</td><td>Nothing</td></tr>
+          <tr><td class="date">5</td><td><strong>Brand-ambassador consolidation</strong></td><td>"brand ambassador" holds 3,755 impressions at position 10.8, earning 9 clicks. Biggest single growth lever.</td><td><span class="chip c-next">Your decision on what to merge</span></td></tr>
+          <tr><td class="date">6</td><td><strong>Submit the disavow</strong></td><td>Spam network confirmed. Hygiene, not growth.</td><td>Search Console owner</td></tr>
+          <tr><td class="date">7</td><td><strong>Rotate the service account key</strong></td><td>The credential was shared in chat and should be replaced.</td><td>Google Cloud access</td></tr>
         </tbody>
       </table>
     </div>
@@ -454,7 +457,7 @@
       <table>
         <thead><tr><th>Item</th><th>Detail</th></tr></thead>
         <tbody>
-          <tr><td><strong>62 case study pages are silent to search</strong></td><td>Every page under <code>/case-studies/</code> returns 200 but carries <strong>no canonical tag, no structured data, and no Yoast output at all</strong> &mdash; the SEO plugin does not run on them. Responses are 46&ndash;66&nbsp;KB against a 220&nbsp;KB site average, the same signature as <code>/services/viba/</code>, which is served by the Webflow plugin rather than the WordPress template. This is a larger loss than anything in the code layer and is an infrastructure question, not a content one. <strong>Recommended as the next investigation.</strong></td></tr>
+          <tr><td><strong>62 URLs get no Yoast output, across three post types</strong></td><td>Re-measured Sep 2 by fetching all 62 individually. The count of 62 was right but the attribution was not: <strong>34 are case studies (the entire post type), 23 are <code>/troc-videos/</code>, 4 are <code>/ebook-papers/</code></strong> and one is <code>/lifeattroc/</code>. All 62 carry <strong>no canonical tag and no structured data</strong>; 36 also have no meta description. Because three separate post types are affected rather than one, the likely cause is a <strong>Yoast content-type setting</strong>, a settings change, not the Webflow plugin as previously suspected. Supersedes the earlier note that read this as an infrastructure question.</td></tr>
           <tr><td><strong>Schema hand-pasted into post content</strong></td><td>182 posts carry an <code>Article</code> block with two nested <code>Organization</code> nodes written directly into the post body, competing with the one Yoast generates. A further 11 pages hold an <strong>entire second HTML document</strong> &mdash; <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;head&gt;</code>, its own <code>&lt;title&gt;</code> and canonical &mdash; pasted inside the content field, which is what produces the 9 duplicate canonicals under <code>/resources/</code>. None of this is fixable by touching code; it needs the content edited.</td></tr>
           <tr><td><strong>Service pages lost ~1,700 words each</strong></td><td>Disabling the hidden-text injectors removed content that visitors never saw but search engines counted. Impressions on the six affected URLs may soften. Baseline captured before the change &mdash; <code>/services/brand-ambassadors/</code> stood at <strong>20 clicks and 5,353 impressions at position 14.2</strong> over the 90 days to Aug 22. <strong>Re-measure around Sep 17.</strong> The copy is preserved and can be reinstated as visible page content.</td></tr>
           <tr><td><strong>Ahrefs API quota exhausted</strong></td><td>Used up on Aug 5. The dashboard reuses the last good Ahrefs data and keeps publishing; Search Console is unaffected. Resets monthly. Schedule reduced from 6-hourly to daily.</td></tr>

@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Review · September 2, 2026 · trocglobal.com</title>
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#FBFCFD;
+    --ink:#121A24; --muted:#586574; --faint:#8A96A5;
+    --line:#E4E9EF; --line-strong:#D3DAE3;
+    --brand-grad:linear-gradient(90deg,#C65B08 0%,#DD1E7E 26%,#7F24E5 102%);
+    --brand-ink:#15171C;
+    --navy:#6B1FC4; --navy-soft:#7F24E5; --navy-wash:#F2ECFD;
+    --up:#157347; --up-bg:#E7F4EC;
+    --warn:#B45309; --warn-bg:#FBEEDF;
+    --crit:#B02A37; --crit-bg:#FBEAEC;
+    --shadow:0 1px 2px rgba(18,26,36,.04), 0 8px 24px -12px rgba(18,26,36,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])){
+      --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+      --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+      --line:#243040; --line-strong:#2E3C4E;
+      --navy:#B98CF5; --navy-soft:#C9A6F8; --navy-wash:#1E1630;
+      --up:#54D183; --up-bg:#12291C;
+      --warn:#F0A64B; --warn-bg:#2C2110;
+      --crit:#F1808B; --crit-bg:#2C1518;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+    --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+    --line:#243040; --line-strong:#2E3C4E;
+    --navy:#B98CF5; --navy-soft:#C9A6F8; --navy-wash:#1E1630;
+    --up:#54D183; --up-bg:#12291C;
+    --warn:#F0A64B; --warn-bg:#2C2110;
+    --crit:#F1808B; --crit-bg:#2C1518;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:48px 22px 90px;
+    display:flex; flex-direction:column; gap:44px; }
+  .wrap > *{ min-width:0; }
+
+  h1,h2,h3{ margin:0; line-height:1.25; text-wrap:balance; }
+  h1{ font-size:clamp(1.7rem,4vw,2.3rem); font-weight:650; letter-spacing:-.02em; }
+  h2{ font-size:1.22rem; font-weight:640; }
+  p{ margin:0; max-width:70ch; }
+  .eyebrow{ font-size:.71rem; font-weight:680; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--navy); }
+  .small{ font-size:.85rem; color:var(--muted); }
+
+  .brandbar{ background:var(--brand-ink); }
+  .brandbar .inner{ max-width:1180px; margin:0 auto; padding:20px 22px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .brandbar svg{ height:38px; width:auto; color:#FFFFFF; display:block; }
+  .brandbar .kicker{ font-size:.72rem; font-weight:680; letter-spacing:.14em;
+    text-transform:uppercase; color:rgba(255,255,255,.62); }
+  .brandrule{ height:4px; background:var(--brand-grad); }
+  header.top{ border-bottom:3px solid transparent; border-image:var(--brand-grad) 1; padding-bottom:20px;
+    display:flex; flex-direction:column; gap:10px; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:6px 18px; font-size:.82rem; color:var(--faint); }
+
+  section{ display:flex; flex-direction:column; gap:16px; min-width:0; }
+  section > *{ min-width:0; }
+  .sec-head{ display:flex; flex-direction:column; gap:6px;
+    border-bottom:1px solid var(--line-strong); padding-bottom:10px; }
+
+  .counts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .count{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:15px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:3px; }
+  .count .n{ font-size:1.9rem; font-weight:660; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1; }
+  .count .l{ font-size:.76rem; color:var(--muted); font-weight:560; }
+  .n-done{ color:var(--up); } .n-block{ color:var(--crit); }
+  .n-next{ color:var(--warn); } .n-watch{ color:var(--navy); }
+
+  .t-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    background:var(--surface); min-width:0; max-width:100%; }
+  table{ border-collapse:collapse; width:100%; font-size:.88rem; min-width:560px; }
+  th,td{ text-align:left; padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--surface-2); font-size:.7rem; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--muted); font-weight:660; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  td.date{ white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--faint); font-size:.82rem; }
+  code{ font-family:var(--mono); font-size:.85em; background:var(--navy-wash);
+    padding:1px 5px; border-radius:4px; color:var(--navy); }
+  a{ color:var(--navy-soft); }
+
+  .chip{ display:inline-flex; align-items:center; border-radius:100px; padding:2px 9px;
+    font-size:.7rem; font-weight:660; white-space:nowrap; }
+  .c-done{ background:var(--up-bg); color:var(--up); }
+  .c-block{ background:var(--crit-bg); color:var(--crit); }
+  .c-next{ background:var(--warn-bg); color:var(--warn); }
+  .c-info{ background:var(--navy-wash); color:var(--navy); }
+
+  .callout{ border-radius:10px; padding:16px 18px; display:flex; flex-direction:column;
+    gap:7px; font-size:.89rem; border:1px solid; }
+  .callout h3{ font-size:.92rem; }
+  .co-crit{ background:var(--crit-bg); border-color:var(--crit); color:var(--crit); }
+  .co-crit p{ color:var(--ink); }
+  .co-navy{ background:var(--navy-wash); border-color:var(--line-strong); }
+  .co-navy p{ color:var(--muted); }
+
+  footer{ border-top:1px solid var(--line-strong); padding-top:18px; font-size:.8rem;
+    color:var(--faint); display:flex; flex-direction:column; gap:7px; }
+  footer p{ max-width:none; }
+
+  @media (max-width:600px){ .wrap{ padding:30px 14px 60px; gap:34px; } }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <div class="inner">
+     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 606.5 163.1" xml:space="preserve"> <style type="text/css"> .st0{fill:currentColor;} .st1{fill:url(#SVGID_1_);} .st2{fill:url(#SVGID_00000007398182552389237400000014547051001265628063_);} .st3{opacity:0.2;} .st4{fill:url(#SVGID_00000038372051776067771770000005244135681748001982_);} .st5{fill:url(#SVGID_00000179629952958335063440000012070255141123673519_);} .st6{fill:url(#SVGID_00000036238257097821829220000014558426099364762534_);} .st7{fill:url(#SVGID_00000041279920748575890620000002667881884433786808_);} .st8{fill:url(#SVGID_00000044866818395195606230000005027126351018287238_);} </style> <g> <g id="Layer_2_00000136413840030005862630000008053133731079152814_"> <g id="Layer_1-2"> <polygon class="st0" points="0.1,40.2 38.8,40.1 39.2,153.4 67.5,153.3 67.2,40 105.9,39.9 105.8,14.8 0,15.2 "></polygon> <rect x="88.1" y="90.4" transform="matrix(1 -3.316120e-03 3.316120e-03 1 -0.3374 0.3767)" class="st0" width="50.5" height="23.2"></rect> <path class="st0" d="M263.3,52.1c-0.1-25.1-14.6-37.8-43.1-37.7l-63,0.2l0.5,138.2l28.8-0.1L186,39.9l32.6-0.1 c10.3,0,15.2,4.2,15.2,13.2c0,13.7-11.2,22.3-34.4,26.3l-1.4,0.2l0.1,13.4l42.1,59.8l35.7-0.1l-43.8-59.3 C252.8,82.4,263.3,68.6,263.3,52.1z"></path> <path class="st0" d="M526.9,37.5c12.7-0.1,25.4,2.3,37.1,7.3l2.3,1l-0.1-26.3l-1.1-0.4c-11.8-4.4-25.3-6.6-40.3-6.6 c-49.4,0.2-74.3,23.2-74.1,68.5c0.2,47.8,25.3,71.9,74.6,71.8c14.9-0.1,28.5-2.4,40.2-6.9l1.1-0.4l-0.1-26.3l-2.3,1 c-11.7,5-24.3,7.6-37.1,7.5c-31.6,0.1-47-15.2-47.1-46.8C480,51.8,495.3,37.6,526.9,37.5z"></path> <radialGradient id="SVGID_1_" cx="395.5869" cy="130.4847" r="92.05" gradientTransform="matrix(1.01 0 0 -0.99 4.09 162.1318)" gradientUnits="userSpaceOnUse"> <stop offset="4.000000e-02" style="stop-color:#A9D5E5"></stop> <stop offset="0.12" style="stop-color:#88C6DD"></stop> <stop offset="0.27" style="stop-color:#36A2C8"></stop> <stop offset="0.36" style="stop-color:#048BBB"></stop> <stop offset="0.47" style="stop-color:#056B9E"></stop> <stop offset="0.63" style="stop-color:#064076"></stop> <stop offset="0.71" style="stop-color:#072F66"></stop> <stop offset="0.73" style="stop-color:#072C60"></stop> <stop offset="0.84" style="stop-color:#081D3E"></stop> <stop offset="0.94" style="stop-color:#091429"></stop> <stop offset="1" style="stop-color:#091121"></stop> </radialGradient> <path class="st1" d="M442.2,80.8c0.2,44.4-48.4,71.8-86.3,75.5c-45.1,4.4-77.6-30.4-77.8-74.8S312.9,0.2,358.3,0 S442,36.4,442.2,80.8z"></path> <radialGradient id="SVGID_00000116919893497929301390000014746087021998370465_" cx="362.55" cy="151.3509" r="106.87" gradientTransform="matrix(1 0 0 -1 0 166.0018)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#CCE70B"></stop> <stop offset="2.000000e-02" style="stop-color:#BFE10E"></stop> <stop offset="7.000000e-02" style="stop-color:#ACD812"></stop> <stop offset="0.12" style="stop-color:#9ED215"></stop> <stop offset="0.19" style="stop-color:#96CE16"></stop> <stop offset="0.31" style="stop-color:#94CD17"></stop> <stop offset="0.7" style="stop-color:#588713"></stop> <stop offset="1" style="stop-color:#4A7110"></stop> </radialGradient> <path style="fill:url(#SVGID_00000116919893497929301390000014746087021998370465_);" d="M287.2,76.2c0.2-1.8-5.5-24.5-4.6-26.4 c8-15.7,19.7-29.3,34.7-38.7c11.3-7.1,26.2-12.1,38.8-5.5c4.7,2.4,8.5,6.2,10.9,10.8c7.5,15-1.8,32.9-6.1,47.3 c-2.7,9.2-4.8,18.7-4.2,28.3c0.5,7.5,3.2,15.5,9.6,19.4c10.9,6.6,24.9-1.9,33-9.2c8.9-7.9,15.5-18,22-27.9c2-3,4-6.1,6.1-9.1 c1.3-1.8,2.7-3.8,4.9-4.7c3.4-1.4,5.4,1.4,6.5,4.2c1.7,4.3,2.7,8.8,3.1,13.4c0.2,2.4,0.3,4.9,0.1,7.3c-0.1,1.3-0.2,2.6-0.4,3.9 c-0.3,1.2-0.6,2.4-0.8,3.7c0,0-8,34.2-23.2,41.4c-13.5,6.5-29.9,11.7-47.8,7.3s-41.9-16.8-46.6-34.6 c-3.1-11.9-12.2-20.8-19.9-29.8C296,68.6,285.5,88.3,287.2,76.2z"></path> <g class="st3"> <linearGradient id="SVGID_00000121966393869284529440000013464293852903704754_" gradientUnits="userSpaceOnUse" x1="313.1545" y1="71.353" x2="352.7646" y2="94.173" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000121966393869284529440000013464293852903704754_);" d="M307.9,37.7 c12.5,3.8,19.4,16.9,23.1,28.5c3.1,9.9,4.5,20.4,7.1,30.5c3.3,13,9.8,27.2,22.3,33.6c7.1,3.6,15.6,4.2,23.4,2.4 c6.1-1.4,11.9-4.1,17.1-7.7c0-0.6,4.4-3.4,5-4c1.7-1.5,3.3-3.1,4.9-4.8c3.1-3.4,5.9-7,8.5-10.7c5.3-7.6,10-15.6,15-23.4 c0.5-0.9,1.1-1.6,1.8-2.3c0.7-0.7,1.7-1,2.7-0.9c0.9,0.2,1.7,0.8,2.1,1.6c0.9,1.5,1.3,3.2,1.1,4.9c0.1-2.3,0.1-4.7-0.1-7 c-0.4-4.6-1.5-9.1-3.1-13.4c-1.1-2.8-3.1-5.6-6.5-4.2c-2.2,0.9-3.6,2.8-4.9,4.7c-2.1,3-4.1,6-6.1,9.1c-6.5,9.9-13.1,20-22,27.9 c-8.2,7.3-22.1,15.9-33,9.2c-6.4-3.9-9.1-11.9-9.6-19.4c-0.7-9.6,1.4-19.1,4.2-28.3c4.3-14.5,13.6-32.4,6.1-47.3 c-2.4-4.7-6.2-8.4-10.9-10.8c-12.7-6.6-27.5-1.6-38.9,5.5c-14.9,9.4-26.6,22.9-34.7,38.7c0,0,0,0,0,0.1 C287.6,40.8,296.3,34.2,307.9,37.7z"></path> <linearGradient id="SVGID_00000099631334421269823960000007522814617985570704_" gradientUnits="userSpaceOnUse" x1="342.9584" y1="19.5537" x2="382.5784" y2="42.3737" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000099631334421269823960000007522814617985570704_);" d="M441.6,89.9c0-0.2,0.1-0.3,0.1-0.5 s0-0.1,0-0.2C441.7,89.5,441.6,89.7,441.6,89.9z"></path> <linearGradient id="SVGID_00000127739122622968611090000016615814152169259945_" gradientUnits="userSpaceOnUse" x1="341.3204" y1="22.3502" x2="380.9504" y2="45.1802" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000127739122622968611090000016615814152169259945_);" d="M442.1,85.7c0,0,0-0.1,0-0.2 c0-0.1,0-0.1,0-0.2C442.2,85.5,442.1,85.6,442.1,85.7z"></path> </g> <radialGradient id="SVGID_00000087384874031121145580000014169164962236265905_" cx="338.74" cy="90.2009" r="73.84" gradientTransform="matrix(1 0 0 -1 0 166.0018)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#F43E9C"></stop> <stop offset="0.42" style="stop-color:#F0047F"></stop> <stop offset="0.52" style="stop-color:#DF0476"></stop> <stop offset="0.72" style="stop-color:#B40360"></stop> <stop offset="0.96" style="stop-color:#780240"></stop> </radialGradient> <path style="fill:url(#SVGID_00000087384874031121145580000014169164962236265905_);" d="M400.9,125c-5.1,3.7-10.9,6.3-17.1,7.8 c-7.8,1.8-16.3,1.3-23.4-2.4c-12.5-6.4-19-20.7-22.3-33.6c-2.6-10.1-4-20.5-7.1-30.5c-3.7-11.7-10.6-24.8-23.1-28.5 c-16.3-4.9-26.9,10.1-29.6,24.1c-2.7,13.7-1.3,28.9,2.6,42.3c12.7,43.3,58.1,68.2,101.4,55.6c29.5-8.6,52.8-35.4,58.4-65.5 c0.7-3.9,2.7-10.1,0.3-13.8c-0.5-0.8-1.3-1.3-2.2-1.5c-1-0.1-2,0.2-2.7,0.9c-0.7,0.7-1.3,1.5-1.8,2.3c-5,7.8-9.6,15.8-15,23.4 c-2.6,3.8-5.5,7.3-8.5,10.7c-1.5,1.7-3.2,3.3-4.9,4.8C405.3,121.6,400.9,124.4,400.9,125z"></path> <radialGradient id="SVGID_00000025413948855085211120000004483712071800557500_" cx="324.2903" cy="43.0586" r="45.6" gradientTransform="matrix(1 -3.839715e-03 -3.839715e-03 -1 1.3771 164.4816)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#FFBF00"></stop> <stop offset="0.35" style="stop-color:#FF8001"></stop> <stop offset="0.51" style="stop-color:#FF7601"></stop> <stop offset="0.77" style="stop-color:#FD5A00"></stop> <stop offset="1" style="stop-color:#FC3D00"></stop> </radialGradient> <path style="fill:url(#SVGID_00000025413948855085211120000004483712071800557500_);" d="M367.4,162.5 c-20.7,2.6-40.5-3.8-57.2-16.2c-8.3-6.2-17.3-15.1-19.6-24.8c-1.6-6.7-0.9-14.7,5.7-18.3c11.4-6.4,19.5,6.7,24.2,14.9 c5.4,9.3,12.1,18.1,21,24.2c13,9,30.1,11.3,45.5,7.7c8-1.9,15.7-5.2,22.6-9.6c3.4-2.2,6.7-4.6,9.8-7.2c5.1-4.2,7.9-9.4,8.5-8.2 s-10.1,14.9-23,23.8C393.8,156.5,381.8,160.7,367.4,162.5z"></path> </g> </g> <g> <path class="st0" d="M581.8,27.2c0-7.2,5.6-12.6,12.4-12.6s12.4,5.4,12.4,12.6c0,7.3-5.6,12.6-12.4,12.6S581.8,34.5,581.8,27.2z M604.4,27.2c0-6.2-4.3-10.8-10.2-10.8s-10.2,4.6-10.2,10.8c0,6.2,4.3,10.8,10.2,10.8S604.4,33.5,604.4,27.2z M589.3,20.4h6.1 c2.4,0,4.2,1.6,4.2,3.7c0,1.5-0.8,2.8-2.5,3.2v0.1c1.3,0.4,1.9,1.1,2.1,2.7c0.2,1.9,0.1,3.3,0.6,3.5v0.2h-2.5 c-0.4-0.2-0.5-1.7-0.6-3.1c-0.1-1.4-0.9-2.3-2.5-2.3h-2.2v5.4h-2.7V20.4z M591.9,26.3h2.9c1.5,0,2.2-0.8,2.2-1.9 c0-1.1-0.7-1.9-2.2-1.9h-2.9V26.3z"></path> </g> </g> </svg> 
+    <span class="kicker">Site Review</span>
+  </div>
+</div>
+<div class="brandrule"></div>
+
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow">Site review</span>
+    <h1>Eleven topics have two live pages, and both are in the sitemap</h1>
+    <p class="small">The August code cleanup held: every item in that remediation pack is verifiably closed and nothing has drifted since. What this review adds is a structural finding that was not previously logged — a <code>/resources/</code> section duplicating pages that already exist at the root — plus corrected numbers for two items already on the watch list.</p>
+    <div class="meta-row">
+      <span>trocglobal.com</span>
+      <span>September 2, 2026</span>
+      <span>662 sitemap URLs crawled live</span>
+      <span><a href="../">← Live dashboard</a></span>
+      <span><a href="work-tracker.html">Work tracker</a></span>
+    </div>
+  </header>
+
+  <section>
+    <div class="counts">
+      <div class="count"><span class="n n-done">662</span><span class="l">URLs return 200 — no exceptions</span></div>
+      <div class="count"><span class="n n-done">0</span><span class="l">Field changes since Aug 28</span></div>
+      <div class="count"><span class="n n-block">22</span><span class="l">Pages competing as 11 pairs</span></div>
+      <div class="count"><span class="n n-block">62</span><span class="l">URLs with no canonical</span></div>
+      <div class="count"><span class="n n-next">11</span><span class="l">Pages with two &lt;title&gt; tags</span></div>
+    </div>
+
+    <div class="callout co-crit">
+      <h3>New finding: 11 topics are represented by two competing pages</h3>
+      <p>A <code>/resources/</code> section was built containing guides and definitions that already existed at the site root. Both copies return 200, both declare themselves canonical, and both sit in the XML sitemap. One of the eleven is <strong>retail merchandising</strong> — the highest-value non-branded term in the account. This was not on the watch list before today.</p>
+    </div>
+  </section>
+
+  <!-- ================= CLOSED ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Verified closed · 7 items</span>
+      <h2>The August cleanup held</h2>
+    </div>
+    <p class="small">Every open item from the August 27 remediation pack, re-tested live today rather than assumed from the changelog.</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Evidence today</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Hidden text on the service pages</strong></td><td><code>/services/brand-ambassadors/</code> — <strong>0</strong> occurrences of the <code>display:none</code> rule.</td><td><span class="chip c-done">Closed</span></td></tr>
+          <tr><td><strong>Duplicate FAQPage schema</strong></td><td><code>/trocglobal-vs-acosta/</code> now emits <strong>1</strong> FAQPage block, was 2.</td><td><span class="chip c-done">Closed</span></td></tr>
+          <tr><td><strong>Three snippets competing over robots.txt</strong></td><td>Served correctly by one: 4 Disallow lines plus <code>Sitemap: sitemap_index.xml</code>, and <strong>no <code>batch_status</code> leak</strong>.</td><td><span class="chip c-done">Closed</span></td></tr>
+          <tr><td><strong>Permission-bypass snippet and nine test snippets</strong></td><td>10966 and 10967&ndash;10975 return <strong>404 (deleted)</strong>, not 403 (present but unreadable) — which is what 11312/11313 still return, so those two remain.</td><td><span class="chip c-done">Closed</span></td></tr>
+          <tr><td><strong>Staging URLs on the homepage</strong></td><td><strong>0</strong> references to <code>trocdev.wpengine.com</code>.</td><td><span class="chip c-done">Closed</span></td></tr>
+          <tr><td><strong>Legacy sitemap path</strong></td><td><code>/sitemap.xml</code> &rarr; 301 &rarr; <code>/sitemap_index.xml</code>.</td><td><span class="chip c-done">Closed</span></td></tr>
+          <tr><td><strong>Site stability</strong></td><td>All 662 sitemap URLs return 200, and <strong>zero field-level differences</strong> across the 661 URLs shared with the August 28 snapshot. One new URL: <code>/implementing-ai-retail-execution/</code>.</td><td><span class="chip c-done">Verified</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= NEW ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">New finding · not previously logged</span>
+      <h2>Eleven duplicate pairs, each self-canonical</h2>
+    </div>
+    <p class="small">Google is being asked to choose between two T-ROC pages on eleven commercial topics. Word counts measured live today.</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Topic</th><th>Root copy</th><th>Words</th><th>/resources/ copy</th><th>Words</th><th>Keep</th></tr></thead>
+        <tbody>
+          <tr><td>Retail merchandising guide</td><td><code>/retail-merchandising-guide/</code></td><td>3,952</td><td><code>/resources/…</code></td><td>4,406</td><td><span class="chip c-info">resources</span></td></tr>
+          <tr><td>Retail technology guide</td><td><code>/retail-technology-guide/</code></td><td>4,537</td><td><code>/resources/…</code></td><td>3,878</td><td><span class="chip c-info">root</span></td></tr>
+          <tr><td>Mystery shopping guide</td><td><code>/mystery-shopping-guide/</code></td><td>4,167</td><td><code>/resources/…</code></td><td>2,770</td><td><span class="chip c-info">root</span></td></tr>
+          <tr><td>Holiday retail strategy</td><td><code>/holiday-retail-strategy-guide/</code></td><td>4,077</td><td><code>/resources/…</code></td><td>2,924</td><td><span class="chip c-info">root</span></td></tr>
+          <tr><td>What is a brand ambassador</td><td><code>/what-is-a-brand-ambassador/</code></td><td>940</td><td><code>/resources/definitions/…</code></td><td>1,827</td><td><span class="chip c-info">resources</span></td></tr>
+          <tr><td>What is a planogram</td><td><code>/what-is-a-planogram/</code></td><td>792</td><td><code>/resources/definitions/…</code></td><td>1,694</td><td><span class="chip c-info">resources</span></td></tr>
+          <tr><td>What is mystery shopping</td><td><code>/what-is-mystery-shopping/</code></td><td>884</td><td><code>/resources/definitions/…</code></td><td>1,457</td><td><span class="chip c-info">resources</span></td></tr>
+          <tr><td>What is retail execution</td><td><code>/what-is-retail-execution/</code></td><td>913</td><td><code>/resources/definitions/…</code></td><td>1,206</td><td><span class="chip c-info">resources</span></td></tr>
+          <tr><td>What is retail merchandising</td><td><code>/what-is-retail-merchandising/</code></td><td>968</td><td><code>/resources/definitions/…</code></td><td>1,526</td><td><span class="chip c-info">resources</span></td></tr>
+          <tr><td>What is retail outsourcing</td><td><code>/what-is-retail-outsourcing/</code></td><td>836</td><td><code>/resources/definitions/…</code></td><td>1,671</td><td><span class="chip c-info">resources</span></td></tr>
+          <tr><td>What is retail staffing</td><td><code>/what-is-retail-staffing/</code></td><td>832</td><td><code>/resources/definitions/…</code></td><td>1,440</td><td><span class="chip c-info">resources</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="small">The pattern is consistent across the seven definitions: the <code>/resources/definitions/</code> copy is roughly twice as long and carries an April publish date, while the shorter root copy was published in June. The pages were rebuilt at the root without retiring the originals. The four guides split three-to-one the other way, so those need deciding individually.</p>
+
+    <div class="callout co-navy">
+      <h3>Recommended</h3>
+      <p>301 the losing copy to the winner in each pair through the <strong>Redirection plugin</strong> — it takes effect immediately and needs no snippet, which matters given the decision to stop adding WPCode. Then drop the retired URLs from the sitemap. <strong>Do the merchandising pair first</strong>; it is the only one touching a term the account is actively trying to win.</p>
+    </div>
+  </section>
+
+  <!-- ================= CORRECTED ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Already on the watch list · now quantified</span>
+      <h2>Two known issues, with corrected numbers</h2>
+    </div>
+    <p class="small">Both were logged on August 27 as "known issues, no action yet". Measuring them properly changed what each one actually is.</p>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Was logged as</th><th>Measured today</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Post types with no Yoast head output</strong></td>
+            <td>"62 case study pages are silent to search"</td>
+            <td>62 URLs is right, but <strong>only 34 of them are case studies</strong> — that is the entire post type. The rest are <strong>23 <code>/troc-videos/</code></strong>, <strong>4 <code>/ebook-papers/</code></strong> and <code>/lifeattroc/</code>. All 62 carry no canonical and no JSON-LD; 36 also have no meta description. Confirmed by re-fetching all 62 individually. <strong>So it is not one post type misconfigured but three</strong>, which points at a Yoast content-type setting rather than at the Webflow plugin.</td>
+          </tr>
+          <tr>
+            <td><strong>Pages holding a second HTML document</strong></td>
+            <td>"11 pages hold an entire second HTML document … producing the 9 duplicate canonicals under <code>/resources/</code>"</td>
+            <td>The count of 11 is exact and confirmed: two <code>&lt;title&gt;</code> and two <code>&lt;!doctype&gt;</code> on each. The part worth acting on: the August cleanup produced <code>CLEAN-*.html</code> files and applied them to the <strong>root</strong> copies, but <strong>the nine <code>/resources/</code> copies are the ones actually in the sitemap</strong> and were never cleaned. Three other <code>/resources/</code> guides — automated retail, clienteling analytics, assembly services — are clean, so this is a bounded set.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout co-navy">
+      <h3>Sequencing note</h3>
+      <p>These two overlap with the duplicate-pairs finding above. <strong>Settle which copy of each pair survives before stripping nested HTML</strong>, or you will clean pages you are about to redirect away.</p>
+    </div>
+  </section>
+
+  <!-- ================= OTHER ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Also measured · 5 items</span>
+      <h2>Smaller findings</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Finding</th><th>Detail</th><th>Priority</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>The homepage still links six times into a 403</strong></td>
+            <td>Five weeks after the ticket was raised, <code>/services/</code> still returns <strong>403</strong> at nginx before WordPress runs. The homepage links to <code>/services</code> six times &rarr; 301 &rarr; <code>/services/</code> &rarr; 403. The staged redirect to <code>/solutions/</code> cannot fire because the request never reaches WordPress. <strong>The content half is fixable today</strong>: repoint the six homepage links straight at <code>/solutions/</code>.</td>
+            <td><span class="chip c-next">High</span></td>
+          </tr>
+          <tr>
+            <td><strong>llms.txt sends AI crawlers off-domain</strong></td>
+            <td>22 of the 24 URLs listed return 200. <code>/services/it-services/</code> <strong>301s to <code>symbits.com</code></strong>, an external domain, and <code>/services/automated-retail/</code> 301s to <code>/automated-retail-services/</code>. The file exists so ChatGPT, Perplexity and Claude get a clean map of what T-ROC does; one entry currently hands them somebody else's address. The homepage links to that same path.</td>
+            <td><span class="chip c-next">Medium</span></td>
+          </tr>
+          <tr>
+            <td><strong>Thin taxonomy archives padding the sitemap</strong></td>
+            <td>104 sitemap URLs hold under 300 words: 38 <code>/troc-videos/</code>, 28 <code>/community/</code>, 14 <code>/case-study-category/</code>, 11 <code>/team/</code>, 9 <code>/case_study_tag/</code>. The <strong>23 case-study taxonomy archives sit at 130 words with no meta description</strong> and all are submitted for indexing — exactly the material that fills the 465-page "crawled, not indexed" bucket. Noindex them and drop the two taxonomy sitemaps; the case studies themselves stay indexed.</td>
+            <td><span class="chip c-next">Medium</span></td>
+          </tr>
+          <tr>
+            <td><strong>Five noindex URLs submitted in the sitemap</strong></td>
+            <td>The sitemap says index, the tag says the opposite. One of the five is <code>/services/test-ag-20/</code> — a page titled <strong>"TEST AG 20", publicly live at 200</strong>. Another is the founder profile <code>/from-hustling-cell-phones-out-of-a-van-…/</code>, which looks like collateral damage from the old thin-post snippet rather than a decision — worth confirming.</td>
+            <td><span class="chip c-next">Medium</span></td>
+          </tr>
+          <tr>
+            <td><strong>The August prune list has aged out</strong></td>
+            <td>All 210 URLs in <code>prune-remaining-210.txt</code> are still live and still in the sitemap, so batch 2 never ran. <strong>Do not execute the list as it stands</strong> — it includes <code>/trocglobal-vs-acosta/</code> and <code>/retail-merchandising-guide/</code>, both of which have had deliberate SEO investment since August 5. What it still shows accurately is the near-duplicate clustering: five pages on inventory management, six on retail execution, eight on automated retail, five on experiential retail. Re-score against current click data, then consolidate by cluster.</td>
+            <td><span class="chip c-info">Needs a decision</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= ORDER ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Sequenced</span>
+      <h2>Suggested order</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Action</th><th>Why here</th></tr></thead>
+        <tbody>
+          <tr><td class="date">1</td><td><strong>Decide the winner in each of the 11 duplicate pairs, then 301 the loser</strong></td><td>Redirection plugin, immediate effect, no snippet. Everything else in the content layer depends on knowing which URLs survive.</td></tr>
+          <tr><td class="date">2</td><td><strong>Strip the nested HTML document from whichever copies survive</strong></td><td>Core REST <code>content.raw</code>. Pointless before step 1.</td></tr>
+          <tr><td class="date">3</td><td><strong>Turn Yoast head output back on for case studies, videos and ebooks</strong></td><td>A settings change, not code. Recovers canonicals and structured data on 62 URLs, including all 34 case studies.</td></tr>
+          <tr><td class="date">4</td><td><strong>Repoint the six homepage <code>/services</code> links; escalate the WP Engine ticket</strong></td><td>The visible dead end goes away today; the server block stays with the host.</td></tr>
+          <tr><td class="date">5</td><td><strong>Correct the two redirecting entries in llms.txt</strong></td><td>Ten minutes. Stops sending AI crawlers to another company's domain.</td></tr>
+          <tr><td class="date">6</td><td><strong>Noindex the case-study taxonomy archives and drop them from the sitemap</strong></td><td>Reduces the crawled-not-indexed backlog with nothing lost.</td></tr>
+          <tr><td class="date">7</td><td><strong>Delete the test page; align the four remaining noindex URLs</strong></td><td>Hygiene, and one page that should not be public.</td></tr>
+          <tr><td class="date">8</td><td><strong>Re-score the prune list against live click data before touching it</strong></td><td>A planning session, not a task. Running the August list unchanged would remove current work.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= METHOD ================= -->
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">Record of corrections</span>
+      <h2>Corrections made in this review</h2>
+    </div>
+
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Date</th><th>Was reported</th><th>Corrected to</th><th>What settled it</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">Sep 2</td>
+            <td>"88 pages are missing a meta description" <span class="small">(my own crawler, earlier today)</span></td>
+            <td><strong>62.</strong> 26 were false positives — 25 case studies and one ebook do have a description.</td>
+            <td>Those pages emit the tag with the attributes reversed, <code>content=</code> before <code>name=</code>, and the crawler's pattern required <code>name=</code> first. All 88 were re-fetched with an order-tolerant parser. The canonical finding was re-checked the same way in case it shared the flaw; it did not — all 62 confirmed individually. <code>seo-check.ps1</code> has been patched and verified against live HTML.</td>
+          </tr>
+          <tr>
+            <td class="date">Sep 2</td>
+            <td>"62 case study pages are silent to search" <span class="small">(logged Aug 27)</span></td>
+            <td><strong>34 case studies, 23 videos, 4 ebooks and one page</strong> — three post types, not one.</td>
+            <td>Per-URL verification of all 62. Changes the likely cause from the Webflow plugin to a Yoast content-type setting, and makes it a settings fix rather than an infrastructure investigation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Method.</strong> All 662 URLs in the XML sitemap index were fetched live on September 2, 2026 and compared field by field against the August 28 snapshot: status, title, meta description, H1, canonical, self-reference, robots directive, structured data and visible word count. Zero differences across the 661 shared URLs. Every finding above was then re-verified with individual live requests rather than read off the crawl.</p>
+    <p><strong>Data.</strong> <a href="seo-snapshot-2026-09-02.csv">Full crawl snapshot (662 URLs, CSV)</a> &middot; <a href="missing-canonical-2026-09-02.txt">The 62 URLs with no canonical</a> &middot; <a href="missing-metadesc-2026-09-02.txt">The 62 URLs with no meta description</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
