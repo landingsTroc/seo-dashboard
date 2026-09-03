@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-09-03T11:03:50.009Z",
+  "generatedAt": "2026-09-03T17:01:19.005Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
-      "ok": true,
+      "ok": false,
       "error": null,
       "asOf": "2026-09-03T11:03:50.009Z"
     },
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-09-03T11:03:50.009Z"
+      "asOf": "2026-09-03T17:01:19.005Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-09-03T11:03:50.009Z"
+      "asOf": "2026-09-03T17:01:19.005Z"
     }
   },
   "summary": {
@@ -584,7 +584,7 @@
       "cls": 8,
       "inp": 121,
       "inpScope": "url",
-      "performanceScore": 92
+      "performanceScore": 66
     },
     "desktop": {
       "strategy": "desktop",
@@ -593,7 +593,7 @@
       "cls": 10,
       "inp": 84,
       "inpScope": "url",
-      "performanceScore": 92
+      "performanceScore": 81
     }
   },
   "ahrefsHistory": [
@@ -660,14 +660,6 @@
       "keywordsTop3": 145,
       "liveRefdomains": 3306,
       "liveBacklinks": 15505
-    },
-    {
-      "date": "2026-09-03",
-      "domainRating": 43,
-      "organicKeywords": 395,
-      "keywordsTop3": 145,
-      "liveRefdomains": 3271,
-      "liveBacklinks": 15433
     }
   ],
   "searchConsole": {
