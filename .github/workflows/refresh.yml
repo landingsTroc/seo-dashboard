@@ -2,12 +2,14 @@ name: Refresh SEO data
 
 on:
   schedule:
-    # Once daily. The Ahrefs API is metered per unit and each full run costs
+    # Mon/Wed/Fri. The Ahrefs API is metered per unit and each full run costs
     # ~1,800 units against a 100,000/month workspace quota, so anything more
-    # frequent exhausts it well before the reset date. SEO metrics do not move
+    # frequent exhausts it well before the reset date -- a daily schedule did
+    # exactly that on 2026-09-04 (101,659 units used, reset 2026-09-24), which
+    # left the dashboard serving stale Ahrefs data. SEO metrics do not move
     # meaningfully within a day. GitHub cron is UTC and best-effort.
     # Push events deploy but do NOT re-fetch Ahrefs — see AHREFS_SKIP below.
-    - cron: "0 6 * * *"
+    - cron: "0 6 * * 1,3,5"
   workflow_dispatch: {}   # lets you refresh on demand from the Actions tab
   push:
     branches: [main]

@@ -134,8 +134,9 @@
     <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
     <div class="meta-row">
       <span>trocglobal.com</span>
-      <span>Last updated: September 3, 2026</span>
+      <span>Last updated: September 9, 2026</span>
       <span><a href="../">← Live dashboard</a></span>
+      <span><a href="seo-report-2026-09-09.html">Performance report, Sep 9</a></span>
       <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
       <span><a href="seo-review-2026-09-02.html">Site review, Sep 2</a></span>
     </div>
@@ -143,9 +144,9 @@
 
   <section>
     <div class="counts">
-      <div class="count"><span class="n n-done">37</span><span class="l">Completed</span></div>
+      <div class="count"><span class="n n-done">39</span><span class="l">Completed</span></div>
       <div class="count"><span class="n n-block">5</span><span class="l">Blocked on access</span></div>
-      <div class="count"><span class="n n-next">7</span><span class="l">Next up</span></div>
+      <div class="count"><span class="n n-next">9</span><span class="l">Next up</span></div>
       <div class="count"><span class="n n-watch">7</span><span class="l">Watching</span></div>
     </div>
 
@@ -167,6 +168,8 @@
       <table>
         <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
         <tbody>
+            <tr><td class="date">Sep 9</td><td><strong>Quarterly performance report on measured data</strong><br><span class="small">90 days of Search Console + Ahrefs &middot; per-page query breakdown</span></td><td><strong>The August work is visible in the click data: 1,778 clicks in August against 1,235 in July &mdash; up 44% from 7% fewer impressions &mdash; and site CTR has doubled since June (0.285% &rarr; 0.569%).</strong> September is holding at 54.8 clicks/day. The per-page query breakdown also settles the low-CTR question: the titles on nine of the ten biggest pages are correct and well-formed, and <strong>68.5% of impressions come from queries Google will not name</strong> &mdash; full-sentence, AI-assistant-shaped queries that do not produce clicks. The recoverable gap is the 25 highest-impression pages: <strong>35.3% of all visibility converting at 0.241%</strong>, worth ~2,900 clicks a quarter at 1.0%. <a href="seo-report-2026-09-09.html">Full report</a>.</td><td><span class="chip c-done">Published</span></td></tr>
+            <tr><td class="date">Sep 9</td><td><strong>Prune list re-screened against Search Console &mdash; and frozen</strong><br><span class="small">11 of the 210 remaining URLs carry page-one visibility</span></td><td><strong>171,749 impressions &mdash; 15.8% of the site's total visibility, at an average position of 7.6 &mdash; sit on pages still queued for deletion</strong>, including the second and third most-seen pages on the site. The list was built from Ahrefs zero-traffic modelling before Search Console access existed, which could not tell a page nobody sees from a page seen 42,286 times that converts badly. One has already gone: <code>/despite-the-rise-of-e-commerce-physical-stores-are-here-to-stay/</code> held <strong>14,756 impressions at position 6.0</strong> and now 301s to <code>/company/</code>, an unrelated corporate page &mdash; which Google treats as a soft removal, not a transfer. Remaining deletions are on hold pending a re-screen.</td><td><span class="chip c-block">Frozen</span></td></tr>
             <tr><td class="date">Sep 3</td><td><strong>New post on the largest unowned query cluster</strong><br><span class="small">/retail-management-services/ &middot; 1,572 impressions, 0 clicks</span></td><td>Search Console shows <strong>1,572 impressions across 9 &ldquo;retail services&rdquo; queries over 90 days and not one click</strong>, all landing on <code>/merchandising-services/</code> &mdash; a merchandising page answering questions about the service category. &ldquo;Retail management services&rdquo; alone carries <strong>582 impressions at position 8.6</strong>: page one, zero clicks, and no page on the site owns the term. Deliberately avoided writing another merchandising or brand-ambassador page &mdash; those terms already have <strong>7 and 15 competing URLs earning nothing</strong>. The post positions the category as the umbrella and includes a section separating it from merchandising, to signal which URL owns which term. Published with the standard Key takeaways block and FAQ, one canonical and a single schema block. <strong>Re-measure in ~30 days.</strong></td><td><span class="chip c-done">Published</span></td></tr>
             <tr><td class="date">Sep 2</td><td><strong>Full site re-crawl and verification of the August cleanup</strong><br><span class="small">662 URLs, diffed against the Aug 28 snapshot</span></td><td>Re-tested every item in the August remediation pack against the live site rather than the changelog: <strong>all seven are closed</strong> &mdash; hidden text gone, duplicate FAQPage down to one, robots.txt served correctly, and the permission-bypass and nine test snippets confirmed deleted (404, not a permissions 403). <strong>All 662 sitemap URLs return 200 and nothing has drifted</strong> &mdash; zero field-level differences across the 661 URLs shared with the previous snapshot. The crawl also surfaced <strong>11 topics with two competing live pages</strong>, which was not previously known. <a href="seo-review-2026-09-02.html">Full review</a>.</td><td><span class="chip c-done">Verified</span></td></tr>
             <tr><td class="date">Aug 27</td><td><strong>Custom code layer cut from 64 snippets to 39</strong><br><span class="small">6 deleted, 19 disabled and preserved &middot; all 64 backed up first</span></td><td>Audited every active WPCode snippet for security exposure, effectiveness and page scope. <strong>No injection or remote-execution vulnerability exists</strong> across the set. Removed one snippet that exposed the SEO fields over REST with the permission callback set to <code>__return_true</code> &mdash; a second snippet already did the job with a real capability check. Cleared nine test snippets left in production, three competing <code>robots.txt</code> writers reduced to one, and a duplicated FAQPage emitter. Verified with <strong>three full crawls of all 661 URLs</strong>: no page went down and no PHP errors were introduced at any point.</td><td><span class="chip c-done">Fixed</span></td></tr>
@@ -362,6 +365,12 @@
         <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
         <tbody>
           <tr>
+            <td class="date">Sep 9</td>
+            <td><strong>SEO Performance Report</strong><br><span class="small">Quarterly, on measured Search Console data</span></td>
+            <td><a href="seo-report-2026-09-09.html">Read</a> &mdash; August up 44% on clicks, the CTR question settled, and the prune-list conflict quantified.</td>
+            <td><span class="chip c-done">Published</span></td>
+          </tr>
+          <tr>
             <td class="date">Aug 5</td>
             <td><strong>Performance &amp; Recovery Plan</strong><br><span class="small">Executive report, web + PDF</span></td>
             <td><a href="kpi-plan-2026-08-en.html">Read</a> · <a href="kpi-plan-2026-08-en.pdf">PDF</a> — built on measured data, with a 90-day roadmap.</td>
@@ -435,13 +444,15 @@
       <table>
         <thead><tr><th>#</th><th>Task</th><th>Why it's next</th><th>Needs</th></tr></thead>
         <tbody>
-          <tr><td class="date">1</td><td><strong>Resolve the 11 duplicate page pairs</strong><br><span class="small">22 live URLs, all self-canonical</span></td><td>A <code>/resources/</code> section duplicates pages that already exist at the root, on eleven commercial topics including <strong>retail merchandising</strong>. Both copies are indexable and both are in the sitemap. Blocks the nested-HTML cleanup, which should only touch the surviving copies.</td><td>Nothing, Redirection plugin</td></tr>
-          <tr><td class="date">2</td><td><strong>Per-page query breakdown</strong></td><td>Separates a title problem from an intent mismatch on the 25 low-CTR pages. Decides whether we rewrite or retarget — no effort should be spent before this.</td><td>Nothing</td></tr>
-          <tr><td class="date">3</td><td><strong>Finish the consolidation</strong><br><span class="small">210 remaining pages</span></td><td>The likely feeder of the 465 "crawled – not indexed" backlog.</td><td>Publishing access</td></tr>
-          <tr><td class="date">4</td><td><strong>Trace the 90 unexplained 404s</strong></td><td>Not from the prune list — source unknown.</td><td>Nothing</td></tr>
-          <tr><td class="date">5</td><td><strong>Brand-ambassador consolidation</strong></td><td>"brand ambassador" holds 3,755 impressions at position 10.8, earning 9 clicks. Biggest single growth lever.</td><td><span class="chip c-next">Your decision on what to merge</span></td></tr>
-          <tr><td class="date">6</td><td><strong>Submit the disavow</strong></td><td>Spam network confirmed. Hygiene, not growth.</td><td>Search Console owner</td></tr>
-          <tr><td class="date">7</td><td><strong>Rotate the service account key</strong></td><td>The credential was shared in chat and should be replaced.</td><td>Google Cloud access</td></tr>
+          <tr><td class="date">1</td><td><strong>Re-screen the 210 remaining prune URLs against Search Console</strong><br><span class="small">list frozen until this is done</span></td><td>11 of them carry <strong>171,749 impressions at an average position of 7.6</strong>. The screen is cheap &mdash; anything above ~500 impressions in 90 days becomes a rewrite candidate rather than a deletion &mdash; and it blocks an irreversible mistake that has already happened once.</td><td>Nothing</td></tr>
+          <tr><td class="date">2</td><td><strong>Rewrite titles and meta descriptions on the 25 highest-impression pages</strong></td><td>They hold <strong>35.3% of all site visibility and convert at 0.241%</strong>. Reaching a modest 1.0% adds ~2,900 clicks a quarter with no new content written. The per-page query breakdown (done Sep 9) confirmed which of them are a copy problem rather than an intent mismatch.</td><td>Publishing access</td></tr>
+          <tr><td class="date">3</td><td><strong>Resolve the 11 duplicate page pairs</strong><br><span class="small">22 live URLs, all self-canonical</span></td><td>A <code>/resources/</code> section duplicates pages that already exist at the root, on eleven commercial topics including <strong>retail merchandising</strong>. Both copies are indexable and both are in the sitemap. Blocks the nested-HTML cleanup, which should only touch the surviving copies.</td><td>Nothing, Redirection plugin</td></tr>
+          <tr><td class="date">4</td><td><strong>Build the pop-up / experiential retail hub</strong><br><span class="small">new: largest unowned cluster</span></td><td>Five pages already take <strong>79,416 impressions for 84 clicks</strong> &mdash; 7.3% of site visibility for 1.9% of clicks &mdash; and no URL owns the category. Four of the five are on the frozen prune list. Larger, in measured impressions, than merchandising or brand ambassadors.</td><td>Publishing access</td></tr>
+          <tr><td class="date">5</td><td><strong>Consolidate &ldquo;retail merchandising services&rdquo; onto one URL</strong></td><td><strong>4,215 impressions at position 9.5 earning 6 clicks</strong>, split across 7 competing pages. The largest single non-branded term on the site, and it sits at the bottom of page one where click-through collapses.</td><td><span class="chip c-next">Your decision on what to merge</span></td></tr>
+          <tr><td class="date">6</td><td><strong>Brand-ambassador consolidation</strong></td><td>&ldquo;brand ambassador&rdquo; holds <strong>3,580 impressions at position 10.5, earning 11 clicks</strong>, split across 15 URLs.</td><td><span class="chip c-next">Your decision on what to merge</span></td></tr>
+          <tr><td class="date">7</td><td><strong>Trace the 90 unexplained 404s</strong></td><td>Not from the prune list &mdash; source unknown.</td><td>Nothing</td></tr>
+          <tr><td class="date">8</td><td><strong>Submit the disavow</strong></td><td>Spam network confirmed, but no longer urgent: referring domains are falling on their own, 3,654 in July to 3,291 now, at about seven a day. Hygiene, not growth.</td><td>Search Console owner</td></tr>
+          <tr><td class="date">9</td><td><strong>Rotate the service account key</strong></td><td>The credential was shared in chat and should be replaced.</td><td>Google Cloud access</td></tr>
         </tbody>
       </table>
     </div>
@@ -482,6 +493,18 @@
       <table>
         <thead><tr><th>Date</th><th>Was believed</th><th>Corrected to</th><th>What settled it</th></tr></thead>
         <tbody>
+          <tr>
+            <td class="date">Sep 9</td>
+            <td>"The 210 remaining prune URLs are zero-traffic pages and can be deleted"</td>
+            <td><strong>11 of them carry 171,749 impressions at an average position of 7.6.</strong> The list is frozen until it is re-screened against measured impressions.</td>
+            <td>Search Console per-page data, which did not exist when the list was built</td>
+          </tr>
+          <tr>
+            <td class="date">Sep 9</td>
+            <td>"The 0.4% CTR is a titles and meta-description problem"</td>
+            <td><strong>Only partly.</strong> The titles on nine of the ten biggest pages are correct. <strong>68.5% of impressions come from unnamed, AI-assistant-shaped queries</strong> that do not produce clicks by design. Site CTR is a diagnostic, not a target &mdash; clicks and non-branded clicks are the honest KPIs.</td>
+            <td>Per-page query breakdown, plus live re-fetch of every title</td>
+          </tr>
           <tr>
             <td class="date">Aug 5</td>
             <td>"Impressions fell 52% — the consolidation damaged the site"</td>

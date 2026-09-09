@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO Report · September 9, 2026 · trocglobal.com</title>
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#FBFCFD;
+    --ink:#121A24; --muted:#586574; --faint:#8A96A5;
+    --line:#E4E9EF; --line-strong:#D3DAE3;
+    --brand-grad:linear-gradient(90deg,#C65B08 0%,#DD1E7E 26%,#7F24E5 102%);
+    --brand-ink:#15171C;
+    --navy:#6B1FC4; --navy-soft:#7F24E5; --navy-wash:#F2ECFD;
+    --up:#157347; --up-bg:#E7F4EC;
+    --warn:#B45309; --warn-bg:#FBEEDF;
+    --crit:#B02A37; --crit-bg:#FBEAEC;
+    --shadow:0 1px 2px rgba(18,26,36,.04), 0 8px 24px -12px rgba(18,26,36,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])){
+      --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+      --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+      --line:#243040; --line-strong:#2E3C4E;
+      --navy:#B98CF5; --navy-soft:#C9A6F8; --navy-wash:#1E1630;
+      --up:#54D183; --up-bg:#12291C;
+      --warn:#F0A64B; --warn-bg:#2C2110;
+      --crit:#F1808B; --crit-bg:#2C1518;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+    --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+    --line:#243040; --line-strong:#2E3C4E;
+    --navy:#B98CF5; --navy-soft:#C9A6F8; --navy-wash:#1E1630;
+    --up:#54D183; --up-bg:#12291C;
+    --warn:#F0A64B; --warn-bg:#2C2110;
+    --crit:#F1808B; --crit-bg:#2C1518;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:48px 22px 90px;
+    display:flex; flex-direction:column; gap:44px; }
+  .wrap > *{ min-width:0; }
+
+  h1,h2,h3{ margin:0; line-height:1.25; text-wrap:balance; }
+  h1{ font-size:clamp(1.7rem,4vw,2.3rem); font-weight:650; letter-spacing:-.02em; }
+  h2{ font-size:1.22rem; font-weight:640; }
+  p{ margin:0; max-width:70ch; }
+  .eyebrow{ font-size:.71rem; font-weight:680; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--navy); }
+  .small{ font-size:.85rem; color:var(--muted); }
+
+  .brandbar{ background:var(--brand-ink); }
+  .brandbar .inner{ max-width:1180px; margin:0 auto; padding:20px 22px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .brandbar svg{ height:38px; width:auto; color:#FFFFFF; display:block; }
+  .brandbar .kicker{ font-size:.72rem; font-weight:680; letter-spacing:.14em;
+    text-transform:uppercase; color:rgba(255,255,255,.62); }
+  .brandrule{ height:4px; background:var(--brand-grad); }
+  header.top{ border-bottom:3px solid transparent; border-image:var(--brand-grad) 1; padding-bottom:20px;
+    display:flex; flex-direction:column; gap:10px; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:6px 18px; font-size:.82rem; color:var(--faint); }
+
+  section{ display:flex; flex-direction:column; gap:16px; min-width:0; }
+  section > *{ min-width:0; }
+  .sec-head{ display:flex; flex-direction:column; gap:6px;
+    border-bottom:1px solid var(--line-strong); padding-bottom:10px; }
+
+  .counts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .count{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:15px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:3px; }
+  .count .n{ font-size:1.9rem; font-weight:660; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1; }
+  .count .l{ font-size:.76rem; color:var(--muted); font-weight:560; }
+  .n-done{ color:var(--up); } .n-block{ color:var(--crit); }
+  .n-next{ color:var(--warn); } .n-watch{ color:var(--navy); }
+
+  .t-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    background:var(--surface); min-width:0; max-width:100%; }
+  table{ border-collapse:collapse; width:100%; font-size:.88rem; min-width:560px; }
+  th,td{ text-align:left; padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--surface-2); font-size:.7rem; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--muted); font-weight:660; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  td.date{ white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--faint); font-size:.82rem; }
+  code{ font-family:var(--mono); font-size:.85em; background:var(--navy-wash);
+    padding:1px 5px; border-radius:4px; color:var(--navy); }
+  a{ color:var(--navy-soft); }
+
+  .chip{ display:inline-flex; align-items:center; border-radius:100px; padding:2px 9px;
+    font-size:.7rem; font-weight:660; white-space:nowrap; }
+  .c-done{ background:var(--up-bg); color:var(--up); }
+  .c-block{ background:var(--crit-bg); color:var(--crit); }
+  .c-next{ background:var(--warn-bg); color:var(--warn); }
+  .c-info{ background:var(--navy-wash); color:var(--navy); }
+
+  .callout{ border-radius:10px; padding:16px 18px; display:flex; flex-direction:column;
+    gap:7px; font-size:.89rem; border:1px solid; }
+  .callout h3{ font-size:.92rem; }
+  .co-crit{ background:var(--crit-bg); border-color:var(--crit); color:var(--crit); }
+  .co-crit p{ color:var(--ink); }
+  .co-navy{ background:var(--navy-wash); border-color:var(--line-strong); }
+  .co-navy p{ color:var(--muted); }
+
+  footer{ border-top:1px solid var(--line-strong); padding-top:18px; font-size:.8rem;
+    color:var(--faint); display:flex; flex-direction:column; gap:7px; }
+  footer p{ max-width:none; }
+
+  @media (max-width:600px){ .wrap{ padding:30px 14px 60px; gap:34px; } }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <div class="inner">
+     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 606.5 163.1" xml:space="preserve"> <style type="text/css"> .st0{fill:currentColor;} .st1{fill:url(#SVGID_1_);} .st2{fill:url(#SVGID_00000007398182552389237400000014547051001265628063_);} .st3{opacity:0.2;} .st4{fill:url(#SVGID_00000038372051776067771770000005244135681748001982_);} .st5{fill:url(#SVGID_00000179629952958335063440000012070255141123673519_);} .st6{fill:url(#SVGID_00000036238257097821829220000014558426099364762534_);} .st7{fill:url(#SVGID_00000041279920748575890620000002667881884433786808_);} .st8{fill:url(#SVGID_00000044866818395195606230000005027126351018287238_);} </style> <g> <g id="Layer_2_00000136413840030005862630000008053133731079152814_"> <g id="Layer_1-2"> <polygon class="st0" points="0.1,40.2 38.8,40.1 39.2,153.4 67.5,153.3 67.2,40 105.9,39.9 105.8,14.8 0,15.2 "></polygon> <rect x="88.1" y="90.4" transform="matrix(1 -3.316120e-03 3.316120e-03 1 -0.3374 0.3767)" class="st0" width="50.5" height="23.2"></rect> <path class="st0" d="M263.3,52.1c-0.1-25.1-14.6-37.8-43.1-37.7l-63,0.2l0.5,138.2l28.8-0.1L186,39.9l32.6-0.1 c10.3,0,15.2,4.2,15.2,13.2c0,13.7-11.2,22.3-34.4,26.3l-1.4,0.2l0.1,13.4l42.1,59.8l35.7-0.1l-43.8-59.3 C252.8,82.4,263.3,68.6,263.3,52.1z"></path> <path class="st0" d="M526.9,37.5c12.7-0.1,25.4,2.3,37.1,7.3l2.3,1l-0.1-26.3l-1.1-0.4c-11.8-4.4-25.3-6.6-40.3-6.6 c-49.4,0.2-74.3,23.2-74.1,68.5c0.2,47.8,25.3,71.9,74.6,71.8c14.9-0.1,28.5-2.4,40.2-6.9l1.1-0.4l-0.1-26.3l-2.3,1 c-11.7,5-24.3,7.6-37.1,7.5c-31.6,0.1-47-15.2-47.1-46.8C480,51.8,495.3,37.6,526.9,37.5z"></path> <radialGradient id="SVGID_1_" cx="395.5869" cy="130.4847" r="92.05" gradientTransform="matrix(1.01 0 0 -0.99 4.09 162.1318)" gradientUnits="userSpaceOnUse"> <stop offset="4.000000e-02" style="stop-color:#A9D5E5"></stop> <stop offset="0.12" style="stop-color:#88C6DD"></stop> <stop offset="0.27" style="stop-color:#36A2C8"></stop> <stop offset="0.36" style="stop-color:#048BBB"></stop> <stop offset="0.47" style="stop-color:#056B9E"></stop> <stop offset="0.63" style="stop-color:#064076"></stop> <stop offset="0.71" style="stop-color:#072F66"></stop> <stop offset="0.73" style="stop-color:#072C60"></stop> <stop offset="0.84" style="stop-color:#081D3E"></stop> <stop offset="0.94" style="stop-color:#091429"></stop> <stop offset="1" style="stop-color:#091121"></stop> </radialGradient> <path class="st1" d="M442.2,80.8c0.2,44.4-48.4,71.8-86.3,75.5c-45.1,4.4-77.6-30.4-77.8-74.8S312.9,0.2,358.3,0 S442,36.4,442.2,80.8z"></path> <radialGradient id="SVGID_00000116919893497929301390000014746087021998370465_" cx="362.55" cy="151.3509" r="106.87" gradientTransform="matrix(1 0 0 -1 0 166.0018)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#CCE70B"></stop> <stop offset="2.000000e-02" style="stop-color:#BFE10E"></stop> <stop offset="7.000000e-02" style="stop-color:#ACD812"></stop> <stop offset="0.12" style="stop-color:#9ED215"></stop> <stop offset="0.19" style="stop-color:#96CE16"></stop> <stop offset="0.31" style="stop-color:#94CD17"></stop> <stop offset="0.7" style="stop-color:#588713"></stop> <stop offset="1" style="stop-color:#4A7110"></stop> </radialGradient> <path style="fill:url(#SVGID_00000116919893497929301390000014746087021998370465_);" d="M287.2,76.2c0.2-1.8-5.5-24.5-4.6-26.4 c8-15.7,19.7-29.3,34.7-38.7c11.3-7.1,26.2-12.1,38.8-5.5c4.7,2.4,8.5,6.2,10.9,10.8c7.5,15-1.8,32.9-6.1,47.3 c-2.7,9.2-4.8,18.7-4.2,28.3c0.5,7.5,3.2,15.5,9.6,19.4c10.9,6.6,24.9-1.9,33-9.2c8.9-7.9,15.5-18,22-27.9c2-3,4-6.1,6.1-9.1 c1.3-1.8,2.7-3.8,4.9-4.7c3.4-1.4,5.4,1.4,6.5,4.2c1.7,4.3,2.7,8.8,3.1,13.4c0.2,2.4,0.3,4.9,0.1,7.3c-0.1,1.3-0.2,2.6-0.4,3.9 c-0.3,1.2-0.6,2.4-0.8,3.7c0,0-8,34.2-23.2,41.4c-13.5,6.5-29.9,11.7-47.8,7.3s-41.9-16.8-46.6-34.6 c-3.1-11.9-12.2-20.8-19.9-29.8C296,68.6,285.5,88.3,287.2,76.2z"></path> <g class="st3"> <linearGradient id="SVGID_00000121966393869284529440000013464293852903704754_" gradientUnits="userSpaceOnUse" x1="313.1545" y1="71.353" x2="352.7646" y2="94.173" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000121966393869284529440000013464293852903704754_);" d="M307.9,37.7 c12.5,3.8,19.4,16.9,23.1,28.5c3.1,9.9,4.5,20.4,7.1,30.5c3.3,13,9.8,27.2,22.3,33.6c7.1,3.6,15.6,4.2,23.4,2.4 c6.1-1.4,11.9-4.1,17.1-7.7c0-0.6,4.4-3.4,5-4c1.7-1.5,3.3-3.1,4.9-4.8c3.1-3.4,5.9-7,8.5-10.7c5.3-7.6,10-15.6,15-23.4 c0.5-0.9,1.1-1.6,1.8-2.3c0.7-0.7,1.7-1,2.7-0.9c0.9,0.2,1.7,0.8,2.1,1.6c0.9,1.5,1.3,3.2,1.1,4.9c0.1-2.3,0.1-4.7-0.1-7 c-0.4-4.6-1.5-9.1-3.1-13.4c-1.1-2.8-3.1-5.6-6.5-4.2c-2.2,0.9-3.6,2.8-4.9,4.7c-2.1,3-4.1,6-6.1,9.1c-6.5,9.9-13.1,20-22,27.9 c-8.2,7.3-22.1,15.9-33,9.2c-6.4-3.9-9.1-11.9-9.6-19.4c-0.7-9.6,1.4-19.1,4.2-28.3c4.3-14.5,13.6-32.4,6.1-47.3 c-2.4-4.7-6.2-8.4-10.9-10.8c-12.7-6.6-27.5-1.6-38.9,5.5c-14.9,9.4-26.6,22.9-34.7,38.7c0,0,0,0,0,0.1 C287.6,40.8,296.3,34.2,307.9,37.7z"></path> <linearGradient id="SVGID_00000099631334421269823960000007522814617985570704_" gradientUnits="userSpaceOnUse" x1="342.9584" y1="19.5537" x2="382.5784" y2="42.3737" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000099631334421269823960000007522814617985570704_);" d="M441.6,89.9c0-0.2,0.1-0.3,0.1-0.5 s0-0.1,0-0.2C441.7,89.5,441.6,89.7,441.6,89.9z"></path> <linearGradient id="SVGID_00000127739122622968611090000016615814152169259945_" gradientUnits="userSpaceOnUse" x1="341.3204" y1="22.3502" x2="380.9504" y2="45.1802" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000127739122622968611090000016615814152169259945_);" d="M442.1,85.7c0,0,0-0.1,0-0.2 c0-0.1,0-0.1,0-0.2C442.2,85.5,442.1,85.6,442.1,85.7z"></path> </g> <radialGradient id="SVGID_00000087384874031121145580000014169164962236265905_" cx="338.74" cy="90.2009" r="73.84" gradientTransform="matrix(1 0 0 -1 0 166.0018)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#F43E9C"></stop> <stop offset="0.42" style="stop-color:#F0047F"></stop> <stop offset="0.52" style="stop-color:#DF0476"></stop> <stop offset="0.72" style="stop-color:#B40360"></stop> <stop offset="0.96" style="stop-color:#780240"></stop> </radialGradient> <path style="fill:url(#SVGID_00000087384874031121145580000014169164962236265905_);" d="M400.9,125c-5.1,3.7-10.9,6.3-17.1,7.8 c-7.8,1.8-16.3,1.3-23.4-2.4c-12.5-6.4-19-20.7-22.3-33.6c-2.6-10.1-4-20.5-7.1-30.5c-3.7-11.7-10.6-24.8-23.1-28.5 c-16.3-4.9-26.9,10.1-29.6,24.1c-2.7,13.7-1.3,28.9,2.6,42.3c12.7,43.3,58.1,68.2,101.4,55.6c29.5-8.6,52.8-35.4,58.4-65.5 c0.7-3.9,2.7-10.1,0.3-13.8c-0.5-0.8-1.3-1.3-2.2-1.5c-1-0.1-2,0.2-2.7,0.9c-0.7,0.7-1.3,1.5-1.8,2.3c-5,7.8-9.6,15.8-15,23.4 c-2.6,3.8-5.5,7.3-8.5,10.7c-1.5,1.7-3.2,3.3-4.9,4.8C405.3,121.6,400.9,124.4,400.9,125z"></path> <radialGradient id="SVGID_00000025413948855085211120000004483712071800557500_" cx="324.2903" cy="43.0586" r="45.6" gradientTransform="matrix(1 -3.839715e-03 -3.839715e-03 -1 1.3771 164.4816)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#FFBF00"></stop> <stop offset="0.35" style="stop-color:#FF8001"></stop> <stop offset="0.51" style="stop-color:#FF7601"></stop> <stop offset="0.77" style="stop-color:#FD5A00"></stop> <stop offset="1" style="stop-color:#FC3D00"></stop> </radialGradient> <path style="fill:url(#SVGID_00000025413948855085211120000004483712071800557500_);" d="M367.4,162.5 c-20.7,2.6-40.5-3.8-57.2-16.2c-8.3-6.2-17.3-15.1-19.6-24.8c-1.6-6.7-0.9-14.7,5.7-18.3c11.4-6.4,19.5,6.7,24.2,14.9 c5.4,9.3,12.1,18.1,21,24.2c13,9,30.1,11.3,45.5,7.7c8-1.9,15.7-5.2,22.6-9.6c3.4-2.2,6.7-4.6,9.8-7.2c5.1-4.2,7.9-9.4,8.5-8.2 s-10.1,14.9-23,23.8C393.8,156.5,381.8,160.7,367.4,162.5z"></path> </g> </g> <g> <path class="st0" d="M581.8,27.2c0-7.2,5.6-12.6,12.4-12.6s12.4,5.4,12.4,12.6c0,7.3-5.6,12.6-12.4,12.6S581.8,34.5,581.8,27.2z M604.4,27.2c0-6.2-4.3-10.8-10.2-10.8s-10.2,4.6-10.2,10.8c0,6.2,4.3,10.8,10.2,10.8S604.4,33.5,604.4,27.2z M589.3,20.4h6.1 c2.4,0,4.2,1.6,4.2,3.7c0,1.5-0.8,2.8-2.5,3.2v0.1c1.3,0.4,1.9,1.1,2.1,2.7c0.2,1.9,0.1,3.3,0.6,3.5v0.2h-2.5 c-0.4-0.2-0.5-1.7-0.6-3.1c-0.1-1.4-0.9-2.3-2.5-2.3h-2.2v5.4h-2.7V20.4z M591.9,26.3h2.9c1.5,0,2.2-0.8,2.2-1.9 c0-1.1-0.7-1.9-2.2-1.9h-2.9V26.3z"></path> </g> </g> </svg> 
+    <span class="kicker">Performance Report</span>
+  </div>
+</div>
+<div class="brandrule"></div>
+
+
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow">Performance report</span>
+    <h1>August worked: clicks up 44% on falling impressions. But 11 of the 25 most-seen pages are queued for deletion.</h1>
+    <p class="small">Search Console now holds a full quarter of measured data covering the period before, during and after the August fixes, and it says the fixes paid. The same data contradicts an open piece of work: the remaining prune list still contains pages carrying <strong>15.8% of the site's total visibility</strong> at an average position of 7.6. That list was compiled from Ahrefs traffic estimates before Search Console access existed, and it should not be executed as written.</p>
+    <div class="meta-row">
+      <span>trocglobal.com</span>
+      <span>September 9, 2026</span>
+      <span>Search Console: Jun 8 &ndash; Sep 6, 2026</span>
+      <span>Ahrefs: Sep 4, 2026</span>
+      <span><a href="../">&larr; Live dashboard</a></span>
+      <span><a href="work-tracker.html">Work tracker</a></span>
+    </div>
+  </header>
+
+  <!-- 1. Numbers -->
+  <section>
+    <div class="sec-head">
+      <h2>Where the site stands</h2>
+      <p class="small">Measured clicks from Search Console over the last 90 days; link and ranking metrics from Ahrefs.</p>
+    </div>
+    <div class="counts">
+      <div class="count"><span class="n">4,398</span><span class="l">Clicks, 90 days</span></div>
+      <div class="count"><span class="n">1.09M</span><span class="l">Impressions, 90 days</span></div>
+      <div class="count"><span class="n n-block">0.40%</span><span class="l">Site CTR</span></div>
+      <div class="count"><span class="n n-block">258</span><span class="l">Non-branded clicks, 90 days</span></div>
+      <div class="count"><span class="n">43</span><span class="l">Domain Rating</span></div>
+      <div class="count"><span class="n">3,288</span><span class="l">Referring domains</span></div>
+      <div class="count"><span class="n">393</span><span class="l">Ranking keywords</span></div>
+      <div class="count"><span class="n n-done">Pass</span><span class="l">Core Web Vitals</span></div>
+    </div>
+    <p class="small">The site is seen more than a million times a quarter and clicked four thousand times. <strong>Roughly one impression in 250 becomes a visit.</strong> Nothing below changes that headline &mdash; but the trend inside it has turned, and the reason for the low number is not what it was assumed to be.</p>
+  </section>
+
+  <!-- 2. August -->
+  <section>
+    <div class="sec-head">
+      <h2>The August work is measurable in the click data</h2>
+      <p class="small">Clicks per day, so the partial months compare fairly.</p>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Month</th><th>Clicks</th><th>Clicks/day</th><th>Impressions</th><th>Impressions/day</th><th>CTR</th></tr></thead>
+        <tbody>
+          <tr><td>June (from the 8th)</td><td>1,056</td><td>45.9</td><td>370,842</td><td>16,124</td><td>0.285%</td></tr>
+          <tr><td>July</td><td>1,235</td><td>39.8</td><td>334,572</td><td>10,793</td><td>0.369%</td></tr>
+          <tr><td><strong>August</strong></td><td><strong>1,778</strong></td><td><strong>57.4</strong></td><td>312,361</td><td>10,076</td><td><strong>0.569%</strong></td></tr>
+          <tr><td>September (1&ndash;6)</td><td>329</td><td>54.8</td><td>69,906</td><td>11,651</td><td>0.471%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small"><strong>August produced 44% more clicks than July from 7% fewer impressions</strong>, and site CTR has doubled since June (0.285% &rarr; 0.569%). The first six days of September hold at 54.8 clicks a day, so this is not a one-month spike. The work that landed in that window was the title repair on 52 pages (Aug 12), the removal of hidden text from seven pages, duplicate structured data cut across 565 pages, and the snippet cleanup (Aug 26&ndash;27).</p>
+    <div class="callout co-navy">
+      <h3>Why Ahrefs shows the opposite</h3>
+      <p>The Ahrefs organic traffic estimate for the same period falls &mdash; 6,271 a month a year ago against 3,360 now. That number is <strong>modelled from ranking positions, not measured</strong>. It drops when pages leave the index, which is exactly what the consolidation did on purpose. Search Console counts actual clicks. Where the two disagree, the measured number is the one to report.</p>
+    </div>
+  </section>
+
+  <!-- 3. Prune conflict -->
+  <section>
+    <div class="sec-head">
+      <h2>Stop before executing the rest of the prune list</h2>
+      <p class="small">11 of the 210 URLs still queued for removal are among the 25 most-seen pages on the site.</p>
+    </div>
+    <div class="callout co-crit">
+      <h3>171,749 impressions &mdash; 15.8% of all site visibility &mdash; sit on pages marked for deletion</h3>
+      <p>Their average position is <strong>7.6: page one</strong>. The prune list was compiled from Ahrefs zero-traffic modelling before Search Console access existed, so pages that rank and are seen but convert poorly were indistinguishable from pages nobody sees at all. They are not the same thing, and the remedy for each is opposite: one gets deleted, the other gets a better title and a stronger reason to click.</p>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Page on the prune list</th><th>Impressions</th><th>Clicks</th><th>Position</th></tr></thead>
+        <tbody>
+          <tr><td><code>/experiential-retail-pop-up-events/</code></td><td>42,286</td><td>30</td><td>6.6</td></tr>
+          <tr><td><code>/walmart-2026-annual-report-takeaways/</code></td><td>35,064</td><td>35</td><td>7.1</td></tr>
+          <tr><td><code>/automated-retail-trends-arki-insights/</code></td><td>30,694</td><td>21</td><td>9.6</td></tr>
+          <tr><td><code>/experiential-retail-trends-2026-levis-pop-up/</code></td><td>15,453</td><td>28</td><td>5.9</td></tr>
+          <tr><td><code>/luxury-pop-up-stores-shipping-containers/</code></td><td>10,766</td><td>15</td><td>6.4</td></tr>
+          <tr><td><code>/in-store-demo-services/</code></td><td>8,653</td><td>25</td><td>8.7</td></tr>
+          <tr><td><code>/world-cup-retail-trends-&hellip;-fifa-2026-&hellip;/</code></td><td>7,460</td><td>11</td><td>6.8</td></tr>
+          <tr><td><code>/pop-up-stores-market-expansion/</code></td><td>6,907</td><td>4</td><td>8.8</td></tr>
+          <tr><td><code>/how-do-i-know-if-a-brand-ambassador-is-legit/</code></td><td>5,897</td><td>20</td><td>7.1</td></tr>
+          <tr><td><code>/retail-sales-growth-consumer-confidence-2026/</code></td><td>4,565</td><td>5</td><td>7.8</td></tr>
+          <tr><td><code>/pop-up-store-services/</code></td><td>4,004</td><td>7</td><td>9.4</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>171,749</strong></td><td><strong>201</strong></td><td><strong>7.6 avg</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">This is not hypothetical. One has already gone: <code>/despite-the-rise-of-e-commerce-physical-stores-are-here-to-stay/</code> carried <strong>14,756 impressions at position 6.0</strong> and now 301s to <code>/company/</code> &mdash; a corporate about page with no topical relationship to what people were searching for. A redirect to an unrelated destination is treated as a soft removal, so that visibility is not preserved, it is discarded.</p>
+    <p class="small"><strong>Recommendation.</strong> Freeze the remaining 210 URLs and re-screen them against Search Console impressions before any further deletion. The screen is cheap: any URL above roughly 500 impressions in 90 days is a rewrite candidate, not a deletion candidate. The genuinely dead pages &mdash; old press releases, event notices, duplicated service copy &mdash; can still go.</p>
+  </section>
+
+  <!-- 4. CTR diagnosis -->
+  <section>
+    <div class="sec-head">
+      <h2>Why the CTR is 0.4%, and why it is mostly not a titles problem</h2>
+      <p class="small">The titles on the ten biggest pages were re-fetched live today and checked one by one.</p>
+    </div>
+    <p class="small">Nine of the ten highest-impression pages carry a well-formed, length-appropriate title and a written meta description &mdash; the August repair held. So a 0.07% click-through rate at position 6.6, roughly <strong>fifty times below a normal page-one rate</strong>, has to come from somewhere else. It does: from what is being searched.</p>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Actual queries bringing impressions to <code>/experiential-retail-pop-up-events/</code></th><th>Impr.</th><th>Clicks</th><th>Pos.</th></tr></thead>
+        <tbody>
+          <tr><td>pop-up experiences customer loyalty</td><td>238</td><td>0</td><td>2.5</td></tr>
+          <tr><td>best strategies for pop-up retail experiences</td><td>229</td><td>0</td><td>3.1</td></tr>
+          <tr><td>evaluate the dolls company adora on localized retail events and services</td><td>204</td><td>0</td><td>8.2</td></tr>
+          <tr><td>challenges brands face with retail pop-ups</td><td>177</td><td>0</td><td>7.6</td></tr>
+          <tr><td>which retail districts have regular weekend programming or pop-up experiences?</td><td>138</td><td>0</td><td>5.2</td></tr>
+          <tr><td>leading agencies immersive pop-up brand experiences</td><td>128</td><td>0</td><td>4.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">These are not phrases people type into a search box. They are full sentences and evaluative instructions &mdash; the shape of queries generated by AI assistants and AI Overviews while researching a topic. On that one page, <strong>87.9% of all impressions come from queries Google will not even name</strong>, because each is too rare to be reported individually. Across the fifteen pages profiled in full the figure is <strong>68.5% &mdash; 224,306 of 327,554 impressions</strong>.</p>
+    <div class="callout co-navy">
+      <h3>What this means for the KPI</h3>
+      <p>A large share of the impression pool is generated on surfaces that do not produce clicks by design: an AI answer resolves the question in place. Chasing site-wide CTR back to an industry benchmark of 3&ndash;5% is not achievable while that pool keeps growing, and a falling CTR could even mean the site is being cited <em>more</em>. <strong>Clicks and non-branded clicks are the honest KPIs; site-wide CTR belongs in the report as a diagnostic, not a target.</strong> The corollary is that being the source an AI answer cites is now worth optimising for directly &mdash; the site already appears in those results.</p>
+    </div>
+    <p class="small">There is still a real, recoverable click gap underneath this. The 25 highest-impression pages hold <strong>383,864 impressions &mdash; 35.3% of all site visibility &mdash; and convert at 0.241%</strong>. Bringing just those 25 to a modest 1.0% would add roughly <strong>2,900 clicks a quarter, a 66% increase in total site traffic</strong>, without a single new page being written.</p>
+  </section>
+
+  <!-- 5. Pop-up cluster -->
+  <section>
+    <div class="sec-head">
+      <h2>The largest unowned opportunity is pop-up and experiential retail</h2>
+      <p class="small">Bigger, in measured impressions, than merchandising or brand ambassadors.</p>
+    </div>
+    <p class="small">Five pages rank for pop-up and experiential retail queries. Together they take <strong>79,416 impressions and 84 clicks</strong> &mdash; 7.3% of the site's visibility for 1.9% of its clicks. Four of the five are on the prune list. No service page owns the category: <code>/pop-up-store-services/</code> exists but sits at position 9.4 with 4,004 impressions and seven clicks, and it is itself queued for deletion.</p>
+    <p class="small">This is the pattern <code>/retail-marketing-services/</code> and <code>/retail-management-services/</code> were published to address in August: a category with real demand, page-one presence, and no URL claiming it. The difference is that this one is already ranking &mdash; the work is consolidation and a stronger hub, not new content from zero. It deserves testing before another merchandising or brand-ambassador page is written; those terms already have <strong>7 and 15 competing URLs earning almost nothing</strong>.</p>
+  </section>
+
+  <!-- 6. Non-branded -->
+  <section>
+    <div class="sec-head">
+      <h2>Non-branded search is still 13.6% of clicks</h2>
+      <p class="small">Measured in Search Console, not modelled.</p>
+    </div>
+    <p class="small">Of 1,903 classified clicks, <strong>1,645 came from people already searching for T-ROC</strong> and 258 did not. In 90 days the site earned fewer than three non-branded clicks a day. The queries where the demand actually sits are close, but not converting:</p>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Non-branded query</th><th>Impressions</th><th>Clicks</th><th>CTR</th><th>Position</th></tr></thead>
+        <tbody>
+          <tr><td>retail merchandising services</td><td>4,215</td><td>6</td><td>0.14%</td><td>9.5</td></tr>
+          <tr><td>brand ambassador</td><td>3,580</td><td>11</td><td>0.31%</td><td>10.5</td></tr>
+          <tr><td>retail merchandising companies</td><td>480</td><td>4</td><td>0.83%</td><td>29.0</td></tr>
+          <tr><td>automated retail machine</td><td>279</td><td>8</td><td>2.87%</td><td>11.5</td></tr>
+          <tr><td>brand ambassador programs</td><td>205</td><td>9</td><td>4.39%</td><td>23.8</td></tr>
+          <tr><td>merchandising companies</td><td>158</td><td>4</td><td>2.53%</td><td>30.6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Note the shape of that table: the two big terms sit at position 9&ndash;10 &mdash; <strong>the bottom of page one, where click-through collapses</strong> &mdash; while terms ranking at 23 to 30 convert ten to thirty times better per impression. Moving &ldquo;retail merchandising services&rdquo; from 9.5 into the top five is worth more than any new page, and it is a consolidation and internal-link problem: <strong>15 URLs currently compete for the brand-ambassador cluster and 7 for retail merchandising.</strong></p>
+  </section>
+
+  <!-- 7. Links -->
+  <section>
+    <div class="sec-head">
+      <h2>Link profile: the spam network is decaying on its own</h2>
+    </div>
+    <div class="counts">
+      <div class="count"><span class="n">43</span><span class="l">Domain Rating (flat)</span></div>
+      <div class="count"><span class="n">3,288</span><span class="l">Referring domains</span></div>
+      <div class="count"><span class="n n-block">&minus;363</span><span class="l">Refdomains since July</span></div>
+      <div class="count"><span class="n">15,520</span><span class="l">Live backlinks</span></div>
+    </div>
+    <p class="small">Referring domains peaked at <strong>3,654 in July and have fallen to 3,291</strong> &mdash; a 9.9% decline, still running at roughly seven lost domains a day through early September. Domain Rating has not moved (43), which is the expected signature of low-quality links expiring: volume falls, authority does not. This is consistent with the <code>troc*</code> network previously identified as SEOExpress.org spam, which supplied 84% of anchor text. It is dying without intervention.</p>
+    <p class="small">The drafted disavow file remains justified &mdash; the point is to make the removal deliberate and permanent rather than dependent on those domains staying expired &mdash; but it is no longer urgent, and the falling refdomain count should not be read as a loss of legitimate links.</p>
+  </section>
+
+  <!-- 8. Technical -->
+  <section>
+    <div class="sec-head">
+      <h2>Technical health</h2>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Check</th><th>Result</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Core Web Vitals &mdash; mobile</td><td>LCP 1,320&nbsp;ms &middot; CLS 0.09 &middot; INP 138&nbsp;ms</td><td><span class="chip c-done">All pass</span></td></tr>
+          <tr><td>Core Web Vitals &mdash; desktop</td><td>LCP 1,511&nbsp;ms &middot; CLS 0.09 &middot; INP 79&nbsp;ms &middot; score 91</td><td><span class="chip c-done">All pass</span></td></tr>
+          <tr><td><code>/services/</code></td><td>Still returns <strong>403 at the WP&nbsp;Engine server</strong>, re-verified today. Child pages such as <code>/services/brand-ambassadors/</code> return 200 normally, so only the hub URL is blocked. The 301 to <code>/solutions/</code> is staged as rule 488 and fires the moment the block is lifted.</td><td><span class="chip c-block">21 days open</span></td></tr>
+          <tr><td>Staging links on 63 pages</td><td>Unchanged &mdash; needs a database search-replace the REST API cannot perform.</td><td><span class="chip c-next">Web team</span></td></tr>
+          <tr><td>Duplicate <code>retail360</code> pages</td><td><code>/services/retail360/</code> and <code>/retail360-ai-retail-execution-platform/</code> both rank for the same term, splitting 52 modelled visits between them.</td><td><span class="chip c-next">Consolidate</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Performance is not a constraint on this site and can come off the worry list. Mobile passes all three Core Web Vitals thresholds on real field data.</p>
+  </section>
+
+  <!-- 9. Next -->
+  <section>
+    <div class="sec-head">
+      <h2>What to do next, in order</h2>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Action</th><th>Why it ranks here</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Freeze the prune list and re-screen it against Search Console</strong></td><td>Prevents the deletion of 171,749 impressions of page-one visibility. Costs nothing and blocks an irreversible mistake.</td></tr>
+          <tr><td>2</td><td><strong>Rewrite titles and meta descriptions on the 25 highest-impression pages</strong></td><td>35.3% of all visibility converting at 0.241%. Reaching 1.0% adds ~2,900 clicks a quarter with no new content.</td></tr>
+          <tr><td>3</td><td><strong>Build the pop-up and experiential retail hub</strong></td><td>79,416 impressions already earned, no URL owns the category, and four of the five ranking pages are queued for deletion.</td></tr>
+          <tr><td>4</td><td><strong>Consolidate &ldquo;retail merchandising services&rdquo; onto one URL</strong></td><td>4,215 impressions at position 9.5 split across 7 competing pages &mdash; the largest single non-branded term on the site.</td></tr>
+          <tr><td>5</td><td><strong>Chase the <code>/services/</code> 403 with WP&nbsp;Engine</strong></td><td>Open 21 days, evidence already gathered and the redirect already staged. Nothing further can be done from our side.</td></tr>
+          <tr><td>6</td><td><strong>Submit the disavow file</strong></td><td>Justified but no longer urgent &mdash; the network is expiring by itself at about seven domains a day.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Method.</strong> Search Console figures are measured clicks and impressions for <code>https://trocglobal.com/</code> covering June 8 to September 6, 2026, pulled through the API on September 9. Monthly rollups are computed from daily rows, so June is a partial month and is compared per day. Branded and non-branded are classified by explicit pattern match on <code>troc</code>, <code>t-roc</code>, <code>retail outsource</code> and <code>revenue optimization compan</code>; the Ahrefs <code>is_branded</code> flag is unreliable on this domain. Titles, meta descriptions, status codes and redirect targets were re-fetched live from the production site on September 9.</p>
+    <p><strong>Ahrefs data is dated September 4.</strong> The workspace API quota was exhausted on that date &mdash; 101,659 units used against a 100,000 a month allowance &mdash; and resets on September 24, so no newer Ahrefs figures could be pulled for this report. The daily refresh schedule alone consumes most of the monthly allowance; it has been reduced to Monday, Wednesday and Friday in the same change that published this report, which leaves headroom for ad-hoc analysis. Link and ranking metrics move slowly enough that a five-day lag does not affect any conclusion above.</p>
+    <p><strong>Data.</strong> <a href="../data/latest.json">Full dataset (JSON)</a> &middot; <a href="prune-remaining-210.txt">The 210 URLs still queued for pruning</a> &middot; <a href="seo-review-2026-09-02.html">Previous review, September 2</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
