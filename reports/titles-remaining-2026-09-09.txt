@@ -1,238 +1,76 @@
-Titles still over 70 characters — trocglobal.com, as of 2026-09-09
-Source: Ahrefs Site Audit "title too long" export (146 URLs), minus the 30 fixed on 2026-09-09.
-Sorted by section. The length shown is from the crawl, before any fix.
+Titles still over 70 characters — trocglobal.com, 2026-09-09 (end of day)
 
-79   /agentic-ai-commerce-retail-trends/
-     Agentic AI in Commerce: The Next Frontier of Retail Discovery and Trust - T-ROC
-104  /ai-ready-business-data-for-retail-operations-how-to-prepare-your-company-before-investing-in-ai/
-     AI-Ready Business Data for Retail Operations: How to Prepare Your Company Before Investing in AI - T-ROC
-94   /automated-retail-field-operations/
-     Why Automated Retail Still Needs People: The Field Operations Behind Unattended Retail - T-ROC
-81   /automated-retail-for-pet-brands/
-     Automated Retail for Pet Brands: Keep Shelves Stocked and Customers Loyal - T-ROC
-76   /best-brand-ambassador/
-     The Best Brand Ambassador: A Guide to Effective Brand Representation - T-ROC
-90   /beyond-retail-basics-how-t-roc-is-redefining-customer-experience-and-brand-impact/
-     Beyond Retail Basics: How T-ROC is Redefining Customer Experience and Brand Impact - T-ROC
-78   /brand-ambassador-program-guide/
-     Brand Ambassador Programs: The Complete Guide for Retail Brands (2026) - T-ROC
-72   /brand-ambassador-staffing-cost/
-     How Much Does Brand Ambassador Staffing Cost? 2026 Pricing Guide | T-ROC
-79   /brand-ambassador-vs-in-house-retail-labor/
-     Brand Ambassador Services vs. In-House Retail Labor: Decision Framework | T-ROC
-98   /case-studies/apple-case-study/
-     T-ROC Drives $17 to $22 ROI for Apple Through Brand Ambassadors and International Retail Expansion
-102  /case-studies/at-t-case-study/
-     T-ROC Staffs 66 AT&T Stores in 90 Days with Full Sales Training and Field Management Across 15 Markets
-103  /case-studies/belkins-case-study/
-     T-ROC Increases Belkin Brand Preference from 30% to 70% Among Verizon Sales Associates in Just One Year
-106  /case-studies/bose-case-study/
-     Bose Chooses T-ROC for Multi-Year Product Launches, Break-Fix Support, and Holiday Sales Events Nationwide
-95   /case-studies/cricket-wireless-case-study/
-     T-ROC Achieves 300% Sales Growth at Target and 73 Percent Boost at Walmart for Cricket Wireless
-99   /case-studies/dbramante-case-study/
-     T-ROC Launches dbramante1928 in 600+ Verizon Stores with Just 45 Brand Ambassadors Across 27 States
-98   /case-studies/ecoatm-case-study/
-     T-ROC Drives 6000+ Customer Interactions and Doubles Drop-Off Rates for ecoATM in Key Test Markets
-100  /case-studies/epson-case-study/
-     T-ROC Helps Epson Become the #1 Printer Brand in North America with Field Teams Driving Inkjet Sales
-108  /case-studies/hisense-case-study/
-     T-ROC Drives Record Unit Growth for Hisense with Targeted Retail Expansion and $4.6 Million in Revenue Gains
-90   /case-studies/hisense-mystery-shopping-case-study/
-     T-ROC Delivers 97 Percent Execution in 1600+ Lowe’s Stores for Hisense Merchandising Blitz
-112  /case-studies/mattress-warehouse-case-study/
-     T-ROC Powers 300+ Store Evaluations for Mattress Warehouse with Real-Time Reporting and Competitive Intelligence
-89   /case-studies/moneygram-case-study/
-     T-ROC Conducts 400+ Monthly Compliance Audits for MoneyGram Across 4700 Walmart Locations
-93   /case-studies/pdg-powersports-case-study/
-     T-ROC Drives $1 Million in Sales for PDG Powersports in Just 8 Weeks Across Costco Road Shows
-102  /case-studies/samsung-case-study/
-     T-ROC Launches 3 Samsung Experience Stores in Just 90 Days, Driving $2 Million in Sales Within 45 Days
-74   /case-studies/t-mobile-case-study/
-     T-ROC Delivers 95% Sales and Ops Performance for T-Mobile Across 74 Stores
-77   /case-studies/tcl-case-study/
-     T-ROC Helps TCL Grow into 5,000 Retail Stores and Surpass Monthly Sales Goals
-87   /case-studies/trend-micro-case-study/
-     From 20 to 50% Market Share—T-ROC Powers Trend Micro’s Retail Growth and Store Coverage
-94   /case-studies/us-cellular-case-study/
-     T-ROC Drives Seamless Retail Management for UScellular from Product Launches to In-Store Demos
-88   /case-studies/walmart-assembly-case-study/
-     T-ROC Assembles 26,000 to 36,000 Units Weekly for Walmart, Including Bikes and Furniture
-76   /clienteling-applications/
-     Unlocking Customer Loyalty Through Advanced Clienteling Applications - T-ROC
-92   /community/t-roc-in-partnership-with-olpc-and-first-star-um-academy-give-back-to-the-community/
-     T-ROC In Partnership With OLPC AND First Star UM Academy, Give Back to the Community - T-ROC
-85   /customer-engagement-strategy/
-     Innovative Customer Engagement Strategies: Revolutionizing the Business World - T-ROC
-92   /experiential-retail-trends/
-     Experiential Retail is Redefining Shopping: How Brands Are Winning Customers in 2025 - T-ROC
-73   /fuel-costs-retail-inflation-margins/
-     The Ripple Effect: How Surging Fuel Costs Impact Retail Inflation - T-ROC
-95   /general-retail-insights-guide/
-     Retail Insights Hub: Expert Perspectives on Running a High-Performance Retail Operation - T-ROC
-74   /holiday-retail-strategy-guide/
-     Holiday Retail Strategy: The Complete Guide to Q4 Execution (2026) - T-ROC
-91   /home-depot-world-cup-marketing-strategy/
-     Beyond the Pitch: Analyzing Home Depot’s World Cup Marketing and Community Strategy - T-ROC
-99   /how-ai-is-transforming-brick-and-mortar-retail-smarter-stores-better-customer-experiences/
-     How AI is Transforming Brick-and-Mortar Retail: Smarter Stores, Better Customer Experiences - T-ROC
-72   /how-mystery-shopping-elevates-your-brand/
-     Discovering the Unseen: How Mystery Shopping Elevates Your Brand - T-ROC
-71   /how-to-choose-a-brand-ambassador-agency/
-     How to Choose a Brand Ambassador Agency: 10 Evaluation Criteria | T-ROC
-71   /how-to-choose-a-mystery-shopping-company/
-     How to Choose a Mystery Shopping Company: 8 Evaluation Criteria | T-ROC
-80   /how-to-choose-a-retail-services-company/
-     How to Choose a Retail Services Company: The Senior Management Framework | T-ROC
-76   /in-store-brand-activation/
-     In-Store Brand Activation: Strategies That Drive Retail Sales (2026) - T-ROC
-71   /industries-we-serve/
-     Industries We Serve: 12 Categories T-ROC Global Operates Across | T-ROC
-82   /inventory-management-retail/
-     A Guide to Inventory Management Retail: Strategies, Challenges, and Trends - T-ROC
-75   /inventory-management-software/
-     Master Stock Control: The Benefits of Inventory Management Software - T-ROC
-73   /inventory-management-system/
-     Stay Ahead of the Game: Optimize Your Inventory Management System - T-ROC
-76   /luxury-retail-value-strategy-why-price-is-no-longer-the-main-driver/
-     Luxury Retail Value Strategy: Why Price Is No Longer the Main Driver - T-ROC
-96   /mattel-q1-2026-analysis-toy-market-growth/
-     Mattel Q1 2026 Analysis: How Digital Strategy and IP Growth are Shaping the Toy Industry - T-ROC
-89   /merchandising-analysis/
-     Merchandising Analysis: Unveiling the Secrets Behind Successful Retail Strategies - T-ROC
-71   /merchandising-fulfillment/
-     Unraveling the Complexity: A Guide to Merchandising Fulfillment - T-ROC
-78   /mystery-shopping-guide/
-     Mystery Shopping Services: The Complete Guide for Retail Brands (2026) - T-ROC
-79   /mystery-shopping-vs-operational-audits/
-     Mystery Shopping vs. Operational Audits: Which Approach Fits Your Goal? | T-ROC
-82   /omnichannel-retail-guide/
-     Omnichannel Retail Strategy: The Complete Guide to Unified Commerce (2026) - T-ROC
-72   /on-demand-retail-staffing-cost/
-     How Much Does On-Demand Retail Staffing Cost? 2026 Pricing Guide | T-ROC
-94   /product-launch-experiential-retail-guide/
-     Product Launch & Experiential Retail: The Complete Guide to In-Store Activation (2026) - T-ROC
-80   /professional-assembly-scalability-speed-quality/
-     The Power of Professional Assembly: T-ROC’s Scalability, Speed & Quality - T-ROC
-82   /resources-2/
-     Retail Services Resources: Pricing, Evaluation Frameworks, Industry Guides | T-ROC
-76   /resources/automated-retail-guide/
-     The Complete Guide to Automated Retail & Retail Execution Technology - T-ROC
-72   /resources/definitions/what-is-click-and-collect/
-     What is Click and Collect? Definition, Benefits & Best Practices - T-ROC
-86   /resources/definitions/what-is-customer-experience-in-retail/
-     What is Customer Experience in Retail? Definition, Drivers & How to Improve It - T-ROC
-73   /resources/definitions/what-is-mystery-shopping/
-     What is Mystery Shopping? How It Works & Why Retail Brands Use It - T-ROC
-74   /resources/definitions/what-is-omnichannel-retail/
-     What is Omnichannel Retail? Definition, Strategy & Examples (2026) - T-ROC
-72   /resources/definitions/what-is-retail-conversion-rate/
-     What is Retail Conversion Rate? Definition, Formula & Benchmarks - T-ROC
-71   /resources/definitions/what-is-retail-execution/
-     What is Retail Execution? Definition, Strategy & Best Practices - T-ROC
-74   /resources/definitions/what-is-retail-operations/
-     What is Retail Operations? Definition, Components & Best Practices - T-ROC
-71   /resources/definitions/what-is-retail-outsourcing/
-     What is Retail Outsourcing? Definition, Benefits & How It Works - T-ROC
-75   /resources/definitions/what-is-retail-staffing/
-     What is Retail Staffing? Models, Benefits & How to Choose a Partner - T-ROC
-72   /resources/definitions/what-is-retail-workforce-management/
-     What is Retail Workforce Management? Definition & Best Practices - T-ROC
-75   /resources/definitions/what-is-visual-merchandising/
-     What is Visual Merchandising? Definition, Examples & Best Practices - T-ROC
-96   /retail-consumer-spending-pullback-inflation/
-     Navigating the 2026 Retail Consumer Spending Pullback: Data-Driven Strategies for Brands - T-ROC
-71   /retail-execution-software/
-     Guide to Streamlining Operations with Retail Execution Software - T-ROC
-87   /retail-execution/
-     Retail Execution: The Operational Discipline That Determines Retail Performance | T-ROC
-78   /retail-field-rep-technology/
-     Retail Field Rep Technology: Streamlining Operations and Boosting Sale - T-ROC
-81   /retail-field-teams-guide/
-     Retail Field Teams: The Complete Guide to In-Store Sales Execution (2026) - T-ROC
-78   /retail-glossary/
-     Retail Glossary: 70+ Retail Services, Merchandising & Technology Terms - T-ROC
-86   /retail-merchandising-guide/
-     Retail Merchandising Services: The Complete Guide to In-Store Execution (2026) - T-ROC
-74   /retail-merchandising-services-cost/
-     How Much Do Retail Merchandising Services Cost? 2026 Pricing Guide | T-ROC
-81   /retail-merchandising-vs-broker-merchandising/
-     Retail Merchandising Services vs. Broker Merchandising: Which Model Fits? | T-ROC
-75   /retail-revenue-optimization-strategies-multi-location-brands/
-     Retail Revenue Optimization: 7 Strategies for Multi-Location Brands - T-ROC
-75   /retail-services/
-     Retail Services Company: T-ROC Global's Full-Stack Retail Solutions | T-ROC
-101  /retail-staffing-guide/
-     Retail Staffing Solutions: The Complete Guide to Building High-Performance Store Teams (2026) - T-ROC
-75   /retail-staffing-services/
+Of the 146 URLs in the Ahrefs "title too long" export, 120 are fixed and live.
+The 26 below could NOT be fixed through the API. All of them share one cause:
+their <title> is not produced by Yoast, so writing _yoast_wpseo_title has no
+effect on the rendered page.
+
+  19 case studies — Yoast is switched OFF for the case-studies post type.
+     These pages emit no canonical, no schema and no og:title either, and the
+     WordPress post title is only the brand name ("Apple"). The long title
+     comes from the theme/ACF layer, which the REST API does not expose.
+     The right fix is to enable Yoast for this post type: it closes the title
+     problem AND the missing canonicals and schema in one change. Needs admin.
+
+   6 video pages — Yoast emits nothing on these six specific /troc-videos/
+     URLs while it works normally on the other 13. Same symptom, cause not yet
+     identified.
+
+   1 post, /retail-staffing-services/ — Yoast runs and its own API reports the
+     new title, but a filter downstream replaces it before output. Not in the
+     WPCode snippets backed up on 2026-08-27, so it needs a live look at the
+     snippet list. Needs admin (the marketing_writer account cannot read the
+     wpcode post type).
+
+  /retail-staffing-services/
      Retail Staffing Services: National Workforce for Brands & Retailers | T-ROC
-81   /retail-staffing-solutions/
-     Retail Staffing Solutions: Complete Guide for Brands and Retailers (2026) - T-ROC
-98   /retail-strategy-leadership-guide/
-     Retail Strategy: The Complete Guide to Building a High-Performance Retail Operation (2026) - T-ROC
-85   /retail-technology-guide/
-     Retail Technology Solutions: The Complete Guide to In-Store Innovation (2026) - T-ROC
-72   /retail-technology-trends-2026/
-     Retail Technology Trends 2026: What's Actually Working in Stores - T-ROC
-79   /retail-trends-industry-guide/
-     Retail Trends 2026: The Complete Guide to What's Reshaping the Industry - T-ROC
-77   /revolutionizing-retail-the-strategic-edge-of-t-roc-brand-ambassadors/
-     Revolutionizing Retail: The Strategic Edge of T-ROC Brand Ambassadors - T-ROC
-89   /shopper-insights-guide/
-     Shopper Insights: The Complete Guide to Understanding Your Retail Customer (2026) - T-ROC
-74   /the-revolution-of-retail-how-ai-is-shaping-the-future-of-commerce/
-     The Revolution of Retail: How AI is Shaping the Future of Commerce - T-ROC
-88   /troc-retail360-retail-execution-platform/
-     T-ROC Retail360: The Retail Execution Platform That Transforms Store Performance - T-ROC
-71   /troc-videos/brand-ambassador-programs-that-prove-roi-isnt-a-guess-its-a-guarantee/
+  /troc-videos/brand-ambassador-programs-that-prove-roi-isnt-a-guess-its-a-guarantee/
      Brand Ambassador Programs That Prove ROI Isn’t a Guess—It’s a Guarantee
-74   /troc-videos/brett-beveridge-real-life-stories-of-a-crazy-entrepreneur-ep-11/
-     Brett Beveridge: Real Life Stories of A Crazy Entrepreneur - Ep.11 - T-ROC
-74   /troc-videos/brett-beveridge-real-life-stories-of-a-crazy-entrepreneur-ep-2/
-     Brett Beveridge: Real Life Stories of A Crazy Entrepreneur - Ep. 2 - T-ROC
-73   /troc-videos/ipt-podcast-episode-3-w-brett-beveridge-the-beginning-of-viba/
-     IPT Podcast: Episode 3 w/ Brett Beveridge - The Beginning of VIBA - T-ROC
-73   /troc-videos/ipt-podcast-episode-5-with-mike-graen-big-changes-driving-retail/
-     IPT Podcast Episode 5 with Mike Graen: Big Changes Driving Retail - T-ROC
-78   /troc-videos/is-your-retail-merchandising-strategy-costing-you-sales-heres-how-to-fix-it/
+  /troc-videos/is-your-retail-merchandising-strategy-costing-you-sales-heres-how-to-fix-it/
      Is Your Retail Merchandising Strategy Costing You Sales? Here’s How to Fix It!
-80   /troc-videos/retail360-transforming-store-strategy-through-data-ai-and-actionable-insights/
-     Retail360: Transforming Store Strategy Through Data, AI, and Actionable Insights
-75   /troc-videos/smarter-store-placement-starts-with-retail-intelligence-that-actually-works/
+  /troc-videos/retail360-transforming-store-strategy-through-data-ai-and-actionable-insights/
+     "Retail360: Transforming Store Strategy Through Data, AI, and Actionable Insights"
+  /troc-videos/smarter-store-placement-starts-with-retail-intelligence-that-actually-works/
      Smarter Store Placement Starts with Retail Intelligence That Actually Works
-74   /troc-videos/tech-treks-with-brett-ces-2025-highlights-hallidays-proactive-ai-glasses/
+  /troc-videos/tech-treks-with-brett-ces-2025-highlights-hallidays-proactive-ai-glasses/
      Tech Treks with Brett: CES 2025 Highlights Halliday’s Proactive AI Glasses
-75   /troc-videos/the-hidden-reason-your-store-isnt-selling-more-fix-it-with-a-store-reset/
+  /troc-videos/the-hidden-reason-your-store-isnt-selling-more-fix-it-with-a-store-reset/
      The Hidden Reason Your Store Isn’t Selling More – Fix It with a Store Reset
-74   /troc-videos/video-title-3-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2-2/
-     T-ROC Mystery Shopping: What Your Customers See Might Surprise You - T-ROC
-95   /troc-videos/video-title-3-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2-2/
-     Tech Treks with Brett: Would You Wear Glasses That Think for You? | CES 2025 Innovation - T-ROC
-88   /troc-videos/video-title-3-2-3-2-2-2-2-2-2-2-2-2-2-2-2-2/
-     Tech Treks with Brett: Would You Eat at an AI-Run Restaurant? The Future Is Here - T-ROC
-79   /troc-videos/video-title-3-2-3-2-2-2-2-2-2-2-2-2-2-2/
-     T-ROC Merchandising: The Power of Data-Driven Displays That Drive Sales - T-ROC
-80   /troc-videos/video-title-3-2-3-2-2-2-2-2-2-2-2/
-     T-ROC Merchandising: How Top Brands Win with Flawless In-Store Execution - T-ROC
-77   /troc-videos/video-title-3-2-3-2-2-2-2-2-2/
-     Assembly Services That Boost Retail Sales – Here’s How T-ROC Does It! - T-ROC
-89   /troc-videos/video-title-3-2-3-2-2-2-2-2/
-     T-ROC Assembly Services: Fast, Accurate Product Assembly That Boosts Retail Sales - T-ROC
-76   /troc-videos/video-title-3-2-3-2-2-2-2/
-     T-ROC Retail360: How AI + Market Data Drive Smarter Retail Expansion - T-ROC
-85   /troc-videos/video-title-3-2-3-2/
-     T-ROC Brand Ambassador Program: The In-Store Sales Strategy Every Brand Needs - T-ROC
-71   /trocglobal-vs-advantage-solutions/
-     T-ROC vs Advantage Solutions: Retail Services Comparison (2026) - T-ROC
-84   /trocglobal-vs-premium-retail-services/
-     T-ROC vs Premium Retail Services: Honest Comparison for Retail Buyers (2026) - T-ROC
-100  /unlocking-the-future-of-footprint-the-strategic-automated-retail-benefits-for-modern-brands/
-     Unlocking the Future of Footprint: The Strategic Automated Retail Benefits for Modern Brands - T-ROC
-77   /what-is-an-outsourced-sales-and-marketing-firm/
-     What Is an Outsourced Sales and Marketing Firm? Complete Guide (2026) - T-ROC
-72   /what-is-mystery-shopping/
-     What Is Mystery Shopping? Definition, Examples, and How It Works | T-ROC
-75   /what-is-retail-execution/
-     What Is Retail Execution? Definition, Framework, and Why It Matters | T-ROC
-72   /what-is-retail-outsourcing/
-     What Is Retail Outsourcing? Definition, Models, and How It Works | T-ROC
+  /case-studies/apple-case-study/
+     T-ROC Drives $17 to $22 ROI for Apple Through Brand Ambassadors and International Retail Expansion
+  /case-studies/at-t-case-study/
+     T-ROC Staffs 66 AT&T Stores in 90 Days with Full Sales Training and Field Management Across 15 Markets
+  /case-studies/belkins-case-study/
+     T-ROC Increases Belkin Brand Preference from 30% to 70% Among Verizon Sales Associates in Just One Year
+  /case-studies/bose-case-study/
+     "Bose Chooses T-ROC for Multi-Year Product Launches, Break-Fix Support, and Holiday Sales Events Nationwide"
+  /case-studies/cricket-wireless-case-study/
+     T-ROC Achieves 300% Sales Growth at Target and 73 Percent Boost at Walmart for Cricket Wireless
+  /case-studies/dbramante-case-study/
+     T-ROC Launches dbramante1928 in 600+ Verizon Stores with Just 45 Brand Ambassadors Across 27 States
+  /case-studies/ecoatm-case-study/
+     T-ROC Drives 6000+ Customer Interactions and Doubles Drop-Off Rates for ecoATM in Key Test Markets
+  /case-studies/epson-case-study/
+     T-ROC Helps Epson Become the #1 Printer Brand in North America with Field Teams Driving Inkjet Sales
+  /case-studies/hisense-case-study/
+     T-ROC Drives Record Unit Growth for Hisense with Targeted Retail Expansion and $4.6 Million in Revenue Gains
+  /case-studies/hisense-mystery-shopping-case-study/
+     T-ROC Delivers 97 Percent Execution in 1600+ Lowe’s Stores for Hisense Merchandising Blitz
+  /case-studies/mattress-warehouse-case-study/
+     T-ROC Powers 300+ Store Evaluations for Mattress Warehouse with Real-Time Reporting and Competitive Intelligence
+  /case-studies/moneygram-case-study/
+     T-ROC Conducts 400+ Monthly Compliance Audits for MoneyGram Across 4700 Walmart Locations
+  /case-studies/pdg-powersports-case-study/
+     T-ROC Drives $1 Million in Sales for PDG Powersports in Just 8 Weeks Across Costco Road Shows
+  /case-studies/samsung-case-study/
+     "T-ROC Launches 3 Samsung Experience Stores in Just 90 Days, Driving $2 Million in Sales Within 45 Days"
+  /case-studies/t-mobile-case-study/
+     T-ROC Delivers 95% Sales and Ops Performance for T-Mobile Across 74 Stores
+  /case-studies/tcl-case-study/
+     "T-ROC Helps TCL Grow into 5,000 Retail Stores and Surpass Monthly Sales Goals"
+  /case-studies/trend-micro-case-study/
+     From 20 to 50% Market Share—T-ROC Powers Trend Micro’s Retail Growth and Store Coverage
+  /case-studies/us-cellular-case-study/
+     T-ROC Drives Seamless Retail Management for UScellular from Product Launches to In-Store Demos
+  /case-studies/walmart-assembly-case-study/
+     "T-ROC Assembles 26,000 to 36,000 Units Weekly for Walmart, Including Bikes and Furniture"
