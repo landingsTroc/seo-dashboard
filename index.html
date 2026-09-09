@@ -164,27 +164,38 @@
   </header>
 
   <div id="error-slot"></div>
-
-  <!-- KPIs -->
+  <!-- Where we are. Hand-written, replaced with each report — not auto-refreshed. -->
   <section>
-    <div class="sec-head"><h2>Core metrics</h2><span class="small" id="kpi-note"></span></div>
-    <div class="kpis" id="kpis"></div>
-  </section>
-
-  <!-- Trend -->
-  <section>
-    <div class="sec-head"><h2>Organic traffic trend</h2><span class="small">Monthly estimate</span></div>
-    <div class="card">
-      <svg class="chart" id="trend" viewBox="0 0 900 260" role="img" aria-label="Monthly organic traffic trend"></svg>
-      <details>
-        <summary class="small" style="cursor:pointer">View data table</summary>
-        <div class="t-wrap" style="margin-top:8px">
-          <table><thead><tr><th>Month</th><th class="num">Organic</th><th class="num">Paid</th></tr></thead>
-          <tbody id="trend-tbody"></tbody></table>
-        </div>
-      </details>
+    <div class="sec-head">
+      <h2>Where we are</h2>
+      <span class="small">Measured in Search Console &middot; from the <a href="reports/seo-report-2026-09-09.html">performance report of September 9, 2026</a></span>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><span class="lbl">Clicks in August</span><span class="val" style="color:var(--good)">1,778</span><span class="sub">+44% vs July, on 7% fewer impressions</span></div>
+      <div class="kpi"><span class="lbl">Site CTR, August</span><span class="val" style="color:var(--good)">0.569%</span><span class="sub">double June's 0.285%</span></div>
+      <div class="kpi"><span class="lbl">Non-branded clicks, 90 days</span><span class="val" style="color:var(--warn)">258</span><span class="sub">13.6% of all clicks</span></div>
+      <div class="kpi"><span class="lbl">Queued for deletion</span><span class="val" style="color:var(--crit)">171,749</span><span class="sub">impressions on 11 pages &mdash; list frozen</span></div>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <h3 style="font-size:.98rem">The August work is paying</h3>
+        <p class="small">August produced <strong>1,778 clicks against July's 1,235</strong> &mdash; up 44% from 7% fewer impressions &mdash; and site CTR has doubled since June (0.285% &rarr; 0.569%). September is holding at 54.8 clicks a day, so this is not a one-month spike. The title repair, the hidden-text removal and the snippet cleanup all landed in that window.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">The prune list is frozen</h3>
+        <p class="small">11 of the 210 URLs still queued for deletion carry <strong>171,749 impressions at an average position of 7.6</strong> &mdash; 15.8% of all site visibility, including the second and third most-seen pages. The list was built from modelled zero-traffic data before Search Console access existed. Nothing further gets deleted until it is re-screened.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">Site CTR is a diagnostic, not a target</h3>
+        <p class="small">Titles are correct on nine of the ten biggest pages, yet <strong>68.5% of impressions come from queries Google will not name</strong> &mdash; full-sentence, AI-assistant-shaped searches that do not produce clicks by design. Chasing a 3&ndash;5% benchmark is not achievable while that pool grows. <strong>Clicks and non-branded clicks are the honest KPIs.</strong></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">Next, in order</h3>
+        <p class="small">1. Re-screen the 210 prune URLs against measured impressions. 2. Rewrite titles on the 25 highest-impression pages &mdash; 35.3% of visibility at 0.241% CTR, worth ~2,900 clicks a quarter. 3. Build the pop-up and experiential hub: 79,416 impressions, no URL owns it. <a href="reports/work-tracker.html">Full tracker &rarr;</a></p>
+      </div>
     </div>
   </section>
+
 
   <!-- Search Console -->
   <section>
@@ -202,6 +213,27 @@
       <span class="small" id="wow-range"></span>
     </div>
     <div id="wow-slot"></div>
+  </section>
+
+  <!-- KPIs -->
+  <section>
+    <div class="sec-head"><h2>Ahrefs estimates</h2><span class="small" id="kpi-note"></span></div>
+    <div class="kpis" id="kpis"></div>
+  </section>
+
+  <!-- Trend -->
+  <section>
+    <div class="sec-head"><h2>Organic traffic trend</h2><span class="small">Ahrefs model, not measured clicks</span></div>
+    <div class="card">
+      <svg class="chart" id="trend" viewBox="0 0 900 260" role="img" aria-label="Monthly organic traffic trend"></svg>
+      <details>
+        <summary class="small" style="cursor:pointer">View data table</summary>
+        <div class="t-wrap" style="margin-top:8px">
+          <table><thead><tr><th>Month</th><th class="num">Organic</th><th class="num">Paid</th></tr></thead>
+          <tbody id="trend-tbody"></tbody></table>
+        </div>
+      </details>
+    </div>
   </section>
 
   <!-- Brand split + CWV -->
@@ -253,17 +285,17 @@
     <div class="sec-head"><h2>Reports</h2><span class="small">Point-in-time analysis, not auto-refreshed</span></div>
     <div class="grid-2">
       <div class="card">
+        <h3 style="font-size:.98rem">SEO performance report &mdash; September 9, 2026</h3>
+        <p class="small">A full quarter of measured Search Console data: August delivered 44% more clicks than July on 7% fewer impressions. Also flags 11 pages carrying 15.8% of site visibility that are still queued for deletion.</p>
+        <p class="small"><a href="reports/seo-report-2026-09-09.html">Read the report</a></p>
+      </div>
+      <div class="card">
         <h3 style="font-size:.98rem">SEO Performance &amp; Recovery Plan — August 2026</h3>
         <p class="small">Built on measured Search Console clicks: the consolidation verdict, the 0.33% CTR problem, index coverage, and the 90-day roadmap.</p>
         <p class="small">
           <a href="reports/kpi-plan-2026-08-en.html">Read online</a> ·
           <a href="reports/kpi-plan-2026-08-en.pdf">PDF</a>
         </p>
-      </div>
-      <div class="card">
-        <h3 style="font-size:.98rem">SEO performance report &mdash; September 9, 2026</h3>
-        <p class="small">A full quarter of measured Search Console data: August delivered 44% more clicks than July on 7% fewer impressions. Also flags 11 pages carrying 15.8% of site visibility that are still queued for deletion.</p>
-        <p class="small"><a href="reports/seo-report-2026-09-09.html">Read the report</a></p>
       </div>
       <div class="card">
         <h3 style="font-size:.98rem">Site review &mdash; September 2, 2026</h3>
@@ -418,7 +450,7 @@
     /* Per-source freshness. The page-level timestamp only says when the job ran —
        if one API failed, its numbers can be days old while the page still reads
        "updated just now". Each source states its own age. */
-    $("kpi-note").innerHTML = "Scope: " + esc(d.scope||"") + " · " + sourceAge(d, "ahrefs", "Ahrefs");
+    $("kpi-note").innerHTML = "Modelled, not measured · scope: " + esc(d.scope||"") + " · " + sourceAge(d, "ahrefs", "Ahrefs");
     var cn = $("cwv-note");
     if (cn) cn.innerHTML = "Chrome field data · " + sourceAge(d, "pageSpeed", "PageSpeed");
     var gr = $("gsc-range");
