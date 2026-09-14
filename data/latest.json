@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T16:34:36.891Z",
+  "generatedAt": "2026-09-14T17:47:27.040Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
@@ -11,12 +11,12 @@
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-09-14T16:34:36.891Z"
+      "asOf": "2026-09-14T17:47:27.041Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-09-14T16:34:36.891Z"
+      "asOf": "2026-09-14T17:47:27.041Z"
     }
   },
   "summary": {
@@ -551,7 +551,7 @@
       "cls": 8,
       "inp": 84,
       "inpScope": "url",
-      "performanceScore": 83
+      "performanceScore": 98
     }
   },
   "ahrefsHistory": [
