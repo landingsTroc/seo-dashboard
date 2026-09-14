@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-09-14T11:43:10.425Z",
+  "generatedAt": "2026-09-14T16:34:36.891Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
       "ok": false,
-      "error": "Ahrefs domain-rating → HTTP 403: {\n  \"error\": \"API units limit reached. Expected usage: 50, API units left: 0.\"\n}",
+      "error": null,
       "asOf": "2026-09-04T11:05:25.919Z"
     },
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-09-14T11:43:10.425Z"
+      "asOf": "2026-09-14T16:34:36.891Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-09-14T11:43:10.425Z"
+      "asOf": "2026-09-14T16:34:36.891Z"
     }
   },
   "summary": {
@@ -542,7 +542,7 @@
       "cls": 9,
       "inp": 154,
       "inpScope": "url",
-      "performanceScore": 52
+      "performanceScore": 68
     },
     "desktop": {
       "strategy": "desktop",
@@ -551,7 +551,7 @@
       "cls": 8,
       "inp": 84,
       "inpScope": "url",
-      "performanceScore": 96
+      "performanceScore": 83
     }
   },
   "ahrefsHistory": [
