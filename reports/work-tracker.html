@@ -134,7 +134,7 @@
     <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
     <div class="meta-row">
       <span>trocglobal.com</span>
-      <span>Last updated: September 14, 2026</span>
+      <span>Last updated: September 16, 2026</span>
       <span><a href="../">← Live dashboard</a></span>
       <span><a href="seo-report-2026-09-09.html">Performance report, Sep 9</a></span>
       <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
@@ -144,10 +144,10 @@
 
   <section>
     <div class="counts">
-      <div class="count"><span class="n n-done">45</span><span class="l">Completed</span></div>
-      <div class="count"><span class="n n-block">7</span><span class="l">Blocked on access</span></div>
+      <div class="count"><span class="n n-done">48</span><span class="l">Completed</span></div>
+      <div class="count"><span class="n n-block">8</span><span class="l">Blocked on access</span></div>
       <div class="count"><span class="n n-next">9</span><span class="l">Next up</span></div>
-      <div class="count"><span class="n n-watch">7</span><span class="l">Watching</span></div>
+      <div class="count"><span class="n n-watch">8</span><span class="l">Watching</span></div>
     </div>
 
     <div class="callout co-crit">
@@ -168,6 +168,9 @@
       <table>
         <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
         <tbody>
+            <tr><td class="date">Sep 16</td><td><strong>Redirect links cleared from page content</strong><br><span class="small">1,029 links across 205 posts and pages &middot; <a href="redirect-cleanup-2026-09-16.html">full report</a></span></td><td>Ahrefs flagged <strong>6,146 internal links pointing at URLs that redirect</strong>. Every one inside content is now fixed: <strong>841 links repointed, 165 dead &ldquo;related articles&rdquo; entries removed, 10 Gmail wrapper links unwrapped</strong>. Measured before and after by reading all 205 records back from the live site: <strong>1,032 redirecting links &rarr; 3</strong>, the three left needing a content decision. Every destination was confirmed to return <strong>200 in a single hop</strong> before any edit, and each write was <strong>read back and compared byte for byte</strong>. An invariant check &mdash; no link may vanish unless it is a known redirect or dead &mdash; caught a real bug before it shipped: an early version of the list-item removal would have deleted <strong>41 links to live pages</strong>. Verified afterwards that nothing else moved: <strong>142 theme files compared, 0 changed</strong>, no snippets added, no scripts, iframes or images added to any record. Two sets of backups held per record.</td><td><span class="chip c-done">Fixed</span></td></tr>
+            <tr><td class="date">Sep 16</td><td><strong>Root cause of the remaining 5,100 redirect links mapped</strong><br><span class="small">seven links in the site chrome, counted once per page</span></td><td>The rest is not a content problem. <strong>Four of the seven are real <code>services</code> records</strong> (IT Services, Support, Assembly, Automated Retail) whose true permalinks the menu prints and redirect rules then intercept &mdash; 2,448 links, and IT Services and Support leave the site for <strong>symbits.com</strong>. <strong>Two are ACF options</strong>, not theme code: the &ldquo;Schedule a Meeting&rdquo; button (<code>lets_talk_link</code>, 599) and the ES language link (<code>languages</code>, 613), both dashboard-only since <code>acf/v3</code> is not exposed over REST. The seventh is <code>nav.php</code> line 19 missing a trailing slash &mdash; and it is <strong>hidden by a CSS rule matching that exact URL</strong>, so correcting it would make a hidden menu item reappear. Also found: the nav&rsquo;s own &ldquo;services&rdquo; link points at <code>/services/</code>, <strong>which returns 403 to every visitor</strong>.</td><td><span class="chip c-next">Needs your decisions</span></td></tr>
+            <tr><td class="date">Sep 16</td><td><strong>Two Ahrefs alerts checked and dismissed</strong><br><span class="small">196 &ldquo;non-indexable&rdquo; pages &middot; 51 title mismatches</span></td><td>The &ldquo;196 pages became non-indexable and lost their titles&rdquo; export was <strong>a failed crawl, not a site fault</strong>: all 196 rows had an empty title and a dropped page rating, all returned 200, and not one carried a noindex tag. <strong>25 checked live &mdash; every one serves a proper title and <code>index, follow</code></strong>. It ran minutes after a cache purge while every page was rebuilding. The &ldquo;page and SERP titles differ&rdquo; report is <strong>mostly normal Google behaviour</strong>: ~16 stale index entries (three provably titles we replaced on Sep 9) and ~11 where Google appends the brand or its own site name. <strong>Six are real defects</strong> &mdash; titles over 60 characters that Google truncates, including <code>/careers/</code> carrying &ldquo;T-ROC&rdquo; twice.</td><td><span class="chip c-done">Diagnosed</span></td></tr>
             <tr><td class="date">Sep 14</td><td><strong>Analysis post on the 2026 store fleet</strong><br><span class="small">/store-closures-2026-field-coverage/ &middot; no existing page on the topic</span></td><td>Third post of the day, and the only one of the three aimed at a topic the site had <strong>no content on at all</strong> &mdash; a search for store-closure coverage returned nothing relevant. The angle is an operational consequence nobody else writes: <strong>Coresight tracked 3,321 closures in the first half of 2026, down 44.1%, but openings fell 23% too</strong>, and <strong>apparel alone was 32.8% of closures</strong> while value formats kept expanding. So a brand's door count can be flat while the banner mix behind it turns over &mdash; which changes visit duration, planogram format, receiving process and access rules, and quietly breaks a coverage plan renewed against last year's store list. Every figure attributed to Coresight, Retail TouchPoints or UBS and linked. Published with the standard Key takeaways block, eight FAQs, one canonical and a unique banner; linked from <code>/retail-execution/</code> and <code>/retail-management-services/</code>.</td><td><span class="chip c-done">Published</span></td></tr>
             <tr><td class="date">Sep 14</td><td><strong>Timely analysis post on Q4 execution</strong><br><span class="small">/holiday-retail-execution-2026/ &middot; sourced, not a service page</span></td><td>Checked for another unowned service cluster first and found none &mdash; <strong>automated retail alone already has more than 20 live pages</strong>, and every remaining striking-distance query belongs to merchandising or brand ambassadors. Writing another service page anywhere would have deepened the cannibalisation, so this one is deliberately a different content type: <strong>news analysis, which is the genre that actually performs here</strong> (the Walmart annual-report piece carries 35,064 impressions, the Walmart automation piece 25,192) and which competes with no service term. The angle is a real tension in verified data: <strong>NRF put 2025 holiday sales up 4.1% and over $1 trillion, and forecasts 4.4% growth for 2026, while Challenger recorded the smallest seasonal retail hiring since 2009</strong> &mdash; more volume, fewer hands. Every figure is attributed and linked to NRF and Challenger rather than asserted. Timed to mid-September, when Q4 reset windows and planogram freeze dates stop being flexible. Linked from both holiday pages and out to the reset post published the same day.</td><td><span class="chip c-done">Published</span></td></tr>
             <tr><td class="date">Sep 14</td><td><strong>New post on the store reset cluster</strong><br><span class="small">/store-reset-services/ &middot; 5,570 impressions, 0 clicks</span></td><td>Twelve reset queries &mdash; <strong>&ldquo;store reset services&rdquo;, &ldquo;planogram reset services&rdquo;, &ldquo;category reset services&rdquo;, &ldquo;retail planogram reset company&rdquo; and others &mdash; carry 5,570 impressions and not one click</strong>, most of them on page one. They were landing on <code>/store-resets-a-complete-guide.../</code>, an informational guide taking 16,417 impressions at 0.15%: commercial intent arriving at a how-to article. The cluster already had a cost page, a definition page, a grocery vertical page and two guides, but <strong>no page owning the head commercial term</strong>. Checked the alternatives first and rejected them: merchandising and brand ambassadors are the two most cannibalised clusters on the site (7 and 15 URLs), and every striking-distance query left belongs to one of them. Published with the standard Key takeaways block, eight FAQs, one canonical, a unique banner with alt text, and a section separating resets from routine merchandising. <strong>Linked from the three existing reset pages</strong> so the cluster has a hub rather than a sixth competitor. <strong>Re-measure in ~30 days.</strong></td><td><span class="chip c-done">Published</span></td></tr>
@@ -404,6 +407,7 @@
       <table>
         <thead><tr><th>Requested</th><th>Item</th><th>Blocks</th><th>Owner</th></tr></thead>
         <tbody>
+          <tr><td class="date">Sep 16</td><td><strong>Change two ACF options in the theme settings</strong><br><span class="small">the single biggest remaining win &mdash; 1,212 links</span></td><td>The &ldquo;Schedule a Meeting&rdquo; button reads from ACF option <code>lets_talk_link</code> and points at <code>/contact-form/</code>, which redirects &mdash; it should be <code>/contact/</code> (<strong>599 links</strong>). The &ldquo;ES&rdquo; language link reads from the <code>languages</code> repeater and sends visitors to an English page (<strong>613 links</strong>); either fix the row or switch off <code>show_language_dropdown</code>. <strong>ACF options are not exposed over REST on this install</strong> (<code>acf/v3</code> returns 404), so neither can be changed through the API. Two fields, about five minutes, fully reversible.</td><td><span class="chip c-block">WordPress admin</span></td></tr>
           <tr><td class="date">Sep 9</td><td><strong>Enable Yoast for the <code>case-studies</code> post type</strong></td><td>Yoast is switched off for that post type, so all <strong>34 case studies emit no canonical, no schema and no og:title</strong>, and their titles &mdash; 74 to 112 characters &mdash; cannot be changed through the API. Turning Yoast on for the type closes three logged issues at once. The WordPress title on these records is only the brand name, so the long string comes from the theme or an ACF field.</td><td><span class="chip c-block">WordPress admin</span></td></tr>
           <tr><td class="date">Sep 9</td><td><strong>Read the live WPCode snippet list</strong></td><td>Something replaces the <code>&lt;title&gt;</code> on <code>/retail-staffing-services/</code> after Yoast has produced the correct one, and Yoast emits nothing at all on six <code>/troc-videos/</code> URLs while working on the other thirteen. Neither behaviour appears in the snippets backed up on Aug 27. The <code>marketing_writer</code> account <strong>cannot read the <code>wpcode</code> post type over REST</strong>, so this needs an admin session or an admin application password.</td><td><span class="chip c-block">WordPress admin</span></td></tr>
           <tr>
@@ -501,6 +505,36 @@
       <table>
         <thead><tr><th>Date</th><th>Was believed</th><th>Corrected to</th><th>What settled it</th></tr></thead>
         <tbody>
+          <tr>
+            <td class="date">Sep 16</td>
+            <td>"203 of the 205 content records were written successfully"</td>
+            <td><strong>Only 8 had actually saved.</strong> The success check compared saved length against intended length with a 200-character tolerance, and a link swap changes only a handful of characters &mdash; so it could not tell a real write from a no-op. Re-run with byte-for-byte read-back: <strong>205 of 205 verified.</strong></td>
+            <td>Re-reading every record from the live site instead of trusting the write log</td>
+          </tr>
+          <tr>
+            <td class="date">Sep 16</td>
+            <td>"The seven sitewide header links are hardcoded strings in the theme"</td>
+            <td><strong>Only one is.</strong> Four are real <code>services</code> records whose permalinks the menu prints, two are <strong>ACF options</strong>, and the single theme line is <strong>hidden by a CSS rule matching that exact URL</strong> &mdash; so "fixing" it would make a hidden menu item reappear. The route is mostly data and settings, not code.</td>
+            <td>Reading the theme over SFTP and the records over REST</td>
+          </tr>
+          <tr>
+            <td class="date">Sep 16</td>
+            <td>"The host's firewall is stripping our content writes"</td>
+            <td><strong>It is not.</strong> Content built from the live record persists; content read from a file written by <code>Set-Content</code> is silently discarded &mdash; Windows CRLF line endings. Not permissions, not the WAF, and not body size: a 32&nbsp;KB body saved while one 215 characters shorter did not.</td>
+            <td>A controlled test on a draft record &mdash; append, multi-swap and a 40% deletion all persisted</td>
+          </tr>
+          <tr>
+            <td class="date">Sep 16</td>
+            <td>"196 pages lost their titles and became non-indexable" <span class="small">(Ahrefs, Sep 16)</span></td>
+            <td><strong>A failed crawl, not a site fault.</strong> All 196 rows had an empty title and a dropped page rating, all returned 200, and none carried a noindex tag. <strong>25 verified live: every one serves a proper title and <code>index, follow</code>.</strong> The crawl ran minutes after a cache purge while every page was rebuilding.</td>
+            <td>Live re-fetch of 25 of the affected URLs, plus robots and header checks</td>
+          </tr>
+          <tr>
+            <td class="date">Sep 16</td>
+            <td>"Google's 'TROC global' SERP suffix comes from a sloppy WordPress site title"</td>
+            <td><strong>The site title is already <code>T-ROC</code></strong>, with the correct tagline. The suffix is Google's own site-name feature. <strong>No setting to change</strong> &mdash; caught before it was sent as a recommendation.</td>
+            <td>Reading the site settings before recommending the edit</td>
+          </tr>
           <tr>
             <td class="date">Sep 9</td>
             <td>"The 210 remaining prune URLs are zero-traffic pages and can be deleted"</td>
