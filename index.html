@@ -194,8 +194,16 @@
         <p class="small">Ahrefs flagged <strong>6,146 internal links pointing at URLs that redirect</strong>. Every one inside page content is now fixed and verified &mdash; <strong>1,032 &rarr; 3</strong> across 205 posts and pages, with 142 theme files confirmed unchanged and no code added. The remaining ~5,100 are <strong>seven links in the site chrome</strong>, each counted once per page it renders on: two ACF options (1,212 links), four service records (2,448), and one nav link that CSS deliberately hides. <a href="reports/redirect-cleanup-2026-09-16.html">Full report &rarr;</a></p>
       </div>
       <div class="card">
+        <h3 style="font-size:.98rem">Clicks up 43% while impressions held flat</h3>
+        <p class="small">Last 30 days against the first 30 of the window: <strong>clicks 1,209 &rarr; 1,730</strong>, click-through rate <strong>0.36% &rarr; 0.52%</strong>, average position <strong>14.5 &rarr; 11.7</strong>, impressions &minus;2%. Since 16 September: three articles published against measured gaps, <strong>103 links to redirects repaired across 75 records</strong>, six 301-into-404 chains cleared, seven orphaned commercial pages connected and 40 Google-search wrapper links unwrapped. <a href="reports/progress-2026-09-30.html">Full report &rarr;</a></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">Correction: the case-studies fix is not a Yoast setting</h3>
+        <p class="small">Earlier guidance here named a Yoast toggle for the missing canonicals and descriptions. That was wrong. The toggle was already on: <strong>all 34 case studies, 79 videos and 4 ebooks are rendered by Webflow</strong>, not WordPress &mdash; their HTML opens with <code>data-wf-site</code> and WordPress never runs. <strong>117 URLs, and the fix lives in Webflow.</strong></p>
+      </div>
+      <div class="card">
         <h3 style="font-size:.98rem">Next, in order</h3>
-        <p class="small">1. Change two ACF options in the theme settings &mdash; <strong>1,212 redirect links, about five minutes</strong>. 2. Enable Yoast for the <code>case-studies</code> post type: closes 34 missing canonicals, 34 missing schema blocks and 19 titles with one toggle. 3. Press WP Engine on the <code>/services/</code> 403 &mdash; the main menu&rsquo;s &ldquo;services&rdquo; link returns an error to every visitor. 4. Re-screen the 210 prune URLs against measured impressions. <a href="reports/work-tracker.html">Full tracker &rarr;</a></p>
+        <p class="small">1. Press WP Engine on the <code>/services/</code> 403 &mdash; open since 19 August, <strong>619 inlinks</strong>, and the main menu&rsquo;s &ldquo;services&rdquo; link returns an error to every visitor. 2. Find who holds <strong>Webflow</strong>: it blocks three fixes across 117 URLs. 3. Two strings in the theme header clear <strong>about 800 redirect links</strong> site-wide. 4. Decide whether the 22 thin taxonomy archives should be indexed at all. <a href="reports/work-tracker.html">Full tracker &rarr;</a></p>
       </div>
     </div>
   </section>
