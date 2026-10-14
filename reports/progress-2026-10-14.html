@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progress Update &middot; October 14, 2026 &middot; trocglobal.com</title>
+<style>
+  :root{
+    --bg:#F5F7F9; --surface:#FFFFFF; --surface-2:#FBFCFD;
+    --ink:#121A24; --muted:#586574; --faint:#8A96A5;
+    --line:#E4E9EF; --line-strong:#D3DAE3;
+    --brand-grad:linear-gradient(90deg,#C65B08 0%,#DD1E7E 26%,#7F24E5 102%);
+    --brand-ink:#15171C;
+    --navy:#6B1FC4; --navy-soft:#7F24E5; --navy-wash:#F2ECFD;
+    --up:#157347; --up-bg:#E7F4EC;
+    --warn:#B45309; --warn-bg:#FBEEDF;
+    --crit:#B02A37; --crit-bg:#FBEAEC;
+    --shadow:0 1px 2px rgba(18,26,36,.04), 0 8px 24px -12px rgba(18,26,36,.12);
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root:where(:not([data-theme="light"])){
+      --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+      --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+      --line:#243040; --line-strong:#2E3C4E;
+      --navy:#B98CF5; --navy-soft:#C9A6F8; --navy-wash:#1E1630;
+      --up:#54D183; --up-bg:#12291C;
+      --warn:#F0A64B; --warn-bg:#2C2110;
+      --crit:#F1808B; --crit-bg:#2C1518;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0D1219; --surface:#151D27; --surface-2:#111922;
+    --ink:#E9EEF4; --muted:#97A4B4; --faint:#6A7787;
+    --line:#243040; --line-strong:#2E3C4E;
+    --navy:#B98CF5; --navy-soft:#C9A6F8; --navy-wash:#1E1630;
+    --up:#54D183; --up-bg:#12291C;
+    --warn:#F0A64B; --warn-bg:#2C2110;
+    --crit:#F1808B; --crit-bg:#2C1518;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 30px -14px rgba(0,0,0,.55);
+  }
+
+  *{ box-sizing:border-box; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:48px 22px 90px;
+    display:flex; flex-direction:column; gap:44px; }
+  .wrap > *{ min-width:0; }
+
+  h1,h2,h3{ margin:0; line-height:1.25; text-wrap:balance; }
+  h1{ font-size:clamp(1.7rem,4vw,2.3rem); font-weight:650; letter-spacing:-.02em; }
+  h2{ font-size:1.22rem; font-weight:640; }
+  p{ margin:0; max-width:70ch; }
+  .eyebrow{ font-size:.71rem; font-weight:680; letter-spacing:.13em;
+    text-transform:uppercase; color:var(--navy); }
+  .small{ font-size:.85rem; color:var(--muted); }
+
+  .brandbar{ background:var(--brand-ink); }
+  .brandbar .inner{ max-width:1180px; margin:0 auto; padding:20px 22px;
+    display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+  .brandbar svg{ height:38px; width:auto; color:#FFFFFF; display:block; }
+  .brandbar .kicker{ font-size:.72rem; font-weight:680; letter-spacing:.14em;
+    text-transform:uppercase; color:rgba(255,255,255,.62); }
+  .brandrule{ height:4px; background:var(--brand-grad); }
+  header.top{ border-bottom:3px solid transparent; border-image:var(--brand-grad) 1; padding-bottom:20px;
+    display:flex; flex-direction:column; gap:10px; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:6px 18px; font-size:.82rem; color:var(--faint); }
+
+  section{ display:flex; flex-direction:column; gap:16px; min-width:0; }
+  section > *{ min-width:0; }
+  .sec-head{ display:flex; flex-direction:column; gap:6px;
+    border-bottom:1px solid var(--line-strong); padding-bottom:10px; }
+
+  .counts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .count{ background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:15px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:3px; }
+  .count .n{ font-size:1.9rem; font-weight:660; letter-spacing:-.03em;
+    font-variant-numeric:tabular-nums; line-height:1; }
+  .count .l{ font-size:.76rem; color:var(--muted); font-weight:560; }
+  .n-done{ color:var(--up); } .n-block{ color:var(--crit); }
+  .n-next{ color:var(--warn); } .n-watch{ color:var(--navy); }
+
+  .t-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:10px;
+    background:var(--surface); min-width:0; max-width:100%; }
+  table{ border-collapse:collapse; width:100%; font-size:.88rem; min-width:560px; }
+  th,td{ text-align:left; padding:10px 13px; border-bottom:1px solid var(--line); vertical-align:top; }
+  thead th{ background:var(--surface-2); font-size:.7rem; text-transform:uppercase;
+    letter-spacing:.07em; color:var(--muted); font-weight:660; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  td.date{ white-space:nowrap; font-variant-numeric:tabular-nums; color:var(--faint); font-size:.82rem; }
+  code{ font-family:var(--mono); font-size:.85em; background:var(--navy-wash);
+    padding:1px 5px; border-radius:4px; color:var(--navy); }
+  a{ color:var(--navy-soft); }
+
+  .chip{ display:inline-flex; align-items:center; border-radius:100px; padding:2px 9px;
+    font-size:.7rem; font-weight:660; white-space:nowrap; }
+  .c-done{ background:var(--up-bg); color:var(--up); }
+  .c-block{ background:var(--crit-bg); color:var(--crit); }
+  .c-next{ background:var(--warn-bg); color:var(--warn); }
+  .c-info{ background:var(--navy-wash); color:var(--navy); }
+
+  .callout{ border-radius:10px; padding:16px 18px; display:flex; flex-direction:column;
+    gap:7px; font-size:.89rem; border:1px solid; }
+  .callout h3{ font-size:.92rem; }
+  .co-crit{ background:var(--crit-bg); border-color:var(--crit); color:var(--crit); }
+  .co-crit p{ color:var(--ink); }
+  .co-navy{ background:var(--navy-wash); border-color:var(--line-strong); }
+  .co-navy p{ color:var(--muted); }
+
+  footer{ border-top:1px solid var(--line-strong); padding-top:18px; font-size:.8rem;
+    color:var(--faint); display:flex; flex-direction:column; gap:7px; }
+  footer p{ max-width:none; }
+
+  @media (max-width:600px){ .wrap{ padding:30px 14px 60px; gap:34px; } }
+</style>
+</head>
+<body>
+
+<div class="brandbar">
+  <div class="inner">
+     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 606.5 163.1" xml:space="preserve"> <style type="text/css"> .st0{fill:currentColor;} .st1{fill:url(#SVGID_1_);} .st2{fill:url(#SVGID_00000007398182552389237400000014547051001265628063_);} .st3{opacity:0.2;} .st4{fill:url(#SVGID_00000038372051776067771770000005244135681748001982_);} .st5{fill:url(#SVGID_00000179629952958335063440000012070255141123673519_);} .st6{fill:url(#SVGID_00000036238257097821829220000014558426099364762534_);} .st7{fill:url(#SVGID_00000041279920748575890620000002667881884433786808_);} .st8{fill:url(#SVGID_00000044866818395195606230000005027126351018287238_);} </style> <g> <g id="Layer_2_00000136413840030005862630000008053133731079152814_"> <g id="Layer_1-2"> <polygon class="st0" points="0.1,40.2 38.8,40.1 39.2,153.4 67.5,153.3 67.2,40 105.9,39.9 105.8,14.8 0,15.2 "></polygon> <rect x="88.1" y="90.4" transform="matrix(1 -3.316120e-03 3.316120e-03 1 -0.3374 0.3767)" class="st0" width="50.5" height="23.2"></rect> <path class="st0" d="M263.3,52.1c-0.1-25.1-14.6-37.8-43.1-37.7l-63,0.2l0.5,138.2l28.8-0.1L186,39.9l32.6-0.1 c10.3,0,15.2,4.2,15.2,13.2c0,13.7-11.2,22.3-34.4,26.3l-1.4,0.2l0.1,13.4l42.1,59.8l35.7-0.1l-43.8-59.3 C252.8,82.4,263.3,68.6,263.3,52.1z"></path> <path class="st0" d="M526.9,37.5c12.7-0.1,25.4,2.3,37.1,7.3l2.3,1l-0.1-26.3l-1.1-0.4c-11.8-4.4-25.3-6.6-40.3-6.6 c-49.4,0.2-74.3,23.2-74.1,68.5c0.2,47.8,25.3,71.9,74.6,71.8c14.9-0.1,28.5-2.4,40.2-6.9l1.1-0.4l-0.1-26.3l-2.3,1 c-11.7,5-24.3,7.6-37.1,7.5c-31.6,0.1-47-15.2-47.1-46.8C480,51.8,495.3,37.6,526.9,37.5z"></path> <radialGradient id="SVGID_1_" cx="395.5869" cy="130.4847" r="92.05" gradientTransform="matrix(1.01 0 0 -0.99 4.09 162.1318)" gradientUnits="userSpaceOnUse"> <stop offset="4.000000e-02" style="stop-color:#A9D5E5"></stop> <stop offset="0.12" style="stop-color:#88C6DD"></stop> <stop offset="0.27" style="stop-color:#36A2C8"></stop> <stop offset="0.36" style="stop-color:#048BBB"></stop> <stop offset="0.47" style="stop-color:#056B9E"></stop> <stop offset="0.63" style="stop-color:#064076"></stop> <stop offset="0.71" style="stop-color:#072F66"></stop> <stop offset="0.73" style="stop-color:#072C60"></stop> <stop offset="0.84" style="stop-color:#081D3E"></stop> <stop offset="0.94" style="stop-color:#091429"></stop> <stop offset="1" style="stop-color:#091121"></stop> </radialGradient> <path class="st1" d="M442.2,80.8c0.2,44.4-48.4,71.8-86.3,75.5c-45.1,4.4-77.6-30.4-77.8-74.8S312.9,0.2,358.3,0 S442,36.4,442.2,80.8z"></path> <radialGradient id="SVGID_00000116919893497929301390000014746087021998370465_" cx="362.55" cy="151.3509" r="106.87" gradientTransform="matrix(1 0 0 -1 0 166.0018)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#CCE70B"></stop> <stop offset="2.000000e-02" style="stop-color:#BFE10E"></stop> <stop offset="7.000000e-02" style="stop-color:#ACD812"></stop> <stop offset="0.12" style="stop-color:#9ED215"></stop> <stop offset="0.19" style="stop-color:#96CE16"></stop> <stop offset="0.31" style="stop-color:#94CD17"></stop> <stop offset="0.7" style="stop-color:#588713"></stop> <stop offset="1" style="stop-color:#4A7110"></stop> </radialGradient> <path style="fill:url(#SVGID_00000116919893497929301390000014746087021998370465_);" d="M287.2,76.2c0.2-1.8-5.5-24.5-4.6-26.4 c8-15.7,19.7-29.3,34.7-38.7c11.3-7.1,26.2-12.1,38.8-5.5c4.7,2.4,8.5,6.2,10.9,10.8c7.5,15-1.8,32.9-6.1,47.3 c-2.7,9.2-4.8,18.7-4.2,28.3c0.5,7.5,3.2,15.5,9.6,19.4c10.9,6.6,24.9-1.9,33-9.2c8.9-7.9,15.5-18,22-27.9c2-3,4-6.1,6.1-9.1 c1.3-1.8,2.7-3.8,4.9-4.7c3.4-1.4,5.4,1.4,6.5,4.2c1.7,4.3,2.7,8.8,3.1,13.4c0.2,2.4,0.3,4.9,0.1,7.3c-0.1,1.3-0.2,2.6-0.4,3.9 c-0.3,1.2-0.6,2.4-0.8,3.7c0,0-8,34.2-23.2,41.4c-13.5,6.5-29.9,11.7-47.8,7.3s-41.9-16.8-46.6-34.6 c-3.1-11.9-12.2-20.8-19.9-29.8C296,68.6,285.5,88.3,287.2,76.2z"></path> <g class="st3"> <linearGradient id="SVGID_00000121966393869284529440000013464293852903704754_" gradientUnits="userSpaceOnUse" x1="313.1545" y1="71.353" x2="352.7646" y2="94.173" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000121966393869284529440000013464293852903704754_);" d="M307.9,37.7 c12.5,3.8,19.4,16.9,23.1,28.5c3.1,9.9,4.5,20.4,7.1,30.5c3.3,13,9.8,27.2,22.3,33.6c7.1,3.6,15.6,4.2,23.4,2.4 c6.1-1.4,11.9-4.1,17.1-7.7c0-0.6,4.4-3.4,5-4c1.7-1.5,3.3-3.1,4.9-4.8c3.1-3.4,5.9-7,8.5-10.7c5.3-7.6,10-15.6,15-23.4 c0.5-0.9,1.1-1.6,1.8-2.3c0.7-0.7,1.7-1,2.7-0.9c0.9,0.2,1.7,0.8,2.1,1.6c0.9,1.5,1.3,3.2,1.1,4.9c0.1-2.3,0.1-4.7-0.1-7 c-0.4-4.6-1.5-9.1-3.1-13.4c-1.1-2.8-3.1-5.6-6.5-4.2c-2.2,0.9-3.6,2.8-4.9,4.7c-2.1,3-4.1,6-6.1,9.1c-6.5,9.9-13.1,20-22,27.9 c-8.2,7.3-22.1,15.9-33,9.2c-6.4-3.9-9.1-11.9-9.6-19.4c-0.7-9.6,1.4-19.1,4.2-28.3c4.3-14.5,13.6-32.4,6.1-47.3 c-2.4-4.7-6.2-8.4-10.9-10.8c-12.7-6.6-27.5-1.6-38.9,5.5c-14.9,9.4-26.6,22.9-34.7,38.7c0,0,0,0,0,0.1 C287.6,40.8,296.3,34.2,307.9,37.7z"></path> <linearGradient id="SVGID_00000099631334421269823960000007522814617985570704_" gradientUnits="userSpaceOnUse" x1="342.9584" y1="19.5537" x2="382.5784" y2="42.3737" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000099631334421269823960000007522814617985570704_);" d="M441.6,89.9c0-0.2,0.1-0.3,0.1-0.5 s0-0.1,0-0.2C441.7,89.5,441.6,89.7,441.6,89.9z"></path> <linearGradient id="SVGID_00000127739122622968611090000016615814152169259945_" gradientUnits="userSpaceOnUse" x1="341.3204" y1="22.3502" x2="380.9504" y2="45.1802" gradientTransform="matrix(1 0 0 -1 0 166.0018)"> <stop offset="1.000000e-02" style="stop-color:#0B1102"></stop> <stop offset="1" style="stop-color:#151F06;stop-opacity:0"></stop> </linearGradient> <path style="fill:url(#SVGID_00000127739122622968611090000016615814152169259945_);" d="M442.1,85.7c0,0,0-0.1,0-0.2 c0-0.1,0-0.1,0-0.2C442.2,85.5,442.1,85.6,442.1,85.7z"></path> </g> <radialGradient id="SVGID_00000087384874031121145580000014169164962236265905_" cx="338.74" cy="90.2009" r="73.84" gradientTransform="matrix(1 0 0 -1 0 166.0018)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#F43E9C"></stop> <stop offset="0.42" style="stop-color:#F0047F"></stop> <stop offset="0.52" style="stop-color:#DF0476"></stop> <stop offset="0.72" style="stop-color:#B40360"></stop> <stop offset="0.96" style="stop-color:#780240"></stop> </radialGradient> <path style="fill:url(#SVGID_00000087384874031121145580000014169164962236265905_);" d="M400.9,125c-5.1,3.7-10.9,6.3-17.1,7.8 c-7.8,1.8-16.3,1.3-23.4-2.4c-12.5-6.4-19-20.7-22.3-33.6c-2.6-10.1-4-20.5-7.1-30.5c-3.7-11.7-10.6-24.8-23.1-28.5 c-16.3-4.9-26.9,10.1-29.6,24.1c-2.7,13.7-1.3,28.9,2.6,42.3c12.7,43.3,58.1,68.2,101.4,55.6c29.5-8.6,52.8-35.4,58.4-65.5 c0.7-3.9,2.7-10.1,0.3-13.8c-0.5-0.8-1.3-1.3-2.2-1.5c-1-0.1-2,0.2-2.7,0.9c-0.7,0.7-1.3,1.5-1.8,2.3c-5,7.8-9.6,15.8-15,23.4 c-2.6,3.8-5.5,7.3-8.5,10.7c-1.5,1.7-3.2,3.3-4.9,4.8C405.3,121.6,400.9,124.4,400.9,125z"></path> <radialGradient id="SVGID_00000025413948855085211120000004483712071800557500_" cx="324.2903" cy="43.0586" r="45.6" gradientTransform="matrix(1 -3.839715e-03 -3.839715e-03 -1 1.3771 164.4816)" gradientUnits="userSpaceOnUse"> <stop offset="0" style="stop-color:#FFBF00"></stop> <stop offset="0.35" style="stop-color:#FF8001"></stop> <stop offset="0.51" style="stop-color:#FF7601"></stop> <stop offset="0.77" style="stop-color:#FD5A00"></stop> <stop offset="1" style="stop-color:#FC3D00"></stop> </radialGradient> <path style="fill:url(#SVGID_00000025413948855085211120000004483712071800557500_);" d="M367.4,162.5 c-20.7,2.6-40.5-3.8-57.2-16.2c-8.3-6.2-17.3-15.1-19.6-24.8c-1.6-6.7-0.9-14.7,5.7-18.3c11.4-6.4,19.5,6.7,24.2,14.9 c5.4,9.3,12.1,18.1,21,24.2c13,9,30.1,11.3,45.5,7.7c8-1.9,15.7-5.2,22.6-9.6c3.4-2.2,6.7-4.6,9.8-7.2c5.1-4.2,7.9-9.4,8.5-8.2 s-10.1,14.9-23,23.8C393.8,156.5,381.8,160.7,367.4,162.5z"></path> </g> </g> <g> <path class="st0" d="M581.8,27.2c0-7.2,5.6-12.6,12.4-12.6s12.4,5.4,12.4,12.6c0,7.3-5.6,12.6-12.4,12.6S581.8,34.5,581.8,27.2z M604.4,27.2c0-6.2-4.3-10.8-10.2-10.8s-10.2,4.6-10.2,10.8c0,6.2,4.3,10.8,10.2,10.8S604.4,33.5,604.4,27.2z M589.3,20.4h6.1 c2.4,0,4.2,1.6,4.2,3.7c0,1.5-0.8,2.8-2.5,3.2v0.1c1.3,0.4,1.9,1.1,2.1,2.7c0.2,1.9,0.1,3.3,0.6,3.5v0.2h-2.5 c-0.4-0.2-0.5-1.7-0.6-3.1c-0.1-1.4-0.9-2.3-2.5-2.3h-2.2v5.4h-2.7V20.4z M591.9,26.3h2.9c1.5,0,2.2-0.8,2.2-1.9 c0-1.1-0.7-1.9-2.2-1.9h-2.9V26.3z"></path> </g> </g> </svg> 
+    <span class="kicker">Progress Update</span>
+  </div>
+</div>
+<div class="brandrule"></div>
+
+
+<div class="wrap">
+
+  <header class="top">
+    <span class="eyebrow">Progress update</span>
+    <h1>Two articles, 57 pages given FAQ schema, and one setting that would clear 436 audit errors at once</h1>
+    <p>Everything shipped since 30 September, the single page that explains most of the site&rsquo;s lost traffic, and the four items now waiting on access or a decision from someone else.</p>
+    <div class="meta-row">
+      <span class="chip">September 30 &ndash; October 14, 2026</span>
+      <span class="chip">Search Console: Jul 4 &ndash; Oct 2</span>
+      <span class="chip c-done">All figures verified live on 14 Oct</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-head">
+      <h2>Where the numbers stand</h2>
+      <p class="small">Ahrefs pulled 14 October; Search Console for the 91-day window ending 2 October.</p>
+    </div>
+    <div class="counts">
+      <div class="count"><span class="n n-done">2,712</span><span class="l">Modelled organic traffic &middot; was 2,146 on 30 Sep</span></div>
+      <div class="count"><span class="n n-done">158</span><span class="l">Keywords in the top three &middot; was 155</span></div>
+      <div class="count"><span class="n">4,721</span><span class="l">Search Console clicks &middot; 91 days</span></div>
+      <div class="count"><span class="n">44</span><span class="l">Domain Rating</span></div>
+    </div>
+    <p class="small">Ranking keywords moved from 442 to 390. That fall is expected and is not a loss: it follows the consolidation and the removal of duplicate pages that were ranking against each other. Traffic and top-three positions both rose while the keyword count fell, which is the pattern you want.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>The single biggest finding</h2>
+    </div>
+    <div class="callout co-crit">
+      <h3>One page ranks first for 3,700 searches a month and receives about 15 visits</h3>
+      <p><code>/what-is-a-brand-ambassador/</code> holds position 1 for &ldquo;brand ambassador meaning&rdquo;. Normal click-through for that position would be roughly 1,000 visits a month. The gap is around <strong>1,021 visits</strong>, and nothing else on the site comes close &mdash; the second-worst case is 45.</p>
+      <p>The cause is not a broken title. Ahrefs reports the search results for that query carry an <strong>AI Overview, image and video thumbnails, sitelinks and People Also Ask</strong>. Google answers the question itself. All six keywords in that cluster behave the same way.</p>
+      <p>So the win there is not the click, it is <strong>being cited inside the AI answer</strong>. The page already opened with a direct 30-word definition, which is right, but carried no FAQ, no schema and no comparison table. It now has seven questions with FAQPage markup, all answered from its own content. Chasing this with title tweaks would have been wasted effort.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>What shipped</h2>
+      <p class="small">Every change was written through the API with the previous value backed up per record and the saved result read back and compared.</p>
+    </div>
+
+    <h3>FAQ schema across 57 pages</h3>
+    <p>The full brief &mdash; all three rounds &mdash; is complete: <strong>57 URLs, every one carrying exactly one valid FAQPage, 306 questions in structured data, zero invalid blocks</strong>. Verified by parsing the live HTML of each page, not by searching for the tag.</p>
+    <p>A batch of 22 files was supplied. Auditing the pages first split them three ways, and only half needed the supplied content:</p>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Group</th><th>Pages</th><th>What they received</th></tr></thead>
+        <tbody>
+          <tr><td>No FAQ and no schema</td><td>11</td><td>The supplied questions as a visible FAQ, plus matching schema</td></tr>
+          <tr><td>Questions already visible, no schema</td><td>8</td><td>Schema generated from the questions already on the page; nothing visible changed</td></tr>
+          <tr><td>Already complete</td><td>3</td><td>Left alone</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Pasting the supplied files onto the eight that already had questions would have produced two contradicting FAQ sections on one page, and schema that disagrees with visible content breaches Google&rsquo;s guidelines.</p>
+
+    <div class="callout co-navy">
+      <h3>The supplied questions needed rewriting</h3>
+      <p>They were written as comprehension questions about each article &mdash; &ldquo;What is the article&rsquo;s main claim about how AI affects physical retail?&rdquo;, &ldquo;How does the article define B malls?&rdquo; &mdash; with <strong>62 self-referential phrases</strong> across 16 of the 22 files. Those validate as schema but nobody types them into Google and no AI assistant will cite them, which is the opposite of the brief&rsquo;s stated purpose. All 55 were rewritten into search form, keeping every fact from the source files.</p>
+    </div>
+
+    <h3>Two articles published against measured gaps</h3>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Article</th><th>Target</th><th>Why it was writable</th></tr></thead>
+        <tbody>
+          <tr><td>Point of Purchase Displays</td><td>&ldquo;point of purchase display&rdquo; 1,100/mo and &ldquo;pop display&rdquo; 700/mo, both difficulty 0</td><td>No page existed; every <code>pop-</code> slug on the site was pop-<em>up</em> events</td></tr>
+          <tr><td>Shelf Talkers</td><td>&ldquo;shelf talkers&rdquo; 1,500/mo and &ldquo;shelf talker&rdquo; 1,000/mo, difficulty 0</td><td>Slugs free, both URLs returned 404</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="small">Both carry Key takeaways, a comparison table, seven FAQs with FAQPage schema built from their own questions, and no external citations. They link to each other so neither depends on the blog listing for its only inbound link.</p>
+
+    <h3>Redirects: lost authority recovered</h3>
+    <p><code>/executive-management/</code> was returning 404 while receiving links from <strong>Crunchbase and YPO, both Domain Rating 91</strong>. It now resolves to <code>/company/</code> in a single hop.</p>
+    <p>Five case studies were also published twice &mdash; the same client at two URLs, with the older version carrying a bare title and half the content, and <strong>all ten sitting in the sitemap</strong>. Four now redirect to the fuller version; two are configured and waiting for their cache to expire.</p>
+    <p class="small">Before writing anything, all 268 existing rules were downloaded and checked for conflicts. That step was missing in September and caused a redirect loop. A final audit of the 267 active rules shows <strong>zero loops</strong>; the two chains this work created were cleaned up, and the three that remain pre-date it.</p>
+
+    <h3>Smaller repairs</h3>
+    <ul>
+      <li><strong>Nineteen Yoast fixes</strong> from the site audit: nine descriptions over the limit, six too short, two short titles, and <strong>one title that was completely empty</strong>. One description had <code>(158 characters)</code> literally written inside it; another contained a grammatical error.</li>
+      <li><strong>Eleven leadership profiles</strong> had no inbound link from anywhere on the site. They are now linked from the About page.</li>
+      <li><strong>Six competitor comparison pages</strong> now link to each other. Previously only one carried the block, and that block omitted one of the six.</li>
+      <li><strong>Three pages carried a complete second HTML document</strong> inside their content, emitting two titles and two <code>&lt;html&gt;</code> tags. All three repaired without losing their schema or styling.</li>
+      <li><strong>One duplicate H1</strong> corrected.</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>What the reports actually showed</h2>
+      <p class="small">Four audit exports described a larger problem than exists, or the wrong problem entirely.</p>
+    </div>
+
+    <h3>The &ldquo;site is down&rdquo; report was a crawl against an empty cache</h3>
+    <p>About 200 URLs returned 504. Ten minutes later the same URLs returned <strong>10 of 10 at 200</strong>. Cold renders take 8 to 25 seconds; warm ones take under three. The crawl ran two minutes before a cache purge from this side, so it met a site rebuilding every page.</p>
+    <p>The real defect underneath is genuine and pre-dates this work: <strong>the site depends entirely on its cache never emptying</strong>. The 94/100 Core Web Vitals score measures cached delivery, so it hides this completely.</p>
+
+    <h3>&ldquo;94 orphan pages&rdquo; is really three</h3>
+    <p>Building the site&rsquo;s link graph showed that <strong><code>/site-index/</code> alone is the only inbound link for 88 of the 94</strong>, and it returned 504 during that same crawl. One slow page failing explains the entire report. Only three pages genuinely have no links at all.</p>
+
+    <h3>&ldquo;83 pages where the title does not match&rdquo; is 16</h3>
+    <p>Google rewrites titles routinely; that is not a defect. <strong>Sixty-seven of the 83</strong> were Google adding or trimming &ldquo;- T-ROC&rdquo;. Three titles were genuinely weaker than Google&rsquo;s rewrite and were fixed, including the highest-traffic page in that report, whose title had lost its subject entirely.</p>
+
+    <h3>The Hindi search result is not a fault</h3>
+    <p>One page appears in Google with a Devanagari title. The page serves <strong>zero Hindi characters</strong> and declares English. It is Google&rsquo;s own translation for Hindi queries from India. The eleven language-prefixed URLs all canonicalise correctly to the English original.</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Blocked, and on whom</h2>
+      <p class="small">None of this can move from the WordPress side.</p>
+    </div>
+    <div class="callout co-crit">
+      <h3>One WP Engine setting clears 436 audit errors</h3>
+      <p>Every address with <code>www</code> does this: <code>https://www.trocglobal.com/x/</code> redirects to <code><strong>http://</strong>trocglobal.com/x/</code>, which then redirects back to HTTPS. Two hops, one of them insecure, on every URL.</p>
+      <p>That is why &ldquo;HTTPS to HTTP redirect: 218&rdquo; and &ldquo;Redirect chain: 218&rdquo; report the same number &mdash; <strong>they are the same 218 URLs</strong>. All 267 redirect rules were checked and none points at HTTP, so this sits at platform level. The ask is simply that the www redirect keeps the HTTPS scheme.</p>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Item</th><th>Scale</th><th>Needs</th></tr></thead>
+        <tbody>
+          <tr><td>Titles, descriptions and schema on case studies, videos and ebooks</td><td>59 URLs</td><td><strong>Webflow access.</strong> Blocked since 30 August. 25 titles and 34 descriptions are written and waiting</td></tr>
+          <tr><td>www redirect downgrades to HTTP</td><td>436 audit errors</td><td><strong>WP Engine.</strong> One setting</td></tr>
+          <tr><td><code>/services/</code> returns 403</td><td>619 inlinks</td><td><strong>WP Engine support.</strong> The 301 is staged and fires when the block lifts</td></tr>
+          <tr><td>23 empty case-study archives, indexed and in the sitemap</td><td>23 URLs</td><td><strong>Three toggles in Yoast.</strong> Not reachable through the API</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout co-navy">
+      <h3>On the Webflow block</h3>
+      <p>The work there is already done twice over. <strong>Thirty-three of the 34 case studies already have a Yoast title written, and all 34 have a description</strong> &mdash; Webflow discards every one of them. The page storing &ldquo;Samsung Experience Stores Case Study | T-ROC&rdquo; serves Google the word &ldquo;Samsung&rdquo;. Add the 25 titles and 34 descriptions written here and that is three rounds of finished work that never reaches a search engine.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Next, in order</h2>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Action</th><th>Why it is in this position</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Fix the www redirect at WP Engine</td><td>One setting, 436 audit errors, and it removes an insecure hop on every external link that uses www</td></tr>
+          <tr><td>2</td><td>Get Webflow access to someone</td><td>59 URLs, six weeks blocked, and the content is already written three times over</td></tr>
+          <tr><td>3</td><td>Set the three Yoast toggles</td><td>Two minutes. Removes 23 empty pages from both the index and the sitemap</td></tr>
+          <tr><td>4</td><td>Diagnose the 8&ndash;25 second uncached render</td><td>The site is one cache failure away from being unusable, and no dashboard shows it</td></tr>
+          <tr><td>5</td><td>Consolidate <code>/aisle-end-cap/</code> into <code>/endcap-display/</code></td><td>257 words competing with 1,084 for a term sitting at position 12 with difficulty 1</td></tr>
+          <tr><td>6</td><td>Re-measure the two new articles</td><td>Around 5 and 12 November</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>Prepared 14 October 2026 &middot; trocglobal.com &middot; search figures from the Google Search Console API for the 91-day window ending 2 October; ranking, keyword and backlink figures from the Ahrefs API v3 pulled 14 October.</p>
+    <p>No theme files were modified and no code snippets were added. Backups of the previous value are held per record for every page edited, and all 268 redirect rules were read and checked for conflicts before any rule was written.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
