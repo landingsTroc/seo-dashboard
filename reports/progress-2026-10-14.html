@@ -245,16 +245,16 @@
       <p class="small">None of this can move from the WordPress side.</p>
     </div>
     <div class="callout co-crit">
-      <h3>One WP Engine setting clears 436 audit errors</h3>
+      <h3>One Cloudflare rule clears 436 audit errors</h3>
       <p>Every address with <code>www</code> does this: <code>https://www.trocglobal.com/x/</code> redirects to <code><strong>http://</strong>trocglobal.com/x/</code>, which then redirects back to HTTPS. Two hops, one of them insecure, on every URL.</p>
-      <p>That is why &ldquo;HTTPS to HTTP redirect: 218&rdquo; and &ldquo;Redirect chain: 218&rdquo; report the same number &mdash; <strong>they are the same 218 URLs</strong>. All 267 redirect rules were checked and none points at HTTP, so this sits at platform level. The ask is simply that the www redirect keeps the HTTPS scheme.</p>
+      <p>That is why &ldquo;HTTPS to HTTP redirect: 218&rdquo; and &ldquo;Redirect chain: 218&rdquo; report the same number &mdash; <strong>they are the same 218 URLs</strong>. All 267 WordPress redirect rules were checked and none points at HTTP. The layer was then identified by header: the www response carries <strong>no <code>X-Cache</code> headers at all</strong>, while a WordPress redirect on the same site does All 267 redirect rules were checked and none points at HTTP, so this sits at platform level. The ask is simply that the www redirect keeps the HTTPS scheme.mdash; so <strong>Cloudflare answers it directly and the request never reaches the server</strong>. The ask is that the Cloudflare rule keeps the HTTPS scheme.</p>
     </div>
     <div class="t-wrap">
       <table>
         <thead><tr><th>Item</th><th>Scale</th><th>Needs</th></tr></thead>
         <tbody>
           <tr><td>Titles, descriptions and schema on case studies, videos and ebooks</td><td>59 URLs</td><td><strong>Webflow access.</strong> Blocked since 30 August. 25 titles and 34 descriptions are written and waiting</td></tr>
-          <tr><td>www redirect downgrades to HTTP</td><td>436 audit errors</td><td><strong>WP Engine.</strong> One setting</td></tr>
+          <tr><td>www redirect downgrades to HTTP</td><td>436 audit errors</td><td><strong>Cloudflare.</strong> One redirect rule</td></tr>
           <tr><td><code>/services/</code> returns 403</td><td>619 inlinks</td><td><strong>WP Engine support.</strong> The 301 is staged and fires when the block lifts</td></tr>
           <tr><td>23 empty case-study archives, indexed and in the sitemap</td><td>23 URLs</td><td><strong>Three toggles in Yoast.</strong> Not reachable through the API</td></tr>
         </tbody>
@@ -274,7 +274,7 @@
       <table>
         <thead><tr><th>#</th><th>Action</th><th>Why it is in this position</th></tr></thead>
         <tbody>
-          <tr><td>1</td><td>Fix the www redirect at WP Engine</td><td>One setting, 436 audit errors, and it removes an insecure hop on every external link that uses www</td></tr>
+          <tr><td>1</td><td>Fix the www redirect in Cloudflare</td><td>One setting, 436 audit errors, and it removes an insecure hop on every external link that uses www</td></tr>
           <tr><td>2</td><td>Get Webflow access to someone</td><td>59 URLs, six weeks blocked, and the content is already written three times over</td></tr>
           <tr><td>3</td><td>Set the three Yoast toggles</td><td>Two minutes. Removes 23 empty pages from both the index and the sitemap</td></tr>
           <tr><td>4</td><td>Diagnose the 8&ndash;25 second uncached render</td><td>The site is one cache failure away from being unusable, and no dashboard shows it</td></tr>

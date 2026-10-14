@@ -198,8 +198,8 @@
         <p class="small"><code>/what-is-a-brand-ambassador/</code> ranks <strong>first for 3,700 searches a month and gets about 15 visits</strong>. Not a broken title: that result carries an <strong>AI Overview, image and video thumbnails, sitelinks and People Also Ask</strong>, and all six keywords in the cluster behave the same. The win there is the citation, not the click &mdash; the page now carries seven questions with FAQPage schema. <a href="reports/progress-2026-10-14.html">Full report &rarr;</a></p>
       </div>
       <div class="card">
-        <h3 style="font-size:.98rem">One WP Engine setting would clear 436 audit errors</h3>
-        <p class="small">Every <code>www</code> address redirects to <strong>HTTP</strong> before bouncing back to HTTPS &mdash; two hops, one insecure, on every URL. That is why &ldquo;HTTPS to HTTP: 218&rdquo; and &ldquo;Redirect chain: 218&rdquo; show the same number: <strong>they are the same 218 URLs</strong>. All 267 redirect rules were checked and none points at HTTP, so this sits at platform level.</p>
+        <h3 style="font-size:.98rem">One Cloudflare rule would clear 436 audit errors</h3>
+        <p class="small">Every <code>www</code> address redirects to <strong>HTTP</strong> before bouncing back to HTTPS &mdash; two hops, one insecure, on every URL. That is why &ldquo;HTTPS to HTTP: 218&rdquo; and &ldquo;Redirect chain: 218&rdquo; show the same number: <strong>they are the same 218 URLs</strong>. All 267 WordPress rules were checked and none points at HTTP; the www response carries no <code>X-Cache</code> header while a WordPress redirect does, so <strong>Cloudflare answers it directly</strong>.</p>
       </div>
       <div class="card">
         <h3 style="font-size:.98rem">FAQ schema complete: 57 pages, 306 questions, zero invalid</h3>
@@ -215,7 +215,7 @@
       </div>
       <div class="card">
         <h3 style="font-size:.98rem">Next, in order</h3>
-        <p class="small">1. <strong>Fix the www redirect at WP Engine</strong> &mdash; one setting clears <strong>436 audit errors</strong> and removes an insecure hop from every external link using www. 2. Get <strong>Webflow</strong> access to someone: 59 URLs, blocked since 30 August, and the content is already written three times over. 3. Three toggles in <strong>Yoast</strong> remove 23 empty archives from the index and the sitemap &mdash; two minutes. 4. Diagnose the <strong>8&ndash;25 second uncached render</strong>: the site is one cache failure from being unusable and no dashboard shows it. <a href="reports/work-tracker.html">Full tracker &rarr;</a></p>
+        <p class="small">1. <strong>Fix the www redirect in Cloudflare</strong> &mdash; one setting clears <strong>436 audit errors</strong> and removes an insecure hop from every external link using www. 2. Get <strong>Webflow</strong> access to someone: 59 URLs, blocked since 30 August, and the content is already written three times over. 3. Three toggles in <strong>Yoast</strong> remove 23 empty archives from the index and the sitemap &mdash; two minutes. 4. Diagnose the <strong>8&ndash;25 second uncached render</strong>: the site is one cache failure from being unusable and no dashboard shows it. <a href="reports/work-tracker.html">Full tracker &rarr;</a></p>
       </div>
     </div>
   </section>
