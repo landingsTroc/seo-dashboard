@@ -178,6 +178,18 @@
     </div>
     <div class="grid-2">
       <div class="card">
+        <h3 style="font-size:.98rem">Correction: Webflow never served the case studies</h3>
+        <p class="small">For two months I reported these URLs as blocked on Webflow access. That was wrong. <code>/case-studies/*</code> is served by <strong>WP&nbsp;Engine</strong>, and <strong>29 of 29 pages carry no WordPress output at all</strong> &mdash; a theme template prints an exported copy of the Webflow markup and never calls <code>wp_head()</code>. Editing in Webflow changes nothing live unless somebody re-exports and re-uploads. <strong>Yoast already holds a correct title and description for all 34</strong>, and the export discards every one. <a href="reports/progress-2026-10-27.html">Full report &rarr;</a></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">Fourteen pillar guides were printing <code>\n\n</code> at readers</h3>
+        <p class="small">The &ldquo;Complete Guide (2026)&rdquo; pages were pasted from Markdown without conversion: <strong>3,789 literal escape sequences</strong> stored as text, each wrapped in its own paragraph. <code>/retail-technology-guide/</code> alone served <strong>122 junk paragraphs</strong> through a 4,400-word article. No crawl report flags this, because crawlers do not grade prose. All fourteen are now clean, validated against identical plain text and identical tag count. <a href="reports/progress-2026-10-27.html">Full report &rarr;</a></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">If the Webflow licence lapses, the pages stay up and the styling dies</h3>
+        <p class="small">The HTML sits on WP&nbsp;Engine, so the URLs keep returning 200 and the text survives. But <strong>67 unique assets</strong> load from the Webflow CDN &mdash; the whole 575&nbsp;KB stylesheet, three scripts, the logo and about sixty images. All 67 answered 200 on 26 October and the three projects still report as published, so <strong>nothing has been withdrawn yet</strong>. Copying those assets onto WP&nbsp;Engine ends the dependency and should happen before anything is cancelled.</p>
+      </div>
+      <div class="card">
         <h3 style="font-size:.98rem">The August work is paying</h3>
         <p class="small">August produced <strong>1,778 clicks against July's 1,235</strong> &mdash; up 44% from 7% fewer impressions &mdash; and site CTR has doubled since June (0.285% &rarr; 0.569%). September is holding at 54.8 clicks a day, so this is not a one-month spike. The title repair, the hidden-text removal and the snippet cleanup all landed in that window.</p>
       </div>
