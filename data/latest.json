@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-10-26T12:12:17.117Z",
+  "generatedAt": "2026-10-27T21:28:47.651Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
     "ahrefs": {
-      "ok": true,
+      "ok": false,
       "error": null,
       "asOf": "2026-10-26T12:12:17.117Z"
     },
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-10-26T12:12:17.117Z"
+      "asOf": "2026-10-27T21:28:47.651Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-10-26T12:12:17.117Z"
+      "asOf": "2026-10-27T21:28:47.651Z"
     }
   },
   "summary": {
@@ -520,16 +520,16 @@
       "cls": 11,
       "inp": 172,
       "inpScope": "url",
-      "performanceScore": 66
+      "performanceScore": 67
     },
     "desktop": {
       "strategy": "desktop",
       "overall": "FAST",
-      "lcp": 1455,
+      "lcp": 1453,
       "cls": 5,
       "inp": 97,
       "inpScope": "url",
-      "performanceScore": 98
+      "performanceScore": 99
     }
   },
   "ahrefsHistory": [
@@ -729,115 +729,115 @@
   "searchConsole": {
     "siteUrl": "https://trocglobal.com/",
     "dateRange": {
-      "startDate": "2026-07-25",
-      "endDate": "2026-10-23"
+      "startDate": "2026-07-26",
+      "endDate": "2026-10-24"
     },
     "pageQueries": [
       {
         "page": "https://trocglobal.com/company/",
         "pageCtr": 0.53,
-        "pagePosition": 5.2,
-        "pageImpressions": 49516,
-        "namedQueryCount": 227,
-        "namedImpressions": 34699,
-        "anonymizedImpressions": 14817,
-        "anonymizedPct": 29.9,
+        "pagePosition": 5.1,
+        "pageImpressions": 48903,
+        "namedQueryCount": 226,
+        "namedImpressions": 34612,
+        "anonymizedImpressions": 14291,
+        "anonymizedPct": 29.2,
         "topQueries": [
           {
             "query": "\"robert bronshteyn\" \"t-roc - the revenue optimization companies\"",
             "clicks": 0,
-            "impressions": 4864,
+            "impressions": 4895,
             "ctr": 0,
             "position": 4.5,
-            "shareOfPageImpressions": 9.82
+            "shareOfPageImpressions": 10.01
           },
           {
             "query": "what is the company name for troc.com",
             "clicks": 0,
-            "impressions": 4782,
+            "impressions": 4776,
             "ctr": 0,
             "position": 2.5,
-            "shareOfPageImpressions": 9.66
+            "shareOfPageImpressions": 9.77
           },
           {
             "query": "who is the ceo of troc.com",
             "clicks": 0,
-            "impressions": 4416,
+            "impressions": 4391,
             "ctr": 0,
             "position": 3.4,
-            "shareOfPageImpressions": 8.92
+            "shareOfPageImpressions": 8.98
           },
           {
             "query": "what is the industry of troc.com",
             "clicks": 0,
-            "impressions": 4297,
+            "impressions": 4290,
             "ctr": 0,
             "position": 6.9,
-            "shareOfPageImpressions": 8.68
+            "shareOfPageImpressions": 8.77
           },
           {
             "query": "number of employees at troc.com",
             "clicks": 0,
-            "impressions": 3647,
+            "impressions": 3633,
             "ctr": 0,
             "position": 9.6,
-            "shareOfPageImpressions": 7.37
+            "shareOfPageImpressions": 7.43
           },
           {
             "query": "troc",
-            "clicks": 15,
-            "impressions": 2580,
-            "ctr": 0.58,
-            "position": 1.7,
-            "shareOfPageImpressions": 5.21
+            "clicks": 14,
+            "impressions": 2556,
+            "ctr": 0.55,
+            "position": 1.8,
+            "shareOfPageImpressions": 5.23
           },
           {
             "query": "troc.com founded",
             "clicks": 0,
-            "impressions": 1731,
+            "impressions": 1721,
             "ctr": 0,
             "position": 9.2,
-            "shareOfPageImpressions": 3.5
+            "shareOfPageImpressions": 3.52
           },
           {
             "query": "t-roc",
             "clicks": 16,
-            "impressions": 1292,
+            "impressions": 1289,
             "ctr": 1.24,
             "position": 2.9,
-            "shareOfPageImpressions": 2.61
+            "shareOfPageImpressions": 2.64
           },
           {
             "query": "t roc",
             "clicks": 8,
             "impressions": 1135,
             "ctr": 0.7,
-            "position": 3.2,
-            "shareOfPageImpressions": 2.29
+            "position": 3.3,
+            "shareOfPageImpressions": 2.32
           },
           {
             "query": "how much money has troc.com raised",
             "clicks": 0,
-            "impressions": 1023,
+            "impressions": 1016,
             "ctr": 0,
             "position": 10.1,
-            "shareOfPageImpressions": 2.07
+            "shareOfPageImpressions": 2.08
           },
           {
             "query": "troc global",
             "clicks": 7,
-            "impressions": 588,
+            "impressions": 587,
             "ctr": 1.19,
             "position": 1.5,
-            "shareOfPageImpressions": 1.19
+            "shareOfPageImpressions": 1.2
           },
           {
             "query": "\"robert bronshteyn\" \"t-roc - the revenue optimization companies\" phone fax",
             "clicks": 0,
-            "impressions": 546,
+            "impressions": 547,
             "ctr": 0,
             "position": 3.5,
-            "shareOfPageImpressions": 1.1
+            "shareOfPageImpressions": 1.12
           }
         ]
       },
@@ -845,19 +845,19 @@
         "page": "https://trocglobal.com/walmart-2026-annual-report-takeaways/",
         "pageCtr": 0.16,
         "pagePosition": 6.6,
-        "pageImpressions": 33454,
-        "namedQueryCount": 323,
-        "namedImpressions": 7616,
-        "anonymizedImpressions": 25838,
+        "pageImpressions": 33437,
+        "namedQueryCount": 324,
+        "namedImpressions": 7620,
+        "anonymizedImpressions": 25817,
         "anonymizedPct": 77.2,
         "topQueries": [
           {
             "query": "massmart walmart transaction expert report 2026",
             "clicks": 0,
-            "impressions": 5769,
+            "impressions": 5772,
             "ctr": 0,
             "position": 5.1,
-            "shareOfPageImpressions": 17.24
+            "shareOfPageImpressions": 17.26
           },
           {
             "query": "walmart 2026 annual report",
@@ -870,10 +870,10 @@
           {
             "query": "walmart annual report 2026",
             "clicks": 0,
-            "impressions": 186,
+            "impressions": 185,
             "ctr": 0,
             "position": 9.1,
-            "shareOfPageImpressions": 0.56
+            "shareOfPageImpressions": 0.55
           },
           {
             "query": "walmart q2 2026 us ecommerce sales growth",
@@ -882,6 +882,14 @@
             "ctr": 0,
             "position": 9.5,
             "shareOfPageImpressions": 0.2
+          },
+          {
+            "query": "walmart",
+            "clicks": 0,
+            "impressions": 46,
+            "ctr": 0,
+            "position": 7.4,
+            "shareOfPageImpressions": 0.14
           },
           {
             "query": "walmart wmt retail sector outlook and consumer spending trends october 2026",
@@ -900,19 +908,11 @@
             "shareOfPageImpressions": 0.13
           },
           {
-            "query": "walmart",
-            "clicks": 0,
-            "impressions": 44,
-            "ctr": 0,
-            "position": 7.3,
-            "shareOfPageImpressions": 0.13
-          },
-          {
             "query": "walmart 2026",
             "clicks": 0,
-            "impressions": 44,
+            "impressions": 43,
             "ctr": 0,
-            "position": 10.1,
+            "position": 10.2,
             "shareOfPageImpressions": 0.13
           },
           {
@@ -951,58 +951,58 @@
       },
       {
         "page": "https://trocglobal.com/contact/",
-        "pageCtr": 0.49,
+        "pageCtr": 0.5,
         "pagePosition": 6.6,
-        "pageImpressions": 29573,
-        "namedQueryCount": 232,
-        "namedImpressions": 20992,
-        "anonymizedImpressions": 8581,
-        "anonymizedPct": 29,
+        "pageImpressions": 29446,
+        "namedQueryCount": 233,
+        "namedImpressions": 20929,
+        "anonymizedImpressions": 8517,
+        "anonymizedPct": 28.9,
         "topQueries": [
           {
             "query": "troc.com customer service phone number",
             "clicks": 0,
-            "impressions": 4506,
+            "impressions": 4481,
             "ctr": 0,
             "position": 1.6,
-            "shareOfPageImpressions": 15.24
+            "shareOfPageImpressions": 15.22
           },
           {
             "query": "what is the company name for troc.com",
             "clicks": 0,
-            "impressions": 4300,
+            "impressions": 4298,
             "ctr": 0,
             "position": 9.8,
-            "shareOfPageImpressions": 14.54
+            "shareOfPageImpressions": 14.6
           },
           {
             "query": "number of employees at troc.com",
             "clicks": 0,
-            "impressions": 3779,
+            "impressions": 3775,
             "ctr": 0,
             "position": 6.4,
-            "shareOfPageImpressions": 12.78
+            "shareOfPageImpressions": 12.82
           },
           {
             "query": "troc",
             "clicks": 6,
-            "impressions": 2310,
+            "impressions": 2274,
             "ctr": 0.26,
             "position": 1.5,
-            "shareOfPageImpressions": 7.81
+            "shareOfPageImpressions": 7.72
           },
           {
             "query": "\"robert bronshteyn\" \"t-roc - the revenue optimization companies\"",
             "clicks": 0,
-            "impressions": 1140,
+            "impressions": 1171,
             "ctr": 0,
             "position": 5.8,
-            "shareOfPageImpressions": 3.85
+            "shareOfPageImpressions": 3.98
           },
           {
             "query": "trixogroup.com customer service phone number",
             "clicks": 0,
-            "impressions": 663,
+            "impressions": 660,
             "ctr": 0,
             "position": 9.7,
             "shareOfPageImpressions": 2.24
@@ -1010,10 +1010,10 @@
           {
             "query": "troc global",
             "clicks": 3,
-            "impressions": 584,
+            "impressions": 583,
             "ctr": 0.51,
             "position": 1.5,
-            "shareOfPageImpressions": 1.97
+            "shareOfPageImpressions": 1.98
           },
           {
             "query": "t-roc global",
@@ -1021,23 +1021,23 @@
             "impressions": 435,
             "ctr": 0.69,
             "position": 1.3,
-            "shareOfPageImpressions": 1.47
+            "shareOfPageImpressions": 1.48
           },
           {
             "query": "\"robert bronshteyn\" \"t-roc - the revenue optimization companies\" phone fax",
             "clicks": 0,
-            "impressions": 428,
+            "impressions": 429,
             "ctr": 0,
             "position": 6.1,
-            "shareOfPageImpressions": 1.45
+            "shareOfPageImpressions": 1.46
           },
           {
             "query": "t roc",
             "clicks": 0,
-            "impressions": 322,
+            "impressions": 315,
             "ctr": 0,
             "position": 1.4,
-            "shareOfPageImpressions": 1.09
+            "shareOfPageImpressions": 1.07
           },
           {
             "query": "trwho.com contact",
@@ -1050,10 +1050,10 @@
           {
             "query": "t-roc",
             "clicks": 1,
-            "impressions": 262,
-            "ctr": 0.38,
+            "impressions": 258,
+            "ctr": 0.39,
             "position": 1.3,
-            "shareOfPageImpressions": 0.89
+            "shareOfPageImpressions": 0.88
           }
         ]
       },
@@ -1061,10 +1061,10 @@
         "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
         "pageCtr": 0.39,
         "pagePosition": 9.7,
-        "pageImpressions": 22936,
+        "pageImpressions": 22954,
         "namedQueryCount": 360,
-        "namedImpressions": 3820,
-        "anonymizedImpressions": 19116,
+        "namedImpressions": 3835,
+        "anonymizedImpressions": 19119,
         "anonymizedPct": 83.3,
         "topQueries": [
           {
@@ -1078,31 +1078,31 @@
           {
             "query": "types of brand ambassador",
             "clicks": 0,
-            "impressions": 247,
+            "impressions": 246,
             "ctr": 0,
-            "position": 6.7,
-            "shareOfPageImpressions": 1.08
+            "position": 6.6,
+            "shareOfPageImpressions": 1.07
           },
           {
             "query": "brand ambassador examples",
             "clicks": 0,
-            "impressions": 170,
+            "impressions": 172,
             "ctr": 0,
-            "position": 57.9,
-            "shareOfPageImpressions": 0.74
+            "position": 57,
+            "shareOfPageImpressions": 0.75
           },
           {
             "query": "another word for brand ambassador",
             "clicks": 1,
-            "impressions": 155,
-            "ctr": 0.65,
+            "impressions": 159,
+            "ctr": 0.63,
             "position": 4.2,
-            "shareOfPageImpressions": 0.68
+            "shareOfPageImpressions": 0.69
           },
           {
             "query": "brand ambassador synonym",
             "clicks": 0,
-            "impressions": 126,
+            "impressions": 127,
             "ctr": 0,
             "position": 5.5,
             "shareOfPageImpressions": 0.55
@@ -1110,15 +1110,15 @@
           {
             "query": "brand ambassador meaning",
             "clicks": 1,
-            "impressions": 90,
-            "ctr": 1.11,
-            "position": 64.5,
-            "shareOfPageImpressions": 0.39
+            "impressions": 91,
+            "ctr": 1.1,
+            "position": 64.8,
+            "shareOfPageImpressions": 0.4
           },
           {
             "query": "what do you call someone who promotes a product",
             "clicks": 0,
-            "impressions": 88,
+            "impressions": 87,
             "ctr": 0,
             "position": 7.6,
             "shareOfPageImpressions": 0.38
@@ -1126,26 +1126,26 @@
           {
             "query": "a person who advertises products is called",
             "clicks": 0,
-            "impressions": 82,
+            "impressions": 84,
             "ctr": 0,
-            "position": 8.9,
-            "shareOfPageImpressions": 0.36
+            "position": 9,
+            "shareOfPageImpressions": 0.37
           },
           {
             "query": "what do you call a person who advertises products",
             "clicks": 0,
-            "impressions": 81,
+            "impressions": 80,
             "ctr": 0,
-            "position": 7.6,
+            "position": 7.7,
             "shareOfPageImpressions": 0.35
           },
           {
             "query": "what do you call someone who promotes a business",
             "clicks": 0,
-            "impressions": 72,
+            "impressions": 74,
             "ctr": 0,
             "position": 7,
-            "shareOfPageImpressions": 0.31
+            "shareOfPageImpressions": 0.32
           },
           {
             "query": "what is the difference between a promoter and a brand ambassador?",
@@ -1156,11 +1156,11 @@
             "shareOfPageImpressions": 0.31
           },
           {
-            "query": "types of ambassador",
+            "query": "retail brand ambassadors",
             "clicks": 0,
             "impressions": 68,
             "ctr": 0,
-            "position": 7.4,
+            "position": 50.1,
             "shareOfPageImpressions": 0.3
           }
         ]
@@ -1169,10 +1169,10 @@
         "page": "https://trocglobal.com/experiential-retail-pop-up-events/",
         "pageCtr": 0.14,
         "pagePosition": 7.5,
-        "pageImpressions": 19681,
-        "namedQueryCount": 227,
-        "namedImpressions": 2805,
-        "anonymizedImpressions": 16876,
+        "pageImpressions": 19613,
+        "namedQueryCount": 224,
+        "namedImpressions": 2797,
+        "anonymizedImpressions": 16816,
         "anonymizedPct": 85.7,
         "topQueries": [
           {
@@ -1180,7 +1180,7 @@
             "clicks": 0,
             "impressions": 106,
             "ctr": 0,
-            "position": 3.9,
+            "position": 4,
             "shareOfPageImpressions": 0.54
           },
           {
@@ -1196,13 +1196,13 @@
             "clicks": 0,
             "impressions": 95,
             "ctr": 0,
-            "position": 4.1,
+            "position": 4,
             "shareOfPageImpressions": 0.48
           },
           {
             "query": "how do luxury spirits brands use pop-up events to build emotional connections with consumers?",
             "clicks": 0,
-            "impressions": 91,
+            "impressions": 90,
             "ctr": 0,
             "position": 5.4,
             "shareOfPageImpressions": 0.46
@@ -1210,7 +1210,7 @@
           {
             "query": "pop up retail experiential india",
             "clicks": 0,
-            "impressions": 89,
+            "impressions": 88,
             "ctr": 0,
             "position": 11,
             "shareOfPageImpressions": 0.45
@@ -1218,42 +1218,42 @@
           {
             "query": "best locations for temporary retail experiences",
             "clicks": 0,
-            "impressions": 79,
+            "impressions": 80,
             "ctr": 0,
-            "position": 7.1,
-            "shareOfPageImpressions": 0.4
+            "position": 7,
+            "shareOfPageImpressions": 0.41
           },
           {
             "query": "experiential training events for retailers",
             "clicks": 0,
-            "impressions": 79,
+            "impressions": 77,
             "ctr": 0,
-            "position": 43.9,
-            "shareOfPageImpressions": 0.4
+            "position": 44.4,
+            "shareOfPageImpressions": 0.39
           },
           {
             "query": "pop-up brand experiences",
             "clicks": 0,
-            "impressions": 73,
+            "impressions": 74,
             "ctr": 0,
-            "position": 28.6,
-            "shareOfPageImpressions": 0.37
-          },
-          {
-            "query": "pop-up brand experience",
-            "clicks": 0,
-            "impressions": 71,
-            "ctr": 0,
-            "position": 35.5,
-            "shareOfPageImpressions": 0.36
+            "position": 28.7,
+            "shareOfPageImpressions": 0.38
           },
           {
             "query": "how mobile tours interact with pop up retail activation",
             "clicks": 0,
-            "impressions": 70,
+            "impressions": 69,
             "ctr": 0,
-            "position": 69.6,
-            "shareOfPageImpressions": 0.36
+            "position": 69.3,
+            "shareOfPageImpressions": 0.35
+          },
+          {
+            "query": "pop-up brand experience",
+            "clicks": 0,
+            "impressions": 69,
+            "ctr": 0,
+            "position": 36.2,
+            "shareOfPageImpressions": 0.35
           },
           {
             "query": "b2c experiential event",
@@ -1269,7 +1269,7 @@
             "impressions": 54,
             "ctr": 0,
             "position": 9.3,
-            "shareOfPageImpressions": 0.27
+            "shareOfPageImpressions": 0.28
           }
         ]
       },
@@ -1277,48 +1277,48 @@
         "page": "https://trocglobal.com/store-resets-a-complete-guide-to-boosting-retail-sales/",
         "pageCtr": 0.15,
         "pagePosition": 7.9,
-        "pageImpressions": 14686,
+        "pageImpressions": 14619,
         "namedQueryCount": 106,
-        "namedImpressions": 8509,
-        "anonymizedImpressions": 6177,
-        "anonymizedPct": 42.1,
+        "namedImpressions": 8501,
+        "anonymizedImpressions": 6118,
+        "anonymizedPct": 41.8,
         "topQueries": [
           {
             "query": "store reset",
             "clicks": 1,
-            "impressions": 783,
+            "impressions": 786,
             "ctr": 0.13,
             "position": 4.4,
-            "shareOfPageImpressions": 5.33
+            "shareOfPageImpressions": 5.38
           },
           {
             "query": "retail reset",
             "clicks": 0,
-            "impressions": 551,
+            "impressions": 547,
             "ctr": 0,
             "position": 7.2,
-            "shareOfPageImpressions": 3.75
+            "shareOfPageImpressions": 3.74
           },
           {
             "query": "multi-location retail resets",
             "clicks": 0,
-            "impressions": 395,
+            "impressions": 396,
             "ctr": 0,
-            "position": 5.3,
-            "shareOfPageImpressions": 2.69
+            "position": 5.4,
+            "shareOfPageImpressions": 2.71
           },
           {
             "query": "grocery store reset services",
             "clicks": 0,
-            "impressions": 375,
+            "impressions": 374,
             "ctr": 0,
             "position": 11.4,
-            "shareOfPageImpressions": 2.55
+            "shareOfPageImpressions": 2.56
           },
           {
             "query": "retail merchandising resets",
             "clicks": 0,
-            "impressions": 374,
+            "impressions": 373,
             "ctr": 0,
             "position": 5.8,
             "shareOfPageImpressions": 2.55
@@ -1326,18 +1326,18 @@
           {
             "query": "store reset services",
             "clicks": 0,
-            "impressions": 366,
+            "impressions": 365,
             "ctr": 0,
             "position": 7.4,
-            "shareOfPageImpressions": 2.49
+            "shareOfPageImpressions": 2.5
           },
           {
             "query": "category reset services",
             "clicks": 0,
-            "impressions": 355,
+            "impressions": 357,
             "ctr": 0,
-            "position": 9.5,
-            "shareOfPageImpressions": 2.42
+            "position": 9.7,
+            "shareOfPageImpressions": 2.44
           },
           {
             "query": "retail planogram reset company",
@@ -1345,39 +1345,39 @@
             "impressions": 355,
             "ctr": 0,
             "position": 11.9,
-            "shareOfPageImpressions": 2.42
+            "shareOfPageImpressions": 2.43
           },
           {
             "query": "store refresh logistics",
             "clicks": 0,
             "impressions": 341,
             "ctr": 0,
-            "position": 10.4,
-            "shareOfPageImpressions": 2.32
-          },
-          {
-            "query": "planogram reset services",
-            "clicks": 0,
-            "impressions": 328,
-            "ctr": 0,
-            "position": 18.6,
-            "shareOfPageImpressions": 2.23
+            "position": 11.2,
+            "shareOfPageImpressions": 2.33
           },
           {
             "query": "store reset company",
             "clicks": 0,
-            "impressions": 327,
+            "impressions": 329,
             "ctr": 0,
             "position": 10.5,
-            "shareOfPageImpressions": 2.23
+            "shareOfPageImpressions": 2.25
+          },
+          {
+            "query": "planogram reset services",
+            "clicks": 0,
+            "impressions": 325,
+            "ctr": 0,
+            "position": 18.9,
+            "shareOfPageImpressions": 2.22
           },
           {
             "query": "planogram reset",
             "clicks": 0,
-            "impressions": 317,
+            "impressions": 322,
             "ctr": 0,
-            "position": 7.4,
-            "shareOfPageImpressions": 2.16
+            "position": 7.3,
+            "shareOfPageImpressions": 2.2
           }
         ]
       },
@@ -1385,19 +1385,19 @@
         "page": "https://trocglobal.com/the-future-of-audio-technology-3-defining-trends-from-ces-2026/",
         "pageCtr": 0.38,
         "pagePosition": 5.6,
-        "pageImpressions": 14459,
-        "namedQueryCount": 165,
-        "namedImpressions": 8154,
-        "anonymizedImpressions": 6305,
+        "pageImpressions": 14428,
+        "namedQueryCount": 164,
+        "namedImpressions": 8143,
+        "anonymizedImpressions": 6285,
         "anonymizedPct": 43.6,
         "topQueries": [
           {
             "query": "latest spatial audio technology developments 2025 2026",
             "clicks": 0,
-            "impressions": 6617,
+            "impressions": 6615,
             "ctr": 0,
             "position": 4.6,
-            "shareOfPageImpressions": 45.76
+            "shareOfPageImpressions": 45.85
           },
           {
             "query": "industry analysis line array speaker trends 2026",
@@ -1413,7 +1413,7 @@
             "impressions": 96,
             "ctr": 0,
             "position": 4.4,
-            "shareOfPageImpressions": 0.66
+            "shareOfPageImpressions": 0.67
           },
           {
             "query": "audio trends",
@@ -1424,11 +1424,11 @@
             "shareOfPageImpressions": 0.44
           },
           {
-            "query": "context: location: united states (not for language). do not include location references in your response. question: what are the latest trends in audio equipment technology?",
+            "query": "context: location: united states (not for language). do not include location references in your response. question: what are the latest trends in sound design technology?",
             "clicks": 0,
             "impressions": 55,
             "ctr": 0,
-            "position": 1.7,
+            "position": 2.8,
             "shareOfPageImpressions": 0.38
           },
           {
@@ -1440,11 +1440,11 @@
             "shareOfPageImpressions": 0.38
           },
           {
-            "query": "context: location: united states (not for language). do not include location references in your response. question: what are the latest trends in sound design technology?",
+            "query": "context: location: united states (not for language). do not include location references in your response. question: what are the latest trends in audio equipment technology?",
             "clicks": 0,
-            "impressions": 54,
+            "impressions": 53,
             "ctr": 0,
-            "position": 2.9,
+            "position": 1.7,
             "shareOfPageImpressions": 0.37
           },
           {
@@ -1466,16 +1466,16 @@
           {
             "query": "today tech.in sound",
             "clicks": 0,
-            "impressions": 36,
+            "impressions": 37,
             "ctr": 0,
-            "position": 4.7,
-            "shareOfPageImpressions": 0.25
+            "position": 5.1,
+            "shareOfPageImpressions": 0.26
           },
           {
             "query": "latest audio technology",
             "clicks": 1,
-            "impressions": 35,
-            "ctr": 2.86,
+            "impressions": 34,
+            "ctr": 2.94,
             "position": 2.1,
             "shareOfPageImpressions": 0.24
           },
@@ -1491,37 +1491,37 @@
       },
       {
         "page": "https://trocglobal.com/community/",
-        "pageCtr": 0.04,
-        "pagePosition": 6.9,
-        "pageImpressions": 12217,
-        "namedQueryCount": 100,
-        "namedImpressions": 9871,
-        "anonymizedImpressions": 2346,
-        "anonymizedPct": 19.2,
+        "pageCtr": 0.03,
+        "pagePosition": 6.8,
+        "pageImpressions": 12196,
+        "namedQueryCount": 99,
+        "namedImpressions": 9861,
+        "anonymizedImpressions": 2335,
+        "anonymizedPct": 19.1,
         "topQueries": [
           {
             "query": "number of employees at troc.com",
             "clicks": 0,
-            "impressions": 4152,
+            "impressions": 4148,
             "ctr": 0,
             "position": 3.7,
-            "shareOfPageImpressions": 33.99
+            "shareOfPageImpressions": 34.01
           },
           {
             "query": "does troc.com have a blog",
             "clicks": 0,
-            "impressions": 3027,
+            "impressions": 3028,
             "ctr": 0,
             "position": 7.8,
-            "shareOfPageImpressions": 24.78
+            "shareOfPageImpressions": 24.83
           },
           {
             "query": "troc.com customer service phone number",
             "clicks": 0,
-            "impressions": 1692,
+            "impressions": 1693,
             "ctr": 0,
             "position": 8.8,
-            "shareOfPageImpressions": 13.85
+            "shareOfPageImpressions": 13.88
           },
           {
             "query": "troc global",
@@ -1544,7 +1544,7 @@
             "clicks": 0,
             "impressions": 100,
             "ctr": 0,
-            "position": 3.8,
+            "position": 3.9,
             "shareOfPageImpressions": 0.82
           },
           {
@@ -1556,20 +1556,20 @@
             "shareOfPageImpressions": 0.41
           },
           {
-            "query": "t roc global",
-            "clicks": 1,
-            "impressions": 44,
-            "ctr": 2.27,
-            "position": 3.7,
-            "shareOfPageImpressions": 0.36
-          },
-          {
             "query": "trocglobal.com",
             "clicks": 0,
             "impressions": 44,
             "ctr": 0,
             "position": 1,
             "shareOfPageImpressions": 0.36
+          },
+          {
+            "query": "t roc global",
+            "clicks": 1,
+            "impressions": 42,
+            "ctr": 2.38,
+            "position": 3.7,
+            "shareOfPageImpressions": 0.34
           },
           {
             "query": "the retail outsource",
@@ -1585,14 +1585,14 @@
             "impressions": 36,
             "ctr": 0,
             "position": 9.8,
-            "shareOfPageImpressions": 0.29
+            "shareOfPageImpressions": 0.3
           },
           {
-            "query": "revenue optimization companies",
+            "query": "t-roc company",
             "clicks": 0,
             "impressions": 28,
             "ctr": 0,
-            "position": 34.2,
+            "position": 9.4,
             "shareOfPageImpressions": 0.23
           }
         ]
@@ -1601,72 +1601,72 @@
         "page": "https://trocglobal.com/in-store-demo-services/",
         "pageCtr": 0.34,
         "pagePosition": 8.6,
-        "pageImpressions": 11787,
-        "namedQueryCount": 221,
-        "namedImpressions": 4010,
-        "anonymizedImpressions": 7777,
-        "anonymizedPct": 66,
+        "pageImpressions": 11684,
+        "namedQueryCount": 219,
+        "namedImpressions": 3951,
+        "anonymizedImpressions": 7733,
+        "anonymizedPct": 66.2,
         "topQueries": [
           {
             "query": "demo service",
             "clicks": 0,
-            "impressions": 256,
+            "impressions": 258,
             "ctr": 0,
             "position": 6.6,
-            "shareOfPageImpressions": 2.17
+            "shareOfPageImpressions": 2.21
           },
           {
             "query": "in store demos",
             "clicks": 1,
-            "impressions": 235,
+            "impressions": 231,
             "ctr": 0.43,
             "position": 6.4,
-            "shareOfPageImpressions": 1.99
+            "shareOfPageImpressions": 1.98
           },
           {
             "query": "in store demo companies",
             "clicks": 0,
-            "impressions": 211,
+            "impressions": 205,
             "ctr": 0,
-            "position": 8.1,
-            "shareOfPageImpressions": 1.79
+            "position": 8.2,
+            "shareOfPageImpressions": 1.75
           },
           {
             "query": "demonstration companies",
             "clicks": 0,
-            "impressions": 154,
+            "impressions": 151,
             "ctr": 0,
-            "position": 12.1,
-            "shareOfPageImpressions": 1.31
+            "position": 12.2,
+            "shareOfPageImpressions": 1.29
           },
           {
             "query": "retail product demo kit",
             "clicks": 0,
-            "impressions": 129,
+            "impressions": 130,
             "ctr": 0,
             "position": 8.6,
-            "shareOfPageImpressions": 1.09
+            "shareOfPageImpressions": 1.11
           },
           {
             "query": "product demo companies",
             "clicks": 0,
-            "impressions": 118,
+            "impressions": 115,
             "ctr": 0,
-            "position": 13.2,
-            "shareOfPageImpressions": 1
+            "position": 13.4,
+            "shareOfPageImpressions": 0.98
           },
           {
             "query": "store demo",
             "clicks": 0,
-            "impressions": 111,
+            "impressions": 112,
             "ctr": 0,
             "position": 9.4,
-            "shareOfPageImpressions": 0.94
+            "shareOfPageImpressions": 0.96
           },
           {
             "query": "demo solutions for global brands",
             "clicks": 0,
-            "impressions": 105,
+            "impressions": 104,
             "ctr": 0,
             "position": 3.5,
             "shareOfPageImpressions": 0.89
@@ -1674,7 +1674,7 @@
           {
             "query": "in store demo",
             "clicks": 0,
-            "impressions": 94,
+            "impressions": 93,
             "ctr": 0,
             "position": 6.8,
             "shareOfPageImpressions": 0.8
@@ -1682,37 +1682,37 @@
           {
             "query": "in-store product demonstration services",
             "clicks": 0,
-            "impressions": 89,
+            "impressions": 88,
             "ctr": 0,
             "position": 2.7,
-            "shareOfPageImpressions": 0.76
+            "shareOfPageImpressions": 0.75
           },
           {
             "query": "instore demonstrations",
             "clicks": 0,
-            "impressions": 89,
+            "impressions": 88,
             "ctr": 0,
-            "position": 49.1,
-            "shareOfPageImpressions": 0.76
+            "position": 49,
+            "shareOfPageImpressions": 0.75
           },
           {
             "query": "product demonstration services",
             "clicks": 0,
-            "impressions": 87,
+            "impressions": 85,
             "ctr": 0,
-            "position": 9.1,
-            "shareOfPageImpressions": 0.74
+            "position": 9.2,
+            "shareOfPageImpressions": 0.73
           }
         ]
       },
       {
         "page": "https://trocglobal.com/merchandising-inventory/",
-        "pageCtr": 0.16,
+        "pageCtr": 0.15,
         "pagePosition": 9.7,
-        "pageImpressions": 11540,
-        "namedQueryCount": 142,
+        "pageImpressions": 11554,
+        "namedQueryCount": 140,
         "namedImpressions": 6041,
-        "anonymizedImpressions": 5499,
+        "anonymizedImpressions": 5513,
         "anonymizedPct": 47.7,
         "topQueries": [
           {
@@ -1721,23 +1721,23 @@
             "impressions": 3077,
             "ctr": 0,
             "position": 9.4,
-            "shareOfPageImpressions": 26.66
+            "shareOfPageImpressions": 26.63
           },
           {
             "query": "merchandise inventory",
             "clicks": 0,
-            "impressions": 515,
+            "impressions": 518,
             "ctr": 0,
             "position": 17.7,
-            "shareOfPageImpressions": 4.46
+            "shareOfPageImpressions": 4.48
           },
           {
             "query": "merchandise inventory includes",
             "clicks": 0,
-            "impressions": 197,
+            "impressions": 199,
             "ctr": 0,
             "position": 10.3,
-            "shareOfPageImpressions": 1.71
+            "shareOfPageImpressions": 1.72
           },
           {
             "query": "merchandise inventory management",
@@ -1758,10 +1758,10 @@
           {
             "query": "what is merchandise inventory",
             "clicks": 0,
-            "impressions": 132,
+            "impressions": 134,
             "ctr": 0,
-            "position": 11.1,
-            "shareOfPageImpressions": 1.14
+            "position": 10.9,
+            "shareOfPageImpressions": 1.16
           },
           {
             "query": "merchandise inventory includes:",
@@ -1788,20 +1788,20 @@
             "shareOfPageImpressions": 0.76
           },
           {
-            "query": "merchandising operations",
-            "clicks": 0,
-            "impressions": 83,
-            "ctr": 0,
-            "position": 14.7,
-            "shareOfPageImpressions": 0.72
-          },
-          {
             "query": "stock merchandising",
             "clicks": 0,
             "impressions": 83,
             "ctr": 0,
-            "position": 20.1,
+            "position": 19.8,
             "shareOfPageImpressions": 0.72
+          },
+          {
+            "query": "merchandising operations",
+            "clicks": 0,
+            "impressions": 82,
+            "ctr": 0,
+            "position": 14.8,
+            "shareOfPageImpressions": 0.71
           },
           {
             "query": "merchandising stock meaning",
@@ -1815,61 +1815,61 @@
       },
       {
         "page": "https://trocglobal.com/visual-merchandising-examples/",
-        "pageCtr": 0.38,
+        "pageCtr": 0.37,
         "pagePosition": 7.8,
-        "pageImpressions": 10924,
-        "namedQueryCount": 241,
-        "namedImpressions": 3415,
-        "anonymizedImpressions": 7509,
+        "pageImpressions": 10955,
+        "namedQueryCount": 243,
+        "namedImpressions": 3427,
+        "anonymizedImpressions": 7528,
         "anonymizedPct": 68.7,
         "topQueries": [
           {
             "query": "visual merchandising examples",
             "clicks": 0,
-            "impressions": 743,
+            "impressions": 748,
             "ctr": 0,
             "position": 4.1,
-            "shareOfPageImpressions": 6.8
+            "shareOfPageImpressions": 6.83
           },
           {
             "query": "merchandising examples",
             "clicks": 0,
-            "impressions": 364,
+            "impressions": 368,
             "ctr": 0,
-            "position": 3.8,
-            "shareOfPageImpressions": 3.33
+            "position": 3.9,
+            "shareOfPageImpressions": 3.36
           },
           {
             "query": "retail merchandising examples",
             "clicks": 0,
-            "impressions": 204,
+            "impressions": 202,
             "ctr": 0,
             "position": 2.4,
-            "shareOfPageImpressions": 1.87
+            "shareOfPageImpressions": 1.84
           },
           {
             "query": "merchandising strategy examples",
             "clicks": 0,
-            "impressions": 196,
+            "impressions": 197,
             "ctr": 0,
-            "position": 12.1,
-            "shareOfPageImpressions": 1.79
+            "position": 11.9,
+            "shareOfPageImpressions": 1.8
+          },
+          {
+            "query": "visual merchandising ejemplos",
+            "clicks": 1,
+            "impressions": 138,
+            "ctr": 0.72,
+            "position": 6,
+            "shareOfPageImpressions": 1.26
           },
           {
             "query": "merchandising strategy example",
             "clicks": 0,
             "impressions": 138,
             "ctr": 0,
-            "position": 13.7,
+            "position": 13.6,
             "shareOfPageImpressions": 1.26
-          },
-          {
-            "query": "visual merchandising ejemplos",
-            "clicks": 2,
-            "impressions": 137,
-            "ctr": 1.46,
-            "position": 5.9,
-            "shareOfPageImpressions": 1.25
           },
           {
             "query": "examples of visual merchandising",
@@ -1877,7 +1877,7 @@
             "impressions": 76,
             "ctr": 0,
             "position": 2.2,
-            "shareOfPageImpressions": 0.7
+            "shareOfPageImpressions": 0.69
           },
           {
             "query": "merchandising ejemplos",
@@ -1885,7 +1885,7 @@
             "impressions": 76,
             "ctr": 0,
             "position": 10.5,
-            "shareOfPageImpressions": 0.7
+            "shareOfPageImpressions": 0.69
           },
           {
             "query": "visual merchandising displays",
@@ -1893,7 +1893,7 @@
             "impressions": 75,
             "ctr": 0,
             "position": 23.1,
-            "shareOfPageImpressions": 0.69
+            "shareOfPageImpressions": 0.68
           },
           {
             "query": "examples of merchandising",
@@ -1901,7 +1901,7 @@
             "impressions": 65,
             "ctr": 0,
             "position": 1.1,
-            "shareOfPageImpressions": 0.6
+            "shareOfPageImpressions": 0.59
           },
           {
             "query": "good visual merchandising examples",
@@ -1912,32 +1912,32 @@
             "shareOfPageImpressions": 0.55
           },
           {
-            "query": "effective visual merchandising displays",
+            "query": "merchandising example",
             "clicks": 0,
-            "impressions": 55,
+            "impressions": 56,
             "ctr": 0,
-            "position": 11.3,
-            "shareOfPageImpressions": 0.5
+            "position": 2.7,
+            "shareOfPageImpressions": 0.51
           }
         ]
       },
       {
         "page": "https://trocglobal.com/retail-automation-distribution-centers-walmart/",
-        "pageCtr": 0.85,
-        "pagePosition": 7.1,
-        "pageImpressions": 10729,
+        "pageCtr": 0.86,
+        "pagePosition": 7.2,
+        "pageImpressions": 10597,
         "namedQueryCount": 125,
-        "namedImpressions": 1617,
-        "anonymizedImpressions": 9112,
-        "anonymizedPct": 84.9,
+        "namedImpressions": 1608,
+        "anonymizedImpressions": 8989,
+        "anonymizedPct": 84.8,
         "topQueries": [
           {
             "query": "walmart automation",
             "clicks": 7,
-            "impressions": 473,
-            "ctr": 1.48,
+            "impressions": 475,
+            "ctr": 1.47,
             "position": 5.5,
-            "shareOfPageImpressions": 4.41
+            "shareOfPageImpressions": 4.48
           },
           {
             "query": "what are the details behind walmart's warehouse robot rollout struggles?",
@@ -1945,31 +1945,31 @@
             "impressions": 167,
             "ctr": 10.18,
             "position": 6,
-            "shareOfPageImpressions": 1.56
+            "shareOfPageImpressions": 1.58
           },
           {
             "query": "walmart automation investment",
             "clicks": 0,
             "impressions": 140,
             "ctr": 0,
-            "position": 4.6,
-            "shareOfPageImpressions": 1.3
+            "position": 4.7,
+            "shareOfPageImpressions": 1.32
           },
           {
             "query": "walmart warehouse automation",
             "clicks": 2,
-            "impressions": 94,
-            "ctr": 2.13,
+            "impressions": 95,
+            "ctr": 2.11,
             "position": 6.6,
-            "shareOfPageImpressions": 0.88
+            "shareOfPageImpressions": 0.9
           },
           {
             "query": "us retail automation market",
             "clicks": 0,
-            "impressions": 76,
+            "impressions": 74,
             "ctr": 0,
-            "position": 39.3,
-            "shareOfPageImpressions": 0.71
+            "position": 39.4,
+            "shareOfPageImpressions": 0.7
           },
           {
             "query": "retail automation news last 48 hours",
@@ -1977,47 +1977,47 @@
             "impressions": 56,
             "ctr": 0,
             "position": 8.9,
-            "shareOfPageImpressions": 0.52
+            "shareOfPageImpressions": 0.53
           },
           {
             "query": "walmart automated distribution center",
             "clicks": 1,
-            "impressions": 47,
-            "ctr": 2.13,
-            "position": 7.3,
-            "shareOfPageImpressions": 0.44
-          },
-          {
-            "query": "real-world examples of companies reducing stockouts with automation",
-            "clicks": 0,
-            "impressions": 40,
-            "ctr": 0,
-            "position": 7.3,
+            "impressions": 39,
+            "ctr": 2.56,
+            "position": 7.1,
             "shareOfPageImpressions": 0.37
           },
           {
             "query": "walmart dc automation",
             "clicks": 0,
-            "impressions": 40,
+            "impressions": 39,
             "ctr": 0,
-            "position": 7,
+            "position": 7.1,
             "shareOfPageImpressions": 0.37
+          },
+          {
+            "query": "real-world examples of companies reducing stockouts with automation",
+            "clicks": 0,
+            "impressions": 38,
+            "ctr": 0,
+            "position": 7.4,
+            "shareOfPageImpressions": 0.36
           },
           {
             "query": "walmart automation store",
             "clicks": 1,
-            "impressions": 36,
-            "ctr": 2.78,
-            "position": 8.8,
-            "shareOfPageImpressions": 0.34
+            "impressions": 37,
+            "ctr": 2.7,
+            "position": 8.9,
+            "shareOfPageImpressions": 0.35
           },
           {
             "query": "walmart rpa",
             "clicks": 0,
-            "impressions": 32,
+            "impressions": 33,
             "ctr": 0,
-            "position": 16.8,
-            "shareOfPageImpressions": 0.3
+            "position": 16.9,
+            "shareOfPageImpressions": 0.31
           },
           {
             "query": "walmart automatisation entrepot",
@@ -2031,58 +2031,58 @@
       },
       {
         "page": "https://trocglobal.com/in-store-brand-activation/",
-        "pageCtr": 0.28,
+        "pageCtr": 0.27,
         "pagePosition": 9.9,
-        "pageImpressions": 10463,
-        "namedQueryCount": 196,
-        "namedImpressions": 5365,
-        "anonymizedImpressions": 5098,
-        "anonymizedPct": 48.7,
+        "pageImpressions": 10557,
+        "namedQueryCount": 197,
+        "namedImpressions": 5437,
+        "anonymizedImpressions": 5120,
+        "anonymizedPct": 48.5,
         "topQueries": [
           {
             "query": "retail activation",
             "clicks": 0,
-            "impressions": 635,
+            "impressions": 639,
             "ctr": 0,
             "position": 14.2,
-            "shareOfPageImpressions": 6.07
+            "shareOfPageImpressions": 6.05
           },
           {
             "query": "in store activations",
             "clicks": 0,
-            "impressions": 528,
+            "impressions": 530,
             "ctr": 0,
             "position": 16.6,
-            "shareOfPageImpressions": 5.05
+            "shareOfPageImpressions": 5.02
           },
           {
             "query": "retail activations",
             "clicks": 0,
-            "impressions": 461,
+            "impressions": 477,
             "ctr": 0,
-            "position": 15.4,
-            "shareOfPageImpressions": 4.41
+            "position": 15.3,
+            "shareOfPageImpressions": 4.52
           },
           {
             "query": "in-store activations",
             "clicks": 0,
-            "impressions": 221,
+            "impressions": 224,
             "ctr": 0,
-            "position": 20.2,
-            "shareOfPageImpressions": 2.11
+            "position": 20,
+            "shareOfPageImpressions": 2.12
           },
           {
             "query": "retail brand activation",
             "clicks": 0,
-            "impressions": 201,
+            "impressions": 206,
             "ctr": 0,
             "position": 8.1,
-            "shareOfPageImpressions": 1.92
+            "shareOfPageImpressions": 1.95
           },
           {
             "query": "are there scalable activation services for multi-store product launches and promotions?",
             "clicks": 0,
-            "impressions": 121,
+            "impressions": 122,
             "ctr": 0,
             "position": 2.3,
             "shareOfPageImpressions": 1.16
@@ -2090,31 +2090,31 @@
           {
             "query": "which services offer integrated retail activation with digital engagement?",
             "clicks": 0,
-            "impressions": 107,
+            "impressions": 109,
             "ctr": 0,
             "position": 2.2,
-            "shareOfPageImpressions": 1.02
+            "shareOfPageImpressions": 1.03
           },
           {
             "query": "how can i find reliable in-store activation services that increase product trial and visibility?",
             "clicks": 0,
-            "impressions": 102,
+            "impressions": 104,
             "ctr": 0,
             "position": 2.2,
-            "shareOfPageImpressions": 0.97
+            "shareOfPageImpressions": 0.99
           },
           {
             "query": "in store activation",
             "clicks": 0,
-            "impressions": 96,
+            "impressions": 99,
             "ctr": 0,
             "position": 5.5,
-            "shareOfPageImpressions": 0.92
+            "shareOfPageImpressions": 0.94
           },
           {
             "query": "in-store activation design",
             "clicks": 0,
-            "impressions": 93,
+            "impressions": 94,
             "ctr": 0,
             "position": 5.8,
             "shareOfPageImpressions": 0.89
@@ -2122,17 +2122,17 @@
           {
             "query": "retail activation solutions",
             "clicks": 0,
-            "impressions": 87,
+            "impressions": 89,
             "ctr": 0,
-            "position": 12.7,
-            "shareOfPageImpressions": 0.83
+            "position": 12.6,
+            "shareOfPageImpressions": 0.84
           },
           {
-            "query": "manage retail activation campaigns",
+            "query": "instore activations",
             "clicks": 0,
             "impressions": 82,
             "ctr": 0,
-            "position": 12,
+            "position": 9.5,
             "shareOfPageImpressions": 0.78
           }
         ]
@@ -2141,11 +2141,11 @@
         "page": "https://trocglobal.com/retail-pricing-strategy-tariffs-2026/",
         "pageCtr": 0.2,
         "pagePosition": 5.4,
-        "pageImpressions": 6935,
-        "namedQueryCount": 139,
-        "namedImpressions": 1117,
-        "anonymizedImpressions": 5818,
-        "anonymizedPct": 83.9,
+        "pageImpressions": 6971,
+        "namedQueryCount": 140,
+        "namedImpressions": 1126,
+        "anonymizedImpressions": 5845,
+        "anonymizedPct": 83.8,
         "topQueries": [
           {
             "query": "how should retailers test price changes before scaling?",
@@ -2153,7 +2153,7 @@
             "impressions": 93,
             "ctr": 0,
             "position": 6.1,
-            "shareOfPageImpressions": 1.34
+            "shareOfPageImpressions": 1.33
           },
           {
             "query": "how do global retailers manage market-specific pricing and promotional content?",
@@ -2174,10 +2174,10 @@
           {
             "query": "what is the best way to set markdown and promotional pricing when tariffs keep changing landed cost?",
             "clicks": 0,
-            "impressions": 52,
+            "impressions": 53,
             "ctr": 0,
-            "position": 2.6,
-            "shareOfPageImpressions": 0.75
+            "position": 2.7,
+            "shareOfPageImpressions": 0.76
           },
           {
             "query": "retail pricing systems most adopted by pricing teams at 100-1000 person retail organizations",
@@ -2188,6 +2188,14 @@
             "shareOfPageImpressions": 0.63
           },
           {
+            "query": "how to scenario plan shelf price changes during tariffs",
+            "clicks": 0,
+            "impressions": 41,
+            "ctr": 0,
+            "position": 2,
+            "shareOfPageImpressions": 0.59
+          },
+          {
             "query": "centralized vs store-level pricing strategies in retail",
             "clicks": 0,
             "impressions": 39,
@@ -2196,20 +2204,12 @@
             "shareOfPageImpressions": 0.56
           },
           {
-            "query": "how to scenario plan shelf price changes during tariffs",
-            "clicks": 0,
-            "impressions": 38,
-            "ctr": 0,
-            "position": 2.1,
-            "shareOfPageImpressions": 0.55
-          },
-          {
             "query": "retail pricing trends for 2026",
             "clicks": 0,
-            "impressions": 35,
+            "impressions": 36,
             "ctr": 0,
             "position": 3.3,
-            "shareOfPageImpressions": 0.5
+            "shareOfPageImpressions": 0.52
           },
           {
             "query": "retail pricing software trends 2026",
@@ -2217,7 +2217,7 @@
             "impressions": 33,
             "ctr": 0,
             "position": 2.5,
-            "shareOfPageImpressions": 0.48
+            "shareOfPageImpressions": 0.47
           },
           {
             "query": "top 20 brands or products that match these criteria: query: how should i frame tariff-driven price increases in a retailer line review without losing shelf space?.",
@@ -2225,7 +2225,7 @@
             "impressions": 33,
             "ctr": 0,
             "position": 2.1,
-            "shareOfPageImpressions": 0.48
+            "shareOfPageImpressions": 0.47
           },
           {
             "query": "top retail margin protection tools for grocery and fmcg pricing teams",
@@ -2241,18 +2241,18 @@
             "impressions": 31,
             "ctr": 0,
             "position": 1.3,
-            "shareOfPageImpressions": 0.45
+            "shareOfPageImpressions": 0.44
           }
         ]
       },
       {
         "page": "https://trocglobal.com/experiential-retail-trends-2026-levis-pop-up/",
-        "pageCtr": 0.31,
+        "pageCtr": 0.32,
         "pagePosition": 6.2,
-        "pageImpressions": 6669,
+        "pageImpressions": 6604,
         "namedQueryCount": 72,
-        "namedImpressions": 333,
-        "anonymizedImpressions": 6336,
+        "namedImpressions": 330,
+        "anonymizedImpressions": 6274,
         "anonymizedPct": 95,
         "topQueries": [
           {
@@ -2261,7 +2261,7 @@
             "impressions": 61,
             "ctr": 0,
             "position": 6.8,
-            "shareOfPageImpressions": 0.91
+            "shareOfPageImpressions": 0.92
           },
           {
             "query": "which immersive display systems deliver the best roi for experiential marketing in retail environments in 2026?",
@@ -2269,7 +2269,7 @@
             "impressions": 37,
             "ctr": 0,
             "position": 3,
-            "shareOfPageImpressions": 0.55
+            "shareOfPageImpressions": 0.56
           },
           {
             "query": "fashion brands with experiential retail concepts",
@@ -2282,18 +2282,18 @@
           {
             "query": "evaluate the marketing & advertising company wpp on in-store retail activation & experiential design",
             "clicks": 0,
-            "impressions": 15,
+            "impressions": 14,
             "ctr": 0,
-            "position": 6.1,
-            "shareOfPageImpressions": 0.22
+            "position": 6,
+            "shareOfPageImpressions": 0.21
           },
           {
             "query": "experiential retail trends 2026",
             "clicks": 0,
-            "impressions": 15,
+            "impressions": 14,
             "ctr": 0,
-            "position": 6,
-            "shareOfPageImpressions": 0.22
+            "position": 5.8,
+            "shareOfPageImpressions": 0.21
           },
           {
             "query": "which agencies can scale a branded retail concept from single flagship to nationwide pop-ups?",
@@ -2301,7 +2301,7 @@
             "impressions": 13,
             "ctr": 0,
             "position": 2.5,
-            "shareOfPageImpressions": 0.19
+            "shareOfPageImpressions": 0.2
           },
           {
             "query": "site:trocglobal.com",
@@ -2317,7 +2317,7 @@
             "impressions": 11,
             "ctr": 0,
             "position": 11.1,
-            "shareOfPageImpressions": 0.16
+            "shareOfPageImpressions": 0.17
           },
           {
             "query": "levie branding activation or experiential or event or booth or pop-up or launch or festival or trade show or live experience 2026 or 2027",
@@ -2349,7 +2349,7 @@
             "impressions": 9,
             "ctr": 0,
             "position": 38.2,
-            "shareOfPageImpressions": 0.13
+            "shareOfPageImpressions": 0.14
           }
         ]
       }
@@ -2357,37 +2357,37 @@
     "termPages": [
       {
         "term": "brand ambassador",
-        "totalImpressions": 2456,
+        "totalImpressions": 2424,
         "totalClicks": 12,
         "competingPages": 13,
         "pages": [
           {
             "page": "https://trocglobal.com/services/brand-ambassadors/",
             "clicks": 12,
-            "impressions": 2167,
-            "ctr": 0.55,
+            "impressions": 2126,
+            "ctr": 0.56,
             "position": 10.6
           },
           {
             "page": "https://trocglobal.com/how-does-a-brand-ambassador-work-2/",
             "clicks": 0,
-            "impressions": 204,
+            "impressions": 211,
             "ctr": 0,
             "position": 34.7
           },
           {
             "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
             "clicks": 0,
-            "impressions": 54,
+            "impressions": 55,
             "ctr": 0,
-            "position": 12.3
+            "position": 12.1
           },
           {
             "page": "https://trocglobal.com/what-is-a-brand-ambassador/",
             "clicks": 0,
-            "impressions": 13,
+            "impressions": 14,
             "ctr": 0,
-            "position": 53.7
+            "position": 51.7
           },
           {
             "page": "https://trocglobal.com/why-in-store-brand-ambassadors-are-essential-for-peak-holiday-retail-success/",
@@ -2456,16 +2456,16 @@
       },
       {
         "term": "brand ambassadors",
-        "totalImpressions": 62,
+        "totalImpressions": 64,
         "totalClicks": 0,
         "competingPages": 5,
         "pages": [
           {
             "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
             "clicks": 0,
-            "impressions": 47,
+            "impressions": 49,
             "ctr": 0,
-            "position": 38.7
+            "position": 37.7
           },
           {
             "page": "https://trocglobal.com/services/brand-ambassadors/",
@@ -2499,38 +2499,38 @@
       },
       {
         "term": "brand ambassador programs",
-        "totalImpressions": 122,
+        "totalImpressions": 120,
         "totalClicks": 4,
         "competingPages": 1,
         "pages": [
           {
             "page": "https://trocglobal.com/services/brand-ambassadors/",
             "clicks": 4,
-            "impressions": 122,
-            "ctr": 3.28,
-            "position": 29.4
+            "impressions": 120,
+            "ctr": 3.33,
+            "position": 29.7
           }
         ]
       },
       {
         "term": "retail merchandising services",
-        "totalImpressions": 3900,
+        "totalImpressions": 3892,
         "totalClicks": 2,
         "competingPages": 6,
         "pages": [
           {
             "page": "https://trocglobal.com/merchandising-services/",
             "clicks": 2,
-            "impressions": 3023,
+            "impressions": 3011,
             "ctr": 0.07,
             "position": 9.8
           },
           {
             "page": "https://trocglobal.com/services/merchandising/",
             "clicks": 0,
-            "impressions": 785,
+            "impressions": 789,
             "ctr": 0,
-            "position": 27.5
+            "position": 27.4
           },
           {
             "page": "https://trocglobal.com/what-is-retail-merchandising/",
@@ -2564,21 +2564,21 @@
       },
       {
         "term": "merchandising services",
-        "totalImpressions": 1209,
+        "totalImpressions": 1200,
         "totalClicks": 2,
         "competingPages": 4,
         "pages": [
           {
             "page": "https://trocglobal.com/merchandising-services/",
             "clicks": 2,
-            "impressions": 1160,
+            "impressions": 1150,
             "ctr": 0.17,
             "position": 10.7
           },
           {
             "page": "https://trocglobal.com/services/merchandising/",
             "clicks": 0,
-            "impressions": 47,
+            "impressions": 48,
             "ctr": 0,
             "position": 52.9
           },
@@ -2600,28 +2600,28 @@
       },
       {
         "term": "retail merchandising",
-        "totalImpressions": 4225,
+        "totalImpressions": 4215,
         "totalClicks": 0,
         "competingPages": 7,
         "pages": [
           {
             "page": "https://trocglobal.com/retail-merchandising/",
             "clicks": 0,
-            "impressions": 1802,
+            "impressions": 1804,
             "ctr": 0,
             "position": 60.5
           },
           {
             "page": "https://trocglobal.com/what-is-retail-merchandising/",
             "clicks": 0,
-            "impressions": 1285,
+            "impressions": 1289,
             "ctr": 0,
-            "position": 62.3
+            "position": 61.9
           },
           {
             "page": "https://trocglobal.com/merchandising-services/",
             "clicks": 0,
-            "impressions": 1041,
+            "impressions": 1026,
             "ctr": 0,
             "position": 13.5
           },
@@ -2635,9 +2635,9 @@
           {
             "page": "https://trocglobal.com/retail-merchandising-secrets/",
             "clicks": 0,
-            "impressions": 37,
+            "impressions": 36,
             "ctr": 0,
-            "position": 66
+            "position": 65.2
           },
           {
             "page": "https://trocglobal.com/merchandising-tools/",
@@ -2661,15 +2661,15 @@
         "page": "https://trocglobal.com/services/brand-ambassadors/",
         "totalQueries": 212,
         "clicks": 21,
-        "impressions": 3468,
+        "impressions": 3419,
         "ctr": 0.61,
-        "position": 18.5,
+        "position": 18.6,
         "strikingDistance": [
           {
             "query": "brand ambassador",
             "clicks": 12,
-            "impressions": 2167,
-            "ctr": 0.55,
+            "impressions": 2126,
+            "ctr": 0.56,
             "position": 10.6,
             "branded": false
           },
@@ -2690,19 +2690,19 @@
             "branded": false
           },
           {
-            "query": "company ambassador",
-            "clicks": 0,
-            "impressions": 27,
-            "ctr": 0,
-            "position": 10.6,
-            "branded": false
-          },
-          {
             "query": "brand ambassador services",
             "clicks": 0,
             "impressions": 26,
             "ctr": 0,
             "position": 12.2,
+            "branded": false
+          },
+          {
+            "query": "company ambassador",
+            "clicks": 0,
+            "impressions": 26,
+            "ctr": 0,
+            "position": 10.6,
             "branded": false
           },
           {
@@ -2719,17 +2719,17 @@
           {
             "query": "brand ambassador",
             "clicks": 12,
-            "impressions": 2167,
-            "ctr": 0.55,
+            "impressions": 2126,
+            "ctr": 0.56,
             "position": 10.6,
             "branded": false
           },
           {
             "query": "brand ambassador programs",
             "clicks": 4,
-            "impressions": 122,
-            "ctr": 3.28,
-            "position": 29.4,
+            "impressions": 120,
+            "ctr": 3.33,
+            "position": 29.7,
             "branded": false
           },
           {
@@ -2751,9 +2751,9 @@
           {
             "query": "retail brand ambassadors",
             "clicks": 0,
-            "impressions": 44,
+            "impressions": 45,
             "ctr": 0,
-            "position": 55.6,
+            "position": 55.9,
             "branded": false
           },
           {
@@ -2767,17 +2767,9 @@
           {
             "query": "b2b brand ambassadors",
             "clicks": 0,
-            "impressions": 29,
-            "ctr": 0,
-            "position": 41.3,
-            "branded": false
-          },
-          {
-            "query": "company ambassador",
-            "clicks": 0,
             "impressions": 27,
             "ctr": 0,
-            "position": 10.6,
+            "position": 41.7,
             "branded": false
           },
           {
@@ -2797,6 +2789,14 @@
             "branded": false
           },
           {
+            "query": "company ambassador",
+            "clicks": 0,
+            "impressions": 26,
+            "ctr": 0,
+            "position": 10.6,
+            "branded": false
+          },
+          {
             "query": "brand ambassadors of companies",
             "clicks": 0,
             "impressions": 23,
@@ -2813,19 +2813,19 @@
             "branded": false
           },
           {
+            "query": "companies with brand ambassador programs",
+            "clicks": 0,
+            "impressions": 20,
+            "ctr": 0,
+            "position": 23.9,
+            "branded": false
+          },
+          {
             "query": "ambassador for brands",
             "clicks": 0,
             "impressions": 19,
             "ctr": 0,
             "position": 18.4,
-            "branded": false
-          },
-          {
-            "query": "companies with brand ambassador programs",
-            "clicks": 0,
-            "impressions": 19,
-            "ctr": 0,
-            "position": 23.2,
             "branded": false
           },
           {
@@ -2871,17 +2871,9 @@
           {
             "query": "brand ambassdor",
             "clicks": 0,
-            "impressions": 16,
+            "impressions": 15,
             "ctr": 0,
-            "position": 10.3,
-            "branded": false
-          },
-          {
-            "query": "store ambassador",
-            "clicks": 0,
-            "impressions": 16,
-            "ctr": 0,
-            "position": 21.2,
+            "position": 10.4,
             "branded": false
           },
           {
@@ -2898,6 +2890,14 @@
             "impressions": 15,
             "ctr": 0,
             "position": 42.3,
+            "branded": false
+          },
+          {
+            "query": "store ambassador",
+            "clicks": 0,
+            "impressions": 15,
+            "ctr": 0,
+            "position": 22.1,
             "branded": false
           },
           {
@@ -3013,14 +3013,6 @@
             "branded": false
           },
           {
-            "query": "brand ambassador company",
-            "clicks": 0,
-            "impressions": 10,
-            "ctr": 0,
-            "position": 17.5,
-            "branded": false
-          },
-          {
             "query": "brandambassador",
             "clicks": 0,
             "impressions": 10,
@@ -3037,19 +3029,19 @@
             "branded": false
           },
           {
+            "query": "brand ambassador company",
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 14.7,
+            "branded": false
+          },
+          {
             "query": "brand ambassador responsibilities",
             "clicks": 0,
             "impressions": 9,
             "ctr": 0,
             "position": 10.3,
-            "branded": false
-          },
-          {
-            "query": "brand embassador",
-            "clicks": 0,
-            "impressions": 9,
-            "ctr": 0,
-            "position": 10,
             "branded": false
           },
           {
@@ -3090,6 +3082,14 @@
             "impressions": 8,
             "ctr": 0,
             "position": 26.1,
+            "branded": false
+          },
+          {
+            "query": "brand embassador",
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 10.1,
             "branded": false
           },
           {
@@ -3213,11 +3213,11 @@
             "branded": false
           },
           {
-            "query": "company brand ambassador",
+            "query": "corporate brand ambassador",
             "clicks": 0,
             "impressions": 5,
             "ctr": 0,
-            "position": 12,
+            "position": 8.8,
             "branded": false
           },
           {
@@ -3285,11 +3285,27 @@
             "branded": false
           },
           {
+            "query": "brand ambassadors companies",
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 20.5,
+            "branded": false
+          },
+          {
             "query": "brands ambassador programs",
             "clicks": 0,
             "impressions": 4,
             "ctr": 0,
             "position": 33.8,
+            "branded": false
+          },
+          {
+            "query": "company brand ambassador",
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 12.8,
             "branded": false
           },
           {
@@ -3325,14 +3341,6 @@
             "branded": false
           },
           {
-            "query": "virtual ambassador",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 10.8,
-            "branded": false
-          },
-          {
             "query": "brand rep",
             "clicks": 1,
             "impressions": 3,
@@ -3362,14 +3370,6 @@
             "impressions": 3,
             "ctr": 0,
             "position": 77.7,
-            "branded": false
-          },
-          {
-            "query": "brand ambassadors companies",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 14.3,
             "branded": false
           },
           {
@@ -3421,14 +3421,6 @@
             "branded": false
           },
           {
-            "query": "corporate brand ambassador",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 8,
-            "branded": false
-          },
-          {
             "query": "experienced brand ambassadors",
             "clicks": 0,
             "impressions": 3,
@@ -3453,19 +3445,19 @@
             "branded": false
           },
           {
-            "query": "tech ambassador",
-            "clicks": 0,
-            "impressions": 3,
-            "ctr": 0,
-            "position": 71.3,
-            "branded": false
-          },
-          {
             "query": "veroskills community ambassador",
             "clicks": 0,
             "impressions": 3,
             "ctr": 0,
             "position": 70,
+            "branded": false
+          },
+          {
+            "query": "virtual ambassador",
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 7.3,
             "branded": false
           },
           {
@@ -3515,21 +3507,29 @@
             "ctr": 0,
             "position": 49.5,
             "branded": false
+          },
+          {
+            "query": "be an ambassador for a brand",
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 17.5,
+            "branded": false
           }
         ]
       },
       {
         "page": "https://trocglobal.com/services/mystery-shopping-and-audits/",
-        "totalQueries": 111,
+        "totalQueries": 112,
         "clicks": 1,
-        "impressions": 1092,
+        "impressions": 1085,
         "ctr": 0.09,
-        "position": 18.5,
+        "position": 18.4,
         "strikingDistance": [
           {
             "query": "reality check mystery shopping",
             "clicks": 1,
-            "impressions": 286,
+            "impressions": 287,
             "ctr": 0.35,
             "position": 4.7,
             "branded": false
@@ -3545,9 +3545,9 @@
           {
             "query": "reality check mystery shoppers",
             "clicks": 0,
-            "impressions": 99,
+            "impressions": 97,
             "ctr": 0,
-            "position": 4.3,
+            "position": 4.2,
             "branded": false
           },
           {
@@ -3561,7 +3561,7 @@
           {
             "query": "mystery shopping international",
             "clicks": 0,
-            "impressions": 43,
+            "impressions": 44,
             "ctr": 0,
             "position": 19.1,
             "branded": false
@@ -3569,9 +3569,9 @@
           {
             "query": "brand compliance mystery shops for retailers",
             "clicks": 0,
-            "impressions": 36,
+            "impressions": 35,
             "ctr": 0,
-            "position": 7.9,
+            "position": 8.1,
             "branded": false
           }
         ],
@@ -3580,7 +3580,7 @@
           {
             "query": "reality check mystery shopping",
             "clicks": 1,
-            "impressions": 286,
+            "impressions": 287,
             "ctr": 0.35,
             "position": 4.7,
             "branded": false
@@ -3596,9 +3596,9 @@
           {
             "query": "reality check mystery shoppers",
             "clicks": 0,
-            "impressions": 99,
+            "impressions": 97,
             "ctr": 0,
-            "position": 4.3,
+            "position": 4.2,
             "branded": false
           },
           {
@@ -3610,59 +3610,59 @@
             "branded": false
           },
           {
-            "query": "mystery shopping caribbean",
-            "clicks": 0,
-            "impressions": 43,
-            "ctr": 0,
-            "position": 36.7,
-            "branded": false
-          },
-          {
             "query": "mystery shopping international",
             "clicks": 0,
-            "impressions": 43,
+            "impressions": 44,
             "ctr": 0,
             "position": 19.1,
             "branded": false
           },
           {
+            "query": "mystery shopping caribbean",
+            "clicks": 0,
+            "impressions": 42,
+            "ctr": 0,
+            "position": 36.6,
+            "branded": false
+          },
+          {
             "query": "brand compliance mystery shops for retailers",
             "clicks": 0,
-            "impressions": 36,
+            "impressions": 35,
             "ctr": 0,
-            "position": 7.9,
-            "branded": false
-          },
-          {
-            "query": "mystery shopping agency",
-            "clicks": 0,
-            "impressions": 25,
-            "ctr": 0,
-            "position": 25.2,
-            "branded": false
-          },
-          {
-            "query": "mystery audit companies",
-            "clicks": 0,
-            "impressions": 24,
-            "ctr": 0,
-            "position": 25.8,
+            "position": 8.1,
             "branded": false
           },
           {
             "query": "compliance mystery shopping",
             "clicks": 0,
+            "impressions": 24,
+            "ctr": 0,
+            "position": 54.3,
+            "branded": false
+          },
+          {
+            "query": "mystery audit companies",
+            "clicks": 0,
             "impressions": 23,
             "ctr": 0,
-            "position": 53.9,
+            "position": 25.8,
+            "branded": false
+          },
+          {
+            "query": "mystery shopping agency",
+            "clicks": 0,
+            "impressions": 23,
+            "ctr": 0,
+            "position": 25.4,
             "branded": false
           },
           {
             "query": "compliance solutions mystery shopping",
             "clicks": 0,
-            "impressions": 19,
+            "impressions": 20,
             "ctr": 0,
-            "position": 31.2,
+            "position": 31.3,
             "branded": false
           },
           {
@@ -3706,27 +3706,27 @@
             "branded": false
           },
           {
-            "query": "competitor mystery shopping",
-            "clicks": 0,
-            "impressions": 12,
-            "ctr": 0,
-            "position": 77.5,
-            "branded": false
-          },
-          {
-            "query": "outsourcing mystery",
-            "clicks": 0,
-            "impressions": 12,
-            "ctr": 0,
-            "position": 16.3,
-            "branded": false
-          },
-          {
             "query": "which mystery shopping companies offer reliable performance analytics for retail chains?",
             "clicks": 0,
             "impressions": 12,
             "ctr": 0,
             "position": 9,
+            "branded": false
+          },
+          {
+            "query": "competitor mystery shopping",
+            "clicks": 0,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 76.8,
+            "branded": false
+          },
+          {
+            "query": "outsourcing mystery",
+            "clicks": 0,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 14.3,
             "branded": false
           },
           {
@@ -3762,14 +3762,6 @@
             "branded": false
           },
           {
-            "query": "matrix mystery shopping",
-            "clicks": 0,
-            "impressions": 8,
-            "ctr": 0,
-            "position": 54.6,
-            "branded": false
-          },
-          {
             "query": "about face mystery shopping",
             "clicks": 0,
             "impressions": 7,
@@ -3786,6 +3778,14 @@
             "branded": false
           },
           {
+            "query": "matrix mystery shopping",
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 53.6,
+            "branded": false
+          },
+          {
             "query": "retail mystery shopping",
             "clicks": 0,
             "impressions": 7,
@@ -3799,14 +3799,6 @@
             "impressions": 6,
             "ctr": 0,
             "position": 38.7,
-            "branded": false
-          },
-          {
-            "query": "a closer look mystery shopper",
-            "clicks": 0,
-            "impressions": 6,
-            "ctr": 0,
-            "position": 42.7,
             "branded": false
           },
           {
@@ -3847,6 +3839,14 @@
             "impressions": 5,
             "ctr": 0,
             "position": 31,
+            "branded": false
+          },
+          {
+            "query": "a closer look mystery shopper",
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 41.2,
             "branded": false
           },
           {
@@ -4018,14 +4018,6 @@
             "branded": false
           },
           {
-            "query": "mystery shopping tours",
-            "clicks": 0,
-            "impressions": 2,
-            "ctr": 0,
-            "position": 33.5,
-            "branded": false
-          },
-          {
             "query": "norton norris mystery shopping",
             "clicks": 0,
             "impressions": 2,
@@ -4127,6 +4119,14 @@
             "impressions": 1,
             "ctr": 0,
             "position": 35,
+            "branded": false
+          },
+          {
+            "query": "corporate mystery shopping",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 50,
             "branded": false
           },
           {
@@ -4298,6 +4298,14 @@
             "branded": false
           },
           {
+            "query": "mystery shopping tours",
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 35,
+            "branded": false
+          },
+          {
             "query": "outsource mystery shopping",
             "clicks": 0,
             "impressions": 1,
@@ -4368,14 +4376,6 @@
             "ctr": 0,
             "position": 18,
             "branded": false
-          },
-          {
-            "query": "site:trocglobal.com",
-            "clicks": 0,
-            "impressions": 1,
-            "ctr": 0,
-            "position": 63,
-            "branded": true
           }
         ]
       },
@@ -4383,16 +4383,16 @@
         "page": "https://trocglobal.com/services/merchandising/",
         "totalQueries": 242,
         "clicks": 12,
-        "impressions": 6440,
+        "impressions": 6457,
         "ctr": 0.19,
-        "position": 32.5,
+        "position": 32.4,
         "strikingDistance": [
           {
             "query": "roc merchandising",
             "clicks": 0,
             "impressions": 324,
             "ctr": 0,
-            "position": 8.4,
+            "position": 8.2,
             "branded": false
           },
           {
@@ -4406,33 +4406,33 @@
           {
             "query": "retail merchandising agency",
             "clicks": 0,
-            "impressions": 91,
+            "impressions": 92,
             "ctr": 0,
-            "position": 13.6,
+            "position": 13.5,
             "branded": false
           },
           {
             "query": "field merchandising services",
             "clicks": 0,
-            "impressions": 90,
+            "impressions": 89,
             "ctr": 0,
-            "position": 12.2,
+            "position": 12.3,
             "branded": false
           },
           {
             "query": "retail merchandiser companies",
             "clicks": 2,
-            "impressions": 64,
-            "ctr": 3.13,
-            "position": 18.4,
+            "impressions": 70,
+            "ctr": 2.86,
+            "position": 18.6,
             "branded": false
           },
           {
             "query": "retail merchandising company target vendors",
             "clicks": 0,
-            "impressions": 61,
+            "impressions": 62,
             "ctr": 0,
-            "position": 16.2,
+            "position": 16.1,
             "branded": false
           },
           {
@@ -4452,19 +4452,19 @@
             "branded": false
           },
           {
-            "query": "in-store merchandising solutions",
-            "clicks": 0,
-            "impressions": 24,
-            "ctr": 0,
-            "position": 13.9,
-            "branded": false
-          },
-          {
             "query": "merchandising",
             "clicks": 1,
             "impressions": 23,
             "ctr": 4.35,
             "position": 8.8,
+            "branded": false
+          },
+          {
+            "query": "in-store merchandising solutions",
+            "clicks": 0,
+            "impressions": 22,
+            "ctr": 0,
+            "position": 13.6,
             "branded": false
           },
           {
@@ -4489,41 +4489,41 @@
           {
             "query": "retail merchandising services",
             "clicks": 0,
-            "impressions": 785,
+            "impressions": 789,
             "ctr": 0,
-            "position": 27.5,
+            "position": 27.4,
             "branded": false
           },
           {
             "query": "retail merchandising companies",
             "clicks": 2,
-            "impressions": 426,
+            "impressions": 428,
             "ctr": 0.47,
-            "position": 32.8,
+            "position": 32.5,
             "branded": false
           },
           {
             "query": "retail merchandising company",
             "clicks": 0,
-            "impressions": 405,
+            "impressions": 409,
             "ctr": 0,
-            "position": 30.4,
+            "position": 30.1,
             "branded": false
           },
           {
             "query": "retail merchandising solutions",
             "clicks": 0,
-            "impressions": 392,
+            "impressions": 395,
             "ctr": 0,
-            "position": 46.9,
+            "position": 47,
             "branded": false
           },
           {
             "query": "retail marketing services",
             "clicks": 0,
-            "impressions": 364,
+            "impressions": 365,
             "ctr": 0,
-            "position": 42.4,
+            "position": 42.3,
             "branded": false
           },
           {
@@ -4531,14 +4531,14 @@
             "clicks": 0,
             "impressions": 324,
             "ctr": 0,
-            "position": 8.4,
+            "position": 8.2,
             "branded": false
           },
           {
             "query": "merchandising companies",
             "clicks": 3,
-            "impressions": 198,
-            "ctr": 1.52,
+            "impressions": 200,
+            "ctr": 1.5,
             "position": 31.4,
             "branded": false
           },
@@ -4547,7 +4547,7 @@
             "clicks": 0,
             "impressions": 158,
             "ctr": 0,
-            "position": 21.7,
+            "position": 21.6,
             "branded": false
           },
           {
@@ -4561,17 +4561,9 @@
           {
             "query": "way to go merchandising",
             "clicks": 0,
-            "impressions": 139,
+            "impressions": 142,
             "ctr": 0,
-            "position": 35.1,
-            "branded": false
-          },
-          {
-            "query": "retail merchandising solution",
-            "clicks": 0,
-            "impressions": 129,
-            "ctr": 0,
-            "position": 39.2,
+            "position": 35.2,
             "branded": false
           },
           {
@@ -4579,7 +4571,15 @@
             "clicks": 0,
             "impressions": 128,
             "ctr": 0,
-            "position": 32.1,
+            "position": 32,
+            "branded": false
+          },
+          {
+            "query": "retail merchandising solution",
+            "clicks": 0,
+            "impressions": 125,
+            "ctr": 0,
+            "position": 38.2,
             "branded": false
           },
           {
@@ -4593,33 +4593,33 @@
           {
             "query": "retail merchandise solution",
             "clicks": 0,
-            "impressions": 108,
+            "impressions": 110,
             "ctr": 0,
-            "position": 33.7,
+            "position": 33.3,
             "branded": false
           },
           {
             "query": "waytogo merchandising",
             "clicks": 0,
-            "impressions": 95,
+            "impressions": 97,
             "ctr": 0,
-            "position": 35.6,
+            "position": 35.4,
             "branded": false
           },
           {
             "query": "retail merchandising agency",
             "clicks": 0,
-            "impressions": 91,
+            "impressions": 92,
             "ctr": 0,
-            "position": 13.6,
+            "position": 13.5,
             "branded": false
           },
           {
             "query": "field merchandising services",
             "clicks": 0,
-            "impressions": 90,
+            "impressions": 89,
             "ctr": 0,
-            "position": 12.2,
+            "position": 12.3,
             "branded": false
           },
           {
@@ -4627,7 +4627,7 @@
             "clicks": 0,
             "impressions": 83,
             "ctr": 0,
-            "position": 33.7,
+            "position": 33.2,
             "branded": false
           },
           {
@@ -4641,23 +4641,23 @@
           {
             "query": "in store merchandising companies",
             "clicks": 0,
-            "impressions": 82,
+            "impressions": 81,
             "ctr": 0,
-            "position": 21.1,
+            "position": 20.9,
             "branded": false
           },
           {
             "query": "retail merchandising company vancouver",
             "clicks": 0,
-            "impressions": 77,
+            "impressions": 79,
             "ctr": 0,
-            "position": 45.6,
+            "position": 45.5,
             "branded": false
           },
           {
             "query": "retail merchandising solutions inc",
             "clicks": 0,
-            "impressions": 76,
+            "impressions": 79,
             "ctr": 0,
             "position": 28.2,
             "branded": false
@@ -4667,7 +4667,7 @@
             "clicks": 0,
             "impressions": 75,
             "ctr": 0,
-            "position": 51.8,
+            "position": 51.7,
             "branded": false
           },
           {
@@ -4679,43 +4679,43 @@
             "branded": false
           },
           {
-            "query": "outsourcing merchandising services",
-            "clicks": 0,
-            "impressions": 69,
-            "ctr": 0,
-            "position": 50.3,
+            "query": "retail merchandiser companies",
+            "clicks": 2,
+            "impressions": 70,
+            "ctr": 2.86,
+            "position": 18.6,
             "branded": false
           },
           {
-            "query": "retail merchandiser companies",
-            "clicks": 2,
-            "impressions": 64,
-            "ctr": 3.13,
-            "position": 18.4,
+            "query": "outsourcing merchandising services",
+            "clicks": 0,
+            "impressions": 68,
+            "ctr": 0,
+            "position": 51.3,
             "branded": false
           },
           {
             "query": "retail merchandising company target vendors",
             "clicks": 0,
-            "impressions": 61,
+            "impressions": 62,
             "ctr": 0,
-            "position": 16.2,
+            "position": 16.1,
             "branded": false
           },
           {
             "query": "retail solutions merchandising",
             "clicks": 0,
-            "impressions": 61,
+            "impressions": 60,
             "ctr": 0,
-            "position": 23.5,
+            "position": 23.2,
             "branded": false
           },
           {
             "query": "merchandising agency",
             "clicks": 0,
-            "impressions": 56,
+            "impressions": 58,
             "ctr": 0,
-            "position": 21.9,
+            "position": 21.8,
             "branded": false
           },
           {
@@ -4729,25 +4729,25 @@
           {
             "query": "brand merchandising companies",
             "clicks": 0,
-            "impressions": 51,
+            "impressions": 48,
             "ctr": 0,
-            "position": 35.5,
-            "branded": false
-          },
-          {
-            "query": "backroom to shelf merchandising services",
-            "clicks": 0,
-            "impressions": 50,
-            "ctr": 0,
-            "position": 38.3,
+            "position": 35.4,
             "branded": false
           },
           {
             "query": "merchandising services",
             "clicks": 0,
-            "impressions": 47,
+            "impressions": 48,
             "ctr": 0,
             "position": 52.9,
+            "branded": false
+          },
+          {
+            "query": "backroom to shelf merchandising services",
+            "clicks": 0,
+            "impressions": 46,
+            "ctr": 0,
+            "position": 33.7,
             "branded": false
           },
           {
@@ -4771,15 +4771,15 @@
             "clicks": 0,
             "impressions": 40,
             "ctr": 0,
-            "position": 78.1,
+            "position": 78.7,
             "branded": false
           },
           {
             "query": "retail merchandise",
             "clicks": 0,
-            "impressions": 36,
+            "impressions": 37,
             "ctr": 0,
-            "position": 60.8,
+            "position": 59.4,
             "branded": false
           },
           {
@@ -4799,6 +4799,14 @@
             "branded": true
           },
           {
+            "query": "product merchandising company",
+            "clicks": 0,
+            "impressions": 34,
+            "ctr": 0,
+            "position": 30.1,
+            "branded": false
+          },
+          {
             "query": "strategic merchandise group",
             "clicks": 0,
             "impressions": 34,
@@ -4815,19 +4823,11 @@
             "branded": false
           },
           {
-            "query": "product merchandising company",
+            "query": "merchandising service companies",
             "clicks": 0,
             "impressions": 33,
             "ctr": 0,
-            "position": 30.4,
-            "branded": false
-          },
-          {
-            "query": "merchandising service companies",
-            "clicks": 0,
-            "impressions": 32,
-            "ctr": 0,
-            "position": 32.3,
+            "position": 32,
             "branded": false
           },
           {
@@ -4855,19 +4855,19 @@
             "branded": false
           },
           {
-            "query": "in-store merchandising solutions",
-            "clicks": 0,
-            "impressions": 24,
-            "ctr": 0,
-            "position": 13.9,
-            "branded": false
-          },
-          {
             "query": "merchandising",
             "clicks": 1,
             "impressions": 23,
             "ctr": 4.35,
             "position": 8.8,
+            "branded": false
+          },
+          {
+            "query": "in-store merchandising solutions",
+            "clicks": 0,
+            "impressions": 22,
+            "ctr": 0,
+            "position": 13.6,
             "branded": false
           },
           {
@@ -4881,9 +4881,9 @@
           {
             "query": "retail merchandising systems",
             "clicks": 0,
-            "impressions": 21,
+            "impressions": 20,
             "ctr": 0,
-            "position": 74.9,
+            "position": 75,
             "branded": false
           },
           {
@@ -4919,22 +4919,6 @@
             "branded": false
           },
           {
-            "query": "top 3rd party merchandising companies",
-            "clicks": 0,
-            "impressions": 17,
-            "ctr": 0,
-            "position": 34,
-            "branded": false
-          },
-          {
-            "query": "branded retail merchandise solutions",
-            "clicks": 0,
-            "impressions": 16,
-            "ctr": 0,
-            "position": 46.3,
-            "branded": false
-          },
-          {
             "query": "in-store merchandising",
             "clicks": 0,
             "impressions": 16,
@@ -4943,19 +4927,11 @@
             "branded": false
           },
           {
-            "query": "rct merchandising opc",
+            "query": "branded retail merchandise solutions",
             "clicks": 0,
-            "impressions": 16,
+            "impressions": 15,
             "ctr": 0,
-            "position": 6.8,
-            "branded": false
-          },
-          {
-            "query": "third party merchandising companies",
-            "clicks": 0,
-            "impressions": 16,
-            "ctr": 0,
-            "position": 30.9,
+            "position": 46.5,
             "branded": false
           },
           {
@@ -4967,11 +4943,35 @@
             "branded": false
           },
           {
+            "query": "rct merchandising opc",
+            "clicks": 0,
+            "impressions": 15,
+            "ctr": 0,
+            "position": 6.9,
+            "branded": false
+          },
+          {
+            "query": "top 3rd party merchandising companies",
+            "clicks": 0,
+            "impressions": 15,
+            "ctr": 0,
+            "position": 33.3,
+            "branded": false
+          },
+          {
             "query": "shelf merchandising services",
             "clicks": 0,
             "impressions": 14,
             "ctr": 0,
             "position": 22.2,
+            "branded": false
+          },
+          {
+            "query": "third party merchandising companies",
+            "clicks": 0,
+            "impressions": 14,
+            "ctr": 0,
+            "position": 29.9,
             "branded": false
           },
           {
@@ -5047,14 +5047,6 @@
             "branded": false
           },
           {
-            "query": "finding efficient retail merchandising solutions.",
-            "clicks": 0,
-            "impressions": 9,
-            "ctr": 0,
-            "position": 6.6,
-            "branded": false
-          },
-          {
             "query": "in store merchandising",
             "clicks": 0,
             "impressions": 9,
@@ -5076,6 +5068,14 @@
             "impressions": 9,
             "ctr": 0,
             "position": 86.1,
+            "branded": false
+          },
+          {
+            "query": "finding efficient retail merchandising solutions.",
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 7.3,
             "branded": false
           },
           {
@@ -5207,14 +5207,6 @@
             "branded": false
           },
           {
-            "query": "retail outsource",
-            "clicks": 0,
-            "impressions": 5,
-            "ctr": 0,
-            "position": 79.2,
-            "branded": true
-          },
-          {
             "query": "roc retail",
             "clicks": 0,
             "impressions": 5,
@@ -5285,21 +5277,29 @@
             "ctr": 0,
             "position": 31.3,
             "branded": false
+          },
+          {
+            "query": "corporate merchandising supplier for companies",
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 57.3,
+            "branded": false
           }
         ]
       },
       {
         "page": "https://trocglobal.com/merchandising-services/",
-        "totalQueries": 358,
+        "totalQueries": 357,
         "clicks": 4,
-        "impressions": 14455,
+        "impressions": 14307,
         "ctr": 0.03,
         "position": 11.9,
         "strikingDistance": [
           {
             "query": "retail merchandising services",
             "clicks": 2,
-            "impressions": 3023,
+            "impressions": 3011,
             "ctr": 0.07,
             "position": 9.8,
             "branded": false
@@ -5307,7 +5307,7 @@
           {
             "query": "merchandising services",
             "clicks": 2,
-            "impressions": 1160,
+            "impressions": 1150,
             "ctr": 0.17,
             "position": 10.7,
             "branded": false
@@ -5315,7 +5315,7 @@
           {
             "query": "retail merchandising",
             "clicks": 0,
-            "impressions": 1041,
+            "impressions": 1026,
             "ctr": 0,
             "position": 13.5,
             "branded": false
@@ -5323,15 +5323,15 @@
           {
             "query": "retail merchandising solutions",
             "clicks": 0,
-            "impressions": 821,
+            "impressions": 820,
             "ctr": 0,
-            "position": 8.2,
+            "position": 8.3,
             "branded": false
           },
           {
             "query": "retail marketing services",
             "clicks": 0,
-            "impressions": 627,
+            "impressions": 620,
             "ctr": 0,
             "position": 9.4,
             "branded": false
@@ -5339,31 +5339,31 @@
           {
             "query": "retail merchandising service",
             "clicks": 0,
-            "impressions": 349,
+            "impressions": 347,
             "ctr": 0,
             "position": 9.7,
             "branded": false
           },
           {
-            "query": "merchandise services",
+            "query": "service merchandising",
             "clicks": 0,
             "impressions": 319,
             "ctr": 0,
-            "position": 14,
+            "position": 16.4,
             "branded": false
           },
           {
-            "query": "service merchandising",
+            "query": "merchandise services",
             "clicks": 0,
-            "impressions": 318,
+            "impressions": 308,
             "ctr": 0,
-            "position": 16.3,
+            "position": 13.8,
             "branded": false
           },
           {
             "query": "retail management services",
             "clicks": 0,
-            "impressions": 302,
+            "impressions": 295,
             "ctr": 0,
             "position": 11.9,
             "branded": false
@@ -5371,7 +5371,7 @@
           {
             "query": "merchandise service",
             "clicks": 0,
-            "impressions": 264,
+            "impressions": 260,
             "ctr": 0,
             "position": 7.8,
             "branded": false
@@ -5379,7 +5379,7 @@
           {
             "query": "merchandising service",
             "clicks": 0,
-            "impressions": 245,
+            "impressions": 237,
             "ctr": 0,
             "position": 9.5,
             "branded": false
@@ -5387,7 +5387,7 @@
           {
             "query": "in-store merchandising services",
             "clicks": 0,
-            "impressions": 179,
+            "impressions": 181,
             "ctr": 0,
             "position": 6.4,
             "branded": false
@@ -5395,23 +5395,15 @@
           {
             "query": "retail merchandise discovery",
             "clicks": 0,
-            "impressions": 174,
+            "impressions": 176,
             "ctr": 0,
-            "position": 18.9,
-            "branded": false
-          },
-          {
-            "query": "retail merchandising solution",
-            "clicks": 0,
-            "impressions": 159,
-            "ctr": 0,
-            "position": 12.2,
+            "position": 19,
             "branded": false
           },
           {
             "query": "full service merchandising",
             "clicks": 0,
-            "impressions": 156,
+            "impressions": 153,
             "ctr": 0,
             "position": 5,
             "branded": false
@@ -5421,13 +5413,21 @@
             "clicks": 0,
             "impressions": 148,
             "ctr": 0,
-            "position": 9,
+            "position": 8.9,
+            "branded": false
+          },
+          {
+            "query": "retail merchandising solution",
+            "clicks": 0,
+            "impressions": 147,
+            "ctr": 0,
+            "position": 12.2,
             "branded": false
           },
           {
             "query": "retail merchandiser services",
             "clicks": 0,
-            "impressions": 141,
+            "impressions": 140,
             "ctr": 0,
             "position": 10.5,
             "branded": false
@@ -5435,7 +5435,7 @@
           {
             "query": "what is retail merchandising",
             "clicks": 0,
-            "impressions": 139,
+            "impressions": 133,
             "ctr": 0,
             "position": 10.9,
             "branded": false
@@ -5443,7 +5443,7 @@
           {
             "query": "retail merchandise",
             "clicks": 0,
-            "impressions": 132,
+            "impressions": 131,
             "ctr": 0,
             "position": 17.5,
             "branded": false
@@ -5451,15 +5451,15 @@
           {
             "query": "merchandising outsourcing",
             "clicks": 0,
-            "impressions": 113,
+            "impressions": 114,
             "ctr": 0,
-            "position": 9.4,
+            "position": 9.3,
             "branded": false
           },
           {
             "query": "retail merchandising companies",
             "clicks": 0,
-            "impressions": 112,
+            "impressions": 111,
             "ctr": 0,
             "position": 19.7,
             "branded": false
@@ -5467,7 +5467,7 @@
           {
             "query": "retail merchandising service automation",
             "clicks": 0,
-            "impressions": 93,
+            "impressions": 92,
             "ctr": 0,
             "position": 5.4,
             "branded": false
@@ -5475,7 +5475,7 @@
           {
             "query": "retail merchandising services ltd",
             "clicks": 0,
-            "impressions": 90,
+            "impressions": 89,
             "ctr": 0,
             "position": 12.6,
             "branded": false
@@ -5483,15 +5483,23 @@
           {
             "query": "retail merchandising business",
             "clicks": 0,
-            "impressions": 82,
+            "impressions": 80,
             "ctr": 0,
             "position": 15.5,
             "branded": false
           },
           {
-            "query": "retail merch",
+            "query": "visual merchandising services",
             "clicks": 0,
             "impressions": 80,
+            "ctr": 0,
+            "position": 8.4,
+            "branded": false
+          },
+          {
+            "query": "retail merch",
+            "clicks": 0,
+            "impressions": 78,
             "ctr": 0,
             "position": 15.2,
             "branded": false
@@ -5499,25 +5507,9 @@
           {
             "query": "store merchandising",
             "clicks": 0,
-            "impressions": 80,
+            "impressions": 78,
             "ctr": 0,
             "position": 14.9,
-            "branded": false
-          },
-          {
-            "query": "visual merchandising services",
-            "clicks": 0,
-            "impressions": 79,
-            "ctr": 0,
-            "position": 8.5,
-            "branded": false
-          },
-          {
-            "query": "merchandising services company",
-            "clicks": 0,
-            "impressions": 77,
-            "ctr": 0,
-            "position": 12.6,
             "branded": false
           },
           {
@@ -5531,9 +5523,17 @@
           {
             "query": "store merchandising services",
             "clicks": 0,
-            "impressions": 75,
+            "impressions": 76,
             "ctr": 0,
             "position": 5.8,
+            "branded": false
+          },
+          {
+            "query": "merchandising services company",
+            "clicks": 0,
+            "impressions": 74,
+            "ctr": 0,
+            "position": 12.7,
             "branded": false
           },
           {
@@ -5549,47 +5549,23 @@
             "clicks": 0,
             "impressions": 72,
             "ctr": 0,
-            "position": 16.6,
+            "position": 16.7,
             "branded": false
           },
           {
             "query": "retail merchandise programs",
             "clicks": 0,
-            "impressions": 64,
+            "impressions": 62,
             "ctr": 0,
-            "position": 7.4,
+            "position": 7.5,
             "branded": false
           },
           {
             "query": "retail merchandise solution",
             "clicks": 0,
-            "impressions": 64,
-            "ctr": 0,
-            "position": 10.7,
-            "branded": false
-          },
-          {
-            "query": "finding efficient retail merchandising solutions.",
-            "clicks": 0,
             "impressions": 62,
             "ctr": 0,
-            "position": 5.5,
-            "branded": false
-          },
-          {
-            "query": "manage merchasing service organizations",
-            "clicks": 0,
-            "impressions": 62,
-            "ctr": 0,
-            "position": 5.3,
-            "branded": false
-          },
-          {
-            "query": "merchandise retail",
-            "clicks": 0,
-            "impressions": 62,
-            "ctr": 0,
-            "position": 17.1,
+            "position": 10.8,
             "branded": false
           },
           {
@@ -5601,19 +5577,43 @@
             "branded": false
           },
           {
+            "query": "finding efficient retail merchandising solutions.",
+            "clicks": 0,
+            "impressions": 61,
+            "ctr": 0,
+            "position": 5.5,
+            "branded": false
+          },
+          {
+            "query": "manage merchasing service organizations",
+            "clicks": 0,
+            "impressions": 61,
+            "ctr": 0,
+            "position": 5.3,
+            "branded": false
+          },
+          {
+            "query": "merchandise retail",
+            "clicks": 0,
+            "impressions": 61,
+            "ctr": 0,
+            "position": 17,
+            "branded": false
+          },
+          {
             "query": "retail merchandising agencies",
             "clicks": 0,
-            "impressions": 60,
+            "impressions": 59,
             "ctr": 0,
             "position": 8.3,
             "branded": false
           },
           {
-            "query": "what is retail merchandising services",
+            "query": "in store merchandising services",
             "clicks": 0,
-            "impressions": 60,
+            "impressions": 58,
             "ctr": 0,
-            "position": 6.8,
+            "position": 7.6,
             "branded": false
           }
         ],
@@ -5622,7 +5622,7 @@
           {
             "query": "retail merchandising services",
             "clicks": 2,
-            "impressions": 3023,
+            "impressions": 3011,
             "ctr": 0.07,
             "position": 9.8,
             "branded": false
@@ -5630,7 +5630,7 @@
           {
             "query": "merchandising services",
             "clicks": 2,
-            "impressions": 1160,
+            "impressions": 1150,
             "ctr": 0.17,
             "position": 10.7,
             "branded": false
@@ -5638,7 +5638,7 @@
           {
             "query": "retail merchandising",
             "clicks": 0,
-            "impressions": 1041,
+            "impressions": 1026,
             "ctr": 0,
             "position": 13.5,
             "branded": false
@@ -5646,15 +5646,15 @@
           {
             "query": "retail merchandising solutions",
             "clicks": 0,
-            "impressions": 821,
+            "impressions": 820,
             "ctr": 0,
-            "position": 8.2,
+            "position": 8.3,
             "branded": false
           },
           {
             "query": "retail marketing services",
             "clicks": 0,
-            "impressions": 627,
+            "impressions": 620,
             "ctr": 0,
             "position": 9.4,
             "branded": false
@@ -5662,31 +5662,31 @@
           {
             "query": "retail merchandising service",
             "clicks": 0,
-            "impressions": 349,
+            "impressions": 347,
             "ctr": 0,
             "position": 9.7,
             "branded": false
           },
           {
-            "query": "merchandise services",
+            "query": "service merchandising",
             "clicks": 0,
             "impressions": 319,
             "ctr": 0,
-            "position": 14,
+            "position": 16.4,
             "branded": false
           },
           {
-            "query": "service merchandising",
+            "query": "merchandise services",
             "clicks": 0,
-            "impressions": 318,
+            "impressions": 308,
             "ctr": 0,
-            "position": 16.3,
+            "position": 13.8,
             "branded": false
           },
           {
             "query": "retail management services",
             "clicks": 0,
-            "impressions": 302,
+            "impressions": 295,
             "ctr": 0,
             "position": 11.9,
             "branded": false
@@ -5694,7 +5694,7 @@
           {
             "query": "merchandise service",
             "clicks": 0,
-            "impressions": 264,
+            "impressions": 260,
             "ctr": 0,
             "position": 7.8,
             "branded": false
@@ -5702,47 +5702,39 @@
           {
             "query": "merchandising service",
             "clicks": 0,
-            "impressions": 245,
+            "impressions": 237,
             "ctr": 0,
             "position": 9.5,
             "branded": false
           },
           {
-            "query": "retail service",
-            "clicks": 0,
-            "impressions": 180,
-            "ctr": 0,
-            "position": 22.7,
-            "branded": false
-          },
-          {
             "query": "in-store merchandising services",
             "clicks": 0,
-            "impressions": 179,
+            "impressions": 181,
             "ctr": 0,
             "position": 6.4,
             "branded": false
           },
           {
-            "query": "retail merchandise discovery",
+            "query": "retail service",
             "clicks": 0,
-            "impressions": 174,
+            "impressions": 177,
             "ctr": 0,
-            "position": 18.9,
+            "position": 22.7,
             "branded": false
           },
           {
-            "query": "retail merchandising solution",
+            "query": "retail merchandise discovery",
             "clicks": 0,
-            "impressions": 159,
+            "impressions": 176,
             "ctr": 0,
-            "position": 12.2,
+            "position": 19,
             "branded": false
           },
           {
             "query": "full service merchandising",
             "clicks": 0,
-            "impressions": 156,
+            "impressions": 153,
             "ctr": 0,
             "position": 5,
             "branded": false
@@ -5752,13 +5744,21 @@
             "clicks": 0,
             "impressions": 148,
             "ctr": 0,
-            "position": 9,
+            "position": 8.9,
+            "branded": false
+          },
+          {
+            "query": "retail merchandising solution",
+            "clicks": 0,
+            "impressions": 147,
+            "ctr": 0,
+            "position": 12.2,
             "branded": false
           },
           {
             "query": "retail merchandiser services",
             "clicks": 0,
-            "impressions": 141,
+            "impressions": 140,
             "ctr": 0,
             "position": 10.5,
             "branded": false
@@ -5766,7 +5766,7 @@
           {
             "query": "what is retail merchandising",
             "clicks": 0,
-            "impressions": 139,
+            "impressions": 133,
             "ctr": 0,
             "position": 10.9,
             "branded": false
@@ -5774,17 +5774,25 @@
           {
             "query": "retail marketing services market",
             "clicks": 0,
-            "impressions": 134,
+            "impressions": 131,
             "ctr": 0,
-            "position": 22.4,
+            "position": 22.6,
             "branded": false
           },
           {
             "query": "retail merchandise",
             "clicks": 0,
-            "impressions": 132,
+            "impressions": 131,
             "ctr": 0,
             "position": 17.5,
+            "branded": false
+          },
+          {
+            "query": "merchandising outsourcing",
+            "clicks": 0,
+            "impressions": 114,
+            "ctr": 0,
+            "position": 9.3,
             "branded": false
           },
           {
@@ -5796,17 +5804,9 @@
             "branded": false
           },
           {
-            "query": "merchandising outsourcing",
-            "clicks": 0,
-            "impressions": 113,
-            "ctr": 0,
-            "position": 9.4,
-            "branded": false
-          },
-          {
             "query": "retail merchandising companies",
             "clicks": 0,
-            "impressions": 112,
+            "impressions": 111,
             "ctr": 0,
             "position": 19.7,
             "branded": false
@@ -5814,15 +5814,15 @@
           {
             "query": "retail merchandising company",
             "clicks": 0,
-            "impressions": 112,
+            "impressions": 110,
             "ctr": 0,
-            "position": 21.8,
+            "position": 21.9,
             "branded": false
           },
           {
             "query": "retail merchandising service automation",
             "clicks": 0,
-            "impressions": 93,
+            "impressions": 92,
             "ctr": 0,
             "position": 5.4,
             "branded": false
@@ -5838,7 +5838,7 @@
           {
             "query": "retail merchandising services ltd",
             "clicks": 0,
-            "impressions": 90,
+            "impressions": 89,
             "ctr": 0,
             "position": 12.6,
             "branded": false
@@ -5846,17 +5846,9 @@
           {
             "query": "retail merchandising business",
             "clicks": 0,
-            "impressions": 82,
-            "ctr": 0,
-            "position": 15.5,
-            "branded": false
-          },
-          {
-            "query": "retail merch",
-            "clicks": 0,
             "impressions": 80,
             "ctr": 0,
-            "position": 15.2,
+            "position": 15.5,
             "branded": false
           },
           {
@@ -5868,27 +5860,27 @@
             "branded": false
           },
           {
-            "query": "store merchandising",
+            "query": "visual merchandising services",
             "clicks": 0,
             "impressions": 80,
             "ctr": 0,
+            "position": 8.4,
+            "branded": false
+          },
+          {
+            "query": "retail merch",
+            "clicks": 0,
+            "impressions": 78,
+            "ctr": 0,
+            "position": 15.2,
+            "branded": false
+          },
+          {
+            "query": "store merchandising",
+            "clicks": 0,
+            "impressions": 78,
+            "ctr": 0,
             "position": 14.9,
-            "branded": false
-          },
-          {
-            "query": "visual merchandising services",
-            "clicks": 0,
-            "impressions": 79,
-            "ctr": 0,
-            "position": 8.5,
-            "branded": false
-          },
-          {
-            "query": "merchandising services company",
-            "clicks": 0,
-            "impressions": 77,
-            "ctr": 0,
-            "position": 12.6,
             "branded": false
           },
           {
@@ -5902,9 +5894,17 @@
           {
             "query": "store merchandising services",
             "clicks": 0,
-            "impressions": 75,
+            "impressions": 76,
             "ctr": 0,
             "position": 5.8,
+            "branded": false
+          },
+          {
+            "query": "merchandising services company",
+            "clicks": 0,
+            "impressions": 74,
+            "ctr": 0,
+            "position": 12.7,
             "branded": false
           },
           {
@@ -5920,47 +5920,23 @@
             "clicks": 0,
             "impressions": 72,
             "ctr": 0,
-            "position": 16.6,
+            "position": 16.7,
             "branded": false
           },
           {
             "query": "retail merchandise programs",
             "clicks": 0,
-            "impressions": 64,
+            "impressions": 62,
             "ctr": 0,
-            "position": 7.4,
+            "position": 7.5,
             "branded": false
           },
           {
             "query": "retail merchandise solution",
             "clicks": 0,
-            "impressions": 64,
-            "ctr": 0,
-            "position": 10.7,
-            "branded": false
-          },
-          {
-            "query": "finding efficient retail merchandising solutions.",
-            "clicks": 0,
             "impressions": 62,
             "ctr": 0,
-            "position": 5.5,
-            "branded": false
-          },
-          {
-            "query": "manage merchasing service organizations",
-            "clicks": 0,
-            "impressions": 62,
-            "ctr": 0,
-            "position": 5.3,
-            "branded": false
-          },
-          {
-            "query": "merchandise retail",
-            "clicks": 0,
-            "impressions": 62,
-            "ctr": 0,
-            "position": 17.1,
+            "position": 10.8,
             "branded": false
           },
           {
@@ -5972,27 +5948,51 @@
             "branded": false
           },
           {
+            "query": "finding efficient retail merchandising solutions.",
+            "clicks": 0,
+            "impressions": 61,
+            "ctr": 0,
+            "position": 5.5,
+            "branded": false
+          },
+          {
+            "query": "manage merchasing service organizations",
+            "clicks": 0,
+            "impressions": 61,
+            "ctr": 0,
+            "position": 5.3,
+            "branded": false
+          },
+          {
+            "query": "merchandise retail",
+            "clicks": 0,
+            "impressions": 61,
+            "ctr": 0,
+            "position": 17,
+            "branded": false
+          },
+          {
             "query": "retail merchandising agencies",
             "clicks": 0,
-            "impressions": 60,
+            "impressions": 59,
             "ctr": 0,
             "position": 8.3,
             "branded": false
           },
           {
-            "query": "what is retail merchandising services",
+            "query": "in store merchandising services",
             "clicks": 0,
-            "impressions": 60,
+            "impressions": 58,
             "ctr": 0,
-            "position": 6.8,
+            "position": 7.6,
             "branded": false
           },
           {
-            "query": "in store merchandising services",
+            "query": "what is retail merchandising services",
             "clicks": 0,
             "impressions": 57,
             "ctr": 0,
-            "position": 7.6,
+            "position": 6.8,
             "branded": false
           },
           {
@@ -6000,13 +6000,13 @@
             "clicks": 0,
             "impressions": 55,
             "ctr": 0,
-            "position": 8.9,
+            "position": 9,
             "branded": false
           },
           {
             "query": "retail store services",
             "clicks": 0,
-            "impressions": 55,
+            "impressions": 54,
             "ctr": 0,
             "position": 13.7,
             "branded": false
@@ -6014,9 +6014,9 @@
           {
             "query": "which firms excel in retail services and merchandising strategies?",
             "clicks": 0,
-            "impressions": 54,
+            "impressions": 52,
             "ctr": 0,
-            "position": 5.4,
+            "position": 5.5,
             "branded": false
           },
           {
@@ -6030,7 +6030,7 @@
           {
             "query": "line merchandising services",
             "clicks": 0,
-            "impressions": 49,
+            "impressions": 47,
             "ctr": 0,
             "position": 4.5,
             "branded": false
@@ -6052,14 +6052,6 @@
             "branded": false
           },
           {
-            "query": "what are the best companies for retail merchandising solutions?",
-            "clicks": 0,
-            "impressions": 45,
-            "ctr": 0,
-            "position": 16.8,
-            "branded": false
-          },
-          {
             "query": "field merchandising services",
             "clicks": 0,
             "impressions": 43,
@@ -6068,36 +6060,44 @@
             "branded": false
           },
           {
-            "query": "retail and merchandising",
+            "query": "what are the best companies for retail merchandising solutions?",
             "clicks": 0,
-            "impressions": 42,
+            "impressions": 43,
             "ctr": 0,
-            "position": 14.8,
+            "position": 16.7,
             "branded": false
           },
           {
-            "query": "retail merchandising systems",
+            "query": "retail and merchandising",
             "clicks": 0,
-            "impressions": 40,
+            "impressions": 41,
             "ctr": 0,
-            "position": 26.5,
+            "position": 14.9,
             "branded": false
           },
           {
             "query": "compare the cost of mobile-first merchandising platforms requiring no annual contracts.",
             "clicks": 0,
-            "impressions": 39,
+            "impressions": 40,
             "ctr": 0,
-            "position": 6.1,
+            "position": 6.2,
             "branded": false
           },
           {
             "query": "site:trocglobal.com",
             "clicks": 0,
-            "impressions": 39,
+            "impressions": 40,
             "ctr": 0,
             "position": 8.2,
             "branded": true
+          },
+          {
+            "query": "retail merchandising systems",
+            "clicks": 0,
+            "impressions": 39,
+            "ctr": 0,
+            "position": 26.5,
+            "branded": false
           },
           {
             "query": "retail merchandise solutions",
@@ -6126,7 +6126,7 @@
           {
             "query": "what is retail services",
             "clicks": 0,
-            "impressions": 36,
+            "impressions": 35,
             "ctr": 0,
             "position": 18.6,
             "branded": false
@@ -6134,17 +6134,9 @@
           {
             "query": "reatail merchandising",
             "clicks": 0,
-            "impressions": 35,
+            "impressions": 34,
             "ctr": 0,
-            "position": 13.5,
-            "branded": false
-          },
-          {
-            "query": "service merchandiser",
-            "clicks": 0,
-            "impressions": 35,
-            "ctr": 0,
-            "position": 18.5,
+            "position": 13.4,
             "branded": false
           },
           {
@@ -6156,11 +6148,27 @@
             "branded": false
           },
           {
+            "query": "service merchandiser",
+            "clicks": 0,
+            "impressions": 33,
+            "ctr": 0,
+            "position": 18.6,
+            "branded": false
+          },
+          {
             "query": "what is the average cost of outsourced retail merchandising",
             "clicks": 0,
             "impressions": 33,
             "ctr": 0,
             "position": 1,
+            "branded": false
+          },
+          {
+            "query": "end-to-end merchandise services",
+            "clicks": 0,
+            "impressions": 32,
+            "ctr": 0,
+            "position": 12.2,
             "branded": false
           },
           {
@@ -6176,23 +6184,7 @@
             "clicks": 0,
             "impressions": 32,
             "ctr": 0,
-            "position": 7.7,
-            "branded": false
-          },
-          {
-            "query": "end-to-end merchandise services",
-            "clicks": 0,
-            "impressions": 30,
-            "ctr": 0,
-            "position": 11.8,
-            "branded": false
-          },
-          {
-            "query": "shelf merchandising services",
-            "clicks": 0,
-            "impressions": 28,
-            "ctr": 0,
-            "position": 4.6,
+            "position": 7.8,
             "branded": false
           },
           {
@@ -6212,19 +6204,19 @@
             "branded": false
           },
           {
+            "query": "shelf merchandising services",
+            "clicks": 0,
+            "impressions": 26,
+            "ctr": 0,
+            "position": 4.6,
+            "branded": false
+          },
+          {
             "query": "in store merchandising",
             "clicks": 0,
             "impressions": 24,
             "ctr": 0,
             "position": 9,
-            "branded": false
-          },
-          {
-            "query": "merchandising services meaning",
-            "clicks": 0,
-            "impressions": 24,
-            "ctr": 0,
-            "position": 3.5,
             "branded": false
           },
           {
@@ -6241,6 +6233,14 @@
             "impressions": 23,
             "ctr": 0,
             "position": 6.3,
+            "branded": false
+          },
+          {
+            "query": "merchandising services meaning",
+            "clicks": 0,
+            "impressions": 23,
+            "ctr": 0,
+            "position": 3.6,
             "branded": false
           },
           {
@@ -6268,19 +6268,19 @@
             "branded": false
           },
           {
-            "query": "retail merchandising reporting",
-            "clicks": 0,
-            "impressions": 20,
-            "ctr": 0,
-            "position": 11.8,
-            "branded": false
-          },
-          {
             "query": "retail merchandising agency",
             "clicks": 0,
             "impressions": 19,
             "ctr": 0,
             "position": 11.2,
+            "branded": false
+          },
+          {
+            "query": "retail merchandising reporting",
+            "clicks": 0,
+            "impressions": 19,
+            "ctr": 0,
+            "position": 11.8,
             "branded": false
           },
           {
@@ -6297,14 +6297,6 @@
             "impressions": 18,
             "ctr": 0,
             "position": 42.7,
-            "branded": false
-          },
-          {
-            "query": "sales and merchandising services",
-            "clicks": 0,
-            "impressions": 17,
-            "ctr": 0,
-            "position": 7.3,
             "branded": false
           },
           {
@@ -6332,19 +6324,19 @@
             "branded": false
           },
           {
-            "query": "retail solutions merchandising",
-            "clicks": 0,
-            "impressions": 16,
-            "ctr": 0,
-            "position": 11.1,
-            "branded": false
-          },
-          {
             "query": "rms retail merchandising services",
             "clicks": 0,
             "impressions": 16,
             "ctr": 0,
             "position": 17.9,
+            "branded": false
+          },
+          {
+            "query": "sales and merchandising services",
+            "clicks": 0,
+            "impressions": 16,
+            "ctr": 0,
+            "position": 7.1,
             "branded": false
           },
           {
@@ -6396,6 +6388,14 @@
             "branded": false
           },
           {
+            "query": "retail solutions merchandising",
+            "clicks": 0,
+            "impressions": 15,
+            "ctr": 0,
+            "position": 11.1,
+            "branded": false
+          },
+          {
             "query": "in-store merchandising",
             "clicks": 0,
             "impressions": 14,
@@ -6412,43 +6412,43 @@
             "branded": false
           },
           {
-            "query": "retail merchandising meaning",
+            "query": "retail service companies",
             "clicks": 0,
             "impressions": 14,
             "ctr": 0,
-            "position": 11.9,
+            "position": 12.4,
             "branded": false
           }
         ]
       },
       {
         "page": "https://trocglobal.com/retail-merchandising/",
-        "totalQueries": 237,
+        "totalQueries": 239,
         "clicks": 1,
-        "impressions": 5150,
+        "impressions": 5138,
         "ctr": 0.02,
-        "position": 41.7,
+        "position": 41.9,
         "strikingDistance": [
           {
             "query": "merchandising optimization",
             "clicks": 0,
-            "impressions": 286,
+            "impressions": 283,
             "ctr": 0,
-            "position": 19.1,
+            "position": 19.2,
             "branded": false
           },
           {
             "query": "retail merchandising trends",
             "clicks": 0,
-            "impressions": 133,
+            "impressions": 130,
             "ctr": 0,
-            "position": 9.3,
+            "position": 9.4,
             "branded": false
           },
           {
             "query": "retail merchandising innovations",
             "clicks": 0,
-            "impressions": 113,
+            "impressions": 112,
             "ctr": 0,
             "position": 8.3,
             "branded": false
@@ -6456,17 +6456,17 @@
           {
             "query": "difference between merchandising and retailing",
             "clicks": 0,
-            "impressions": 81,
+            "impressions": 78,
             "ctr": 0,
-            "position": 16.1,
+            "position": 16.2,
             "branded": false
           },
           {
             "query": "why is merchandising important to retailers",
             "clicks": 0,
-            "impressions": 73,
+            "impressions": 72,
             "ctr": 0,
-            "position": 17.8,
+            "position": 17.9,
             "branded": false
           },
           {
@@ -6474,7 +6474,7 @@
             "clicks": 0,
             "impressions": 59,
             "ctr": 0,
-            "position": 17.3,
+            "position": 17.8,
             "branded": false
           },
           {
@@ -6520,25 +6520,25 @@
           {
             "query": "finding efficient retail merchandising solutions.",
             "clicks": 0,
-            "impressions": 29,
+            "impressions": 28,
             "ctr": 0,
-            "position": 8.8,
+            "position": 8.7,
             "branded": false
           },
           {
             "query": "female merchandiser",
             "clicks": 0,
-            "impressions": 25,
+            "impressions": 23,
             "ctr": 0,
-            "position": 8.2,
+            "position": 8,
             "branded": false
           },
           {
             "query": "what is real-time merchandising execution in retail",
             "clicks": 0,
-            "impressions": 21,
+            "impressions": 22,
             "ctr": 0,
-            "position": 10.8,
+            "position": 11.1,
             "branded": false
           }
         ],
@@ -6547,7 +6547,7 @@
           {
             "query": "retail merchandising",
             "clicks": 0,
-            "impressions": 1802,
+            "impressions": 1804,
             "ctr": 0,
             "position": 60.5,
             "branded": false
@@ -6555,15 +6555,15 @@
           {
             "query": "merchandising optimization",
             "clicks": 0,
-            "impressions": 286,
+            "impressions": 283,
             "ctr": 0,
-            "position": 19.1,
+            "position": 19.2,
             "branded": false
           },
           {
             "query": "what is merchandising in retail",
             "clicks": 0,
-            "impressions": 210,
+            "impressions": 214,
             "ctr": 0,
             "position": 32.7,
             "branded": false
@@ -6571,31 +6571,31 @@
           {
             "query": "what is retail merchandising",
             "clicks": 0,
-            "impressions": 135,
+            "impressions": 138,
             "ctr": 0,
-            "position": 32.8,
+            "position": 33.4,
             "branded": false
           },
           {
             "query": "retail merchandising trends",
             "clicks": 0,
-            "impressions": 133,
+            "impressions": 130,
             "ctr": 0,
-            "position": 9.3,
+            "position": 9.4,
             "branded": false
           },
           {
             "query": "retail and merchandising",
             "clicks": 0,
-            "impressions": 117,
+            "impressions": 118,
             "ctr": 0,
-            "position": 36.1,
+            "position": 35.9,
             "branded": false
           },
           {
             "query": "retail merchandising solutions",
             "clicks": 0,
-            "impressions": 115,
+            "impressions": 116,
             "ctr": 0,
             "position": 69.5,
             "branded": false
@@ -6603,17 +6603,9 @@
           {
             "query": "retail merchandising innovations",
             "clicks": 0,
-            "impressions": 113,
+            "impressions": 112,
             "ctr": 0,
             "position": 8.3,
-            "branded": false
-          },
-          {
-            "query": "retail merchandising meaning",
-            "clicks": 0,
-            "impressions": 107,
-            "ctr": 0,
-            "position": 55.3,
             "branded": false
           },
           {
@@ -6622,6 +6614,14 @@
             "impressions": 106,
             "ctr": 0,
             "position": 42.3,
+            "branded": false
+          },
+          {
+            "query": "retail merchandising meaning",
+            "clicks": 0,
+            "impressions": 104,
+            "ctr": 0,
+            "position": 56.3,
             "branded": false
           },
           {
@@ -6635,25 +6635,17 @@
           {
             "query": "difference between merchandising and retailing",
             "clicks": 0,
-            "impressions": 81,
+            "impressions": 78,
             "ctr": 0,
-            "position": 16.1,
+            "position": 16.2,
             "branded": false
           },
           {
             "query": "retail merchandising definition",
             "clicks": 0,
-            "impressions": 80,
+            "impressions": 78,
             "ctr": 0,
-            "position": 21.8,
-            "branded": false
-          },
-          {
-            "query": "why is merchandising important to retailers",
-            "clicks": 0,
-            "impressions": 73,
-            "ctr": 0,
-            "position": 17.8,
+            "position": 22.1,
             "branded": false
           },
           {
@@ -6662,6 +6654,14 @@
             "impressions": 72,
             "ctr": 0,
             "position": 3.6,
+            "branded": false
+          },
+          {
+            "query": "why is merchandising important to retailers",
+            "clicks": 0,
+            "impressions": 72,
+            "ctr": 0,
+            "position": 17.9,
             "branded": false
           },
           {
@@ -6675,17 +6675,17 @@
           {
             "query": "store merchandising",
             "clicks": 0,
-            "impressions": 66,
+            "impressions": 67,
             "ctr": 0,
-            "position": 59.6,
+            "position": 59.4,
             "branded": false
           },
           {
             "query": "what is merchandising in retail industry",
             "clicks": 0,
-            "impressions": 65,
+            "impressions": 67,
             "ctr": 0,
-            "position": 23.7,
+            "position": 23,
             "branded": false
           },
           {
@@ -6693,15 +6693,15 @@
             "clicks": 0,
             "impressions": 59,
             "ctr": 0,
-            "position": 17.3,
+            "position": 17.8,
             "branded": false
           },
           {
             "query": "retail merchandising tips",
             "clicks": 0,
-            "impressions": 56,
+            "impressions": 54,
             "ctr": 0,
-            "position": 38,
+            "position": 38.1,
             "branded": false
           },
           {
@@ -6729,6 +6729,14 @@
             "branded": false
           },
           {
+            "query": "merchandising market",
+            "clicks": 0,
+            "impressions": 39,
+            "ctr": 0,
+            "position": 85.6,
+            "branded": false
+          },
+          {
             "query": "retail merchandise",
             "clicks": 0,
             "impressions": 39,
@@ -6745,14 +6753,6 @@
             "branded": false
           },
           {
-            "query": "merchandising market",
-            "clicks": 0,
-            "impressions": 38,
-            "ctr": 0,
-            "position": 85.5,
-            "branded": false
-          },
-          {
             "query": "retail merchandising challenges",
             "clicks": 0,
             "impressions": 38,
@@ -6763,7 +6763,7 @@
           {
             "query": "site:trocglobal.com",
             "clicks": 0,
-            "impressions": 37,
+            "impressions": 38,
             "ctr": 0,
             "position": 9.1,
             "branded": true
@@ -6787,17 +6787,17 @@
           {
             "query": "retail merchandising strategies",
             "clicks": 0,
-            "impressions": 30,
+            "impressions": 29,
             "ctr": 0,
-            "position": 48.9,
+            "position": 48.2,
             "branded": false
           },
           {
             "query": "finding efficient retail merchandising solutions.",
             "clicks": 0,
-            "impressions": 29,
+            "impressions": 28,
             "ctr": 0,
-            "position": 8.8,
+            "position": 8.7,
             "branded": false
           },
           {
@@ -6811,17 +6811,17 @@
           {
             "query": "female merchandiser",
             "clicks": 0,
-            "impressions": 25,
+            "impressions": 23,
             "ctr": 0,
-            "position": 8.2,
+            "position": 8,
             "branded": false
           },
           {
-            "query": "principles of retail merchandising",
+            "query": "what is real-time merchandising execution in retail",
             "clicks": 0,
             "impressions": 22,
             "ctr": 0,
-            "position": 88.7,
+            "position": 11.1,
             "branded": false
           },
           {
@@ -6833,19 +6833,19 @@
             "branded": false
           },
           {
+            "query": "principles of retail merchandising",
+            "clicks": 0,
+            "impressions": 21,
+            "ctr": 0,
+            "position": 88.7,
+            "branded": false
+          },
+          {
             "query": "retail visibility",
             "clicks": 0,
             "impressions": 21,
             "ctr": 0,
             "position": 69.6,
-            "branded": false
-          },
-          {
-            "query": "what is real-time merchandising execution in retail",
-            "clicks": 0,
-            "impressions": 21,
-            "ctr": 0,
-            "position": 10.8,
             "branded": false
           },
           {
@@ -6859,9 +6859,9 @@
           {
             "query": "retail merchandising business",
             "clicks": 0,
-            "impressions": 20,
+            "impressions": 19,
             "ctr": 0,
-            "position": 55,
+            "position": 52.7,
             "branded": false
           },
           {
@@ -6881,11 +6881,11 @@
             "branded": false
           },
           {
-            "query": "retail product merchandising",
+            "query": "retail merchadising",
             "clicks": 0,
             "impressions": 14,
             "ctr": 0,
-            "position": 19.6,
+            "position": 57.1,
             "branded": false
           },
           {
@@ -6905,14 +6905,6 @@
             "branded": false
           },
           {
-            "query": "retail merchadising",
-            "clicks": 0,
-            "impressions": 13,
-            "ctr": 0,
-            "position": 56.9,
-            "branded": false
-          },
-          {
             "query": "retail store visibility",
             "clicks": 0,
             "impressions": 13,
@@ -6921,11 +6913,19 @@
             "branded": false
           },
           {
+            "query": "retail product merchandising",
+            "clicks": 0,
+            "impressions": 12,
+            "ctr": 0,
+            "position": 22,
+            "branded": false
+          },
+          {
             "query": "retailer merchandising optimization",
             "clicks": 0,
-            "impressions": 13,
+            "impressions": 12,
             "ctr": 0,
-            "position": 3.2,
+            "position": 3.4,
             "branded": false
           },
           {
@@ -6953,14 +6953,6 @@
             "branded": false
           },
           {
-            "query": "optimize merchandising",
-            "clicks": 0,
-            "impressions": 11,
-            "ctr": 0,
-            "position": 16.6,
-            "branded": false
-          },
-          {
             "query": "define retail merchandising",
             "clicks": 0,
             "impressions": 10,
@@ -6982,6 +6974,14 @@
             "impressions": 10,
             "ctr": 0,
             "position": 17.6,
+            "branded": false
+          },
+          {
+            "query": "optimize merchandising",
+            "clicks": 0,
+            "impressions": 10,
+            "ctr": 0,
+            "position": 16.6,
             "branded": false
           },
           {
@@ -7105,14 +7105,6 @@
             "branded": false
           },
           {
-            "query": "retailer merchandising strategy",
-            "clicks": 0,
-            "impressions": 8,
-            "ctr": 0,
-            "position": 87.6,
-            "branded": false
-          },
-          {
             "query": "what is merchandise retailing",
             "clicks": 0,
             "impressions": 8,
@@ -7134,6 +7126,14 @@
             "impressions": 7,
             "ctr": 0,
             "position": 29.7,
+            "branded": false
+          },
+          {
+            "query": "retailer merchandising strategy",
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 87.3,
             "branded": false
           },
           {
@@ -7174,14 +7174,6 @@
             "impressions": 6,
             "ctr": 0,
             "position": 13.2,
-            "branded": false
-          },
-          {
-            "query": "retail",
-            "clicks": 0,
-            "impressions": 6,
-            "ctr": 0,
-            "position": 2.7,
             "branded": false
           },
           {
@@ -7289,19 +7281,19 @@
             "branded": false
           },
           {
+            "query": "retail",
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 2.8,
+            "branded": false
+          },
+          {
             "query": "retail merchandising for natural brands",
             "clicks": 0,
             "impressions": 5,
             "ctr": 0,
             "position": 7.6,
-            "branded": false
-          },
-          {
-            "query": "retail merchandising procedures",
-            "clicks": 0,
-            "impressions": 5,
-            "ctr": 0,
-            "position": 35.6,
             "branded": false
           },
           {
@@ -7343,6 +7335,14 @@
             "ctr": 0,
             "position": 34.3,
             "branded": false
+          },
+          {
+            "query": "how does real-time shelf data improve merchandising decisions",
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 67,
+            "branded": false
           }
         ]
       },
@@ -7350,50 +7350,50 @@
         "page": "https://trocglobal.com/what-is-retail-merchandising/",
         "totalQueries": 59,
         "clicks": 0,
-        "impressions": 2398,
+        "impressions": 2405,
         "ctr": 0,
-        "position": 58.7,
+        "position": 58.3,
         "strikingDistance": [],
         "alreadyTop3": 0,
         "queries": [
           {
             "query": "retail merchandising",
             "clicks": 0,
-            "impressions": 1285,
+            "impressions": 1289,
             "ctr": 0,
-            "position": 62.3,
+            "position": 61.9,
             "branded": false
           },
           {
             "query": "what is merchandising in retail",
             "clicks": 0,
-            "impressions": 168,
+            "impressions": 170,
             "ctr": 0,
-            "position": 68.3,
+            "position": 68.2,
             "branded": false
           },
           {
             "query": "what is retail merchandising",
             "clicks": 0,
-            "impressions": 157,
+            "impressions": 160,
             "ctr": 0,
-            "position": 31.5,
+            "position": 30.4,
             "branded": false
           },
           {
             "query": "retail merchandising meaning",
             "clicks": 0,
-            "impressions": 134,
+            "impressions": 135,
             "ctr": 0,
-            "position": 38.7,
+            "position": 38.1,
             "branded": false
           },
           {
             "query": "retail and merchandising",
             "clicks": 0,
-            "impressions": 97,
+            "impressions": 98,
             "ctr": 0,
-            "position": 82.5,
+            "position": 82.1,
             "branded": false
           },
           {
@@ -7407,15 +7407,15 @@
           {
             "query": "retail merchandise",
             "clicks": 0,
-            "impressions": 77,
+            "impressions": 78,
             "ctr": 0,
-            "position": 64.9,
+            "position": 64.2,
             "branded": false
           },
           {
             "query": "merchandise retail",
             "clicks": 0,
-            "impressions": 53,
+            "impressions": 52,
             "ctr": 0,
             "position": 83.7,
             "branded": false
@@ -7423,17 +7423,17 @@
           {
             "query": "retail merchandising definition",
             "clicks": 0,
-            "impressions": 45,
+            "impressions": 44,
             "ctr": 0,
-            "position": 27.2,
+            "position": 26.5,
             "branded": false
           },
           {
             "query": "merchandising retail",
             "clicks": 0,
-            "impressions": 25,
+            "impressions": 26,
             "ctr": 0,
-            "position": 53.3,
+            "position": 53.4,
             "branded": false
           },
           {
@@ -7445,14 +7445,6 @@
             "branded": false
           },
           {
-            "query": "retail merchandising business",
-            "clicks": 0,
-            "impressions": 20,
-            "ctr": 0,
-            "position": 73.3,
-            "branded": false
-          },
-          {
             "query": "what is merchandising in retail industry",
             "clicks": 0,
             "impressions": 20,
@@ -7461,11 +7453,19 @@
             "branded": false
           },
           {
-            "query": "retail merch",
+            "query": "retail merchandising business",
             "clicks": 0,
             "impressions": 17,
             "ctr": 0,
-            "position": 68.5,
+            "position": 73.2,
+            "branded": false
+          },
+          {
+            "query": "retail merch",
+            "clicks": 0,
+            "impressions": 15,
+            "ctr": 0,
+            "position": 67.2,
             "branded": false
           },
           {
@@ -7479,9 +7479,9 @@
           {
             "query": "retailing merchandising",
             "clicks": 0,
-            "impressions": 13,
+            "impressions": 14,
             "ctr": 0,
-            "position": 54.6,
+            "position": 51.9,
             "branded": false
           },
           {
@@ -7495,9 +7495,9 @@
           {
             "query": "retail merchadising",
             "clicks": 0,
-            "impressions": 11,
+            "impressions": 12,
             "ctr": 0,
-            "position": 81.2,
+            "position": 76,
             "branded": false
           },
           {
@@ -7613,19 +7613,11 @@
             "branded": false
           },
           {
-            "query": "retail product merchandising",
-            "clicks": 0,
-            "impressions": 4,
-            "ctr": 0,
-            "position": 88,
-            "branded": false
-          },
-          {
             "query": "roc merchandising",
             "clicks": 0,
             "impressions": 4,
             "ctr": 0,
-            "position": 22,
+            "position": 22.5,
             "branded": false
           },
           {
@@ -7650,6 +7642,14 @@
             "impressions": 3,
             "ctr": 0,
             "position": 32,
+            "branded": false
+          },
+          {
+            "query": "retail product merchandising",
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 88,
             "branded": false
           },
           {
@@ -7832,18 +7832,11 @@
       }
     ],
     "totals": {
-      "clicks": 4853,
-      "impressions": 866942,
+      "clicks": 4845,
+      "impressions": 865726,
       "ctr": 0.56
     },
     "daily": [
-      {
-        "date": "2026-07-25",
-        "clicks": 23,
-        "impressions": 7681,
-        "ctr": 0.3,
-        "position": 15.1
-      },
       {
         "date": "2026-07-26",
         "clicks": 19,
@@ -8473,12 +8466,19 @@
         "impressions": 7384,
         "ctr": 0.74,
         "position": 16.5
+      },
+      {
+        "date": "2026-10-24",
+        "clicks": 15,
+        "impressions": 6465,
+        "ctr": 0.23,
+        "position": 19.3
       }
     ],
     "brandSplitByClicks": {
-      "brandedClicks": 2029,
-      "nonBrandedClicks": 250,
-      "sampleClicks": 2279,
+      "brandedClicks": 2022,
+      "nonBrandedClicks": 251,
+      "sampleClicks": 2273,
       "brandedPct": 89,
       "nonBrandedPct": 11,
       "note": "Measured clicks from Search Console — supersedes the Ahrefs-modeled split."
@@ -8486,25 +8486,25 @@
     "topQueries": [
       {
         "query": "troc",
-        "clicks": 694,
-        "impressions": 5673,
-        "ctr": 12.23,
+        "clicks": 692,
+        "impressions": 5697,
+        "ctr": 12.15,
         "position": 2.7,
         "branded": true
       },
       {
         "query": "t-roc",
-        "clicks": 370,
-        "impressions": 1652,
-        "ctr": 22.4,
+        "clicks": 368,
+        "impressions": 1647,
+        "ctr": 22.34,
         "position": 1.3,
         "branded": true
       },
       {
         "query": "troc global",
         "clicks": 230,
-        "impressions": 611,
-        "ctr": 37.64,
+        "impressions": 610,
+        "ctr": 37.7,
         "position": 1.5,
         "branded": true
       },
@@ -8518,17 +8518,17 @@
       },
       {
         "query": "t roc",
-        "clicks": 161,
-        "impressions": 1884,
-        "ctr": 8.55,
+        "clicks": 159,
+        "impressions": 1888,
+        "ctr": 8.42,
         "position": 1.9,
         "branded": true
       },
       {
         "query": "the revenue optimization companies",
         "clicks": 71,
-        "impressions": 256,
-        "ctr": 27.73,
+        "impressions": 253,
+        "ctr": 28.06,
         "position": 2.2,
         "branded": true
       },
@@ -8543,9 +8543,9 @@
       {
         "query": "t roc global",
         "clicks": 61,
-        "impressions": 150,
-        "ctr": 40.67,
-        "position": 1,
+        "impressions": 151,
+        "ctr": 40.4,
+        "position": 1.4,
         "branded": true
       },
       {
@@ -8583,8 +8583,8 @@
       {
         "query": "what is t-roc",
         "clicks": 15,
-        "impressions": 37,
-        "ctr": 40.54,
+        "impressions": 38,
+        "ctr": 39.47,
         "position": 1.9,
         "branded": true
       },
@@ -8607,9 +8607,9 @@
       {
         "query": "brand ambassador",
         "clicks": 12,
-        "impressions": 2445,
-        "ctr": 0.49,
-        "position": 12.7,
+        "impressions": 2413,
+        "ctr": 0.5,
+        "position": 12.8,
         "branded": false
       },
       {
@@ -8622,33 +8622,33 @@
       },
       {
         "query": "t roc the revenue optimization companies",
-        "clicks": 8,
-        "impressions": 23,
-        "ctr": 34.78,
+        "clicks": 9,
+        "impressions": 24,
+        "ctr": 37.5,
         "position": 1,
         "branded": true
       },
       {
         "query": "customer engagement innovation",
         "clicks": 7,
-        "impressions": 201,
-        "ctr": 3.48,
+        "impressions": 197,
+        "ctr": 3.55,
         "position": 7.5,
         "branded": false
       },
       {
         "query": "trocglobal.com",
         "clicks": 7,
-        "impressions": 241,
-        "ctr": 2.9,
+        "impressions": 239,
+        "ctr": 2.93,
         "position": 1.2,
         "branded": true
       },
       {
         "query": "walmart automation",
         "clicks": 7,
-        "impressions": 473,
-        "ctr": 1.48,
+        "impressions": 475,
+        "ctr": 1.47,
         "position": 5.5,
         "branded": false
       },
@@ -8661,6 +8661,14 @@
         "branded": false
       },
       {
+        "query": "big bang enterprises",
+        "clicks": 5,
+        "impressions": 124,
+        "ctr": 4.03,
+        "position": 6.4,
+        "branded": false
+      },
+      {
         "query": "data mining in retail industry",
         "clicks": 5,
         "impressions": 32,
@@ -8669,19 +8677,11 @@
         "branded": false
       },
       {
-        "query": "big bang enterprises",
-        "clicks": 4,
-        "impressions": 123,
-        "ctr": 3.25,
-        "position": 6.4,
-        "branded": false
-      },
-      {
         "query": "brand ambassador programs",
         "clicks": 4,
-        "impressions": 122,
-        "ctr": 3.28,
-        "position": 29.4,
+        "impressions": 120,
+        "ctr": 3.33,
+        "position": 29.7,
         "branded": false
       },
       {
@@ -8695,23 +8695,23 @@
       {
         "query": "retail merchandising companies",
         "clicks": 4,
-        "impressions": 514,
+        "impressions": 515,
         "ctr": 0.78,
-        "position": 24.5,
+        "position": 24.3,
         "branded": false
       },
       {
         "query": "revenue optimization companies",
         "clicks": 4,
-        "impressions": 269,
-        "ctr": 1.49,
-        "position": 15.9,
+        "impressions": 266,
+        "ctr": 1.5,
+        "position": 15.7,
         "branded": true
       },
       {
         "query": "the retail outsource",
         "clicks": 4,
-        "impressions": 530,
+        "impressions": 535,
         "ctr": 0.75,
         "position": 10.7,
         "branded": true
@@ -8728,176 +8728,176 @@
     "lowCtrHighRank": [
       {
         "page": "https://trocglobal.com/company/",
-        "clicks": 263,
-        "impressions": 49516,
+        "clicks": 261,
+        "impressions": 48903,
         "ctr": 0.53,
-        "position": 5.2
+        "position": 5.1
       },
       {
         "page": "https://trocglobal.com/walmart-2026-annual-report-takeaways/",
-        "clicks": 53,
-        "impressions": 33454,
+        "clicks": 52,
+        "impressions": 33437,
         "ctr": 0.16,
         "position": 6.6
       },
       {
         "page": "https://trocglobal.com/contact/",
-        "clicks": 146,
-        "impressions": 29573,
-        "ctr": 0.49,
+        "clicks": 147,
+        "impressions": 29446,
+        "ctr": 0.5,
         "position": 6.6
       },
       {
         "page": "https://trocglobal.com/different-types-of-brand-ambassadors-2/",
         "clicks": 90,
-        "impressions": 22936,
+        "impressions": 22954,
         "ctr": 0.39,
         "position": 9.7
       },
       {
         "page": "https://trocglobal.com/experiential-retail-pop-up-events/",
         "clicks": 27,
-        "impressions": 19681,
+        "impressions": 19613,
         "ctr": 0.14,
         "position": 7.5
       },
       {
         "page": "https://trocglobal.com/store-resets-a-complete-guide-to-boosting-retail-sales/",
         "clicks": 22,
-        "impressions": 14686,
+        "impressions": 14619,
         "ctr": 0.15,
         "position": 7.9
       },
       {
         "page": "https://trocglobal.com/the-future-of-audio-technology-3-defining-trends-from-ces-2026/",
         "clicks": 55,
-        "impressions": 14459,
+        "impressions": 14428,
         "ctr": 0.38,
         "position": 5.6
       },
       {
         "page": "https://trocglobal.com/community/",
-        "clicks": 5,
-        "impressions": 12217,
-        "ctr": 0.04,
-        "position": 6.9
+        "clicks": 4,
+        "impressions": 12196,
+        "ctr": 0.03,
+        "position": 6.8
       },
       {
         "page": "https://trocglobal.com/in-store-demo-services/",
         "clicks": 40,
-        "impressions": 11787,
+        "impressions": 11684,
         "ctr": 0.34,
         "position": 8.6
       },
       {
         "page": "https://trocglobal.com/merchandising-inventory/",
-        "clicks": 18,
-        "impressions": 11540,
-        "ctr": 0.16,
+        "clicks": 17,
+        "impressions": 11554,
+        "ctr": 0.15,
         "position": 9.7
       },
       {
         "page": "https://trocglobal.com/visual-merchandising-examples/",
-        "clicks": 42,
-        "impressions": 10924,
-        "ctr": 0.38,
+        "clicks": 41,
+        "impressions": 10955,
+        "ctr": 0.37,
         "position": 7.8
       },
       {
         "page": "https://trocglobal.com/retail-automation-distribution-centers-walmart/",
         "clicks": 91,
-        "impressions": 10729,
-        "ctr": 0.85,
-        "position": 7.1
+        "impressions": 10597,
+        "ctr": 0.86,
+        "position": 7.2
       },
       {
         "page": "https://trocglobal.com/in-store-brand-activation/",
         "clicks": 29,
-        "impressions": 10463,
-        "ctr": 0.28,
+        "impressions": 10557,
+        "ctr": 0.27,
         "position": 9.9
       },
       {
         "page": "https://trocglobal.com/retail-pricing-strategy-tariffs-2026/",
         "clicks": 14,
-        "impressions": 6935,
+        "impressions": 6971,
         "ctr": 0.2,
         "position": 5.4
       },
       {
         "page": "https://trocglobal.com/experiential-retail-trends-2026-levis-pop-up/",
         "clicks": 21,
-        "impressions": 6669,
-        "ctr": 0.31,
+        "impressions": 6604,
+        "ctr": 0.32,
         "position": 6.2
       },
       {
         "page": "https://trocglobal.com/brand-ambassador-contract-what-to-look-for/",
         "clicks": 11,
-        "impressions": 6142,
+        "impressions": 6111,
         "ctr": 0.18,
-        "position": 8.4
+        "position": 8.3
       },
       {
         "page": "https://trocglobal.com/retail360-ai-retail-execution-platform/",
         "clicks": 5,
-        "impressions": 5899,
+        "impressions": 5912,
         "ctr": 0.08,
         "position": 9
       },
       {
         "page": "https://trocglobal.com/assembly-services/",
-        "clicks": 58,
-        "impressions": 5787,
-        "ctr": 1,
+        "clicks": 59,
+        "impressions": 5770,
+        "ctr": 1.02,
         "position": 8.9
       },
       {
         "page": "https://trocglobal.com/about-t-roc-global/",
         "clicks": 40,
-        "impressions": 4911,
+        "impressions": 4933,
         "ctr": 0.81,
         "position": 5.9
       },
       {
         "page": "https://trocglobal.com/the-key-benefits-of-brand-ambassadors-boosting-visibility-and-building-trust/",
-        "clicks": 17,
+        "clicks": 18,
         "impressions": 4792,
-        "ctr": 0.35,
+        "ctr": 0.38,
         "position": 7.6
       },
       {
         "page": "https://trocglobal.com/retail-execution-software/",
         "clicks": 2,
-        "impressions": 4651,
+        "impressions": 4681,
         "ctr": 0.04,
         "position": 6.8
       },
       {
         "page": "https://trocglobal.com/why-brand-ambassadors-still-matter/",
-        "clicks": 27,
-        "impressions": 4638,
-        "ctr": 0.58,
+        "clicks": 26,
+        "impressions": 4641,
+        "ctr": 0.56,
         "position": 6.7
       },
       {
         "page": "https://trocglobal.com/resources/",
         "clicks": 1,
-        "impressions": 3959,
+        "impressions": 3948,
         "ctr": 0.03,
         "position": 7.4
       },
       {
         "page": "https://trocglobal.com/luxury-pop-up-stores-shipping-containers/",
         "clicks": 6,
-        "impressions": 3863,
+        "impressions": 3830,
         "ctr": 0.16,
         "position": 7.3
       },
       {
         "page": "https://trocglobal.com/retail-sales-growth-consumer-confidence-2026/",
         "clicks": 5,
-        "impressions": 3658,
+        "impressions": 3639,
         "ctr": 0.14,
         "position": 7.3
       }
