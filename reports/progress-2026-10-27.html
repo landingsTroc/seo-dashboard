@@ -222,12 +222,12 @@
           <tr><td>Case studies</td><td>29</td><td>Blocked &mdash; emit no schema at all; see the correction above</td></tr>
           <tr><td>Community posts</td><td>14</td><td>Blocked &mdash; empty body in the API and the content type has no author field</td></tr>
           <tr><td>Excluded on purpose</td><td>7</td><td>Not articles: link indexes, the glossary, <code>llms.txt</code>, the company page</td></tr>
-          <tr><td>One blog post</td><td>1</td><td>Blocked &mdash; the post template strips scripts from the body</td></tr>
+          <tr><td>One blog post</td><td>1</td><td>Not blocked &mdash; see the correction below; that URL is served by a page, not the post</td></tr>
         </tbody>
       </table>
     </div>
     <p class="small">The author is declared as the organisation, not a person. These guides carry no visible byline, and inventing one would be fabricating the signal rather than recording it. The seven exclusions were left alone because declaring a link index an &ldquo;article&rdquo; would satisfy the crawler and misdescribe the page.</p>
-    <p class="small">One page explains a long-standing puzzle: <code>/retail-staffing-services/</code> has carried correct <code>Article</code> markup with an author for some time, and it has never reached the page. The post template removes scripts from the body. Any schema previously added to a blog post is worth re-checking for the same reason.</p>
+    <p class="small"><strong>Corrected 30 October.</strong> This report first said the post template strips scripts from the body, on the evidence of <code>/retail-staffing-services/</code>. That was wrong, and it was a generalisation from a single case. <strong>That URL is served by page 11346, which shadows post 7874 &mdash; both hold the same slug and WordPress resolves to the page.</strong> The post&rsquo;s schema never appears because its template never runs, not because anything is filtered. Four ordinary blog posts were re-measured on 30 October and every one renders its injected FAQPage correctly. No re-check of blog schema is needed; the orphaned post 7874 is a pruning candidate instead.</p>
   </section>
 
   <section>
@@ -243,7 +243,7 @@
           <tr><td>3</td><td>Make the case&nbsp;study template call <code>wp_head()</code></td><td>Fixes 34 titles, 34 descriptions, the missing canonicals and the missing schema in one change</td></tr>
           <tr><td>4</td><td>Fix the Cloudflare www redirect</td><td>One field. Still the cheapest win on the list</td></tr>
           <tr><td>5</td><td>Set the three Yoast toggles</td><td>Two minutes. Removes 23 empty pages from the index and the sitemap</td></tr>
-          <tr><td>6</td><td>Re-check schema on blog posts</td><td>The post template strips body scripts, so earlier additions may never have gone live</td></tr>
+          <tr><td>6</td><td>Prune the orphaned post 7874</td><td>It duplicates page 11346 at the same URL and can never be served; it is not a schema problem</td></tr>
           <tr><td>7</td><td>Diagnose the 8&ndash;25 second uncached render</td><td>The site is one cache failure away from being unusable, and no dashboard shows it</td></tr>
         </tbody>
       </table>
