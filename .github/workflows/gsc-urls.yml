@@ -1,0 +1,60 @@
+name: GSC per-URL check
+
+# One-off, manual only. Answers "does Google serve these URLs?" for a list of
+# addresses, by querying Search Analytics once per URL.
+#
+# Deliberately separate from refresh.yml: this must never touch the Ahrefs
+# budget or the dashboard's data/latest.json, and a failure here must not stop
+# the dashboard deploying.
+
+on:
+  workflow_dispatch:
+    inputs:
+      list:
+        description: "Path to the URL list file in this repo"
+        required: false
+        default: "data/noindex-check-urls.txt"
+      days:
+        description: "Days of history to look back over"
+        required: false
+        default: "90"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gsc-urls
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Query Search Console per URL
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          TARGET_DOMAIN: trocglobal.com
+          GSC_DAYS: ${{ github.event.inputs.days }}
+        run: node scripts/gsc-urls.mjs "${{ github.event.inputs.list }}" data/gsc-urls.json
+
+      - name: Commit the result
+        run: |
+          git config user.name "seo-bot"
+          git config user.email "seo-bot@users.noreply.github.com"
+          git add data/gsc-urls.json
+          if git diff --cached --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "chore: per-URL Search Console check"
+          # The dashboard's own refresh rewrites data/latest.json wholesale and
+          # can land between our checkout and push, so rebase onto whatever is
+          # there rather than failing the run.
+          git pull --rebase origin main
+          git push origin HEAD:main

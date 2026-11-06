@@ -20,7 +20,7 @@ const SCOPE = "https://www.googleapis.com/auth/webmasters.readonly";
 const b64url = (input) => Buffer.from(input).toString("base64url");
 
 /** Exchange a service-account key for an OAuth2 access token. */
-async function getAccessToken(creds) {
+export async function getAccessToken(creds) {
   const now = Math.floor(Date.now() / 1000);
   const header = b64url(JSON.stringify({ alg: "RS256", typ: "JWT" }));
   const claim = b64url(JSON.stringify({
@@ -78,7 +78,7 @@ async function query(token, siteUrl, body) {
 }
 
 /** Find which property form this account can actually read. */
-async function resolveSite(token, domain) {
+export async function resolveSite(token, domain) {
   const res = await fetch("https://www.googleapis.com/webmasters/v3/sites", {
     headers: { Authorization: `Bearer ${token}` },
   });
