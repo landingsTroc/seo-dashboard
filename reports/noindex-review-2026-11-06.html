@@ -220,6 +220,30 @@
 
   <section>
     <div class="sec-head">
+      <span class="eyebrow">Added 6 November, after the review</span>
+      <h2>What Search Console says</h2>
+      <p class="small">Each URL was queried individually against Search Analytics for 5 August to 3 November. Impressions above zero prove Google served the page in results. Zero impressions is reported as no data, because a page can be indexed and still never match a query.</p>
+    </div>
+    <div class="t-wrap">
+      <table>
+        <thead><tr><th>Group</th><th>URLs</th><th>With impressions</th><th>Is that the expected result?</th></tr></thead>
+        <tbody>
+          <tr><td>301 &mdash; redirects away</td><td>25</td><td>0</td><td><strong>Yes.</strong> A redirected address does not collect impressions; its destination does. <code>/company/</code> took <strong>44,289 impressions and 258 clicks at position 5</strong>.</td></tr>
+          <tr><td>404 &mdash; page gone</td><td>8</td><td>0</td><td><strong>Yes.</strong> There is no page to serve.</td></tr>
+          <tr><td>noindex on purpose</td><td>16</td><td>0</td><td><strong>Yes.</strong> Zero is the intended outcome of blocking a page.</td></tr>
+          <tr><td>Live, indexable</td><td>4</td><td>1</td><td>Mixed &mdash; see below.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout co-navy">
+      <h3>Only four URLs on the list could earn an impression at all</h3>
+      <p>Forty-nine of the fifty-three either redirect, are gone, or are blocked on purpose, so zero impressions is the correct and expected reading for every one of them. That leaves four live indexable pages. One, <code>/bringing-value-to-our-clients-a-success-in-jefferson-ga/</code>, collected <strong>45 impressions</strong>. The other three collected none over ninety days.</p>
+      <p><strong>That is not evidence of a block.</strong> They are old press releases, and roughly nine in ten posts on this site draw no search traffic at all. A page with nothing anyone searches for earns nothing, whether or not Google has it. The directive those three serve is <code>index, follow</code>, which is the thing the request asked about.</p>
+    </div>
+    <p class="small">The honest limit of this evidence: Search Console confirms the consolidation is working and that nothing on this list is being suppressed, but for pages with no search demand it can neither prove nor disprove indexation. The served <code>robots</code> directive, in the table below, is the direct answer to the question that was asked. A definitive per-URL index status would need URL Inspection, which requires owner or full-user permission on the property rather than the restricted access used here.</p>
+  </section>
+  <section>
+    <div class="sec-head">
       <h2>Evidence, URL by URL</h2>
       <p class="small">Fetched 6 November 2026 with a standard browser user agent, following redirects. The robots column is the directive as served.</p>
     </div>
