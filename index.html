@@ -178,6 +178,10 @@
     </div>
     <div class="grid-2">
       <div class="card">
+        <h3 style="font-size:.98rem">FAQ schema: 8 of 21 pages needed it, 13 already had better</h3>
+        <p class="small">A 21-file package arrived with five FAQs per page. Auditing every URL first showed <strong>13 already carried a complete, valid FAQPage</strong> with every question visible &mdash; six of them with seven questions, better than the five supplied. Overwriting those would have been a downgrade. The <strong>8 with nothing now have FAQ schema</strong>, verified live at full parity. The supplied questions were rewritten: the package held <strong>254 instances of &ldquo;the article&rdquo;</strong>, phrasing that is self-referential in schema and matches nothing anyone searches.</p>
+      </div>
+      <div class="card">
         <h3 style="font-size:.98rem">Correction: Webflow never served the case studies</h3>
         <p class="small">For two months I reported these URLs as blocked on Webflow access. That was wrong. <code>/case-studies/*</code> is served by <strong>WP&nbsp;Engine</strong>, and <strong>29 of 29 pages carry no WordPress output at all</strong> &mdash; a theme template prints an exported copy of the Webflow markup and never calls <code>wp_head()</code>. Editing in Webflow changes nothing live unless somebody re-exports and re-uploads. <strong>Yoast already holds a correct title and description for all 34</strong>, and the export discards every one. <a href="reports/progress-2026-10-27.html">Full report &rarr;</a></p>
       </div>

@@ -134,7 +134,7 @@
     <p class="small">Record of work completed, what it produced, and what is waiting on whom. Updated manually — the number at the top of each section is the count in that table.</p>
     <div class="meta-row">
       <span>trocglobal.com</span>
-      <span>Last updated: October 30, 2026</span>
+      <span>Last updated: November 6, 2026</span>
       <span><a href="../">← Live dashboard</a></span>
       <span><a href="seo-report-2026-09-09.html">Performance report, Sep 9</a></span>
       <span><a href="kpi-plan-2026-08-en.html">Performance &amp; Recovery Plan</a></span>
@@ -144,7 +144,7 @@
 
   <section>
     <div class="counts">
-      <div class="count"><span class="n n-done">67</span><span class="l">Completed</span></div>
+      <div class="count"><span class="n n-done">68</span><span class="l">Completed</span></div>
       <div class="count"><span class="n n-block">10</span><span class="l">Blocked on access</span></div>
       <div class="count"><span class="n n-next">11</span><span class="l">Next up</span></div>
       <div class="count"><span class="n n-watch">8</span><span class="l">Watching</span></div>
@@ -159,7 +159,7 @@
   <!-- ================= COMPLETED ================= -->
   <section>
     <div class="sec-head">
-      <span class="eyebrow">Completed · 45 items</span>
+      <span class="eyebrow">Completed · 46 items</span>
       <h2>Work done</h2>
     </div>
 
@@ -168,6 +168,7 @@
       <table>
         <thead><tr><th>Date</th><th>Work</th><th>Outcome</th><th>Status</th></tr></thead>
         <tbody>
+            <tr><td class="date">Nov 6</td><td><strong>FAQ schema: 8 pages of 21 needed it, 13 already had better</strong><br><span class="small">40 questions written &middot; supplied package audited first</span></td><td>A 21-file package arrived with five FAQs each. Audited every URL live before applying anything: <strong>13 already carried a complete, valid FAQPage with every question visible on the page</strong> &mdash; six of them with seven questions, better than the five supplied. Overwriting those would have been a downgrade. The remaining <strong>8 had nothing and received FAQ schema</strong>, verified live at full parity. <strong>The supplied questions were rewritten.</strong> The package carried <strong>254 instances of &ldquo;the article&rdquo;</strong> and 21 of its 105 questions asked what &ldquo;the article&rdquo; says &mdash; comprehension questions about the text, not what anyone searches, and self-referential inside schema. Substance was kept and checked against each page; only the phrasing changed.</td><td><span class="chip c-done">8 live, 13 left alone</span></td></tr>
             <tr><td class="date">Oct 26</td><td><strong>Fourteen pillar guides were serving raw Markdown to readers</strong><br><span class="small">3,789 escape sequences &middot; <a href="progress-2026-10-27.html">progress report</a></span></td><td>The &ldquo;Complete Guide (2026)&rdquo; pages were pasted from Markdown without conversion, leaving <strong>3,789 literal <code>\n</code> sequences and eleven <code>---</code> rules stored as text</strong>. WordPress wrapped each in its own paragraph, so <code>/retail-technology-guide/</code> alone served <strong>122 junk paragraphs</strong> through a 4,400-word article. <strong>No crawl report flags this</strong>, because crawlers do not grade prose. Before each write, two invariants were checked: identical plain text and identical tag count &mdash; 24,735 characters and 302 tags before and after on that page, proving no word was lost or joined. The 25 escape sequences that sit <em>inside</em> JSON-LD on two blog posts were identified and left alone, since deleting those would break the schema. A malformed <code>&lt;ul&gt;</code> was repaired in the same pass. A live HTML diff confirmed the only change was the junk disappearing.</td><td><span class="chip c-done">14 of 14 verified</span></td></tr>
             <tr><td class="date">Oct 26</td><td><strong>Article and author schema added to 45 pages</strong><br><span class="small">from a 96-URL Ahrefs report that split three ways</span></td><td>The report labels these &ldquo;Article&rdquo; pages, but that is the crawler&rsquo;s classifier, not a declaration by the site &mdash; Yoast correctly emits <code>WebPage</code> for a WordPress page. Added a self-contained <code>Article</code> node naming the organisation as author, hooked to Yoast&rsquo;s own <code>@id</code> values so the graph merges rather than duplicates. <strong>Author is the organisation, not a person</strong>: these guides carry no visible byline and inventing one would fabricate the signal. <strong>Seven pages were excluded on purpose</strong> &mdash; link indexes, the glossary, <code>llms.txt</code> and the company page &mdash; because calling a link index an article would satisfy the crawler and misdescribe the page. Delivered in a <code>display:none</code> wrapper so nothing moves on screen and WordPress adds no stray paragraph.</td><td><span class="chip c-done">45 of 45 verified</span></td></tr>
             <tr><td class="date">Oct 30</td><td><strong>A shadowed post, not a template that strips scripts</strong><br><span class="small">corrects the Oct 26 entry</span></td><td><code>/retail-staffing-services/</code> is served by <strong>page 11346, which shadows post 7874</strong> &mdash; both hold the same slug and WordPress resolves to the page. The post&rsquo;s schema never appears because <strong>its template never runs</strong>, not because anything is filtered. Four ordinary blog posts re-measured on 30 October each render their injected FAQPage correctly, with six scripts inside <code>&lt;main&gt;</code>. Post 7874 is an unreachable duplicate and a pruning candidate.</td><td><span class="chip c-done">Corrected</span></td></tr><tr><td class="date">Oct 30</td><td><strong>CEO Forbes column republished with attribution</strong><br><span class="small">/dead-zone-economy/ &middot; 1,750 words &middot; bylined to Brett Beveridge</span></td><td>Published two days after the Forbes original. A verbatim copy would have competed with a DR&nbsp;94 domain and lost, and <strong>Yoast&rsquo;s canonical field cannot be written through the API</strong> &mdash; it accepts the value and ignores it. So the post carries an explicit linked attribution to the Forbes original, plus material the original does not have: a six-row table of dead-zone venues, five key takeaways and seven FAQs with schema generated from its own questions. Bylined to the real author account rather than Press Room. <strong>Deliberately not optimised for &ldquo;automated retail&rdquo;</strong> &mdash; the site already has 20+ pages on it and another would cannibalise; this one links into that cluster instead.</td><td><span class="chip c-done">Live</span></td></tr>
