@@ -178,6 +178,18 @@
     </div>
     <div class="grid-2">
       <div class="card">
+        <h3 style="font-size:.98rem">93 out of 100, and 844,731 impressions produce 4,798 clicks</h3>
+        <p class="small">All 626 flagged URLs were triaged. <strong>146 should be left alone</strong> &mdash; short titles on noindexed pages, empty <code>alt</code> on decorative icons, meta descriptions of 110&ndash;119 characters. <strong>108 are blocked on theme access</strong>, including 63 &ldquo;missing&rdquo; meta descriptions that Yoast already holds and simply does not print. That leaves <strong>282 URLs of real work</strong>, and the single highest-return item is still one template change on the case studies. <a href="reports/progress-2026-11-17.html">Full triage &rarr;</a></p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">507 AI citations &mdash; Perplexity cites more pages than ChatGPT</h3>
+        <p class="small">Measured through the Ahrefs AI responses API: <strong>Perplexity 80 citations across 58 pages</strong>, ChatGPT 48 across 24, Copilot 38, AI Overviews 28 directly and <strong>246 on AIO-triggering keywords</strong>. Grok cites the site <strong>zero</strong> times. At positions 6&ndash;8 the click is taken by the AI answer, so citation is the winnable target &mdash; which is why the schema work is the priority, not title rewrites.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:.98rem">Two things this dashboard got wrong, now corrected</h3>
+        <p class="small">The <strong>eleven FAQ pages reported as outstanding already had valid schema</strong> &mdash; the check searched for fixed spacing and those pages store it pretty-printed. The FAQ programme is complete, and the audit confirms it independently at zero. Separately, the <strong>endcap consolidation is off the plan</strong>: <code>/aisle-end-cap/</code> now holds 1,552 words rather than 257, and the domain no longer ranks for any endcap term, so merging would destroy content for no gain.</p>
+      </div>
+      <div class="card">
         <h3 style="font-size:.98rem">The &ldquo;57 noindexed blog posts&rdquo; are not blog posts, and are not blocked</h3>
         <p class="small">All 53 URLs on the supplied list were fetched live. <strong>29 serve <code>index, follow</code></strong> and were never blocked, <strong>8 return 404</strong>, and the <strong>16 that do carry noindex are blocked on purpose</strong> &mdash; search pages, category archives, placeholder videos, legal pages. <strong>None is a blog post needing the tag removed.</strong> The likely cause of the report: <strong>20 of them are the press releases consolidated into <code>/company/</code> in July</strong>, which answer with a 301. A crawler listing a 301 as &ldquo;blocked&rdquo; is describing the redirect. <a href="reports/noindex-review-2026-11-06.html">Evidence, URL by URL &rarr;</a></p>
       </div>
