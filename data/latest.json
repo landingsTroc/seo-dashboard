@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T19:30:31.012Z",
+  "generatedAt": "2026-11-17T20:48:36.229Z",
   "target": "trocglobal.com",
   "scope": "subdomains · US",
   "sources": {
@@ -11,12 +11,12 @@
     "pageSpeed": {
       "ok": true,
       "error": null,
-      "asOf": "2026-11-17T19:30:31.012Z"
+      "asOf": "2026-11-17T20:48:36.229Z"
     },
     "searchConsole": {
       "ok": true,
       "error": null,
-      "asOf": "2026-11-17T19:30:31.013Z"
+      "asOf": "2026-11-17T20:48:36.229Z"
     }
   },
   "summary": {
